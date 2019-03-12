@@ -21,8 +21,8 @@ if ( ! defined( 'WPINC' ) ) {
 }
 
 /**
- * Define plugin directory
- *
+ * Define plugin directory 
+ * 
  * @since 1.0.0
  */
 define( 'RF_DIR', dirname( __FILE__ ) );
