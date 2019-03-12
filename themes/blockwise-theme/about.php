@@ -1,6 +1,8 @@
 <?php
 /**
- * The main template file.
+ * The template for displaying the about page.
+ * 
+ * Template Name: about
  *
  * @package Blockwise_Theme
  */
