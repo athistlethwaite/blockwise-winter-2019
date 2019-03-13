@@ -1,10 +1,11 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying the about page.
+ * 
+ * Template Name: academy
  *
  * @package Blockwise_Theme
  */
-
 get_header(); ?>
 
 	<div id="primary" class="content-area">
@@ -16,8 +17,6 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+		</main>
+	</div>
 <?php get_footer(); ?>
