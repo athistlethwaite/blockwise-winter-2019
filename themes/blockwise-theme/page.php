@@ -18,5 +18,8 @@ get_header(); ?>
 			<?php endwhile; // End of the loop. ?>
 
 		</main>
+
+		<button class="blockwise-academy-button"><a href="https://blockwise.ca/">Visit Website</a></button>
+
 	</div>
 <?php get_footer(); ?>
