@@ -29,7 +29,7 @@
 
             <nav id="site-navigation" class="main-navigation" role="navigation">
                 <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <!--<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/blockwise">-->
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/BlockwiseIcon.png">
 
                     <h1><?php echo get_bloginfo() ?></h1>
                 </a>
