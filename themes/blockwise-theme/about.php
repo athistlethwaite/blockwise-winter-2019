@@ -43,11 +43,15 @@ get_header(); ?>
 											<?php get_template_part('template-parts/content'); ?>
                     <?php endwhile; wp_reset_query(); ?>
                 </ul>
-            </div>
+						<div class="become-member">
+							<a class="full-colored" href="">Become A Member</a>
+						</div>
+          </div>
 				</section>
+				
 				<section>
 						<div class="corporate-mentor">	
-						<p>Corporate Mentors</p>
+						<p>Community Mentors</p>
                 <ul>
                     <?php $loop = new WP_Query(array('post_type' => 'mentor')); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
@@ -55,6 +59,9 @@ get_header(); ?>
                     <?php endwhile; wp_reset_query(); ?> 
                 </ul>
             </div>
+						<div class="become-mentor">
+							<a class="full-colored" href="">Become A Mentor</a>
+						</div>
 				</section>
 
         <?php else : ?>
