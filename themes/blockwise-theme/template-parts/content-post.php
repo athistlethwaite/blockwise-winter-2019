@@ -7,17 +7,18 @@
 
 ?>
 
+
+<?php if (is_sticky()) : ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if (is_sticky()){ ?>
-		<?php echo get_the_post_thumbnail(); ?>
-		<?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
-		<p class="article-authors"><?php echo CFS()->get('article_author'); ?></p>
-		<p class="article-details"><?php echo CFS()->get('article_details'); ?></p>
-		<a class="border-colored" href="">Read More...</a>
-	<?php } ?>
-	<li>
-		<?php echo get_the_post_thumbnail(); ?>
-		<?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
-		<p><?php echo CFS()->get('article_author'); ?></p>
-	</li>
+    <?php echo get_the_post_thumbnail(); ?>
+    <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+    <p class="article-authors">By <?php echo CFS()->get('article_author'); ?></p>
+    <a class="border-colored" href="<?php echo CFS()->get('article_url'); ?>">Read More...</a>
 </article><!-- #post-## -->
+<?php else : ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php echo get_the_post_thumbnail(); ?>
+    <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+    <p class="article-authors">By <?php echo CFS()->get('article_author'); ?></p>
+</article><!-- #post-## -->
+<?php endif; ?> 
