@@ -34,7 +34,7 @@ get_header(); ?>
                         <?php echo get_the_post_thumbnail(); ?>
                     </li>
                     <?php endwhile;
-				wp_reset_query(); ?>
+                wp_reset_query(); ?>
                 </ul>
             </div>
         </header>
@@ -52,18 +52,18 @@ get_header(); ?>
                         <p><?php echo CFS()->get('event_date'); ?></p>
                     </li>
                     <?php endwhile;
-				wp_reset_query(); ?>
+                wp_reset_query(); ?>
                 </ul>
             </div>
             <div class="market-trends">
                 <h3>Market Trends</h3>
-                <ul>
+                <div class="article-list">
                     <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4)); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php get_template_part('template-parts/content', 'post'); ?>
                     <?php endwhile;
-				wp_reset_query(); ?>
-                </ul>
+                wp_reset_query(); ?>
+                </div>
             </div>
 
         </section>
