@@ -19,10 +19,6 @@ get_header(); ?>
 			<div class="visit-website">
 					<a class="story" href="">Visit Website</a>
 			</div>
-
 		</main>
-
-		<button class="blockwise-academy-button"><a href="https://blockwise.ca/">Visit Website</a></button>
-
 	</div>
 <?php get_footer(); ?>
