@@ -19,6 +19,19 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+			<section> 
+				<div class="lesson-type">
+					<?php $lesson_types=get_terms('lesson_type'); ?>
+					<?php foreach ( $lesson_types as $lesson_type ) : setup_postdata( $lesson_type ); ?>
+					
+					<div class="lesson-type-wrapper">
+						<?php echo $lesson_type->name?>	
+          </div>
+
+        <?php endforeach; wp_reset_postdata(); ?>
+				</div>
+			</section>
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
