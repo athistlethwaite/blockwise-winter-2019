@@ -14,7 +14,7 @@ get_header(); ?>
 
 			<header class="page-header">
 				<?php the_archive_title( '<h1 class="page-title">', '</h1>' );?>
-				<h3 class="event-subtitle">Connecting BC’s Blockchain community one event at a time.</h3>
+				<h3 class="event-undertitle">Connecting BC’s Blockchain community one event at a time.</h3>
 			</header><!-- .page-header -->
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -25,6 +25,9 @@ get_header(); ?>
 						<p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
 						<p class="event-host"><?php echo CFS()->get('event_host'); ?></p>
 					</header>
+					<div class="complet-infos-event">
+					<a class="read-more" href="<?php the_permalink(); ?>"><i class="fas fa-angle-right"></i></a>
+					</div>
 				</article>
 			<?php endwhile; ?>
 
