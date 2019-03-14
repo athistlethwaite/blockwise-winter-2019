@@ -21,5 +21,8 @@ get_header(); ?>
 			</div>
 
 		</main>
+
+		<button class="blockwise-academy-button"><a href="https://blockwise.ca/">Visit Website</a></button>
+
 	</div>
 <?php get_footer(); ?>
