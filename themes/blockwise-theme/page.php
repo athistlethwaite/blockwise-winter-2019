@@ -17,7 +17,7 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 			<div class="visit-website">
-					<a class="story" href="">Visit Website</a>
+					<a class="full-colored" href="">Visit Website</a>
 			</div>
 		</main>
 	</div>

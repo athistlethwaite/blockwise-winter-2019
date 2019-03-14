@@ -60,10 +60,7 @@ get_header(); ?>
                 <ul>
                     <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4)); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                    <li>
-                        <?php echo get_the_post_thumbnail(); ?>
-                        <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
-                    </li>
+                    <?php get_template_part('template-parts/content', 'page'); ?>
                     <?php endwhile;
 				wp_reset_query(); ?>
                 </ul>
