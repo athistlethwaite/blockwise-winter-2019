@@ -19,27 +19,36 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<section> 
-				<div class="lesson-type">
-					<?php $lesson_types=get_terms('lesson_type'); ?>
-					<?php foreach ( $lesson_types as $lesson_type ) : setup_postdata( $lesson_type ); ?>
-					
-					<div class="lesson-type-wrapper">
-						<?php echo $lesson_type->name?>	
-          </div>
-
-        <?php endforeach; wp_reset_postdata(); ?>
-				</div>
-			</section>
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+			<header class="entry-header">
+            <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+            <div class="entry-content">
+                <?php the_excerpt(); ?>
+            </div><!-- .entry-content -->
+			</header>
 
 			<?php endwhile; ?>
+
+			<section>
+           <div class="lesson-type">
+               <?php $lesson_types = get_terms('lesson_type'); ?>
+               <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
+               <h3><?php echo $lesson_type->name ?></h3>
+               <ul>
+                   <?php $lessons = get_posts(array('post_type' => 'lesson')); ?>
+                   <?php foreach ($lessons as $lesson) : setup_postdata($lesson); ?>
+                       <li><a href=<?php echo get_permalink($lesson->ID); ?>><?php echo $lesson->post_title; ?></a></li>
+                   <?php endforeach;
+                wp_reset_postdata(); ?>
+               </ul>
+
+               <?php endforeach;
+            wp_reset_postdata(); ?>
+           </div>
+       </section>
 
 		<?php else : ?>
 
