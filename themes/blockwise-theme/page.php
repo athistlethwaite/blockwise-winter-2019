@@ -16,6 +16,9 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 			<?php endwhile; // End of the loop. ?>
+			<div class="visit-website">
+					<a class="story" href="">Visit Website</a>
+			</div>
 
 		</main>
 	</div>
