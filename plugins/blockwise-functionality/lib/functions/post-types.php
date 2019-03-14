@@ -172,7 +172,7 @@ function blockwise_mentor()
         'capability_type'       => 'page',
         'show_in_rest'            => true,
     );
-    register_post_type('product', $args);
+    register_post_type('mentor', $args);
 }
 add_action('init', 'blockwise_mentor', 0);
 
