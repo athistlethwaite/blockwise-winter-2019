@@ -60,7 +60,7 @@ get_header(); ?>
                 <ul>
                     <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4)); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-                    <?php get_template_part('template-parts/content', 'page'); ?>
+                    <?php get_template_part('template-parts/content', 'post'); ?>
                     <?php endwhile;
 				wp_reset_query(); ?>
                 </ul>
