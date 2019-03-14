@@ -40,9 +40,8 @@ get_header(); ?>
                 <ul>
                     <?php $loop = new WP_Query(array('post_type' => 'partner')); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-										<?php get_template_part('template-parts/content'); ?>
-                    <?php endwhile;
-				wp_reset_query(); ?>
+											<?php get_template_part('template-parts/content'); ?>
+                    <?php endwhile; wp_reset_query(); ?>
                 </ul>
             </div>
 				</section>
@@ -52,13 +51,11 @@ get_header(); ?>
                 <ul>
                     <?php $loop = new WP_Query(array('post_type' => 'mentor')); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-										<?php get_template_part('template-parts/content'); ?>
-                    <?php endwhile;
-				wp_reset_query(); ?>
+											<?php get_template_part('template-parts/content'); ?>
+                    <?php endwhile; wp_reset_query(); ?> 
                 </ul>
             </div>
 				</section>
-
 
         <?php else : ?>
 
