@@ -20,7 +20,7 @@
             </div>
             <span class="copyright">&copy; 2019 Blockwise. All Rights Reserved.</span>
         </div>
-        <div class="bottomMenu">
+        <div class="bottom-menu">
             <?php wp_nav_menu(array('theme_location' => 'secondary')); ?>
         </div>
     </div><!-- .site-info -->
