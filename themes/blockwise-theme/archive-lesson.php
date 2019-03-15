@@ -19,26 +19,22 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-			<header class="entry-header">
-            <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
-            <div class="entry-content">
-                <?php the_excerpt(); ?>
-            </div><!-- .entry-content -->
-			</header>
-
-			<?php endwhile; ?>
-
 			<section>
            <div class="lesson-type">
                <?php $lesson_types = get_terms('lesson_type'); ?>
                <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
                <h3><?php echo $lesson_type->name ?></h3>
                <ul>
-                   <?php $lessons = get_posts(array('post_type' => 'lesson')); ?>
+                   <?php $lessons = get_posts(array(
+					   'post_type' => 'lesson',
+					   'tax_query' => array(
+							array(
+								'taxonomy' => 'lesson_type',
+								'field' => 'term_id',
+								'terms' => $lesson_type->term_id,
+							)
+						)
+					)); ?>
                    <?php foreach ($lessons as $lesson) : setup_postdata($lesson); ?>
                        <li><a href=<?php echo get_permalink($lesson->ID); ?>><?php echo $lesson->post_title; ?></a></li>
                    <?php endforeach;
