@@ -31,13 +31,17 @@
   position: fixed;
   width: 100%;
   top: 0;
+
   .main-navigation {
-    background-color: #026082;
+    background-color: $color__brand-blue-sapphire;
     display: flex;
     justify-content: space-evenly;
     a {
       margin-top: 20px;
       display: flex;
+      h1 {
+        color: $color__brand-ghost-white;
+      }
       img {
         max-height: 70%;
         padding-top: 10px;
