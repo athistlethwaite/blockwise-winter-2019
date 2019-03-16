@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying the contact us page.
+ * 
+ * Template Name: contact
  *
  * @package Blockwise_Theme
  */

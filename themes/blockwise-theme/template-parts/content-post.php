@@ -1,24 +1,32 @@
 <?php
 /**
- * Template part for displaying page content in front-page.
+ * Template part for displaying posts.
  *
  * @package Blockwise_Theme
  */
 
 ?>
 
-
-<?php if (is_sticky()) : ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php echo get_the_post_thumbnail(); ?>
-    <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
-    <p class="article-authors">By <?php echo CFS()->get('article_author'); ?></p>
-    <a class="border-colored" href="<?php echo CFS()->get('article_url'); ?>">Read More...</a>
-</article><!-- #post-## -->
-<?php else : ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php echo get_the_post_thumbnail(); ?>
-    <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
-    <p class="article-authors">By <?php echo CFS()->get('article_author'); ?></p>
-</article><!-- #post-## -->
-<?php endif; ?> 
+    <header class="entry-header">
+        <?php if (has_post_thumbnail()) : ?>
+        <?php if (blockwise_is_latest_post(get_the_ID())) : ?>
+        <?php the_post_thumbnail('large'); ?>
+        <?php else : ?>
+        <?php the_post_thumbnail('thumbnail'); ?>
+        <?php endif; ?>
+        <?php endif; ?>
+        <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+        <?php if ('post' === get_post_type()) : ?>
+        <div class="entry-meta">
+            <p>by <?php echo CFS()->get('article_author'); ?></p>
+        </div><!-- .entry-meta -->
+        <?php endif; ?>
+    </header><!-- .entry-header -->
+    <?php if (blockwise_is_latest_post(get_the_ID())) : ?>
+    <div class="entry-content">
+        <?php the_excerpt(); ?>
+        <a class="white-btn blockwise-btn" target='_blank' href="<?php echo CFS()->get('article_url'); ?>">Read More...</a>
+    </div><!-- .entry-content -->
+    <?php endif; ?>
+</article><!-- #post-## --> 
