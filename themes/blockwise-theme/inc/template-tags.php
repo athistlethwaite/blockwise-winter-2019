@@ -223,5 +223,16 @@ function blockwise_comment_list($comment, $args, $depth)
 	add_action('pre_get_posts', 'blockwise_posts_filter', 1);
 
 
+	function blockwise_page_title_filter($title)
+	{
+		if (is_post_type_archive()) {
+			$title = substr($title, 10);
+		}
+
+		return $title;
+	}
+	add_filter('get_the_archive_title', 'blockwise_page_title_filter');
+
+
 
 	
