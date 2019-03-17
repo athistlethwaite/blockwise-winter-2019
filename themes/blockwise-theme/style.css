@@ -945,6 +945,9 @@ object {
   .site-header a,
   .site-header h1 {
     color: #f7f9fa; }
+    .site-header a:hover,
+    .site-header h1:hover {
+      color: #ffae4e; }
   .site-header .site-branding {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -981,3 +984,26 @@ object {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+.site-footer {
+  background-color: #026082;
+  color: #f7f9fa; }
+  .site-footer a,
+  .site-footer i {
+    color: #f7f9fa; }
+    .site-footer a:hover,
+    .site-footer i:hover {
+      color: #ffae4e; }
+  .site-footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
