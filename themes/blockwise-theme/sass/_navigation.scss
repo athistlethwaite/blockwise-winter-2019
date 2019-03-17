@@ -6,6 +6,7 @@
 
 a {
   color: $color__link;
+  text-decoration: none;
 
   &:visited {
     color: $color__link-visited;
@@ -28,15 +29,14 @@ a {
 
 .main-navigation {
   clear: both;
-  display: block;
-  float: left;
-  width: 100%;
-
+  display: inline-block;
   ul {
     display: none;
     list-style: none;
     margin: 0;
     padding-left: 0;
+    text-transform: capitalize;
+    font-weight: bold;
 
     ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -79,6 +79,7 @@ a {
   li {
     float: left;
     position: relative;
+    margin: 0 0.8em;
 
     &:hover > a,
     &.focus > a {
