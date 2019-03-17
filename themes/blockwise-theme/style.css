@@ -594,7 +594,7 @@ button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'] {
-  border-radius: 1em;
+  border-radius: 1rem;
   border: 0px;
   background: #ffae4e;
   color: #008294;
@@ -632,7 +632,7 @@ select,
 textarea {
   color: #7bd1d0;
   border: 3px solid #026082;
-  border-radius: 1em;
+  border-radius: 1rem;
   font-family: "Proxima-Nova"; }
   input[type='text']:focus,
   input[type='email']:focus,
@@ -660,7 +660,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #026082; }
+  color: #026082;
+  text-decoration: none; }
   a:visited {
     color: #026082; }
   a:hover, a:focus, a:active {
@@ -673,14 +674,14 @@ a {
 /* Menus */
 .main-navigation {
   clear: both;
-  display: block;
-  float: left;
-  width: 100%; }
+  display: inline-block; }
   .main-navigation ul {
     display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    text-transform: capitalize;
+    font-weight: bold; }
     .main-navigation ul ul {
       -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
               box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -702,7 +703,8 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative; }
+    position: relative;
+    margin: 0 0.8em; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -907,6 +909,75 @@ object {
   display: block; }
 
 /*--------------------------------------------------------------
+# Globals
+--------------------------------------------------------------*/
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.blockwise-btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  border-radius: 1rem;
+  border: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.white-btn {
+  border: 3px solid #ffae4e;
+  color: #008294; }
+
+.yellow-btn {
+  background: #ffae4e;
+  color: #008294; }
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  color: #f7f9fa;
+  background-color: #026082; }
+  .site-header a,
+  .site-header h1 {
+    color: #f7f9fa; }
+  .site-header .site-branding {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .site-header .site-branding img {
+      margin-right: 1.5rem;
+      width: auto;
+      height: 40px; }
+  .site-header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+/*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
