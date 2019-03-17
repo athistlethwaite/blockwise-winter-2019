@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-header {
+  color: $color__brand-ghost-white;
+  background-color: $color__brand-blue-sapphire;
+  a,
+  h1 {
+    color: $color__brand-ghost-white;
+  }
+  .site-branding {
+    display: flex;
+    flex-flow: row, nowrap;
+    align-items: center;
+    img {
+      margin-right: 1.5rem;
+      width: auto;
+      height: 40px;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row, nowrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
