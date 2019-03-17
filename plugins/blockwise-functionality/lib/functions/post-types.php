@@ -42,7 +42,8 @@ function blockwise_event()
     );
     $args = array(
         'label'                 => 'Event',
-        'description'           => 'Blockwise Events',
+        'description'           => 'Connecting BC’s Blockchain community 
+        one event at a time.',
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail', 'revisions'),
         'hierarchical'          => false,
@@ -98,7 +99,7 @@ function blockwise_lesson()
     );
     $args = array(
         'label'                 => 'Lesson',
-        'description'           => 'Blockwise Lessons',
+        'description'           => 'Your introduction into the world of Cryptocurrencies and Blockchain',
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail', 'revisions'),
         'hierarchical'          => false,
