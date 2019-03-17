@@ -7,6 +7,9 @@
   a,
   h1 {
     color: $color__brand-ghost-white;
+    &:hover {
+      color: $color__brand-yellow-orange;
+    }
   }
   .site-branding {
     display: flex;

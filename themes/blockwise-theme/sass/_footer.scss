@@ -1,3 +1,20 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+.site-footer {
+  background-color: $color__brand-blue-sapphire;
+  color: $color__brand-ghost-white;
+  a,
+  i {
+    color: $color__brand-ghost-white;
+    &:hover {
+      color: $color__brand-yellow-orange;
+    }
+  }
+  .container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
