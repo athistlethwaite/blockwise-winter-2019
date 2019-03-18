@@ -16,6 +16,7 @@
     @content;
   }
 }
+
 @mixin tablet {
   @media screen and (min-width: $tablet-width) and (max-width: $desktop-width) {
     @content;
