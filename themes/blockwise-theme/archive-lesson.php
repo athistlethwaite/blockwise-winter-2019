@@ -66,8 +66,6 @@ get_header(); ?>
 
         <?php endif; ?>
 
-
-
         <div id="load-content"></div>
 
     </main><!-- #main -->

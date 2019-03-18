@@ -12,10 +12,10 @@
     }).done(function (data) {
 
       $('#load-content').html('');
-      $('#load-content').append(data.content.rendered);
+      $('#load-content').append(data.content.rendered + '<a href="#" class="blockwise-btn white-btn">Back to top</a>');
 
     }).fail(function () {
-      console.log('something went wrong');
+      console.log('Something went wrong.');
     });
   });
 

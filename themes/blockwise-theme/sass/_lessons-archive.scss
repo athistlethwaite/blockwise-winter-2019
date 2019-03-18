@@ -7,7 +7,14 @@
 
   .page-header {
     background-image: url("../../assets/images/LearnBlocksBGmobile.png");
-    height: 200px;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    @include desktop {
+      background-image: url("../../assets/images/LearnBlocks.png");
+      background-repeat: no-repeat;
+      height: 100vh;
+    }
   }
 
   //change this just for layout
