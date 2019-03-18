@@ -46,7 +46,7 @@ get_header(); ?>
                     // echo $the_post_id;
                     ?>
 
-                    <li><a class="lesson-title" href='<?php echo get_permalink($the_post_id); ?>'
+                    <li><a class="lesson-title" href='#'
                     data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a></li>
                     <?php endforeach;
                 wp_reset_postdata(); ?>
