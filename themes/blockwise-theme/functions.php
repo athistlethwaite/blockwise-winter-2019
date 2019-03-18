@@ -88,11 +88,18 @@ add_filter('stylesheet_uri', 'blockwise_minified_css', 10, 2);
 function blockwise_scripts()
 {
 	wp_enqueue_style('font-awesome-cdn', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', array(), '5.7.2');
-	wp_enqueue_style('red-starter-style', get_stylesheet_uri());
+	wp_enqueue_style('bw-style', get_stylesheet_uri());
 
-	wp_enqueue_script('red-starter-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
-	wp_enqueue_script('red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
+	wp_enqueue_script('bw-navigation', get_template_directory_uri() . '/build/js/navigation.min.js', array(), '20151215', true);
+	wp_enqueue_script('bw-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 	wp_enqueue_script('jquery');
+
+	wp_enqueue_script('bw-scripts', get_template_directory_uri() . '/build/js/blockwise-theme.min.js', array('jquery'), '', true);
+	
+	wp_localize_script( 'bw-scripts', 'bw_vars', array(
+		'rest_url' => esc_url_raw( rest_url() ),
+	) );
+
 	// Enque additional js files after this line if you need to. Make sure you pass-in jquery 	to be able to use it as well.
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

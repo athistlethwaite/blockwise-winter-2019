@@ -1,1 +1,29 @@
-/* Lessons archive page */
+/*--------------------------------------------------------------
+# Lesson Archive Page
+--------------------------------------------------------------*/
+
+
+.post-type-archive-lesson {
+
+  .page-header {
+    background-image: url("../../assets/images/LearnBlocksBGmobile.png");
+    height: 200px;
+  }
+
+  //change this just for layout
+  h1 {
+    text-align: center;
+  }
+
+  .taxonomy-description {
+    text-align: center;
+  }
+
+  .lessons {
+    display: flex;
+
+    img {
+      height: 5px;
+    }
+  }
+}

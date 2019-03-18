@@ -39,7 +39,15 @@ get_header(); ?>
                         )
                     )); ?>
                     <?php foreach ($lessons as $lesson) : setup_postdata($lesson); ?>
-                    <li><a href='#'><?php echo $lesson->post_title; ?></a></li>
+
+                    <?php 
+                    // var_dump($lesson); 
+                    $the_post_id = $lesson->ID;
+                    // echo $the_post_id;
+                    ?>
+
+                    <li><a class="lesson-title" href='<?php echo get_permalink($the_post_id); ?>'
+                    data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a></li>
                     <?php endforeach;
                 wp_reset_postdata(); ?>
                 </ul>
@@ -57,6 +65,10 @@ get_header(); ?>
         <?php get_template_part('template-parts/content', 'none'); ?>
 
         <?php endif; ?>
+
+
+
+        <div id="load-content"></div>
 
     </main><!-- #main -->
 </div><!-- #primary -->

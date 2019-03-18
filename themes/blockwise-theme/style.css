@@ -543,7 +543,7 @@ body {
 
 blockquote,
 q {
-  quotes: '' ''; }
+  quotes: "" ""; }
   blockquote:before, blockquote:after,
   q:before,
   q:after {
@@ -977,14 +977,47 @@ object {
         -ms-flex-align: center;
             align-items: center; }
 
-/* Front page */
-/* About page */
-/* Events Archive page */
-/* Lessons archive page */
-/* Market Trends Archive page */
-/* Academy page */
-/* Membership page */
-/* Contact Us page */
+/*--------------------------------------------------------------
+# Front Page 
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Events Archive Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Lesson Archive Page
+--------------------------------------------------------------*/
+.post-type-archive-lesson .page-header {
+  background-image: url("../../assets/images/LearnBlocksBGmobile.png");
+  height: 200px; }
+
+.post-type-archive-lesson h1 {
+  text-align: center; }
+
+.post-type-archive-lesson .taxonomy-description {
+  text-align: center; }
+
+.post-type-archive-lesson .lessons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .post-type-archive-lesson .lessons img {
+    height: 5px; }
+
+/*--------------------------------------------------------------
+# Market Trends Archive Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Academy Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Membership Page
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Contact Page
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
