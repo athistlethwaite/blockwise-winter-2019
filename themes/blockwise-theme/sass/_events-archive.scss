@@ -1,3 +1,25 @@
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
+.archive {
+  .site-main {
+    text-align: center;
+    margin: 10px;
+    .page-header {
+      background: url(../../assets/images/EventsBanner.jpg);
+    }
+    .event {
+      padding: 20px 0px;
+      border: 1.5px solid $color__brand-dark-cyan;
+      .entry-header {
+        .entry-meta {
+          color: rgb(123, 209, 208);
+          padding: 0px 40px;
+          p {
+            margin: 10px;
+          }
+        }
+      }
+    }
+  }
+}

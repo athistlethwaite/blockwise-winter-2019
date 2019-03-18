@@ -986,6 +986,20 @@ object {
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
+.archive .site-main {
+  text-align: center;
+  margin: 10px; }
+  .archive .site-main .page-header {
+    background: url(../../assets/images/EventsBanner.jpg); }
+  .archive .site-main .event {
+    padding: 20px 0px;
+    border: 1.5px solid #008294; }
+    .archive .site-main .event .entry-header .entry-meta {
+      color: #7bd1d0;
+      padding: 0px 40px; }
+      .archive .site-main .event .entry-header .entry-meta p {
+        margin: 10px; }
+
 /*--------------------------------------------------------------
 # Lesson Archive Page
 --------------------------------------------------------------*/
