@@ -18,8 +18,5 @@
             <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
         </div><!-- .entry-meta -->
     </header><!-- .entry-header -->
-    <?php if (!is_front_page()) : ?>
     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
-    <?php endif; ?>
-
 </article><!-- #post-## --> 
