@@ -28,7 +28,7 @@ get_header(); ?>
             <header class="entry-header">
                 <a href="#" data-event-<?php echo $eventNumber; ?>>
                     <h2 class="entry-title"><?php the_title(); ?></h2>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/MembershipDropArrow.png" alt="Click for Event Info">
+                    <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/MembershipDropArrow.png" alt="Click for Event Info">
                 </a>
                 <div class="entry-meta">
                     <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
@@ -36,7 +36,7 @@ get_header(); ?>
                 </div><!-- .entry-meta -->
             </header><!-- .entry-header -->
             <?php if (!is_front_page()) : ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
+            <img class="small-chain" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
             <?php endif; ?>
 
         </article><!-- #post-## -->
