@@ -41,8 +41,6 @@ get_header(); ?>
             } ?>
 
         </ul>
-
-
         <?php endforeach; ?>
         <?php endwhile; ?>
 
