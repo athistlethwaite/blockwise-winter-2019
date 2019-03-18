@@ -20,11 +20,41 @@ get_header(); ?>
         </header><!-- .page-header -->
 
         <?php  /* Start the Loop */ ?>
+        <?php $eventNumber = 0; ?>
         <?php while (have_posts()) : the_post(); ?>
+        <?php $eventNumber++; ?>
 
-        <?php
-        get_template_part('template-parts/content', 'event');
-        ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <header class="entry-header">
+                <a href="#" data-event-<?php echo $eventNumber; ?>>
+                    <h2 class="entry-title"><?php the_title(); ?></h2>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/MembershipDropArrow.png" alt="Click for Event Info">
+                </a>
+                <div class="entry-meta">
+                    <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
+                    <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
+                </div><!-- .entry-meta -->
+            </header><!-- .entry-header -->
+            <?php if (!is_front_page()) : ?>
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
+            <?php endif; ?>
+
+        </article><!-- #post-## -->
+        <article class="pop-up hidden" data-event-<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <header class="entry-header">
+                <h2 class="entry-title"><?php the_title(); ?></h2>
+                <div class="entry-meta">
+                    <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
+                    <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
+                </div><!-- .entry-meta -->
+            </header><!-- .entry-header -->
+
+            <div class="entry-content">
+                <?php the_content(); ?>
+                <button class="white-btn btn">RSVP</button>
+            </div><!-- .entry-content -->
+
+        </article><!-- #post-## -->
 
         <?php endwhile; ?>
         <?php blockwise_numbered_pagination(); ?>
