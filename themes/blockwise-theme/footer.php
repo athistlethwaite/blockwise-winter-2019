@@ -4,26 +4,25 @@
  *
  * @package Blockwise_Theme
  */
-
 ?>
 
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer" role="contentinfo">
-    <div class="site-info">
-        <div class="copyright-social-icons">
+    <div class="container">
+        <div class="site-info">
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-square"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/FacebookIcon.png" alt="Facebook Icon"></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/InstaIcon.png" alt="Instagram Icon"></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/LinkedInIcon.png" alt="LinkedIn Icon"></a>
+                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/TwitterIcon.png" alt="Twitter Icon"></a>
             </div>
-            <span class="copyright">&copy; 2019 Blockwise. All Rights Reserved.</span>
-        </div>
-        <div class="bottom-menu">
-            <?php wp_nav_menu(array('theme_location' => 'secondary')); ?>
-        </div>
-    </div><!-- .site-info -->
+            <div class="footer-menu">
+                <?php wp_nav_menu(array('theme_location' => 'secondary')); ?>
+            </div>
+        </div><!-- .site-info -->
+        <p class="copyright">&copy; 2019 Blockwise. All Rights Reserved.</p>
+    </div>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

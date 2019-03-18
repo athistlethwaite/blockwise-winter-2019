@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+# Globals
+--------------------------------------------------------------*/
+.container {
+  max-width: $desktop-width;
+  margin: 0 auto;
+}
+
+.blockwise-btn {
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 1rem;
+  border: 0px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0.6rem 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.white-btn {
+  border: 3px solid $color__brand-yellow-orange;
+  color: $color__brand-dark-cyan;
+}
+.yellow-btn {
+  background: $color__brand-yellow-orange;
+  color: $color__brand-dark-cyan;
+}

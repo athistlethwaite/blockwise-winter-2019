@@ -1,6 +1,8 @@
 // Structure
 
 $base__space-unit: 1.5rem;
+$desktop-width: 1000px;
+$tablet-width: 600px;
 
 // Colors
 
@@ -10,13 +12,9 @@ $color__brand-middle-blue: #7bd1d0;
 $color__brand-ghost-white: #f7f9fa;
 $color__brand-yellow-orange: #ffae4e;
 
-$color__button: $color__brand-yellow-orange;
-$color__button-border: $color__brand-yellow-orange;
-
 $color__background-body: #fff;
 $color__text-header: $color__brand-blue-sapphire;
 $color__text-main: $color__brand-dark-cyan;
-
 
 $color__background-screen: #f1f1f1;
 $color__text-screen: #21759b;
@@ -32,15 +30,9 @@ $color__link-hover: $color__brand-yellow-orange;
 
 // Typography
 
-$font__main: "Raleway";
-$font__other: "Proxima-Nova";
-$font__code: Monaco,
-Consolas,
-"Andale Mono",
-"DejaVu Sans Mono",
-monospace;
-$font__pre: "Courier 10 Pitch",
-Courier,
-monospace;
+$font__main: 'Raleway';
+$font__other: 'Proxima-Nova';
+$font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+$font__pre: 'Courier 10 Pitch', Courier, monospace;
 $font__line-height-body: 1;
 $font__line-height-pre: 1;

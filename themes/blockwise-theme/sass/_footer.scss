@@ -1,8 +1,41 @@
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-.site-info {
-  background-image: url("../../assets/images/FooterBg.png");
-  display: flex;
-  flex-direction: row;
+.site-footer {
+  background-color: $color__brand-blue-sapphire;
+  color: $color__brand-ghost-white;
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+  p {
+    @include font-size(0.7);
+  }
+  .site-info {
+    box-sizing: border-box;
+    a {
+      color: $color__brand-ghost-white;
+      &:hover {
+        color: $color__brand-yellow-orange;
+      }
+    }
+    img {
+      height: 2em;
+      width: auto;
+      margin: 0 0.5em;
+      &:hover {
+        border: 2px solid $color__brand-yellow-orange;
+        border-radius: 50%;
+      }
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      li {
+        padding: 0.4em 0;
+      }
+    }
+    display: flex;
+    flex-flow: row, nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 }
