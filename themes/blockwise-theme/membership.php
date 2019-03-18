@@ -16,9 +16,26 @@ get_header(); ?>
 
         <?php get_template_part('template-parts/content', 'page'); ?>
 
+        <?php
+        $fields = CFS()->get('membership_options');
+        foreach ($fields as $field) {
+
+            echo $field['option_title'];
+        } ?>
+        <ul>
+            <li>
+                <?php $options = CFS()->get('membership_options');
+                foreach ($options as $option) {
+
+                    echo var_dump($option) . '<br>';
+                    echo '<h2> -------------- </h2>';
+                } ?>
+            </li>
+        </ul>
+
         <?php endwhile; ?>
 
     </main><!-- #main -->
 </div><!-- #primary -->
 
-<?php get_footer(); ?> 
+<?php  get_footer(); ?>
