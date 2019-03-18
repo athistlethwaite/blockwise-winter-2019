@@ -23,10 +23,12 @@
         </div><!-- .entry-meta -->
         <?php endif; ?>
     </header><!-- .entry-header -->
+    
     <?php if (blockwise_is_latest_post(get_the_ID())) : ?>
     <div class="entry-content">
         <?php the_excerpt(); ?>
         <a class="white-btn blockwise-btn" target='_blank' href="<?php echo CFS()->get('article_url'); ?>">Read More...</a>
     </div><!-- .entry-content -->
     <?php endif; ?>
+    
 </article><!-- #post-## --> 
