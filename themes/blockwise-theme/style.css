@@ -1005,7 +1005,13 @@ object {
 --------------------------------------------------------------*/
 .post-type-archive-lesson .page-header {
   background-image: url("../../assets/images/LearnBlocksBGmobile.png");
-  height: 200px; }
+  background-repeat: no-repeat;
+  height: 100vh; }
+  @media screen and (min-width: 1000px) {
+    .post-type-archive-lesson .page-header {
+      background-image: url("../../assets/images/LearnBlocks.png");
+      background-repeat: no-repeat;
+      height: 100vh; } }
 
 .post-type-archive-lesson h1 {
   text-align: center; }
