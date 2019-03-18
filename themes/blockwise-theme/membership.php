@@ -17,25 +17,36 @@ get_header(); ?>
         <?php get_template_part('template-parts/content', 'page'); ?>
 
         <?php
+        /*
+         * CFS Loop membership_options Title
+         */
         $fields = CFS()->get('membership_options');
-        foreach ($fields as $field) {
+        foreach ($fields as $field) :
+            echo "<h4>" . $field['option_title'] . "</h4>";
+            // var_dump($field);
+            ?>
 
-            echo $field['option_title'];
-        } ?>
         <ul>
-            <li>
-                <?php $options = CFS()->get('membership_options');
-                foreach ($options as $option) {
+            <?php 
+            /*
+                    * CFS Loop options title
+                    */
+            // $options = CFS()->get('options_list_items');
+            $options = $field['options_list_items'];
+            foreach ($options as $option) {
+                // var_dump($option);
+                echo "<li>" . $option['option'] . "</li>";
+                // echo $option['options_list_items'];
+                // echo $option['option '];
+            } ?>
 
-                    echo var_dump($option) . '<br>';
-                    echo '<h2> -------------- </h2>';
-                } ?>
-            </li>
         </ul>
 
+
+        <?php endforeach; ?>
         <?php endwhile; ?>
 
     </main><!-- #main -->
 </div><!-- #primary -->
 
-<?php  get_footer(); ?>
+<?php get_footer(); ?> 
