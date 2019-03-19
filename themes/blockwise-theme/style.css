@@ -1129,9 +1129,8 @@ object {
       .lessons .lesson-type-wrapper .lesson-type-title img {
         padding-top: 19px; }
     .lessons .lesson-type-wrapper ul {
-      margin: 0; }
-      .lessons .lesson-type-wrapper ul li {
-        display: none; }
+      margin: 0;
+      display: none; }
   .lessons .load-content .blockwise-btn,
   .lessons .load-content .white-btn {
     text-align: center; }
