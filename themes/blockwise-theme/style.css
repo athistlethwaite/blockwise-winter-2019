@@ -1114,6 +1114,14 @@ object {
 .post-48 .entry-header {
   background-image: url("../../assets/images/MembershipBanner.jpg"); }
 
+.post-48 .option-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
