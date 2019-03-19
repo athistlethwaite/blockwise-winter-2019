@@ -12,9 +12,8 @@
 
     @include desktop {
       background-image: url("../../assets/images/LearnBlocks.png");
-      background-size: auto;
-      height: 546px;
-      width: 1202px;
+      background-size: contain;
+      background-position: center;
     }
   }
 }

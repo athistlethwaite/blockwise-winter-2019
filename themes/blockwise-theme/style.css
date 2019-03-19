@@ -1031,9 +1031,8 @@ object {
   @media screen and (min-width: 1000px) {
     .post-type-archive-lesson .page-header {
       background-image: url("../../assets/images/LearnBlocks.png");
-      background-size: auto;
-      height: 546px;
-      width: 1202px; } }
+      background-size: contain;
+      background-position: center; } }
 
 .lessons {
   display: -webkit-box;
