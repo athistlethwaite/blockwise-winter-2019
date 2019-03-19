@@ -5,7 +5,8 @@
   max-width: $desktop-width;
   margin: 0 auto;
 }
-.site-main > article:first-child header,
+
+.site-main>article:first-child header,
 .page-header {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
