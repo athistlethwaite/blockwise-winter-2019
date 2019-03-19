@@ -38,7 +38,7 @@ get_header(); ?>
                     </div><!-- .entry-meta -->
                 </div>
                 <a href="#" data-event-<?php echo $eventNumber; ?>>
-                    <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/EventsArrow.jpg" alt="Click for Event Info">
+                    <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click for Event Info">
                 </a>
             </header><!-- .entry-header -->
             <?php if (!is_front_page()) : ?>

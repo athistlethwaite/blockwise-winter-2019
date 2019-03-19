@@ -98,8 +98,8 @@ function blockwise_lesson()
         'filter_items_list'     => 'Filter Lessons list',
     );
     $args = array(
-        'label'                 => 'What is Blockchain?',
-        'description'           => 'Your introduction into the world of Cryptocurrencies and Blockchain.',
+        'label'                 => 'Lesson',
+        'description'           => 'Your introduction into the world of <br> Cryptocurrencies and Blockchain.',
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail', 'revisions'),
         'hierarchical'          => false,
