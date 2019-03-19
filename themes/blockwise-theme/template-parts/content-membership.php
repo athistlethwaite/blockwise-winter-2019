@@ -25,9 +25,9 @@
             $fields = CFS()->get('membership_options');
             foreach ($fields as $field) : ?>
             <div class='option-title-list   <?php echo str_replace(' ', '', $field['option_title'])  ?>; '>
-                <h4>
+                <a href="">
                     <?php echo  $field['option_title'] ?>;
-                </h4>
+                </a>
                 <ul>
                     <?php 
                     /*
