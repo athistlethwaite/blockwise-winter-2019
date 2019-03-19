@@ -15,36 +15,35 @@ get_header(); ?>
         <?php while (have_posts()) : the_post(); ?>
 
         <?php get_template_part('template-parts/content', 'page'); ?>
+        <section class="option-wrapper">
 
-        <?php
+            <?php
         /*
          * CFS Loop membership_options Title
          */
-        $fields = CFS()->get('membership_options');
-        foreach ($fields as $field) :
-            echo "<h4>" . $field['option_title'] . "</h4>";
-            // var_dump($field);
-            ?>
+            $fields = CFS()->get('membership_options');
+            foreach ($fields as $field) : ?>
 
-        <ul>
-            <?php 
-            /*
-                    * CFS Loop options title
-                    */
-            // $options = CFS()->get('options_list_items');
-            $options = $field['options_list_items'];
-            foreach ($options as $option) {
-                // var_dump($option);
-                echo "<li>" . $option['option'] . "</li>";
-                // echo $option['options_list_items'];
-                // echo $option['option '];
-            } ?>
+            <?php echo "<div class='option-title-list'><h4>" . $field['option_title'] . "</h4>"; ?>
 
-        </ul>
-        <?php endforeach; ?>
-        <?php endwhile; ?>
+            <ul>
+                <?php 
+                /*
+             * CFS Loop list options
+             */
+                $options = $field['options_list_items'];
+                foreach ($options as $option) {
 
-    </main><!-- #main -->
+                    echo "<li>" . $option['option'] . "</li>";
+                } ?>
+
+            </ul>
+</div>
+<?php endforeach; ?>
+<?php endwhile; ?>
+
+</section>
+</main><!-- #main -->
 </div><!-- #primary -->
 
 <?php get_footer(); ?> 
