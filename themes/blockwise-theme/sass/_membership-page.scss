@@ -6,4 +6,8 @@
   .entry-header {
     background-image: url('../../assets/images/MembershipBanner.jpg');
   }
+  .option-wrapper {
+      display: flex;
+      justify-content: space-between;
+  }
 }

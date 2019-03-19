@@ -14,8 +14,8 @@ get_header(); ?>
 
         <header class="page-header">
             <div class="header-content-wrapper">
+                <h1 class="page-title">What is Blockchain?</h1>
                 <?php
-                the_archive_title('<h1 class="page-title">', '</h1>');
                 the_archive_description('<div class="taxonomy-description">', '</div>');
                 ?>
             </div>
@@ -25,10 +25,14 @@ get_header(); ?>
             <?php $lesson_types = get_terms('lesson_type'); ?>
             <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
             <div class="lesson-type-wrapper">
-                <a href="#">
-                    <h3><?php echo $lesson_type->name ?></h3>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/MembershipDropArrow.png" alt="Click to see Lesson">
-                </a>
+                <div class="lesson-type-title">
+                    <div>
+                        <?php echo $lesson_type->name ?>
+                    </div>
+
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click to see Lesson">
+                </div>
+
                 <ul>
                     <?php $lessons = get_posts(array(
                         'post_type' => 'lesson',
@@ -53,7 +57,7 @@ get_header(); ?>
                 wp_reset_postdata(); ?>
                 </ul>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
+            <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains"> -->
             <?php endforeach;
         wp_reset_postdata(); ?>
 

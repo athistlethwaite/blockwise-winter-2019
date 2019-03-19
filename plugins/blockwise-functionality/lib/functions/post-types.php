@@ -99,7 +99,7 @@ function blockwise_lesson()
     );
     $args = array(
         'label'                 => 'Lesson',
-        'description'           => 'Your introduction into the world of Cryptocurrencies and Blockchain',
+        'description'           => 'Your introduction into the world of <br> Cryptocurrencies and Blockchain.',
         'labels'                => $labels,
         'supports'              => array('title', 'editor', 'thumbnail', 'revisions'),
         'hierarchical'          => false,
