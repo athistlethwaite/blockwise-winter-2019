@@ -13,10 +13,12 @@ get_header(); ?>
         <?php if (have_posts()) : ?>
 
         <header class="page-header">
-            <?php
-            the_archive_title('<h1 class="page-title">', '</h1>');
-            the_archive_description('<div class="taxonomy-description">', '</div>');
-            ?>
+            <div class="header-content-wrapper">
+                <?php
+                the_archive_title('<h1 class="page-title">', '</h1>');
+                the_archive_description('<div class="taxonomy-description">', '</div>');
+                ?>
+            </div>
         </header><!-- .page-header -->
 
         <section class="lessons">
@@ -46,8 +48,7 @@ get_header(); ?>
                     // echo $the_post_id;
                     ?>
 
-                    <li><a class="lesson-title" href='#'
-                    data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a></li>
+                    <li><a class="lesson-title" href='#' data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a></li>
                     <?php endforeach;
                 wp_reset_postdata(); ?>
                 </ul>

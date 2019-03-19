@@ -9,6 +9,7 @@
 
   p {
     @include font-size(0.7);
+    text-align: center;
   }
 
   .site-info {

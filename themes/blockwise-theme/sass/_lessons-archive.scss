@@ -8,29 +8,57 @@
   .page-header {
     background-image: url("../../assets/images/LearnBlocksBGmobile.png");
     background-repeat: no-repeat;
-    height: 100vh;
+    background-size: contain;
 
     @include desktop {
       background-image: url("../../assets/images/LearnBlocks.png");
-      background-repeat: no-repeat;
-      height: 100vh;
+      background-size: auto;
+      height: 546px;
+      width: 1202px;
+    }
+  }
+}
+
+
+.lessons {
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    flex-direction: row;
+  }
+
+  img {
+    height: 20px;
+    width: 20px;
+
+    @include desktop {
+      width: 26.56px;
+      height: 10.7px;
+
     }
   }
 
-  //change this just for layout
-  h1 {
-    text-align: center;
-  }
+  .lesson-type-wrapper {
 
-  .taxonomy-description {
-    text-align: center;
-  }
-
-  .lessons {
-    display: flex;
-
-    img {
-      height: 5px;
+    h3 {
+      color: white;
+      text-align: center;
+      padding-top: 30px;
+      height: 86px;
+      width: 397px;
+      border-radius: 20px;
+      background-color: $color__brand-blue-sapphire;
+      box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
     }
+  }
+}
+
+
+.load-content {
+
+  .blockwise-btn,
+  .white-btn {
+    text-align: center;
   }
 }

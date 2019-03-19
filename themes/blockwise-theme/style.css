@@ -915,6 +915,25 @@ object {
   max-width: 1000px;
   margin: 0 auto; }
 
+.site-main > article:first-child header,
+.page-header {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center; }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1028,25 +1047,49 @@ object {
 .post-type-archive-lesson .page-header {
   background-image: url("../../assets/images/LearnBlocksBGmobile.png");
   background-repeat: no-repeat;
-  height: 100vh; }
+  background-size: contain; }
   @media screen and (min-width: 1000px) {
     .post-type-archive-lesson .page-header {
       background-image: url("../../assets/images/LearnBlocks.png");
-      background-repeat: no-repeat;
-      height: 100vh; } }
+      background-size: auto;
+      height: 546px;
+      width: 1202px; } }
 
-.post-type-archive-lesson h1 {
-  text-align: center; }
-
-.post-type-archive-lesson .taxonomy-description {
-  text-align: center; }
-
-.post-type-archive-lesson .lessons {
+.lessons {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
-  .post-type-archive-lesson .lessons img {
-    height: 5px; }
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media screen and (min-width: 1000px) {
+    .lessons {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+  .lessons img {
+    height: 20px;
+    width: 20px; }
+    @media screen and (min-width: 1000px) {
+      .lessons img {
+        width: 26.56px;
+        height: 10.7px; } }
+  .lessons .lesson-type-wrapper h3 {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    height: 86px;
+    width: 397px;
+    border-radius: 20px;
+    background-color: #026082;
+    -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5); }
+
+.load-content .blockwise-btn,
+.load-content .white-btn {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Market Trends Archive Page
@@ -1057,6 +1100,9 @@ object {
 /*--------------------------------------------------------------
 # Membership Page
 --------------------------------------------------------------*/
+.post-48 .entry-header {
+  background-image: url("../../assets/images/MembershipBanner.jpg"); }
+
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
@@ -1070,7 +1116,8 @@ object {
   padding-top: 2rem; }
   .site-footer p {
     font-size: 11.2px;
-    font-size: 0.7rem; }
+    font-size: 0.7rem;
+    text-align: center; }
   .site-footer .site-info {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
