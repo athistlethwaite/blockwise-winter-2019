@@ -1031,9 +1031,11 @@ object {
   @media screen and (min-width: 1000px) {
     .post-type-archive-lesson .page-header {
       background-image: url("../../assets/images/LearnBlocks.png");
-      background-size: auto; } }
+      background-size: auto;
+      height: 546px;
+      width: 1202px; } }
 
-.post-type-archive-lesson .lessons {
+.lessons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1042,20 +1044,31 @@ object {
       -ms-flex-direction: column;
           flex-direction: column; }
   @media screen and (min-width: 1000px) {
-    .post-type-archive-lesson .lessons {
+    .lessons {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row; } }
-  .post-type-archive-lesson .lessons img {
+  .lessons img {
     height: 20px;
     width: 20px; }
     @media screen and (min-width: 1000px) {
-      .post-type-archive-lesson .lessons img {
+      .lessons img {
         width: 26.56px;
         height: 10.7px; } }
+  .lessons .lesson-type-wrapper h3 {
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    height: 86px;
+    width: 397px;
+    border-radius: 20px;
+    background-color: #026082;
+    -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5); }
 
-.load-content .blockwise-btn {
+.load-content .blockwise-btn,
+.load-content .white-btn {
   text-align: center; }
 
 /*--------------------------------------------------------------
