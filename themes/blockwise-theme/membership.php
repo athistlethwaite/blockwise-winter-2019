@@ -14,13 +14,12 @@ get_header(); ?>
 
         <?php while (have_posts()) : the_post(); ?>
 
-        <?php get_template_part('template-parts/content', 'page'); ?>
+        <?php get_template_part('template-parts/content', 'membership'); ?>
         <section class="option-wrapper">
-
             <?php
-        /*
-         * CFS Loop membership_options Title
-         */
+    /*
+     * CFS Loop membership_options Title
+     */
             $fields = CFS()->get('membership_options');
             foreach ($fields as $field) : ?>
 
@@ -29,8 +28,8 @@ get_header(); ?>
             <ul>
                 <?php 
                 /*
-             * CFS Loop list options
-             */
+         * CFS Loop list options
+         */
                 $options = $field['options_list_items'];
                 foreach ($options as $option) {
 
@@ -43,6 +42,8 @@ get_header(); ?>
 <?php endwhile; ?>
 
 </section>
+
+
 </main><!-- #main -->
 </div><!-- #primary -->
 
