@@ -604,12 +604,6 @@ input[type='submit'] {
   font-size: 0.75rem;
   line-height: 1;
   padding: 0.6rem 1.5rem; }
-  button:hover,
-  input[type='button']:hover,
-  input[type='reset']:hover,
-  input[type='submit']:hover {
-    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
-            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02); }
   button:active, button:focus,
   input[type='button']:active,
   input[type='button']:focus,
@@ -617,9 +611,7 @@ input[type='submit'] {
   input[type='reset']:focus,
   input[type='submit']:active,
   input[type='submit']:focus {
-    border-color: #aaa #bbb #bbb;
-    -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
-            box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15); }
+    border-color: #aaa #bbb #bbb; }
 
 /* Fields */
 input[type='text'],
@@ -1130,9 +1122,8 @@ object {
       .lessons .lesson-type-wrapper .lesson-type-title img {
         padding-top: 19px; }
     .lessons .lesson-type-wrapper ul {
-      margin: 0; }
-      .lessons .lesson-type-wrapper ul li {
-        display: none; }
+      margin: 0;
+      display: none; }
   .lessons .load-content .blockwise-btn,
   .lessons .load-content .white-btn {
     text-align: center; }
