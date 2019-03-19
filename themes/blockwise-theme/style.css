@@ -1011,8 +1011,7 @@ object {
   .post-type-archive-event .site-main .page-header {
     background: url(../../assets/images/EventsBanner.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 190px; }
+    background-size: 100% 100%; }
     .post-type-archive-event .site-main .page-header h1 {
       margin-top: 0px; }
     .post-type-archive-event .site-main .page-header .taxonomy-description p {
@@ -1043,35 +1042,37 @@ object {
 @media screen and (min-width: 1000px) {
   .post-type-archive-event .site-content {
     max-width: none;
-    background: url(../../assets/images/EventsBanner-big.jpg); }
+    background-image: url(../../assets/images/EventsBanner-big.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto; }
     .post-type-archive-event .site-content .site-main {
       text-align: center;
       margin-bottom: 10px; }
-      .post-type-archive-event .site-content .site-main .page-header h1 {
-        margin-top: 0px; }
-      .post-type-archive-event .site-content .site-main .page-header .taxonomy-description p {
-        margin: 0px; }
+      .post-type-archive-event .site-content .site-main .page-header {
+        background: none; }
+        .post-type-archive-event .site-content .site-main .page-header h1 {
+          margin-top: 0px; }
+        .post-type-archive-event .site-content .site-main .page-header .taxonomy-description p {
+          margin: 0px; }
       .post-type-archive-event .site-content .site-main .event {
         padding: 20px 0px;
         margin: 0px;
-        border: 1.5px solid #008294;
-        opacity: 1; }
+        border: none; }
         .post-type-archive-event .site-content .site-main .event .entry-header {
           padding: 0px 30px;
-          display: grid;
-          grid-template-columns: 90% 10%;
-          grid-template-areas: 'main logo' 'main logo'; }
-          .post-type-archive-event .site-content .site-main .event .entry-header .content-event {
-            grid-area: main; }
-            .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta {
-              color: #7bd1d0; }
-              .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta p {
-                margin-bottom: 5px; }
+          border: 1.5px solid #008294;
+          background-color: #f7f9fa; }
+          .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta {
+            color: #7bd1d0; }
+            .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta p {
+              margin-bottom: 5px; }
           .post-type-archive-event .site-content .site-main .event .entry-header .small-angle {
-            grid-area: logo;
-            padding-top: 60px; }
+            display: none; }
         .post-type-archive-event .site-content .site-main .event .small-chain {
-          display: none; }
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex; }
       .post-type-archive-event .site-content .site-main .hidden {
         display: none; } }
 
@@ -1147,6 +1148,14 @@ object {
 --------------------------------------------------------------*/
 .post-48 .entry-header {
   background-image: url("../../assets/images/MembershipBanner.jpg"); }
+
+.post-48 .option-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 /*--------------------------------------------------------------
 # Contact Page
