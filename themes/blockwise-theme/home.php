@@ -13,9 +13,11 @@ get_header(); ?>
         <?php if (have_posts()) : ?>
 
         <?php if (is_home() && !is_front_page()) : ?>
-        <header>
-            <h1 class="page-title"><?php single_post_title(); ?></h1>
-            <p>The Description</p>
+        <header class="page-header">
+            <div class="header-content-wrapper">
+                <h1 class="page-title"><?php single_post_title(); ?></h1>
+                <p>The Description</p>
+            </div>
         </header>
         <?php endif; ?>
 
