@@ -8,28 +8,39 @@
   .page-header {
     background-image: url("../../assets/images/LearnBlocksBGmobile.png");
     background-repeat: no-repeat;
-    height: 100vh;
-    width: auto;
+    background-size: contain;
 
     @include desktop {
       background-image: url("../../assets/images/LearnBlocks.png");
+      background-size: auto;
     }
   }
 
-  //change this just for layout
-  h1 {
-    text-align: center;
-  }
-
-  .taxonomy-description {
-    text-align: center;
-  }
 
   .lessons {
     display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
 
     img {
-      height: 5px;
+      height: 20px;
+      width: 20px;
+
+      @include desktop {
+        width: 26.56px;
+        height: 10.7px;
+
+      }
     }
+  }
+}
+
+.load-content {
+
+  .blockwise-btn {
+    text-align: center;
   }
 }
