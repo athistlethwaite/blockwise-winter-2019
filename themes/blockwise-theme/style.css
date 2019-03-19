@@ -1008,12 +1008,11 @@ object {
 .post-type-archive-lesson .page-header {
   background-image: url("../../assets/images/LearnBlocksBGmobile.png");
   background-repeat: no-repeat;
-  height: 100vh; }
+  height: 100vh;
+  width: auto; }
   @media screen and (min-width: 1000px) {
     .post-type-archive-lesson .page-header {
-      background-image: url("../../assets/images/LearnBlocks.png");
-      background-repeat: no-repeat;
-      height: 100vh; } }
+      background-image: url("../../assets/images/LearnBlocks.png"); } }
 
 .post-type-archive-lesson h1 {
   text-align: center; }
