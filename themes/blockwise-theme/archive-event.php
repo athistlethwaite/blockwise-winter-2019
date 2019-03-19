@@ -28,19 +28,22 @@ get_header(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header class="entry-header">
+                <div clacc="content-event">
+                    <a href="#" data-event-<?php echo $eventNumber; ?>>
+                        <h2 class="entry-title"><?php the_title(); ?></h2>
+                    </a>
+                    <div class="entry-meta">
+                        <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
+                        <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
+                    </div><!-- .entry-meta -->
+                </div>
                 <a href="#" data-event-<?php echo $eventNumber; ?>>
-                    <h2 class="entry-title"><?php the_title(); ?></h2>
-                    <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/MembershipDropArrow.png" alt="Click for Event Info">
+                    <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/EventsArrow.jpg" alt="Click for Event Info">
                 </a>
-                <div class="entry-meta">
-                    <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
-                    <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
-                </div><!-- .entry-meta -->
             </header><!-- .entry-header -->
             <?php if (!is_front_page()) : ?>
             <img class="small-chain" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
             <?php endif; ?>
-
         </article><!-- #post-## -->
         <article class="pop-up hidden" data-event-<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header class="entry-header">
