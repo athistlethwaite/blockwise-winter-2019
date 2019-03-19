@@ -988,19 +988,39 @@ object {
 --------------------------------------------------------------*/
 .post-type-archive-event .site-main {
   text-align: center;
-  margin: 10px 0px; }
+  margin-bottom: 10px; }
   .post-type-archive-event .site-main .page-header {
-    background: url(../../assets/images/EventsBanner.jpg); }
+    background: url(../../assets/images/EventsBanner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .post-type-archive-event .site-main .page-header h1 {
+      margin-top: 0px;
+      padding-top: 50px; }
+    .post-type-archive-event .site-main .page-header .taxonomy-description p {
+      margin: 0px;
+      padding-bottom: 40px; }
   .post-type-archive-event .site-main .event {
     padding: 20px 0px;
+    margin: 0px;
     border: 1.5px solid #008294; }
-    .post-type-archive-event .site-main .event .entry-header .entry-meta {
-      color: #7bd1d0;
-      padding: 0px 40px; }
-      .post-type-archive-event .site-main .event .entry-header .entry-meta p {
-        margin: 10px; }
-    .post-type-archive-event .site-main .event .small-chaine {
+    .post-type-archive-event .site-main .event .entry-header {
+      padding: 0px 30px;
+      display: grid;
+      grid-template-columns: 90% 10%;
+      grid-template-areas: 'main logo' 'main logo'; }
+      .post-type-archive-event .site-main .event .entry-header .content-event {
+        grid-area: main; }
+        .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
+          color: #7bd1d0; }
+          .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta p {
+            margin-bottom: 5px; }
+      .post-type-archive-event .site-main .event .entry-header .small-angle {
+        grid-area: logo;
+        padding-top: 60px; }
+    .post-type-archive-event .site-main .event .small-chain {
       display: none; }
+  .post-type-archive-event .site-main .hidden {
+    display: none; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
