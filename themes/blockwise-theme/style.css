@@ -1086,6 +1086,9 @@ object {
       height: 60vh;
       width: 100%; } }
 
+.post-type-archive-lesson h4 {
+  text-align: center; }
+
 .lessons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1113,19 +1116,44 @@ object {
       width: 325px;
       height: 65px; }
       .lessons .lesson-type-wrapper .lesson-type-title div {
+        width: 90%;
+        padding-top: 24px;
+        float: left;
         color: white;
         font-weight: bold;
-        float: left;
-        width: 90%;
-        text-align: center;
-        padding-top: 24px; }
+        text-align: center; }
       .lessons .lesson-type-wrapper .lesson-type-title img {
         padding-top: 19px; }
     .lessons .lesson-type-wrapper ul {
       margin: 0;
-      display: none; }
-  .lessons .load-content .blockwise-btn,
-  .lessons .load-content .white-btn {
+      display: none;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px 10px; }
+      .lessons .lesson-type-wrapper ul li {
+        border: 1px solid #026082;
+        border-radius: 5px;
+        border: 1px solid #026082;
+        padding: 5px 5px; }
+
+.load-content {
+  position: absolute;
+  top: 0;
+  background-color: white; }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .load-content .blockwise-btn,
+  .load-content .white-btn {
     text-align: center; }
 
 /*--------------------------------------------------------------

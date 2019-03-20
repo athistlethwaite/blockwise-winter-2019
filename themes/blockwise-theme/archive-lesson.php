@@ -16,20 +16,19 @@ get_header(); ?>
             <div class="header-content-wrapper">
                 <h1 class="page-title">What is Blockchain?</h1>
                 <?php
-                the_archive_description('<div class="taxonomy-description">', '</div>');
+                the_archive_description('<h4 class="taxonomy-description">', '</h4>');
                 ?>
             </div>
         </header><!-- .page-header -->
+
+        <h4>Select a Lesson:</h4>
 
         <section class="lessons">
             <?php $lesson_types = get_terms('lesson_type'); ?>
             <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
             <div class="lesson-type-wrapper">
                 <div class="lesson-type-title">
-                    <div>
-                        <?php echo $lesson_type->name ?>
-                    </div>
-
+                    <div><?php echo $lesson_type->name ?></div>
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click to see Lesson">
                 </div>
 
@@ -44,25 +43,24 @@ get_header(); ?>
                             )
                         )
                     )); ?>
+
                     <?php foreach ($lessons as $lesson) : setup_postdata($lesson); ?>
 
-                    <?php 
-                    // var_dump($lesson); 
-                    $the_post_id = $lesson->ID;
-                    // echo $the_post_id;
-                    ?>
+                    <?php $the_post_id = $lesson->ID; ?>
 
-                    <li><a class="lesson-title" href='#' data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a></li>
+                    <li>
+                        <a class="lesson-title" href='#' data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a>
+                    </li>
+
                     <?php endforeach;
                 wp_reset_postdata(); ?>
                 </ul>
             </div>
-            <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains"> -->
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
             <?php endforeach;
         wp_reset_postdata(); ?>
 
         </section>
-
 
 
         <?php else : ?>
@@ -71,7 +69,7 @@ get_header(); ?>
 
         <?php endif; ?>
 
-        <div id="load-content"></div>
+        <div id="load-content" class="load-content"></div>
 
     </main><!-- #main -->
 </div><!-- #primary -->

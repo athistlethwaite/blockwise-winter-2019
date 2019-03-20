@@ -21,6 +21,10 @@
       width: 100%;
     }
   }
+
+  h4 {
+    text-align: center;
+  }
 }
 
 .lessons {
@@ -45,13 +49,12 @@
       height: 65px;
 
       div {
+        width: 90%;
+        padding-top: 24px;
+        float: left;
         color: white;
         font-weight: bold;
-        float: left;
-        width: 90%;
         text-align: center;
-        padding-top: 24px;
-
       }
 
       img {
@@ -63,14 +66,37 @@
     ul {
       margin: 0;
       display: none;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px 10px;
+
+      li {
+        border: 1px solid $color__brand-blue-sapphire;
+        border-radius: 5px;
+        border: 1px solid $color__brand-blue-sapphire;
+        padding: 5px 5px;
+      }
+    }
+  }
+}
+
+.load-content {
+  position: absolute;
+  top: 0;
+  background-color: white;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
     }
   }
 
-  .load-content {
-
-    .blockwise-btn,
-    .white-btn {
-      text-align: center;
-    }
+  .blockwise-btn,
+  .white-btn {
+    text-align: center;
   }
 }

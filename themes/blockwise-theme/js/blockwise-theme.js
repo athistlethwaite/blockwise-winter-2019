@@ -3,8 +3,7 @@
 
   $('.lesson-title').on('click', function (event) {
     event.preventDefault();
-    var itemClicked = $(this).data('load-post');
-    console.log(itemClicked);
+    const itemClicked = $(this).data('load-post');
 
     $.ajax({
       method: 'GET',
@@ -12,10 +11,10 @@
     }).done(function (data) {
 
       $('#load-content').html('');
-      $('#load-content').append(data.content.rendered + '<a href="#" class="blockwise-btn white-btn">Back to top</a>');
+      $('#load-content').append('<a href="" class="back-to-lesson"></a><h2>' + data.title.rendered + '</h2>' + data.content.rendered + '<a href="#" class="blockwise-btn white-btn">Back to top</a><a href="" class="back-to-lesson"></a>');
 
     }).fail(function () {
-      console.log('Something went wrong.');
+      alert('Something went wrong.');
     });
   });
 
