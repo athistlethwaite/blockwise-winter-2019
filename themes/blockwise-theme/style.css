@@ -1137,6 +1137,9 @@ object {
 /*--------------------------------------------------------------
 # Membership Page
 --------------------------------------------------------------*/
+.post-48 .wpcf7-form {
+  display: none; }
+
 .post-48 .entry-header {
   background-image: url("../../assets/images/MembershipBanner.jpg"); }
 
@@ -1147,6 +1150,9 @@ object {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+
+.post-48 .sign-up-pop {
+  text-align: center; }
 
 /*--------------------------------------------------------------
 # Contact Page
