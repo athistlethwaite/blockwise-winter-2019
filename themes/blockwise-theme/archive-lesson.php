@@ -28,7 +28,7 @@ get_header(); ?>
             <?php $x=0;?>
             <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
             <?php $x++; ?>
-            <div class="lesson-type-wrapper">
+            <div class="lesson-type-wrapper chain">
                 <div class="lesson-type-title">
                     <h3 id="button<?php echo $x ?>"><?php echo $lesson_type->name ?></h3>
                     <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click to see Lesson"></div>
