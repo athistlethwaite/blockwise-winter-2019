@@ -6,7 +6,7 @@
   ul,
   li {
     margin-left: 0;
-    padding-left: 0;
+    padding: 10px 0px;
   }
   .wpcf7-form {
     display: none;
@@ -16,14 +16,24 @@
   .entry-header {
     background-image: url('../../assets/images/MembershipBanner.jpg');
   }
-  .option-wrapper {
+  .tablinks {
     display: flex;
     justify-content: space-between;
   }
+  .option-wrapper {
+    ul {
+      list-style-image: url('../../assets/images/MembershipCheck.png');
+    }
+  }
   .list-content {
     display: none;
+    width: 100%;
+    padding: 0 140px;
   }
   .sign-up-pop {
     margin-left: 41%;
+  }
+  .active {
+    display: block;
   }
 }

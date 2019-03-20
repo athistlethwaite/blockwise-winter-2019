@@ -1415,7 +1415,7 @@ https://flickity.metafizzy.co
 .post-48 ul,
 .post-48 li {
   margin-left: 0;
-  padding-left: 0; }
+  padding: 10px 0px; }
 
 .post-48 .wpcf7-form {
   display: none; }
@@ -1423,7 +1423,7 @@ https://flickity.metafizzy.co
 .post-48 .entry-header {
   background-image: url("../../assets/images/MembershipBanner.jpg"); }
 
-.post-48 .option-wrapper {
+.post-48 .tablinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1431,11 +1431,19 @@ https://flickity.metafizzy.co
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.post-48 .option-wrapper ul {
+  list-style-image: url("../../assets/images/MembershipCheck.png"); }
+
 .post-48 .list-content {
-  display: none; }
+  display: none;
+  width: 100%;
+  padding: 0 140px; }
 
 .post-48 .sign-up-pop {
   margin-left: 41%; }
+
+.post-48 .active {
+  display: block; }
 
 /*--------------------------------------------------------------
 # Contact Page
