@@ -20,7 +20,7 @@ get_header(); ?>
                 ?>
             </div>
         </header><!-- .page-header -->
-
+        <div class="all-articles">
         <?php  /* Start the Loop */ ?>
         <?php $eventNumber = 0; ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -41,7 +41,7 @@ get_header(); ?>
                     <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click for Event Info">
                 </a>
             </header><!-- .entry-header -->
-            <?php if (!is_front_page()) : ?>
+            <?php if ($eventNumber%3!==0) : ?>
             <img class="small-chain" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
             <?php endif; ?>
         </article><!-- #post-## -->
@@ -62,6 +62,7 @@ get_header(); ?>
         </article><!-- #post-## -->
 
         <?php endwhile; ?>
+        </div>
         <?php blockwise_numbered_pagination(); ?>
 
 
