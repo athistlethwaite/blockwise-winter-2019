@@ -4,17 +4,21 @@
 .site-header {
   color: $color__brand-ghost-white;
   background-color: $color__brand-blue-sapphire;
+
   a,
   h1 {
     color: $color__brand-ghost-white;
+
     &:hover {
       color: $color__brand-yellow-orange;
     }
   }
+
   .site-branding {
     display: flex;
     flex-flow: row, nowrap;
     align-items: center;
+
     img {
       margin-right: 1.5rem;
       width: auto;

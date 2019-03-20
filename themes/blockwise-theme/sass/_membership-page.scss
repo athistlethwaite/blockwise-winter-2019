@@ -3,11 +3,27 @@
 --------------------------------------------------------------*/
 
 .post-48 {
+  ul,
+  li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .wpcf7-form {
+    display: none;
+    // @include desktop {
+    // }
+  }
   .entry-header {
     background-image: url('../../assets/images/MembershipBanner.jpg');
   }
   .option-wrapper {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+  }
+  .list-content {
+    display: none;
+  }
+  .sign-up-pop {
+    margin-left: 41%;
   }
 }
