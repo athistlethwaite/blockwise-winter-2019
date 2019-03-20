@@ -1,6 +1,6 @@
 (function ($) {
 
-
+  //Lesson Content 
   $('.lesson-title').on('click', function (event) {
     event.preventDefault();
     const itemClicked = $(this).data('load-post');
@@ -21,6 +21,12 @@
     }).fail(function () {
       alert('Something went wrong.');
     });
+  });
+
+  //Remove Chain Link 
+  $('.lesson-type-wrapper').on('click', function (event) {
+    $('#pseudo').remove();
+
   });
 
 })(jQuery);
