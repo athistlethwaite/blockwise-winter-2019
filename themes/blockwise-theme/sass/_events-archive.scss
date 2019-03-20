@@ -8,99 +8,127 @@
     .page-header {
       background: url(../../assets/images/EventsBanner.jpg);
       background-repeat: no-repeat;
-      background-size:100% 100%;;
-      h1{
-          margin-top: 0px;
+      background-size: 100%;
+      height: 50vh;
+      h1 {
+        margin-top: 0px;
       }
-      .taxonomy-description p{
-          margin:0px;
+      .taxonomy-description p {
+        margin: 0px;
       }
     }
     .event {
       padding: 20px 0px;
-      margin:0px;
+      margin: 0px;
       border: 1.5px solid $color__brand-dark-cyan;
       .entry-header {
-        padding:0px 30px;
-        display:grid;
-        grid-template-columns:90% 10%;
+        padding: 0px 30px;
+        display: grid;
+        grid-template-columns: 90% 10%;
         grid-template-areas:
-        'main logo'
-        'main logo';
-          .content-event{
-            grid-area:main;
-            .entry-meta {
-                color:$color__brand-middle-blue;
-                p{
-                    margin-bottom:5px;
-                }
+          'main logo'
+          'main logo';
+        .content-event {
+          grid-area: main;
+          .entry-meta {
+            color: $color__brand-middle-blue;
+            p {
+              margin-bottom: 5px;
             }
           }
-          .small-angle{
-            grid-area:logo;
-            padding-top: 60px;
-          }
+        }
+        .small-angle {
+          grid-area: logo;
+          padding-top: 60px;
+        }
       }
-      .small-chain{
-          display:none;
+      .small-chain {
+        display: none;
       }
     }
-    .hidden{
-        display:none;
-
+    .hidden {
+      display: none;
     }
   }
 }
 
 @include desktop {
-    .post-type-archive-event {
-        .site-content{
-            max-width: none;
-            background-image: url(../../assets/images/EventsBanner-big.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            height:auto;
-            .site-main {
-            text-align: center;
-            margin-bottom: 10px;
-            .page-header {
-                background: none;
-                h1{
-                    margin-top: 0px;
-                }
-                .taxonomy-description p{
-                    margin:0px;
-                }
-            }
-            .event {
-                padding: 20px 0px;
-                margin:0px;
-                border:none;
-                .entry-header {
-                    padding:0px 30px;
-                    border: 1.5px solid $color__brand-dark-cyan;
-                    background-color: $color__brand-ghost-white;
-                    .content-event{
-                    .entry-meta {
-                        color:$color__brand-middle-blue;
-                        p{
-                            margin-bottom:5px;
-                        }
-                    }
-                    }
-                    .small-angle{
-                        display: none;
-                    }
-                }
-                .small-chain{
-                    display:flex;
-                }
-            }
-            .hidden{
-                display:none;
-        
-            }
-            }
+  .post-type-archive-event {
+    .site-content {
+      max-width: none;
+      background-image: url(../../assets/images/EventsBanner-big.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: auto;
+      .site-main {
+        text-align: center;
+        margin-bottom: 10px;
+        .page-header {
+          background: none;
+          h1 {
+            margin-top: 0px;
+            margin-bottom: 20px;
+            font-size: 3rem;
+          }
+          .taxonomy-description p {
+            margin: 0px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: $color__brand-blue-sapphire;
+          }
         }
+        .all-articles {
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          .event {
+            padding: 0px;
+            margin: 0px;
+            border: none;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            flex: 1 0 33%;
+
+            .entry-header {
+              padding: 0px 10px;
+              border: 1.5px solid $color__brand-dark-cyan;
+              background-color: $color__brand-ghost-white;
+              flex: 1 0 90%;
+              height: 200px;
+              border-radius: 15px;
+              box-sizing: border-box;
+              .content-event {
+                padding-top: 15px;
+                .entry-meta {
+                  color: $color__brand-middle-blue;
+                  p {
+                    margin-bottom: 5px;
+                  }
+                }
+              }
+              a .small-angle {
+                display: none;
+              }
+            }
+            .small-chain {
+              display: inline-block;
+              flex: 1 0 9%;
+              width: 8px;
+            }
+          }
+        }
+        .hidden {
+          display: none;
+        }
+        .event:last-child {
+            .small-chain {
+              width: 0;
+            }
+          }
+      }
     }
+  }
 }
+

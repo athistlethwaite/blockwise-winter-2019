@@ -20,7 +20,7 @@ get_header(); ?>
                 ?>
             </div>
         </header><!-- .page-header -->
-
+        <div class="all-articles">
         <?php  /* Start the Loop */ ?>
         <?php $eventNumber = 0; ?>
         <?php while (have_posts()) : the_post(); ?>
@@ -62,6 +62,7 @@ get_header(); ?>
         </article><!-- #post-## -->
 
         <?php endwhile; ?>
+        </div>
         <?php blockwise_numbered_pagination(); ?>
 
 
