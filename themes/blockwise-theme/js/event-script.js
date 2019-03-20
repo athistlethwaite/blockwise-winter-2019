@@ -1,20 +1,16 @@
-// (function ($) {
-//     $('.small-angle').on('click', function (event) {
-//       event.preventDefault();
-//       var angleClicked = $(this).data('load-post');
-//       console.log(angleClicked);
-  
-//       $.ajax({
-//         method: 'GET',
-//         url: bw_vars.rest_url + 'wp/v2/lesson/' + itemClicked,
-//       }).done(function (data) {
-  
-//         $('#load-content').html('');
-//         $('#load-content').append(data.content.rendered + '<a href="#" class="blockwise-btn white-btn">Back to top</a>');
-  
-//       }).fail(function () {
-//         console.log('Something went wrong.');
-//       });
-//     });
-  
-//   })(jQuery);
+(function($) {
+  $('.event a').on('click', function() {
+    event.preventDefault();
+    const eventNum = this.getAttribute('data-event');
+    $('.event-pop-up').addClass('hidden');
+    $('.event-pop-up[data-event=' + eventNum + ']').removeClass('hidden');
+  });
+  $('.go-back').on('click', function() {
+    event.preventDefault();
+    $('.event-pop-up').addClass('hidden');
+  });
+  $('.RSVP').on('click', function() {
+    event.preventDefault();
+    $('.pop-up').removeClass('hidden');
+  });
+})(jQuery);
