@@ -38,31 +38,75 @@
 
   @include desktop {
     flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
   }
 
 
 
   .lesson-type-wrapper {
-    padding-bottom: 20px;
+    position: relative;
+    padding-bottom: 30px;
+
+    &:first-child {
+
+      &:before {
+        display: none;
+      }
+    }
+
+    &:before {
+      background-image: url('../../assets/images/LearnChainMobile.png');
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 38px;
+      content: '';
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      transform: translateX(-50);
+
+      @include desktop {
+        background-image: url('../../assets/images/LearnChainLink.png');
+        width: 78px;
+        height: 11px;
+        content: '';
+        // top: -31px;
+        left: 50%;
+        transform: translateY(-50);
+      }
+    }
 
     .lesson-type-title {
       background-color: $color__brand-blue-sapphire;
       box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
       border-radius: 5px;
-      width: 325px;
+      width: 320px;
       height: 65px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px;
 
-      div {
-        width: 90%;
-        padding-top: 24px;
-        float: left;
+      h3 {
+        flex: 0 1 90%;
+        line-height: 1.25em;
         color: white;
         font-weight: bold;
         text-align: center;
+
+        @include desktop {
+          flex: 0 1 100%;
+        }
       }
 
-      img {
-        padding-top: 19px;
+      .arrow {
+        flex: 0 1 10%;
+
+        @include desktop {
+          display: none;
+        }
       }
 
     }
@@ -72,13 +116,15 @@
       display: none;
       text-align: center;
       font-weight: bold;
-      padding: 10px 10px;
+      padding-bottom: 10px;
+      padding-left: 0px;
+      background-color: white;
 
       li {
         border: 1px solid $color__brand-blue-sapphire;
         border-radius: 5px;
         border: 1px solid $color__brand-blue-sapphire;
-        padding: 5px 5px;
+        padding: 10px;
       }
     }
   }
@@ -90,12 +136,25 @@
   top: 0;
   background-color: white;
 
+  @include desktop {
+    position: relative;
+
+  }
+
   .back-to-lesson {
-    display: inline;
+    display: inline-block;
+
+    @include desktop {
+      display: none;
+    }
   }
 
   .blockwise-btn,
   .white-btn {
-    text-align: center;
+    display: none;
+
+    @include desktop {
+      display: inline-block;
+    }
   }
 }

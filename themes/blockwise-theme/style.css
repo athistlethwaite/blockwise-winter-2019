@@ -1108,47 +1108,113 @@ object {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; } }
+              flex-direction: row;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
   .lessons .lesson-type-wrapper {
-    padding-bottom: 20px; }
+    position: relative;
+    padding-bottom: 30px; }
+    .lessons .lesson-type-wrapper:first-child:before {
+      display: none; }
+    .lessons .lesson-type-wrapper:before {
+      background-image: url("../../assets/images/LearnChainMobile.png");
+      background-repeat: no-repeat;
+      width: 6px;
+      height: 38px;
+      content: '';
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      -webkit-transform: translateX(-50);
+              transform: translateX(-50); }
+      @media screen and (min-width: 1000px) {
+        .lessons .lesson-type-wrapper:before {
+          background-image: url("../../assets/images/LearnChainLink.png");
+          width: 78px;
+          height: 11px;
+          content: '';
+          left: 50%;
+          -webkit-transform: translateY(-50);
+                  transform: translateY(-50); } }
     .lessons .lesson-type-wrapper .lesson-type-title {
       background-color: #026082;
       -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
               box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
       border-radius: 5px;
-      width: 325px;
-      height: 65px; }
-      .lessons .lesson-type-wrapper .lesson-type-title div {
-        width: 90%;
-        padding-top: 24px;
-        float: left;
+      width: 320px;
+      height: 65px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 0px 10px; }
+      .lessons .lesson-type-wrapper .lesson-type-title h3 {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 90%;
+                flex: 0 1 90%;
+        line-height: 1.25em;
         color: white;
         font-weight: bold;
         text-align: center; }
-      .lessons .lesson-type-wrapper .lesson-type-title img {
-        padding-top: 19px; }
+        @media screen and (min-width: 1000px) {
+          .lessons .lesson-type-wrapper .lesson-type-title h3 {
+            -webkit-box-flex: 0;
+                -ms-flex: 0 1 100%;
+                    flex: 0 1 100%; } }
+      .lessons .lesson-type-wrapper .lesson-type-title .arrow {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 1 10%;
+                flex: 0 1 10%; }
+        @media screen and (min-width: 1000px) {
+          .lessons .lesson-type-wrapper .lesson-type-title .arrow {
+            display: none; } }
     .lessons .lesson-type-wrapper ul {
       margin: 0;
       display: none;
       text-align: center;
       font-weight: bold;
-      padding: 10px 10px; }
+      padding-bottom: 10px;
+      padding-left: 0px;
+      background-color: white; }
       .lessons .lesson-type-wrapper ul li {
         border: 1px solid #026082;
         border-radius: 5px;
         border: 1px solid #026082;
-        padding: 5px 5px; }
+        padding: 10px; }
 
 .load-content {
   display: none;
   position: absolute;
   top: 0;
   background-color: white; }
+  @media screen and (min-width: 1000px) {
+    .load-content {
+      position: relative; } }
   .load-content .back-to-lesson {
-    display: inline; }
+    display: inline-block; }
+    @media screen and (min-width: 1000px) {
+      .load-content .back-to-lesson {
+        display: none; } }
   .load-content .blockwise-btn,
   .load-content .white-btn {
-    text-align: center; }
+    display: none; }
+    @media screen and (min-width: 1000px) {
+      .load-content .blockwise-btn,
+      .load-content .white-btn {
+        display: inline-block; } }
 
 /*--------------------------------------------------------------
 # Market Trends Archive Page

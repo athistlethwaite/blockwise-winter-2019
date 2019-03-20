@@ -28,8 +28,8 @@ get_header(); ?>
             <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
             <div class="lesson-type-wrapper">
                 <div class="lesson-type-title">
-                    <div><?php echo $lesson_type->name ?></div>
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click to see Lesson">
+                    <h3><?php echo $lesson_type->name ?></h3>
+                    <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click to see Lesson"></div>
                 </div>
 
                 <ul>
@@ -56,7 +56,6 @@ get_header(); ?>
                 wp_reset_postdata(); ?>
                 </ul>
             </div>
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
             <?php endforeach;
         wp_reset_postdata(); ?>
 
