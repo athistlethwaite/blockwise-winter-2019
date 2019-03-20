@@ -30,18 +30,18 @@
                         <?php echo  $field['option_title'] ?>
                     </div>
                 </h3>
-                    <ul class="list-content">
-                        <?php 
-                        /*
+                <ul class="list-content">
+                    <?php 
+                    /*
          * CFS Loop list options
          */
-                        $options = $field['options_list_items'];
-                        foreach ($options as $option) {
+                    $options = $field['options_list_items'];
+                    foreach ($options as $option) {
 
-                            echo "<li>" . $option['option'] . "</li>";
-                        } ?>
+                        echo "<li>" . $option['option'] . "</li>";
+                    } ?>
 
-                    </ul>
+                </ul>
             </div>
             <?php endforeach; ?>
         </section>
@@ -55,4 +55,4 @@
         ));
         ?>
     </div><!-- .entry-content -->
-</article><!-- #post-## --> 
+</article><!--  #post-## --> 
