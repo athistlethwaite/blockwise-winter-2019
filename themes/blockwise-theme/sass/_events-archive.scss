@@ -77,7 +77,7 @@
           }
           .taxonomy-description p {
             margin: 0px;
-            font-size: 1.6rem;
+            font-size: 2rem;
             font-weight: bold;
             color: $color__brand-blue-sapphire;
           }
@@ -111,6 +111,10 @@
               box-sizing: border-box;
               .content-event {
                 padding-top: 15px;
+                a h2{
+                  font-size: 2rem;
+                  padding-top:10px;
+                }
                 .entry-meta {
                   color: $color__brand-middle-blue;
                   p {
