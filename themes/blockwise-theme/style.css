@@ -1137,6 +1137,11 @@ object {
 /*--------------------------------------------------------------
 # Membership Page
 --------------------------------------------------------------*/
+.post-48 ul,
+.post-48 li {
+  margin-left: 0;
+  padding-left: 0; }
+
 .post-48 .wpcf7-form {
   display: none; }
 
@@ -1151,8 +1156,11 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.post-48 .list-content {
+  display: none; }
+
 .post-48 .sign-up-pop {
-  text-align: center; }
+  margin-left: 41%; }
 
 /*--------------------------------------------------------------
 # Contact Page
