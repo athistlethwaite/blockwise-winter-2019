@@ -1071,6 +1071,9 @@ object {
 /*--------------------------------------------------------------
 # Lesson Archive Page
 --------------------------------------------------------------*/
+.post-type-archive-lesson .site-content {
+  position: relative; }
+
 .post-type-archive-lesson .page-header {
   background-image: url("../../assets/images/LearnBlocksBGmobile.png");
   background-size: 100% 100%;
@@ -1137,21 +1140,12 @@ object {
         padding: 5px 5px; }
 
 .load-content {
+  display: none;
   position: absolute;
   top: 0;
   background-color: white; }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
+  .load-content .back-to-lesson {
+    display: inline; }
   .load-content .blockwise-btn,
   .load-content .white-btn {
     text-align: center; }

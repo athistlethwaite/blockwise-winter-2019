@@ -8,14 +8,4 @@
     $('#load-content').html('');
   });
 
-  // For Modal Pop-Up on Mobile 
-  // $('.lesson-title').on('click', function () {
-  //   $('.load-content').show();
-  // });
-  // console.log('click');
-
-  // $('.md-close').on('click', function () {
-  //   $('.load-content').hide();
-  // });
-
 })(jQuery);

@@ -5,6 +5,10 @@
 
 .post-type-archive-lesson {
 
+  .site-content {
+    position: relative;
+  }
+
   .page-header {
     background-image: url("../../assets/images/LearnBlocksBGmobile.png");
     background-size: 100% 100%;
@@ -81,18 +85,13 @@
 }
 
 .load-content {
+  display: none;
   position: absolute;
   top: 0;
   background-color: white;
 
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
-      opacity: 1;
-    }
+  .back-to-lesson {
+    display: inline;
   }
 
   .blockwise-btn,
