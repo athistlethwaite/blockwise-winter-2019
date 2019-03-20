@@ -17,32 +17,39 @@
 
     <div class="entry-content">
 
+        <?php
+ /*
+ * CFS Loop membership_options Title
+ */
+        $fields = CFS()->get('membership_options'); ?>
+
+        <ul class="tablinks">
+            <?php foreach ($fields as $field) : ?>
+
+            <li>
+                <?php echo  $field['option_title'] ?>
+            </li>
+
+            <?php endforeach; ?>
+            <!-- <div class='option-title-list   <?php  ?> '> -->
+        </ul>
         <section class="option-wrapper">
-            <?php
-    /*
-     * CFS Loop membership_options Title
-     */
-            $fields = CFS()->get('membership_options');
-            foreach ($fields as $field) : ?>
-            <div class='option-title-list   <?php echo str_replace(' ', '', $field['option_title'])  ?> '>
-                <h3>
-                    <div class="tablinks">
-                        <?php echo  $field['option_title'] ?>
-                    </div>
-                </h3>
-                <ul class="list-content">
-                    <?php 
-                    /*
-         * CFS Loop list options
-         */
-                    $options = $field['options_list_items'];
-                    foreach ($options as $option) {
+            <?php foreach ($fields as $field) : ?>
+            <ul class="list-content">
+                <?php 
+                /*
+            * CFS Loop list options
+            */
+                $options = $field['options_list_items'];
+                foreach ($options as $option) :
 
-                        echo "<li>" . $option['option'] . "</li>";
-                    } ?>
+                    echo "<li>" . $option['option'] . "</li>";
+                    ?>
 
-                </ul>
-            </div>
+
+                <!-- </div> -->
+                <?php endforeach; ?>
+            </ul>
             <?php endforeach; ?>
         </section>
 
