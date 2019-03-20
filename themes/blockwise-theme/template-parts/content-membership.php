@@ -45,6 +45,7 @@
         </section>
 
         <?php the_content(); ?>
+        <button class="sign-up-pop">Sign Up</button>
         <?php
         wp_link_pages(array(
             'before' => '<div class="page-links">' . esc_html('Pages:'),
