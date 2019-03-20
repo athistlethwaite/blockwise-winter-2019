@@ -1140,7 +1140,7 @@ https://flickity.metafizzy.co
       padding: 0px 30px;
       display: grid;
       grid-template-columns: 90% 10%;
-      grid-template-areas: 'main logo' 'main logo'; }
+      grid-template-areas: 'main logo' 'main logo'; }
       .post-type-archive-event .site-main .event .entry-header .content-event {
         grid-area: main; }
         .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
@@ -1260,10 +1260,8 @@ https://flickity.metafizzy.co
           background-image: url("../../assets/images/LearnChainLink.png");
           width: 78px;
           height: 11px;
-          content: '';
-          left: 50%;
-          -webkit-transform: translateY(-50);
-                  transform: translateY(-50); } }
+          top: 30px;
+          left: -71px; } }
     .lessons .lesson-type-wrapper .lesson-type-title {
       background-color: #026082;
       -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -1285,6 +1283,9 @@ https://flickity.metafizzy.co
           -ms-flex-align: center;
               align-items: center;
       padding: 0px 10px; }
+      @media screen and (min-width: 1000px) {
+        .lessons .lesson-type-wrapper .lesson-type-title {
+          width: 290px; } }
       .lessons .lesson-type-wrapper .lesson-type-title h3 {
         -webkit-box-flex: 0;
             -ms-flex: 0 1 90%;
@@ -1311,8 +1312,10 @@ https://flickity.metafizzy.co
       text-align: center;
       font-weight: bold;
       padding-bottom: 10px;
-      padding-left: 0px;
-      background-color: white; }
+      padding-left: 0px; }
+      @media screen and (min-width: 1000px) {
+        .lessons .lesson-type-wrapper ul {
+          width: 290px; } }
       .lessons .lesson-type-wrapper ul li {
         border: 1px solid #026082;
         border-radius: 5px;
@@ -1397,8 +1400,8 @@ https://flickity.metafizzy.co
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
