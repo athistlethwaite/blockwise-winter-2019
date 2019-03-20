@@ -1393,6 +1393,8 @@ https://flickity.metafizzy.co
     @media screen and (min-width: 1000px) {
       .load-content .back-to-lesson {
         display: none; } }
+  .load-content h2 {
+    text-align: center; }
   .load-content .blockwise-btn,
   .load-content .white-btn {
     display: none; }
