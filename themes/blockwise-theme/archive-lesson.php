@@ -25,10 +25,12 @@ get_header(); ?>
 
         <section class="lessons">
             <?php $lesson_types = get_terms('lesson_type'); ?>
+            <?php $x=0;?>
             <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
+            <?php $x++; ?>
             <div class="lesson-type-wrapper">
                 <div class="lesson-type-title">
-                    <h3><?php echo $lesson_type->name ?></h3>
+                    <h3 id="button<?php echo $x ?>"><?php echo $lesson_type->name ?></h3>
                     <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click to see Lesson"></div>
                 </div>
 
@@ -43,7 +45,7 @@ get_header(); ?>
                             )
                         )
                     )); ?>
-
+                    
                     <?php foreach ($lessons as $lesson) : setup_postdata($lesson); ?>
 
                     <?php $the_post_id = $lesson->ID; ?>
