@@ -1303,9 +1303,9 @@ https://flickity.metafizzy.co
   .lessons .lesson-type-wrapper {
     position: relative;
     padding-bottom: 30px; }
-    .lessons .lesson-type-wrapper:first-child:before {
+    .lessons .lesson-type-wrapper.chain:first-child:before {
       display: none; }
-    .lessons .lesson-type-wrapper:before {
+    .lessons .lesson-type-wrapper.chain:before {
       background-image: url("../../assets/images/LearnChainMobile.png");
       background-repeat: no-repeat;
       width: 6px;
@@ -1317,7 +1317,7 @@ https://flickity.metafizzy.co
       -webkit-transform: translateX(-50);
               transform: translateX(-50); }
       @media screen and (min-width: 1000px) {
-        .lessons .lesson-type-wrapper:before {
+        .lessons .lesson-type-wrapper.chain:before {
           background-image: url("../../assets/images/LearnChainLink.png");
           width: 78px;
           height: 11px;
@@ -1418,7 +1418,7 @@ https://flickity.metafizzy.co
 .post-48 ul,
 .post-48 li {
   margin-left: 0;
-  padding: 10px 0px; }
+  padding: 0; }
 
 .post-48 .wpcf7-form {
   display: none; }
@@ -1432,7 +1432,13 @@ https://flickity.metafizzy.co
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  border: solid 3px;
+  font-weight: bold; }
+  .post-48 .tablinks li {
+    padding: 20px 0;
+    width: 33%;
+    text-align: center; }
 
 .post-48 .option-wrapper ul {
   list-style-image: url("../../assets/images/MembershipCheck.png"); }
@@ -1441,12 +1447,18 @@ https://flickity.metafizzy.co
   display: none;
   width: 100%;
   padding: 0 140px; }
+  .post-48 .list-content li {
+    padding: 10px 0px; }
 
 .post-48 .sign-up-pop {
   margin-left: 41%; }
 
 .post-48 .active {
   display: block; }
+
+.post-48 .tab-color {
+  background-color: #008294;
+  color: #f7f9fa; }
 
 /*--------------------------------------------------------------
 # Contact Page
