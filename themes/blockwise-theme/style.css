@@ -477,7 +477,8 @@ h6 {
 /* Copy */
 p {
   margin-bottom: 1.5rem;
-  line-height: 1.25; }
+  line-height: 1.25;
+  color: #008294; }
 
 dfn,
 cite,
@@ -1408,6 +1409,8 @@ https://flickity.metafizzy.co
     .load-content {
       position: relative;
       padding: 0px 0px; } }
+  .load-content h1 {
+    font-size: 1.75rem; }
   .load-content .back-to-lesson {
     display: inline-block; }
     @media screen and (min-width: 1000px) {
@@ -1420,6 +1423,9 @@ https://flickity.metafizzy.co
     padding-bottom: 20px; }
   .load-content h2 {
     text-align: center; }
+    @media screen and (min-width: 1000px) {
+      .load-content h2 {
+        text-align: start; } }
   .load-content .blockwise-btn,
   .load-content .white-btn {
     display: none;
