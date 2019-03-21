@@ -477,8 +477,7 @@ h6 {
 /* Copy */
 p {
   margin-bottom: 1.5rem;
-  line-height: 1.25;
-  color: #008294; }
+  line-height: 1.25; }
 
 dfn,
 cite,
@@ -1163,7 +1162,7 @@ https://flickity.metafizzy.co
       padding: 0px 30px;
       display: grid;
       grid-template-columns: 90% 10%;
-      grid-template-areas: 'main logo' 'main logo'; }
+      grid-template-areas: 'main logo' 'main logo'; }
       .post-type-archive-event .site-main .event .entry-header .content-event {
         grid-area: main; }
         .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
@@ -1413,6 +1412,17 @@ https://flickity.metafizzy.co
     font-size: 1.75rem; }
   .load-content .back-to-lesson {
     display: inline-block; }
+    .load-content .back-to-lesson::before {
+      background-image: url("../../assets/images/LearnBackArrow.png");
+      background-repeat: no-repeat;
+      width: 22px;
+      height: 28px;
+      content: '';
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      -webkit-transform: translateX(-50);
+              transform: translateX(-50); }
     @media screen and (min-width: 1000px) {
       .load-content .back-to-lesson {
         display: none; } }
@@ -1567,8 +1577,8 @@ https://flickity.metafizzy.co
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

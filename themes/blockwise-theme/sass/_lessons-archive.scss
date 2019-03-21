@@ -144,7 +144,6 @@
   @include desktop {
     position: relative;
     padding: 0px 0px;
-
   }
 
   h1 {
@@ -153,6 +152,19 @@
 
   .back-to-lesson {
     display: inline-block;
+
+    &::before {
+      background-image: url('../../assets/images/LearnBackArrow.png');
+      background-repeat: no-repeat;
+      width: 22px;
+      height: 28px;
+      content: '';
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      transform: translateX(-50);
+
+    }
 
     @include desktop {
       display: none;
