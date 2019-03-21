@@ -47,7 +47,7 @@ jQuery(function($) {
     $('.wpcf7-form').removeClass('mobile-popup');
     $('.thank-you').addClass('thank-you-active');
   });
-  $('.thank-you').click(function() {
+  $('.got-it').click(function() {
     $('.thank-you').removeClass('thank-you-active');
   });
   // on click of button in pop up
