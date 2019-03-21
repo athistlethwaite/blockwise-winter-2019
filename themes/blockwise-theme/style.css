@@ -1509,50 +1509,71 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Membership Page
 --------------------------------------------------------------*/
-.post-48 ul,
-.post-48 li {
-  margin-left: 0;
-  padding: 0; }
-
-.post-48 .wpcf7-form {
-  display: none; }
-
-.post-48 .entry-header {
-  background-image: url("../../assets/images/MembershipBanner.jpg"); }
-
-.post-48 .tablinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: solid 3px;
-  font-weight: bold; }
-  .post-48 .tablinks li {
-    padding: 20px 0;
-    width: 33%;
-    text-align: center; }
-
-.post-48 .option-wrapper ul {
-  list-style-image: url("../../assets/images/MembershipCheck.png"); }
-
-.post-48 .list-content {
-  display: none;
-  width: 100%;
-  padding: 0 140px; }
-  .post-48 .list-content li {
-    padding: 10px 0px; }
-
-.post-48 .sign-up-pop {
-  margin-left: 41%; }
-
-.post-48 .active {
-  display: block; }
-
-.post-48 .tab-color {
-  background-color: #008294;
-  color: #f7f9fa; }
+.post-48 {
+  text-align: center; }
+  .post-48 ul,
+  .post-48 li {
+    margin-left: 0;
+    padding: 0; }
+  .post-48 .wpcf7-form {
+    display: none; }
+  .post-48 .entry-header {
+    background-image: url("../../assets/images/MembershipBanner.jpg"); }
+  .post-48 .tablinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: solid 3px;
+    font-weight: bold; }
+    .post-48 .tablinks li {
+      padding: 20px 0;
+      width: 33%;
+      text-align: center; }
+  .post-48 .option-wrapper ul {
+    list-style-image: url("../../assets/images/MembershipCheck.png"); }
+  .post-48 .list-content {
+    display: none;
+    width: 100%;
+    padding: 0 140px; }
+    .post-48 .list-content li {
+      padding: 10px 0px; }
+  .post-48 .thank-you {
+    display: none; }
+  .post-48 .thank-you-active {
+    display: block;
+    background-color: #f7f9fa;
+    width: 65vw;
+    height: 37vh;
+    position: fixed;
+    top: 103px;
+    left: 84px;
+    border-radius: 5px;
+    background-image: url("../../assets/images/PopupBG.png");
+    background-size: contain;
+    background-repeat: no-repeat; }
+    .post-48 .thank-you-active p {
+      padding: 0px 13px;
+      padding-top: 30px; }
+  .post-48 .active {
+    display: block; }
+  .post-48 .mobile-popup {
+    display: block;
+    background-color: #f7f9fa;
+    width: 74vw;
+    height: 90vh;
+    position: fixed;
+    top: 60px;
+    left: 63px; }
+    .post-48 .mobile-popup input {
+      max-width: 90%; }
+    .post-48 .mobile-popup textarea {
+      max-width: 90%; }
+  .post-48 .tab-color {
+    background-color: #008294;
+    color: #f7f9fa; }
 
 /*--------------------------------------------------------------
 # Contact Page
