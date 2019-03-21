@@ -16,7 +16,7 @@ get_header(); ?>
         <header class="page-header">
             <div class="header-content-wrapper">
                 <h1 class="page-title"><?php single_post_title(); ?></h1>
-                <p>The Description</p>
+                <p><?php echo CFS()->get('page_subtitle'); ?></p>
             </div>
         </header>
         <?php endif; ?>

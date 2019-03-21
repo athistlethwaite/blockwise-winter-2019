@@ -11,7 +11,7 @@
     <header class="entry-header">
         <div class="header-content-wrapper">
             <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-            <P>The Description</P>
+            <p><?php echo CFS()->get('page_subtitle'); ?></p>
         </div>
     </header><!-- .entry-header -->
 
