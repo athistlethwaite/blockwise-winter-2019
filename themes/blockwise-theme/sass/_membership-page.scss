@@ -19,7 +19,7 @@
   }
   .entry-header {
     background-image: url('../../assets/images/MembershipBanner.jpg');
-    height: 62vh !important;
+    height: 62vh !important; //to override global yay or nay
   }
   .tablinks {
     display: flex;
