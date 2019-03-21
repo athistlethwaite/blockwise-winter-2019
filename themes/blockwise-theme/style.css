@@ -1144,7 +1144,7 @@ https://flickity.metafizzy.co
       padding: 0px 30px;
       display: grid;
       grid-template-columns: 90% 10%;
-      grid-template-areas: 'main logo' 'main logo'; }
+      grid-template-areas: 'main logo' 'main logo'; }
       .post-type-archive-event .site-main .event .entry-header .content-event {
         grid-area: main; }
         .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
@@ -1238,7 +1238,7 @@ https://flickity.metafizzy.co
               padding-top: 15px; }
               .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event a h2 {
                 font-size: 2rem;
-                padding-top: 10px; }
+                margin: 10px 0px; }
               .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta {
                 color: #7bd1d0; }
                 .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta p {
@@ -1463,8 +1463,8 @@ https://flickity.metafizzy.co
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
