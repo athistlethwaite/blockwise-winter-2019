@@ -1139,7 +1139,55 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
+<<<<<<< HEAD
+.post-type-archive-event .site-content {
+  position: relative; }
+  .post-type-archive-event .site-content .site-main {
+    text-align: center; }
+    .post-type-archive-event .site-content .site-main .page-header {
+      background: url(../../assets/images/EventsBanner.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      padding-top: 50px;
+      height: 30vh; }
+      .post-type-archive-event .site-content .site-main .page-header h1 {
+        margin-top: 0px; }
+      .post-type-archive-event .site-content .site-main .page-header .taxonomy-description p {
+        margin: 0px; }
+    .post-type-archive-event .site-content .site-main .event {
+      padding: 20px 0px;
+      margin: 0px;
+      border: 1.5px solid #008294; }
+      .post-type-archive-event .site-content .site-main .event .entry-header {
+        padding: 0px 30px;
+        display: grid;
+        grid-template-columns: 90% 10%;
+        grid-template-areas: 'main logo' 'main logo'; }
+        .post-type-archive-event .site-content .site-main .event .entry-header .content-event {
+          grid-area: main; }
+          .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta {
+            color: #7bd1d0; }
+            .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta p {
+              margin-bottom: 5px; }
+        .post-type-archive-event .site-content .site-main .event .entry-header .small-angle {
+          grid-area: logo;
+          padding-top: 60px; }
+      .post-type-archive-event .site-content .site-main .event .small-chain {
+        display: none; }
+    .post-type-archive-event .site-content .site-main .hidden {
+      display: none; }
+  .post-type-archive-event .site-content .event-pop-up {
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f7f9fa; }
+=======
 .post-type-archive-event .site-main {
+<<<<<<< HEAD
   text-align: center; }
   .post-type-archive-event .site-main .page-header {
     background: url(../../assets/images/EventsBanner.jpg);
@@ -1176,6 +1224,68 @@ https://flickity.metafizzy.co
       display: none; }
   .post-type-archive-event .site-main .hidden {
     display: none; }
+=======
+  text-align: center;
+}
+
+.post-type-archive-event .site-main .page-header {
+  background: url(../../assets/images/EventsBanner.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 50px;
+  height: 30vh;
+}
+
+.post-type-archive-event .site-main .page-header h1 {
+  margin-top: 0px;
+}
+
+.post-type-archive-event .site-main .page-header .taxonomy-description p {
+  margin: 0px;
+}
+
+.post-type-archive-event .site-main .event {
+  padding: 20px 0px;
+  margin: 0px;
+  border: 1.5px solid #008294;
+}
+
+.post-type-archive-event .site-main .event .entry-header {
+  padding: 0px 30px;
+  display: grid;
+  grid-template-columns: 90% 10%;
+  grid-template-areas: 'main logo''main logo';
+}
+
+.post-type-archive-event .site-main .event .entry-header .content-event {
+  grid-area: main;
+}
+
+.post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
+  color: #7bd1d0;
+}
+
+.post-type-archive-event .site-main .event .entry-header .content-event .entry-meta p {
+  margin-bottom: 5px;
+}
+
+.post-type-archive-event .site-main .event .entry-header .small-angle {
+  grid-area: logo;
+  padding-top: 60px;
+}
+
+.post-type-archive-event .site-main .event .small-chain {
+  display: none;
+}
+
+.post-type-archive-event .site-main .hidden {
+  display: none;
+}
+>>>>>>> 4e4059f1c41cf3a3cbf2a1b1df4d2f88ea61d560
+>>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
 
 @media screen and (min-width: 1000px) {
   .post-type-archive-event .site-content {
@@ -1183,6 +1293,10 @@ https://flickity.metafizzy.co
     background-image: url(../../assets/images/EventsBanner-big.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
     height: auto; }
     .post-type-archive-event .site-content .site-main {
       text-align: center;
@@ -1219,6 +1333,10 @@ https://flickity.metafizzy.co
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+<<<<<<< HEAD
+=======
+        z-index: 0;
+>>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
         padding: 0px 50px 100px 50px; }
         .post-type-archive-event .site-content .site-main .all-articles .event {
           position: relative;
@@ -1270,6 +1388,128 @@ https://flickity.metafizzy.co
                     flex: 1 0 19%; }
       .post-type-archive-event .site-content .site-main .hidden {
         display: none; } }
+<<<<<<< HEAD
+=======
+=======
+    height: auto;
+  }
+
+  .post-type-archive-event .site-content .site-main {
+    text-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .post-type-archive-event .site-content .site-main .page-header {
+    background: none;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    height: auto;
+    padding: 150px 0px;
+  }
+
+  .post-type-archive-event .site-content .site-main .page-header h1 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+  }
+
+  .post-type-archive-event .site-content .site-main .page-header .taxonomy-description p {
+    margin: 0px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #026082;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0px 50px 100px 50px;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 33%;
+    flex: 1 0 33%;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header {
+    padding: 0px 10px;
+    border: 1.5px solid #008294;
+    background-color: #f7f9fa;
+    display: block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 80%;
+    flex: 1 0 80%;
+    height: 200px;
+    border-radius: 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event {
+    padding-top: 15px;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event a h2 {
+    font-size: 2rem;
+    margin: 10px 0px;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta {
+    color: #7bd1d0;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta p {
+    margin-bottom: 5px;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header a .small-angle {
+    display: none;
+  }
+
+  .post-type-archive-event .site-content .site-main .all-articles .event .small-chain {
+    display: inline-block;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 19%;
+    flex: 1 0 19%;
+  }
+
+  .post-type-archive-event .site-content .site-main .hidden {
+    display: none;
+  }
+}
+>>>>>>> 4e4059f1c41cf3a3cbf2a1b1df4d2f88ea61d560
+>>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
