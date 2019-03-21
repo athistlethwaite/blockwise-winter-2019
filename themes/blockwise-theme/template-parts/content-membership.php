@@ -52,6 +52,10 @@
         </section>
         <?php the_content(); ?>
         <button class="sign-up-pop">Sign Up</button>
+        <div class="thank-you">
+            <p>Thank you for your interest in becoming a member. We will reach out shortly to discuss next steps.</p>
+            <button class='got-it'>Got it!</button>
+        </div>
         <?php
         wp_link_pages(array(
             'before' => '<div class="page-links">' . esc_html('Pages:'),
