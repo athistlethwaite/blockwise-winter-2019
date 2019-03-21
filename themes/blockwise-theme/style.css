@@ -461,7 +461,7 @@ textarea {
   font-family: "Raleway";
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1; }
+  line-height: 1.25; }
 
 /* Headings */
 h1,
@@ -476,7 +476,8 @@ h6 {
 
 /* Copy */
 p {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem;
+  line-height: 1.25; }
 
 dfn,
 cite,
@@ -1401,15 +1402,22 @@ https://flickity.metafizzy.co
   display: none;
   position: absolute;
   top: 0;
-  background-color: white; }
+  background-color: white;
+  padding: 20px 30px; }
   @media screen and (min-width: 1000px) {
     .load-content {
-      position: relative; } }
+      position: relative;
+      padding: 0px 0px; } }
   .load-content .back-to-lesson {
     display: inline-block; }
     @media screen and (min-width: 1000px) {
       .load-content .back-to-lesson {
         display: none; } }
+  .load-content .back-to-top .back-to-lesson-top {
+    padding: 20px 10px; }
+  .load-content .back-to-lesson-bottom {
+    text-align: center;
+    padding-bottom: 20px; }
   .load-content h2 {
     text-align: center; }
   .load-content .blockwise-btn,

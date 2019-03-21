@@ -139,9 +139,11 @@
   position: absolute;
   top: 0;
   background-color: white;
+  padding: 20px 30px;
 
   @include desktop {
     position: relative;
+    padding: 0px 0px;
 
   }
 
@@ -151,6 +153,15 @@
     @include desktop {
       display: none;
     }
+  }
+
+  .back-to-top .back-to-lesson-top {
+    padding: 20px 10px;
+  }
+
+  .back-to-lesson-bottom {
+    text-align: center;
+    padding-bottom: 20px;
   }
 
   h2 {
