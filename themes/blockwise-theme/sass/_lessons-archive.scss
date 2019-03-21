@@ -147,6 +147,10 @@
 
   }
 
+  h1 {
+    font-size: 1.75rem;
+  }
+
   .back-to-lesson {
     display: inline-block;
 
@@ -166,6 +170,10 @@
 
   h2 {
     text-align: center;
+
+    @include desktop {
+      text-align: start;
+    }
   }
 
   .blockwise-btn,

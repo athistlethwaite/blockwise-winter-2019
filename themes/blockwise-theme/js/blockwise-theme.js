@@ -11,8 +11,8 @@
     }).done(function (data) {
 
       $('#load-content').html('');
-      $('#load-content').append('<div class="back-to-lesson-top"><a href="" class="back-to-lesson">See all lessons</a></div>' + '<h2>' +
-        data.title.rendered + '</h2>' + data.content.rendered + '<div class="back-to-lesson-bottom"><a href="#" class="blockwise-btn white-btn">Back to top</a><a href="#" class="back-to-lesson">See all lessons</a></div>');
+      $('#load-content').append('<div class="back-to-lesson-top"><a href="" class="back-to-lesson">See all lessons</a></div>' + '<h1>' +
+        data.title.rendered + '</h1>' + data.content.rendered + '<div class="back-to-lesson-bottom"><a href="#" class="blockwise-btn white-btn">Back to top</a><a href="#" class="back-to-lesson">See all lessons</a></div>');
       $('#load-content').fadeIn();
 
       $('.back-to-lesson').on('click', function () {
