@@ -17,12 +17,13 @@
 
 /* jshint browser: true, strict: true, undef: true, unused: true */
 
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
-  /*jshint strict: false */ /* globals define, module, require */
+  /*jshint strict: false */
+  /* globals define, module, require */
   if (typeof define == 'function' && define.amd) {
     // AMD
-    define('jquery-bridget/jquery-bridget', ['jquery'], function(jQuery) {
+    define('jquery-bridget/jquery-bridget', ['jquery'], function (jQuery) {
       return factory(window, jQuery);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -43,11 +44,11 @@
   // $.error breaks jQuery chaining
   var console = window.console;
   var logError =
-    typeof console == 'undefined'
-      ? function() {}
-      : function(message) {
-          console.error(message);
-        };
+    typeof console == 'undefined' ?
+    function () {} :
+    function (message) {
+      console.error(message);
+    };
 
   // ----- jQueryBridget ----- //
 
@@ -60,7 +61,7 @@
     // add option method -> $().plugin('option', {...})
     if (!PluginClass.prototype.option) {
       // option setter
-      PluginClass.prototype.option = function(opts) {
+      PluginClass.prototype.option = function (opts) {
         // bail out if not an object
         if (!$.isPlainObject(opts)) {
           return;
@@ -70,7 +71,7 @@
     }
 
     // make jQuery plugin
-    $.fn[namespace] = function(arg0 /*, arg1 */) {
+    $.fn[namespace] = function (arg0 /*, arg1 */ ) {
       if (typeof arg0 == 'string') {
         // method call $().plugin( 'methodName', { options } )
         // shift arguments by 1
@@ -87,14 +88,14 @@
       var returnValue;
       var pluginMethodStr = '$().' + namespace + '("' + methodName + '")';
 
-      $elems.each(function(i, elem) {
+      $elems.each(function (i, elem) {
         // get instance
         var instance = $.data(elem, namespace);
         if (!instance) {
           logError(
             namespace +
-              ' not initialized. Cannot call methods, i.e. ' +
-              pluginMethodStr
+            ' not initialized. Cannot call methods, i.e. ' +
+            pluginMethodStr
           );
           return;
         }
@@ -115,7 +116,7 @@
     }
 
     function plainCall($elems, options) {
-      $elems.each(function(i, elem) {
+      $elems.each(function (i, elem) {
         var instance = $.data(elem, namespace);
         if (instance) {
           // set options & init
@@ -157,9 +158,10 @@
 
 /* jshint unused: true, undef: true, strict: true */
 
-(function(global, factory) {
+(function (global, factory) {
   // universal module definition
-  /* jshint strict: false */ /* globals define, module, window */
+  /* jshint strict: false */
+  /* globals define, module, window */
   if (typeof define == 'function' && define.amd) {
     // AMD - RequireJS
     define('ev-emitter/ev-emitter', factory);
@@ -170,12 +172,12 @@
     // Browser globals
     global.EvEmitter = factory();
   }
-})(typeof window != 'undefined' ? window : this, function() {
+})(typeof window != 'undefined' ? window : this, function () {
   function EvEmitter() {}
 
   var proto = EvEmitter.prototype;
 
-  proto.on = function(eventName, listener) {
+  proto.on = function (eventName, listener) {
     if (!eventName || !listener) {
       return;
     }
@@ -191,7 +193,7 @@
     return this;
   };
 
-  proto.once = function(eventName, listener) {
+  proto.once = function (eventName, listener) {
     if (!eventName || !listener) {
       return;
     }
@@ -208,7 +210,7 @@
     return this;
   };
 
-  proto.off = function(eventName, listener) {
+  proto.off = function (eventName, listener) {
     var listeners = this._events && this._events[eventName];
     if (!listeners || !listeners.length) {
       return;
@@ -221,7 +223,7 @@
     return this;
   };
 
-  proto.emitEvent = function(eventName, args) {
+  proto.emitEvent = function (eventName, args) {
     var listeners = this._events && this._events[eventName];
     if (!listeners || !listeners.length) {
       return;
@@ -249,7 +251,7 @@
     return this;
   };
 
-  proto.allOff = function() {
+  proto.allOff = function () {
     delete this._events;
     delete this._onceEvents;
   };
@@ -266,8 +268,9 @@
 /* jshint browser: true, strict: true, undef: true, unused: true */
 /* globals console: false */
 
-(function(window, factory) {
-  /* jshint strict: false */ /* globals define, module */
+(function (window, factory) {
+  /* jshint strict: false */
+  /* globals define, module */
   if (typeof define == 'function' && define.amd) {
     // AMD
     define('get-size/get-size', factory);
@@ -294,11 +297,11 @@
   function noop() {}
 
   var logError =
-    typeof console == 'undefined'
-      ? noop
-      : function(message) {
-          console.error(message);
-        };
+    typeof console == 'undefined' ?
+    noop :
+    function (message) {
+      console.error(message);
+    };
 
   // -------------------------- measurements -------------------------- //
 
@@ -346,9 +349,9 @@
     if (!style) {
       logError(
         'Style returned ' +
-          style +
-          '. Are you running this code in a hidden iframe on Firefox? ' +
-          'See https://bit.ly/getsizebug1'
+        style +
+        '. Are you running this code in a hidden iframe on Firefox? ' +
+        'See https://bit.ly/getsizebug1'
       );
     }
     return style;
@@ -478,7 +481,7 @@
 
 /*jshint browser: true, strict: true, undef: true, unused: true */
 
-(function(window, factory) {
+(function (window, factory) {
   /*global define: false, module: false */
   'use strict';
   // universal module definition
@@ -495,7 +498,7 @@
 })(window, function factory() {
   'use strict';
 
-  var matchesMethod = (function() {
+  var matchesMethod = (function () {
     var ElemProto = window.Element.prototype;
     // check for the standard method name first
     if (ElemProto.matches) {
@@ -529,15 +532,16 @@
 
 /*jshint browser: true, undef: true, unused: true, strict: true */
 
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
+  /*jshint strict: false */
+  /*globals define, module, require */
 
   if (typeof define == 'function' && define.amd) {
     // AMD
     define('fizzy-ui-utils/utils', [
       'desandro-matches-selector/matches-selector'
-    ], function(matchesSelector) {
+    ], function (matchesSelector) {
       return factory(window, matchesSelector);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -553,7 +557,7 @@
   // ----- extend ----- //
 
   // extends objects
-  utils.extend = function(a, b) {
+  utils.extend = function (a, b) {
     for (var prop in b) {
       a[prop] = b[prop];
     }
@@ -562,7 +566,7 @@
 
   // ----- modulo ----- //
 
-  utils.modulo = function(num, div) {
+  utils.modulo = function (num, div) {
     return ((num % div) + div) % div;
   };
 
@@ -571,7 +575,7 @@
   var arraySlice = Array.prototype.slice;
 
   // turn element or nodeList into an array
-  utils.makeArray = function(obj) {
+  utils.makeArray = function (obj) {
     if (Array.isArray(obj)) {
       // use object if already an array
       return obj;
@@ -593,7 +597,7 @@
 
   // ----- removeFrom ----- //
 
-  utils.removeFrom = function(ary, obj) {
+  utils.removeFrom = function (ary, obj) {
     var index = ary.indexOf(obj);
     if (index != -1) {
       ary.splice(index, 1);
@@ -602,7 +606,7 @@
 
   // ----- getParent ----- //
 
-  utils.getParent = function(elem, selector) {
+  utils.getParent = function (elem, selector) {
     while (elem.parentNode && elem != document.body) {
       elem = elem.parentNode;
       if (matchesSelector(elem, selector)) {
@@ -614,7 +618,7 @@
   // ----- getQueryElement ----- //
 
   // use element as selector string
-  utils.getQueryElement = function(elem) {
+  utils.getQueryElement = function (elem) {
     if (typeof elem == 'string') {
       return document.querySelector(elem);
     }
@@ -624,7 +628,7 @@
   // ----- handleEvent ----- //
 
   // enable .ontype to trigger from .addEventListener( elem, 'type' )
-  utils.handleEvent = function(event) {
+  utils.handleEvent = function (event) {
     var method = 'on' + event.type;
     if (this[method]) {
       this[method](event);
@@ -633,12 +637,12 @@
 
   // ----- filterFindElements ----- //
 
-  utils.filterFindElements = function(elems, selector) {
+  utils.filterFindElements = function (elems, selector) {
     // make array of elems
     elems = utils.makeArray(elems);
     var ffElems = [];
 
-    elems.forEach(function(elem) {
+    elems.forEach(function (elem) {
       // check that elem is an actual element
       if (!(elem instanceof HTMLElement)) {
         return;
@@ -666,19 +670,19 @@
 
   // ----- debounceMethod ----- //
 
-  utils.debounceMethod = function(_class, methodName, threshold) {
+  utils.debounceMethod = function (_class, methodName, threshold) {
     threshold = threshold || 100;
     // original method
     var method = _class.prototype[methodName];
     var timeoutName = methodName + 'Timeout';
 
-    _class.prototype[methodName] = function() {
+    _class.prototype[methodName] = function () {
       var timeout = this[timeoutName];
       clearTimeout(timeout);
 
       var args = arguments;
       var _this = this;
-      this[timeoutName] = setTimeout(function() {
+      this[timeoutName] = setTimeout(function () {
         method.apply(_this, args);
         delete _this[timeoutName];
       }, threshold);
@@ -687,7 +691,7 @@
 
   // ----- docReady ----- //
 
-  utils.docReady = function(callback) {
+  utils.docReady = function (callback) {
     var readyState = document.readyState;
     if (readyState == 'complete' || readyState == 'interactive') {
       // do async to allow for other scripts to run. metafizzy/flickity#441
@@ -700,9 +704,9 @@
   // ----- htmlInit ----- //
 
   // http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
-  utils.toDashed = function(str) {
+  utils.toDashed = function (str) {
     return str
-      .replace(/(.)([A-Z])/g, function(match, $1, $2) {
+      .replace(/(.)([A-Z])/g, function (match, $1, $2) {
         return $1 + '-' + $2;
       })
       .toLowerCase();
@@ -714,8 +718,8 @@
    * htmlInit( Widget, 'widgetName' )
    * options are parsed from data-namespace-options
    */
-  utils.htmlInit = function(WidgetClass, namespace) {
-    utils.docReady(function() {
+  utils.htmlInit = function (WidgetClass, namespace) {
+    utils.docReady(function () {
       var dashedNamespace = utils.toDashed(namespace);
       var dataAttr = 'data-' + dashedNamespace;
       var dataAttrElems = document.querySelectorAll('[' + dataAttr + ']');
@@ -726,7 +730,7 @@
       var dataOptionsAttr = dataAttr + '-options';
       var jQuery = window.jQuery;
 
-      elems.forEach(function(elem) {
+      elems.forEach(function (elem) {
         var attr =
           elem.getAttribute(dataAttr) || elem.getAttribute(dataOptionsAttr);
         var options;
@@ -737,11 +741,11 @@
           if (console) {
             console.error(
               'Error parsing ' +
-                dataAttr +
-                ' on ' +
-                elem.className +
-                ': ' +
-                error
+              dataAttr +
+              ' on ' +
+              elem.className +
+              ': ' +
+              error
             );
           }
           return;
@@ -762,12 +766,12 @@
 });
 
 // Flickity.Cell
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
     // AMD
-    define('flickity/js/cell', ['get-size/get-size'], function(getSize) {
+    define('flickity/js/cell', ['get-size/get-size'], function (getSize) {
       return factory(window, getSize);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -788,14 +792,14 @@
 
   var proto = Cell.prototype;
 
-  proto.create = function() {
+  proto.create = function () {
     this.element.style.position = 'absolute';
     this.element.setAttribute('aria-hidden', 'true');
     this.x = 0;
     this.shift = 0;
   };
 
-  proto.destroy = function() {
+  proto.destroy = function () {
     // reset style
     this.unselect();
     this.element.style.position = '';
@@ -803,18 +807,18 @@
     this.element.style[side] = '';
   };
 
-  proto.getSize = function() {
+  proto.getSize = function () {
     this.size = getSize(this.element);
   };
 
-  proto.setPosition = function(x) {
+  proto.setPosition = function (x) {
     this.x = x;
     this.updateTarget();
     this.renderPosition(x);
   };
 
   // setDefaultTarget v1 method, backwards compatibility, remove in v3
-  proto.updateTarget = proto.setDefaultTarget = function() {
+  proto.updateTarget = proto.setDefaultTarget = function () {
     var marginProperty =
       this.parent.originSide == 'left' ? 'marginLeft' : 'marginRight';
     this.target =
@@ -823,18 +827,18 @@
       this.size.width * this.parent.cellAlign;
   };
 
-  proto.renderPosition = function(x) {
+  proto.renderPosition = function (x) {
     // render position of cell with in slider
     var side = this.parent.originSide;
     this.element.style[side] = this.parent.getPositionValue(x);
   };
 
-  proto.select = function() {
+  proto.select = function () {
     this.element.classList.add('is-selected');
     this.element.removeAttribute('aria-hidden');
   };
 
-  proto.unselect = function() {
+  proto.unselect = function () {
     this.element.classList.remove('is-selected');
     this.element.setAttribute('aria-hidden', 'true');
   };
@@ -842,12 +846,12 @@
   /**
    * @param {Integer} factor - 0, 1, or -1
    **/
-  proto.wrapShift = function(shift) {
+  proto.wrapShift = function (shift) {
     this.shift = shift;
     this.renderPosition(this.x + this.parent.slideableWidth * shift);
   };
 
-  proto.remove = function() {
+  proto.remove = function () {
     this.element.parentNode.removeChild(this.element);
   };
 
@@ -855,7 +859,7 @@
 });
 
 // slide
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -882,7 +886,7 @@
 
   var proto = Slide.prototype;
 
-  proto.addCell = function(cell) {
+  proto.addCell = function (cell) {
     this.cells.push(cell);
     this.outerWidth += cell.size.outerWidth;
     this.height = Math.max(cell.size.outerHeight, this.height);
@@ -894,7 +898,7 @@
     }
   };
 
-  proto.updateTarget = function() {
+  proto.updateTarget = function () {
     var endMargin = this.isOriginLeft ? 'marginRight' : 'marginLeft';
     var lastCell = this.getLastCell();
     var lastMargin = lastCell ? lastCell.size[endMargin] : 0;
@@ -903,24 +907,24 @@
       this.x + this.firstMargin + slideWidth * this.parent.cellAlign;
   };
 
-  proto.getLastCell = function() {
+  proto.getLastCell = function () {
     return this.cells[this.cells.length - 1];
   };
 
-  proto.select = function() {
-    this.cells.forEach(function(cell) {
+  proto.select = function () {
+    this.cells.forEach(function (cell) {
       cell.select();
     });
   };
 
-  proto.unselect = function() {
-    this.cells.forEach(function(cell) {
+  proto.unselect = function () {
+    this.cells.forEach(function (cell) {
       cell.unselect();
     });
   };
 
-  proto.getCellElements = function() {
-    return this.cells.map(function(cell) {
+  proto.getCellElements = function () {
+    return this.cells.map(function (cell) {
       return cell.element;
     });
   };
@@ -929,12 +933,12 @@
 });
 
 // animate
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
     // AMD
-    define('flickity/js/animate', ['fizzy-ui-utils/utils'], function(utils) {
+    define('flickity/js/animate', ['fizzy-ui-utils/utils'], function (utils) {
       return factory(window, utils);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -950,7 +954,7 @@
 
   var proto = {};
 
-  proto.startAnimation = function() {
+  proto.startAnimation = function () {
     if (this.isAnimating) {
       return;
     }
@@ -960,7 +964,7 @@
     this.animate();
   };
 
-  proto.animate = function() {
+  proto.animate = function () {
     this.applyDragForce();
     this.applySelectedAttraction();
 
@@ -978,7 +982,7 @@
     }
   };
 
-  proto.positionSlider = function() {
+  proto.positionSlider = function () {
     var x = this.x;
     // wrap position around
     if (this.options.wrapAround && this.cells.length > 1) {
@@ -991,19 +995,19 @@
     this.dispatchScrollEvent();
   };
 
-  proto.setTranslateX = function(x, is3d) {
+  proto.setTranslateX = function (x, is3d) {
     x += this.cursorPosition;
     // reverse if right-to-left and using transform
     x = this.options.rightToLeft ? -x : x;
     var translateX = this.getPositionValue(x);
     // use 3D tranforms for hardware acceleration on iOS
     // but use 2D when settled, for better font-rendering
-    this.slider.style.transform = is3d
-      ? 'translate3d(' + translateX + ',0,0)'
-      : 'translateX(' + translateX + ')';
+    this.slider.style.transform = is3d ?
+      'translate3d(' + translateX + ',0,0)' :
+      'translateX(' + translateX + ')';
   };
 
-  proto.dispatchScrollEvent = function() {
+  proto.dispatchScrollEvent = function () {
     var firstSlide = this.slides[0];
     if (!firstSlide) {
       return;
@@ -1013,7 +1017,7 @@
     this.dispatchEvent('scroll', null, [progress, positionX]);
   };
 
-  proto.positionSliderAtSelected = function() {
+  proto.positionSliderAtSelected = function () {
     if (!this.cells.length) {
       return;
     }
@@ -1022,7 +1026,7 @@
     this.positionSlider();
   };
 
-  proto.getPositionValue = function(position) {
+  proto.getPositionValue = function (position) {
     if (this.options.percentPosition) {
       // percent position, round to 2 digits, like 12.34%
       return Math.round((position / this.size.innerWidth) * 10000) * 0.01 + '%';
@@ -1032,7 +1036,7 @@
     }
   };
 
-  proto.settle = function(previousX) {
+  proto.settle = function (previousX) {
     // keep track of frames where x hasn't moved
     if (
       !this.isPointerDown &&
@@ -1050,7 +1054,7 @@
     }
   };
 
-  proto.shiftWrapCells = function(x) {
+  proto.shiftWrapCells = function (x) {
     // shift before cells
     var beforeGap = this.cursorPosition + x;
     this._shiftCells(this.beforeShiftCells, beforeGap, -1);
@@ -1060,7 +1064,7 @@
     this._shiftCells(this.afterShiftCells, afterGap, 1);
   };
 
-  proto._shiftCells = function(cells, gap, shift) {
+  proto._shiftCells = function (cells, gap, shift) {
     for (var i = 0; i < cells.length; i++) {
       var cell = cells[i];
       var cellShift = gap > 0 ? shift : 0;
@@ -1069,7 +1073,7 @@
     }
   };
 
-  proto._unshiftCells = function(cells) {
+  proto._unshiftCells = function (cells) {
     if (!cells || !cells.length) {
       return;
     }
@@ -1080,27 +1084,27 @@
 
   // -------------------------- physics -------------------------- //
 
-  proto.integratePhysics = function() {
+  proto.integratePhysics = function () {
     this.x += this.velocity;
     this.velocity *= this.getFrictionFactor();
   };
 
-  proto.applyForce = function(force) {
+  proto.applyForce = function (force) {
     this.velocity += force;
   };
 
-  proto.getFrictionFactor = function() {
+  proto.getFrictionFactor = function () {
     return (
       1 - this.options[this.isFreeScrolling ? 'freeScrollFriction' : 'friction']
     );
   };
 
-  proto.getRestingPosition = function() {
+  proto.getRestingPosition = function () {
     // my thanks to Steven Wittens, who simplified this math greatly
     return this.x + this.velocity / (1 - this.getFrictionFactor());
   };
 
-  proto.applyDragForce = function() {
+  proto.applyDragForce = function () {
     if (!this.isDraggable || !this.isPointerDown) {
       return;
     }
@@ -1110,7 +1114,7 @@
     this.applyForce(dragForce);
   };
 
-  proto.applySelectedAttraction = function() {
+  proto.applySelectedAttraction = function () {
     // do not attract if pointer down or no slides
     var dragDown = this.isDraggable && this.isPointerDown;
     if (dragDown || this.isFreeScrolling || !this.slides.length) {
@@ -1125,7 +1129,7 @@
 });
 
 // Flickity main
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -1137,7 +1141,7 @@
       './cell',
       './slide',
       './animate'
-    ], function(EvEmitter, getSize, utils, Cell, Slide, animatePrototype) {
+    ], function (EvEmitter, getSize, utils, Cell, Slide, animatePrototype) {
       return factory(
         window,
         EvEmitter,
@@ -1254,7 +1258,7 @@
   // inherit EventEmitter
   utils.extend(proto, EvEmitter.prototype);
 
-  proto._create = function() {
+  proto._create = function () {
     // add id for Flickity.data
     var id = (this.guid = ++GUID);
     this.element.flickityGUID = id; // expando
@@ -1282,7 +1286,7 @@
       this.on(eventName, listener);
     }
 
-    Flickity.createMethods.forEach(function(method) {
+    Flickity.createMethods.forEach(function (method) {
       this[method]();
     }, this);
 
@@ -1297,11 +1301,11 @@
    * set options
    * @param {Object} opts
    */
-  proto.option = function(opts) {
+  proto.option = function (opts) {
     utils.extend(this.options, opts);
   };
 
-  proto.activate = function() {
+  proto.activate = function () {
     if (this.isActive) {
       return;
     }
@@ -1336,7 +1340,7 @@
   };
 
   // slider positions the cells
-  proto._createSlider = function() {
+  proto._createSlider = function () {
     // slider element does all the positioning
     var slider = document.createElement('div');
     slider.className = 'flickity-slider';
@@ -1344,12 +1348,12 @@
     this.slider = slider;
   };
 
-  proto._filterFindCellElements = function(elems) {
+  proto._filterFindCellElements = function (elems) {
     return utils.filterFindElements(elems, this.options.cellSelector);
   };
 
   // goes through all children
-  proto.reloadCells = function() {
+  proto.reloadCells = function () {
     // collection of item elements
     this.cells = this._makeCells(this.slider.children);
     this.positionCells();
@@ -1362,27 +1366,27 @@
    * @param {Array or NodeList or HTMLElement} elems
    * @returns {Array} items - collection of new Flickity Cells
    */
-  proto._makeCells = function(elems) {
+  proto._makeCells = function (elems) {
     var cellElems = this._filterFindCellElements(elems);
 
     // create new Flickity for collection
-    var cells = cellElems.map(function(cellElem) {
+    var cells = cellElems.map(function (cellElem) {
       return new Cell(cellElem, this);
     }, this);
 
     return cells;
   };
 
-  proto.getLastCell = function() {
+  proto.getLastCell = function () {
     return this.cells[this.cells.length - 1];
   };
 
-  proto.getLastSlide = function() {
+  proto.getLastSlide = function () {
     return this.slides[this.slides.length - 1];
   };
 
   // positions all cells
-  proto.positionCells = function() {
+  proto.positionCells = function () {
     // size all cells
     this._sizeCells(this.cells);
     // position all cells
@@ -1393,7 +1397,7 @@
    * position certain cells
    * @param {Integer} index - which cell to start with
    */
-  proto._positionCells = function(index) {
+  proto._positionCells = function (index) {
     index = index || 0;
     // also measure maxCellHeight
     // start 0 if positioning all cells
@@ -1418,24 +1422,24 @@
     // contain slides target
     this._containSlides();
     // update slidesWidth
-    this.slidesWidth = len
-      ? this.getLastSlide().target - this.slides[0].target
-      : 0;
+    this.slidesWidth = len ?
+      this.getLastSlide().target - this.slides[0].target :
+      0;
   };
 
   /**
    * cell.getSize() on multiple cells
    * @param {Array} cells
    */
-  proto._sizeCells = function(cells) {
-    cells.forEach(function(cell) {
+  proto._sizeCells = function (cells) {
+    cells.forEach(function (cell) {
       cell.getSize();
     });
   };
 
   // --------------------------  -------------------------- //
 
-  proto.updateSlides = function() {
+  proto.updateSlides = function () {
     this.slides = [];
     if (!this.cells.length) {
       return;
@@ -1448,7 +1452,7 @@
 
     var canCellFit = this._getCanCellFit();
 
-    this.cells.forEach(function(cell, i) {
+    this.cells.forEach(function (cell, i) {
       // just add cell if first cell in slide
       if (!slide.cells.length) {
         slide.addCell(cell);
@@ -1477,16 +1481,16 @@
     this.updateSelectedSlide();
   };
 
-  proto._getCanCellFit = function() {
+  proto._getCanCellFit = function () {
     var groupCells = this.options.groupCells;
     if (!groupCells) {
-      return function() {
+      return function () {
         return false;
       };
     } else if (typeof groupCells == 'number') {
       // group by number. 3 -> [0,1,2], [3,4,5], ...
       var number = parseInt(groupCells, 10);
-      return function(i) {
+      return function (i) {
         return i % number !== 0;
       };
     }
@@ -1495,18 +1499,18 @@
     var percentMatch =
       typeof groupCells == 'string' && groupCells.match(/^(\d+)%$/);
     var percent = percentMatch ? parseInt(percentMatch[1], 10) / 100 : 1;
-    return function(i, slideWidth) {
+    return function (i, slideWidth) {
       return slideWidth <= (this.size.innerWidth + 1) * percent;
     };
   };
 
   // alias _init for jQuery plugin .flickity()
-  proto._init = proto.reposition = function() {
+  proto._init = proto.reposition = function () {
     this.positionCells();
     this.positionSliderAtSelected();
   };
 
-  proto.getSize = function() {
+  proto.getSize = function () {
     this.size = getSize(this.element);
     this.setCellAlign();
     this.cursorPosition = this.size.innerWidth * this.cellAlign;
@@ -1528,24 +1532,24 @@
     }
   };
 
-  proto.setCellAlign = function() {
+  proto.setCellAlign = function () {
     var shorthand = cellAlignShorthands[this.options.cellAlign];
-    this.cellAlign = shorthand
-      ? shorthand[this.originSide]
-      : this.options.cellAlign;
+    this.cellAlign = shorthand ?
+      shorthand[this.originSide] :
+      this.options.cellAlign;
   };
 
-  proto.setGallerySize = function() {
+  proto.setGallerySize = function () {
     if (this.options.setGallerySize) {
       var height =
-        this.options.adaptiveHeight && this.selectedSlide
-          ? this.selectedSlide.height
-          : this.maxCellHeight;
+        this.options.adaptiveHeight && this.selectedSlide ?
+        this.selectedSlide.height :
+        this.maxCellHeight;
       this.viewport.style.height = height + 'px';
     }
   };
 
-  proto._getWrapShiftCells = function() {
+  proto._getWrapShiftCells = function () {
     // only for wrap-around
     if (!this.options.wrapAround) {
       return;
@@ -1565,7 +1569,7 @@
     this.afterShiftCells = this._getGapCells(gapX, 0, 1);
   };
 
-  proto._getGapCells = function(gapX, cellIndex, increment) {
+  proto._getGapCells = function (gapX, cellIndex, increment) {
     // keep adding cells until the cover the initial gap
     var cells = [];
     while (gapX > 0) {
@@ -1583,7 +1587,7 @@
   // ----- contain ----- //
 
   // contain cell targets so no excess sliding
-  proto._containSlides = function() {
+  proto._containSlides = function () {
     if (
       !this.options.contain ||
       this.options.wrapAround ||
@@ -1601,7 +1605,7 @@
     var beginBound = this.cursorPosition + this.cells[0].size[beginMargin];
     var endBound = contentWidth - this.size.innerWidth * (1 - this.cellAlign);
     // contain each cell target
-    this.slides.forEach(function(slide) {
+    this.slides.forEach(function (slide) {
       if (isContentSmaller) {
         // all cells fit inside gallery
         slide.target = contentWidth * this.cellAlign;
@@ -1621,7 +1625,7 @@
    * @param {Event} event - original event
    * @param {Array} args - extra arguments
    */
-  proto.dispatchEvent = function(type, event, args) {
+  proto.dispatchEvent = function (type, event, args) {
     var emitArgs = event ? [event].concat(args) : args;
     this.emitEvent(type, emitArgs);
 
@@ -1646,7 +1650,7 @@
    * @param {Boolean} isWrap - will wrap-around to last/first if at the end
    * @param {Boolean} isInstant - will immediately set position at selected cell
    */
-  proto.select = function(index, isWrap, isInstant) {
+  proto.select = function (index, isWrap, isInstant) {
     if (!this.isActive) {
       return;
     }
@@ -1682,7 +1686,7 @@
   };
 
   // wraps position for wrapAround, to move to closest slide. #113
-  proto._wrapSelect = function(index) {
+  proto._wrapSelect = function (index) {
     var len = this.slides.length;
     var isWrapping = this.options.wrapAround && len > 1;
     if (!isWrapping) {
@@ -1706,15 +1710,15 @@
     }
   };
 
-  proto.previous = function(isWrap, isInstant) {
+  proto.previous = function (isWrap, isInstant) {
     this.select(this.selectedIndex - 1, isWrap, isInstant);
   };
 
-  proto.next = function(isWrap, isInstant) {
+  proto.next = function (isWrap, isInstant) {
     this.select(this.selectedIndex + 1, isWrap, isInstant);
   };
 
-  proto.updateSelectedSlide = function() {
+  proto.updateSelectedSlide = function () {
     var slide = this.slides[this.selectedIndex];
     // selectedIndex could be outside of slides, if triggered before resize()
     if (!slide) {
@@ -1733,13 +1737,13 @@
     this.selectedElement = this.selectedElements[0];
   };
 
-  proto.unselectSelectedSlide = function() {
+  proto.unselectSelectedSlide = function () {
     if (this.selectedSlide) {
       this.selectedSlide.unselect();
     }
   };
 
-  proto.selectInitialIndex = function() {
+  proto.selectInitialIndex = function () {
     var initialIndex = this.options.initialIndex;
     // already activated, select previous selectedIndex
     if (this.isInitActivated) {
@@ -1768,7 +1772,7 @@
    * select slide from number or cell element
    * @param {Element or Number} elem
    */
-  proto.selectCell = function(value, isWrap, isInstant) {
+  proto.selectCell = function (value, isWrap, isInstant) {
     // get cell
     var cell = this.queryCell(value);
     if (!cell) {
@@ -1779,7 +1783,7 @@
     this.select(index, isWrap, isInstant);
   };
 
-  proto.getCellSlideIndex = function(cell) {
+  proto.getCellSlideIndex = function (cell) {
     // get index of slides that has cell
     for (var i = 0; i < this.slides.length; i++) {
       var slide = this.slides[i];
@@ -1797,7 +1801,7 @@
    * @param {Element} elem
    * @returns {Flickity.Cell} item
    */
-  proto.getCell = function(elem) {
+  proto.getCell = function (elem) {
     // loop through cells to get the one that matches
     for (var i = 0; i < this.cells.length; i++) {
       var cell = this.cells[i];
@@ -1812,10 +1816,10 @@
    * @param {Element, Array, NodeList} elems
    * @returns {Array} cells - Flickity.Cells
    */
-  proto.getCells = function(elems) {
+  proto.getCells = function (elems) {
     elems = utils.makeArray(elems);
     var cells = [];
-    elems.forEach(function(elem) {
+    elems.forEach(function (elem) {
       var cell = this.getCell(elem);
       if (cell) {
         cells.push(cell);
@@ -1828,8 +1832,8 @@
    * get cell elements
    * @returns {Array} cellElems
    */
-  proto.getCellElements = function() {
-    return this.cells.map(function(cell) {
+  proto.getCellElements = function () {
+    return this.cells.map(function (cell) {
       return cell.element;
     });
   };
@@ -1839,7 +1843,7 @@
    * @param {Element} elem
    * @returns {Flickit.Cell} cell
    */
-  proto.getParentCell = function(elem) {
+  proto.getParentCell = function (elem) {
     // first check if elem is cell
     var cell = this.getCell(elem);
     if (cell) {
@@ -1856,7 +1860,7 @@
    * @param {Integer} index - index of slide to start
    * @returns {Array} cells - array of Flickity.Cells
    */
-  proto.getAdjacentCellElements = function(adjCount, index) {
+  proto.getAdjacentCellElements = function (adjCount, index) {
     if (!adjCount) {
       return this.selectedSlide.getCellElements();
     }
@@ -1882,7 +1886,7 @@
    * select slide from number or cell element
    * @param {Element, Selector String, or Number} selector
    */
-  proto.queryCell = function(selector) {
+  proto.queryCell = function (selector) {
     if (typeof selector == 'number') {
       // use number as index
       return this.cells[selector];
@@ -1901,12 +1905,12 @@
 
   // -------------------------- events -------------------------- //
 
-  proto.uiChange = function() {
+  proto.uiChange = function () {
     this.emitEvent('uiChange');
   };
 
   // keep focus on element when child UI elements are clicked
-  proto.childUIPointerDown = function(event) {
+  proto.childUIPointerDown = function (event) {
     // HACK iOS does not allow touch events to bubble up?!
     if (event.type != 'touchstart') {
       event.preventDefault();
@@ -1916,14 +1920,14 @@
 
   // ----- resize ----- //
 
-  proto.onresize = function() {
+  proto.onresize = function () {
     this.watchCSS();
     this.resize();
   };
 
   utils.debounceMethod(Flickity, 'onresize', 150);
 
-  proto.resize = function() {
+  proto.resize = function () {
     if (!this.isActive) {
       return;
     }
@@ -1943,7 +1947,7 @@
   };
 
   // watches the :after property, activates/deactivates
-  proto.watchCSS = function() {
+  proto.watchCSS = function () {
     var watchOption = this.options.watchCSS;
     if (!watchOption) {
       return;
@@ -1961,7 +1965,7 @@
   // ----- keydown ----- //
 
   // go previous/next if left/right keys pressed
-  proto.onkeydown = function(event) {
+  proto.onkeydown = function (event) {
     // only work if element is in focus
     var isNotFocused =
       document.activeElement && document.activeElement != this.element;
@@ -1977,13 +1981,13 @@
 
   Flickity.keyboardHandlers = {
     // left arrow
-    37: function() {
+    37: function () {
       var leftMethod = this.options.rightToLeft ? 'next' : 'previous';
       this.uiChange();
       this[leftMethod]();
     },
     // right arrow
-    39: function() {
+    39: function () {
       var rightMethod = this.options.rightToLeft ? 'previous' : 'next';
       this.uiChange();
       this[rightMethod]();
@@ -1992,11 +1996,13 @@
 
   // ----- focus ----- //
 
-  proto.focus = function() {
+  proto.focus = function () {
     // TODO remove scrollTo once focus options gets more support
     // https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/focus#Browser_compatibility
     var prevScrollY = window.pageYOffset;
-    this.element.focus({ preventScroll: true });
+    this.element.focus({
+      preventScroll: true
+    });
     // hack to fix scroll jump after focus, #76
     if (window.pageYOffset != prevScrollY) {
       window.scrollTo(window.pageXOffset, prevScrollY);
@@ -2006,7 +2012,7 @@
   // -------------------------- destroy -------------------------- //
 
   // deactivate all Flickity functionality, but keep stuff available
-  proto.deactivate = function() {
+  proto.deactivate = function () {
     if (!this.isActive) {
       return;
     }
@@ -2014,7 +2020,7 @@
     this.element.classList.remove('flickity-rtl');
     this.unselectSelectedSlide();
     // destroy cells
-    this.cells.forEach(function(cell) {
+    this.cells.forEach(function (cell) {
       cell.destroy();
     });
     this.element.removeChild(this.viewport);
@@ -2029,7 +2035,7 @@
     this.emitEvent('deactivate');
   };
 
-  proto.destroy = function() {
+  proto.destroy = function () {
     this.deactivate();
     window.removeEventListener('resize', this);
     this.allOff();
@@ -2052,7 +2058,7 @@
    * @param {Element} elem
    * @returns {Flickity}
    */
-  Flickity.data = function(elem) {
+  Flickity.data = function (elem) {
     elem = utils.getQueryElement(elem);
     var id = elem && elem.flickityGUID;
     return id && instances[id];
@@ -2065,7 +2071,7 @@
   }
 
   // set internal jQuery, for Webpack + jQuery v3, #478
-  Flickity.setJQuery = function(jq) {
+  Flickity.setJQuery = function (jq) {
     jQuery = jq;
   };
 
@@ -2083,12 +2089,13 @@
 
 /*jshint browser: true, undef: true, unused: true, strict: true */
 
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
-  /* jshint strict: false */ /*global define, module, require */
+  /* jshint strict: false */
+  /*global define, module, require */
   if (typeof define == 'function' && define.amd) {
     // AMD
-    define('unipointer/unipointer', ['ev-emitter/ev-emitter'], function(
+    define('unipointer/unipointer', ['ev-emitter/ev-emitter'], function (
       EvEmitter
     ) {
       return factory(window, EvEmitter);
@@ -2108,11 +2115,11 @@
   // inherit EvEmitter
   var proto = (Unipointer.prototype = Object.create(EvEmitter.prototype));
 
-  proto.bindStartEvent = function(elem) {
+  proto.bindStartEvent = function (elem) {
     this._bindStartEvent(elem, true);
   };
 
-  proto.unbindStartEvent = function(elem) {
+  proto.unbindStartEvent = function (elem) {
     this._bindStartEvent(elem, false);
   };
 
@@ -2120,7 +2127,7 @@
    * Add or remove start event
    * @param {Boolean} isAdd - remove if falsey
    */
-  proto._bindStartEvent = function(elem, isAdd) {
+  proto._bindStartEvent = function (elem, isAdd) {
     // munge isAdd, default to true
     isAdd = isAdd === undefined ? true : isAdd;
     var bindMethod = isAdd ? 'addEventListener' : 'removeEventListener';
@@ -2138,7 +2145,7 @@
   };
 
   // trigger handler methods for events
-  proto.handleEvent = function(event) {
+  proto.handleEvent = function (event) {
     var method = 'on' + event.type;
     if (this[method]) {
       this[method](event);
@@ -2146,7 +2153,7 @@
   };
 
   // returns the touch that we're keeping track of
-  proto.getTouch = function(touches) {
+  proto.getTouch = function (touches) {
     for (var i = 0; i < touches.length; i++) {
       var touch = touches[i];
       if (touch.identifier == this.pointerIdentifier) {
@@ -2157,7 +2164,7 @@
 
   // ----- start event ----- //
 
-  proto.onmousedown = function(event) {
+  proto.onmousedown = function (event) {
     // dismiss clicks from right or middle buttons
     var button = event.button;
     if (button && (button !== 0 && button !== 1)) {
@@ -2166,11 +2173,11 @@
     this._pointerDown(event, event);
   };
 
-  proto.ontouchstart = function(event) {
+  proto.ontouchstart = function (event) {
     this._pointerDown(event, event.changedTouches[0]);
   };
 
-  proto.onpointerdown = function(event) {
+  proto.onpointerdown = function (event) {
     this._pointerDown(event, event);
   };
 
@@ -2179,7 +2186,7 @@
    * @param {Event} event
    * @param {Event or Touch} pointer
    */
-  proto._pointerDown = function(event, pointer) {
+  proto._pointerDown = function (event, pointer) {
     // dismiss right click and other pointers
     // button = 0 is okay, 1-4 not
     if (event.button || this.isPointerDown) {
@@ -2189,15 +2196,14 @@
     this.isPointerDown = true;
     // save pointer identifier to match up touch events
     this.pointerIdentifier =
-      pointer.pointerId !== undefined
-        ? // pointerId for pointer events, touch.indentifier for touch events
-          pointer.pointerId
-        : pointer.identifier;
+      pointer.pointerId !== undefined ? // pointerId for pointer events, touch.indentifier for touch events
+      pointer.pointerId :
+      pointer.identifier;
 
     this.pointerDown(event, pointer);
   };
 
-  proto.pointerDown = function(event, pointer) {
+  proto.pointerDown = function (event, pointer) {
     this._bindPostStartEvents(event);
     this.emitEvent('pointerDown', [event, pointer]);
   };
@@ -2209,26 +2215,26 @@
     pointerdown: ['pointermove', 'pointerup', 'pointercancel']
   };
 
-  proto._bindPostStartEvents = function(event) {
+  proto._bindPostStartEvents = function (event) {
     if (!event) {
       return;
     }
     // get proper events to match start event
     var events = postStartEvents[event.type];
     // bind events to node
-    events.forEach(function(eventName) {
+    events.forEach(function (eventName) {
       window.addEventListener(eventName, this);
     }, this);
     // save these arguments
     this._boundPointerEvents = events;
   };
 
-  proto._unbindPostStartEvents = function() {
+  proto._unbindPostStartEvents = function () {
     // check for _boundEvents, in case dragEnd triggered twice (old IE8 bug)
     if (!this._boundPointerEvents) {
       return;
     }
-    this._boundPointerEvents.forEach(function(eventName) {
+    this._boundPointerEvents.forEach(function (eventName) {
       window.removeEventListener(eventName, this);
     }, this);
 
@@ -2237,17 +2243,17 @@
 
   // ----- move event ----- //
 
-  proto.onmousemove = function(event) {
+  proto.onmousemove = function (event) {
     this._pointerMove(event, event);
   };
 
-  proto.onpointermove = function(event) {
+  proto.onpointermove = function (event) {
     if (event.pointerId == this.pointerIdentifier) {
       this._pointerMove(event, event);
     }
   };
 
-  proto.ontouchmove = function(event) {
+  proto.ontouchmove = function (event) {
     var touch = this.getTouch(event.changedTouches);
     if (touch) {
       this._pointerMove(event, touch);
@@ -2260,28 +2266,28 @@
    * @param {Event or Touch} pointer
    * @private
    */
-  proto._pointerMove = function(event, pointer) {
+  proto._pointerMove = function (event, pointer) {
     this.pointerMove(event, pointer);
   };
 
   // public
-  proto.pointerMove = function(event, pointer) {
+  proto.pointerMove = function (event, pointer) {
     this.emitEvent('pointerMove', [event, pointer]);
   };
 
   // ----- end event ----- //
 
-  proto.onmouseup = function(event) {
+  proto.onmouseup = function (event) {
     this._pointerUp(event, event);
   };
 
-  proto.onpointerup = function(event) {
+  proto.onpointerup = function (event) {
     if (event.pointerId == this.pointerIdentifier) {
       this._pointerUp(event, event);
     }
   };
 
-  proto.ontouchend = function(event) {
+  proto.ontouchend = function (event) {
     var touch = this.getTouch(event.changedTouches);
     if (touch) {
       this._pointerUp(event, touch);
@@ -2294,26 +2300,26 @@
    * @param {Event or Touch} pointer
    * @private
    */
-  proto._pointerUp = function(event, pointer) {
+  proto._pointerUp = function (event, pointer) {
     this._pointerDone();
     this.pointerUp(event, pointer);
   };
 
   // public
-  proto.pointerUp = function(event, pointer) {
+  proto.pointerUp = function (event, pointer) {
     this.emitEvent('pointerUp', [event, pointer]);
   };
 
   // ----- pointer done ----- //
 
   // triggered on pointer up & pointer cancel
-  proto._pointerDone = function() {
+  proto._pointerDone = function () {
     this._pointerReset();
     this._unbindPostStartEvents();
     this.pointerDone();
   };
 
-  proto._pointerReset = function() {
+  proto._pointerReset = function () {
     // reset properties
     this.isPointerDown = false;
     delete this.pointerIdentifier;
@@ -2323,13 +2329,13 @@
 
   // ----- pointer cancel ----- //
 
-  proto.onpointercancel = function(event) {
+  proto.onpointercancel = function (event) {
     if (event.pointerId == this.pointerIdentifier) {
       this._pointerCancel(event, event);
     }
   };
 
-  proto.ontouchcancel = function(event) {
+  proto.ontouchcancel = function (event) {
     var touch = this.getTouch(event.changedTouches);
     if (touch) {
       this._pointerCancel(event, touch);
@@ -2342,20 +2348,20 @@
    * @param {Event or Touch} pointer
    * @private
    */
-  proto._pointerCancel = function(event, pointer) {
+  proto._pointerCancel = function (event, pointer) {
     this._pointerDone();
     this.pointerCancel(event, pointer);
   };
 
   // public
-  proto.pointerCancel = function(event, pointer) {
+  proto.pointerCancel = function (event, pointer) {
     this.emitEvent('pointerCancel', [event, pointer]);
   };
 
   // -----  ----- //
 
   // utility function for getting x/y coords from event
-  Unipointer.getPointerPoint = function(pointer) {
+  Unipointer.getPointerPoint = function (pointer) {
     return {
       x: pointer.pageX,
       y: pointer.pageY
@@ -2375,13 +2381,14 @@
 
 /*jshint browser: true, unused: true, undef: true, strict: true */
 
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
+  /*jshint strict: false */
+  /*globals define, module, require */
 
   if (typeof define == 'function' && define.amd) {
     // AMD
-    define('unidragger/unidragger', ['unipointer/unipointer'], function(
+    define('unidragger/unidragger', ['unipointer/unipointer'], function (
       Unipointer
     ) {
       return factory(window, Unipointer);
@@ -2403,11 +2410,11 @@
 
   // ----- bind start ----- //
 
-  proto.bindHandles = function() {
+  proto.bindHandles = function () {
     this._bindHandles(true);
   };
 
-  proto.unbindHandles = function() {
+  proto.unbindHandles = function () {
     this._bindHandles(false);
   };
 
@@ -2415,7 +2422,7 @@
    * Add or remove start event
    * @param {Boolean} isAdd
    */
-  proto._bindHandles = function(isAdd) {
+  proto._bindHandles = function (isAdd) {
     // munge isAdd, default to true
     isAdd = isAdd === undefined ? true : isAdd;
     // bind each handle
@@ -2442,7 +2449,7 @@
    * @param {Event} event
    * @param {Event or Touch} pointer
    */
-  proto.pointerDown = function(event, pointer) {
+  proto.pointerDown = function (event, pointer) {
     var isOkay = this.okayPointerDown(event);
     if (!isOkay) {
       return;
@@ -2476,7 +2483,7 @@
   };
 
   // dismiss inputs with text fields. flickity#403, flickity#404
-  proto.okayPointerDown = function(event) {
+  proto.okayPointerDown = function (event) {
     var isCursorNode = cursorNodes[event.target.nodeName];
     var isClickType = clickTypes[event.target.type];
     var isOkay = !isCursorNode || isClickType;
@@ -2487,7 +2494,7 @@
   };
 
   // kludge to blur previously focused input
-  proto.pointerDownBlur = function() {
+  proto.pointerDownBlur = function () {
     var focused = document.activeElement;
     // do not blur body for IE10, metafizzy/flickity#117
     var canBlur = focused && focused.blur && focused != document.body;
@@ -2503,14 +2510,14 @@
    * @param {Event} event
    * @param {Event or Touch} pointer
    */
-  proto.pointerMove = function(event, pointer) {
+  proto.pointerMove = function (event, pointer) {
     var moveVector = this._dragPointerMove(event, pointer);
     this.emitEvent('pointerMove', [event, pointer, moveVector]);
     this._dragMove(event, pointer, moveVector);
   };
 
   // base pointer move logic
-  proto._dragPointerMove = function(event, pointer) {
+  proto._dragPointerMove = function (event, pointer) {
     var moveVector = {
       x: pointer.pageX - this.pointerDownPointer.pageX,
       y: pointer.pageY - this.pointerDownPointer.pageY
@@ -2523,7 +2530,7 @@
   };
 
   // condition if pointer has moved far enough to start drag
-  proto.hasDragStarted = function(moveVector) {
+  proto.hasDragStarted = function (moveVector) {
     return Math.abs(moveVector.x) > 3 || Math.abs(moveVector.y) > 3;
   };
 
@@ -2534,12 +2541,12 @@
    * @param {Event} event
    * @param {Event or Touch} pointer
    */
-  proto.pointerUp = function(event, pointer) {
+  proto.pointerUp = function (event, pointer) {
     this.emitEvent('pointerUp', [event, pointer]);
     this._dragPointerUp(event, pointer);
   };
 
-  proto._dragPointerUp = function(event, pointer) {
+  proto._dragPointerUp = function (event, pointer) {
     if (this.isDragging) {
       this._dragEnd(event, pointer);
     } else {
@@ -2551,19 +2558,19 @@
   // -------------------------- drag -------------------------- //
 
   // dragStart
-  proto._dragStart = function(event, pointer) {
+  proto._dragStart = function (event, pointer) {
     this.isDragging = true;
     // prevent clicks
     this.isPreventingClicks = true;
     this.dragStart(event, pointer);
   };
 
-  proto.dragStart = function(event, pointer) {
+  proto.dragStart = function (event, pointer) {
     this.emitEvent('dragStart', [event, pointer]);
   };
 
   // dragMove
-  proto._dragMove = function(event, pointer, moveVector) {
+  proto._dragMove = function (event, pointer, moveVector) {
     // do not drag if not dragging yet
     if (!this.isDragging) {
       return;
@@ -2572,18 +2579,18 @@
     this.dragMove(event, pointer, moveVector);
   };
 
-  proto.dragMove = function(event, pointer, moveVector) {
+  proto.dragMove = function (event, pointer, moveVector) {
     event.preventDefault();
     this.emitEvent('dragMove', [event, pointer, moveVector]);
   };
 
   // dragEnd
-  proto._dragEnd = function(event, pointer) {
+  proto._dragEnd = function (event, pointer) {
     // set flags
     this.isDragging = false;
     // re-enable clicking async
     setTimeout(
-      function() {
+      function () {
         delete this.isPreventingClicks;
       }.bind(this)
     );
@@ -2591,14 +2598,14 @@
     this.dragEnd(event, pointer);
   };
 
-  proto.dragEnd = function(event, pointer) {
+  proto.dragEnd = function (event, pointer) {
     this.emitEvent('dragEnd', [event, pointer]);
   };
 
   // ----- onclick ----- //
 
   // handle all clicks and prevent clicks when dragging
-  proto.onclick = function(event) {
+  proto.onclick = function (event) {
     if (this.isPreventingClicks) {
       event.preventDefault();
     }
@@ -2607,7 +2614,7 @@
   // ----- staticClick ----- //
 
   // triggered after pointer down & up with no/tiny movement
-  proto._staticClick = function(event, pointer) {
+  proto._staticClick = function (event, pointer) {
     // ignore emulated mouse up clicks
     if (this.isIgnoringMouseUp && event.type == 'mouseup') {
       return;
@@ -2620,7 +2627,7 @@
       this.isIgnoringMouseUp = true;
       // reset flag after 300ms
       setTimeout(
-        function() {
+        function () {
           delete this.isIgnoringMouseUp;
         }.bind(this),
         400
@@ -2628,7 +2635,7 @@
     }
   };
 
-  proto.staticClick = function(event, pointer) {
+  proto.staticClick = function (event, pointer) {
     this.emitEvent('staticClick', [event, pointer]);
   };
 
@@ -2642,7 +2649,7 @@
 });
 
 // drag
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -2651,7 +2658,7 @@
       './flickity',
       'unidragger/unidragger',
       'fizzy-ui-utils/utils'
-    ], function(Flickity, Unidragger, utils) {
+    ], function (Flickity, Unidragger, utils) {
       return factory(window, Flickity, Unidragger, utils);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -2694,7 +2701,7 @@
   var isTouch = 'createTouch' in document;
   var isTouchmoveScrollCanceled = false;
 
-  proto._createDrag = function() {
+  proto._createDrag = function () {
     this.on('activate', this.onActivateDrag);
     this.on('uiChange', this._uiChangeDrag);
     this.on('deactivate', this.onDeactivateDrag);
@@ -2703,23 +2710,23 @@
     // HACK - add seemingly innocuous handler to fix iOS 10 scroll behavior
     // #457, RubaXa/Sortable#973
     if (isTouch && !isTouchmoveScrollCanceled) {
-      window.addEventListener('touchmove', function() {});
+      window.addEventListener('touchmove', function () {});
       isTouchmoveScrollCanceled = true;
     }
   };
 
-  proto.onActivateDrag = function() {
+  proto.onActivateDrag = function () {
     this.handles = [this.viewport];
     this.bindHandles();
     this.updateDraggable();
   };
 
-  proto.onDeactivateDrag = function() {
+  proto.onDeactivateDrag = function () {
     this.unbindHandles();
     this.element.classList.remove('is-draggable');
   };
 
-  proto.updateDraggable = function() {
+  proto.updateDraggable = function () {
     // disable dragging if less than 2 slides. #278
     if (this.options.draggable == '>1') {
       this.isDraggable = this.slides.length > 1;
@@ -2734,23 +2741,23 @@
   };
 
   // backwards compatibility
-  proto.bindDrag = function() {
+  proto.bindDrag = function () {
     this.options.draggable = true;
     this.updateDraggable();
   };
 
-  proto.unbindDrag = function() {
+  proto.unbindDrag = function () {
     this.options.draggable = false;
     this.updateDraggable();
   };
 
-  proto._uiChangeDrag = function() {
+  proto._uiChangeDrag = function () {
     delete this.isFreeScrolling;
   };
 
   // -------------------------- pointer events -------------------------- //
 
-  proto.pointerDown = function(event, pointer) {
+  proto.pointerDown = function (event, pointer) {
     if (!this.isDraggable) {
       this._pointerDownDefault(event, pointer);
       return;
@@ -2779,7 +2786,7 @@
   };
 
   // default pointerDown logic, used for staticClick
-  proto._pointerDownDefault = function(event, pointer) {
+  proto._pointerDownDefault = function (event, pointer) {
     // track start event position
     // Safari 9 overrides pageX and pageY. These values needs to be copied. #779
     this.pointerDownPointer = {
@@ -2797,14 +2804,14 @@
     SELECT: true
   };
 
-  proto.pointerDownFocus = function(event) {
+  proto.pointerDownFocus = function (event) {
     var isFocusNode = focusNodes[event.target.nodeName];
     if (!isFocusNode) {
       this.focus();
     }
   };
 
-  proto._pointerDownPreventDefault = function(event) {
+  proto._pointerDownPreventDefault = function (event) {
     var isTouchStart = event.type == 'touchstart';
     var isTouchPointer = event.pointerType == 'touch';
     var isFocusNode = focusNodes[event.target.nodeName];
@@ -2815,27 +2822,27 @@
 
   // ----- move ----- //
 
-  proto.hasDragStarted = function(moveVector) {
+  proto.hasDragStarted = function (moveVector) {
     return Math.abs(moveVector.x) > this.options.dragThreshold;
   };
 
   // ----- up ----- //
 
-  proto.pointerUp = function(event, pointer) {
+  proto.pointerUp = function (event, pointer) {
     delete this.isTouchScrolling;
     this.viewport.classList.remove('is-pointer-down');
     this.dispatchEvent('pointerUp', event, [pointer]);
     this._dragPointerUp(event, pointer);
   };
 
-  proto.pointerDone = function() {
+  proto.pointerDone = function () {
     window.removeEventListener('scroll', this);
     delete this.pointerDownScroll;
   };
 
   // -------------------------- dragging -------------------------- //
 
-  proto.dragStart = function(event, pointer) {
+  proto.dragStart = function (event, pointer) {
     if (!this.isDraggable) {
       return;
     }
@@ -2845,13 +2852,13 @@
     this.dispatchEvent('dragStart', event, [pointer]);
   };
 
-  proto.pointerMove = function(event, pointer) {
+  proto.pointerMove = function (event, pointer) {
     var moveVector = this._dragPointerMove(event, pointer);
     this.dispatchEvent('pointerMove', event, [pointer, moveVector]);
     this._dragMove(event, pointer, moveVector);
   };
 
-  proto.dragMove = function(event, pointer, moveVector) {
+  proto.dragMove = function (event, pointer, moveVector) {
     if (!this.isDraggable) {
       return;
     }
@@ -2886,7 +2893,7 @@
     this.dispatchEvent('dragMove', event, [pointer, moveVector]);
   };
 
-  proto.dragEnd = function(event, pointer) {
+  proto.dragEnd = function (event, pointer) {
     if (!this.isDraggable) {
       return;
     }
@@ -2901,8 +2908,7 @@
       // do not free-scroll if going outside of bounding slides
       // so bounding slides can attract slider, and keep it in bounds
       var restingX = this.getRestingPosition();
-      this.isFreeScrolling =
-        -restingX > this.slides[0].target &&
+      this.isFreeScrolling = -restingX > this.slides[0].target &&
         -restingX < this.getLastSlide().target;
     } else if (!this.options.freeScroll && index == this.selectedIndex) {
       // boost selection if selected index has not changed
@@ -2918,7 +2924,7 @@
     this.dispatchEvent('dragEnd', event, [pointer]);
   };
 
-  proto.dragEndRestingSelect = function() {
+  proto.dragEndRestingSelect = function () {
     var restingX = this.getRestingPosition();
     // how far away from selected slide
     var distance = Math.abs(
@@ -2929,9 +2935,9 @@
     var negativeResting = this._getClosestResting(restingX, distance, -1);
     // use closer resting for wrap-around
     var index =
-      positiveResting.distance < negativeResting.distance
-        ? positiveResting.index
-        : negativeResting.index;
+      positiveResting.distance < negativeResting.distance ?
+      positiveResting.index :
+      negativeResting.index;
     return index;
   };
 
@@ -2943,18 +2949,17 @@
    * @param {Integer} increment - +1 or -1, going up or down
    * @returns {Object} - { distance: {Number}, index: {Integer} }
    */
-  proto._getClosestResting = function(restingX, distance, increment) {
+  proto._getClosestResting = function (restingX, distance, increment) {
     var index = this.selectedIndex;
     var minDistance = Infinity;
     var condition =
-      this.options.contain && !this.options.wrapAround
-        ? // if contain, keep going if distance is equal to minDistance
-          function(d, md) {
-            return d <= md;
-          }
-        : function(d, md) {
-            return d < md;
-          };
+      this.options.contain && !this.options.wrapAround ? // if contain, keep going if distance is equal to minDistance
+      function (d, md) {
+        return d <= md;
+      } :
+      function (d, md) {
+        return d < md;
+      };
     while (condition(distance, minDistance)) {
       // measure distance to next cell
       index += increment;
@@ -2977,7 +2982,7 @@
    * @param {Number} x
    * @param {Integer} index - slide index
    */
-  proto.getSlideDistance = function(x, index) {
+  proto.getSlideDistance = function (x, index) {
     var len = this.slides.length;
     // wrap around if at least 2 slides
     var isWrapAround = this.options.wrapAround && len > 1;
@@ -2991,7 +2996,7 @@
     return x - (slide.target + wrap);
   };
 
-  proto.dragEndBoostSelect = function() {
+  proto.dragEndBoostSelect = function () {
     // do not boost if no previousDragX or dragMoveTime
     if (
       this.previousDragX === undefined ||
@@ -3016,7 +3021,7 @@
 
   // ----- staticClick ----- //
 
-  proto.staticClick = function(event, pointer) {
+  proto.staticClick = function (event, pointer) {
     // get clickedCell, if cell was clicked
     var clickedCell = this.getParentCell(event.target);
     var cellElem = clickedCell && clickedCell.element;
@@ -3026,7 +3031,7 @@
 
   // ----- scroll ----- //
 
-  proto.onscroll = function() {
+  proto.onscroll = function () {
     var scroll = getScrollPosition();
     var scrollMoveX = this.pointerDownScroll.x - scroll.x;
     var scrollMoveY = this.pointerDownScroll.y - scroll.y;
@@ -3051,7 +3056,7 @@
 });
 
 // prev/next buttons
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -3060,7 +3065,7 @@
       './flickity',
       'unipointer/unipointer',
       'fizzy-ui-utils/utils'
-    ], function(Flickity, Unipointer, utils) {
+    ], function (Flickity, Unipointer, utils) {
       return factory(window, Flickity, Unipointer, utils);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -3090,7 +3095,7 @@
 
   PrevNextButton.prototype = Object.create(Unipointer.prototype);
 
-  PrevNextButton.prototype._create = function() {
+  PrevNextButton.prototype._create = function () {
     // properties
     this.isEnabled = true;
     this.isPrevious = this.direction == -1;
@@ -3115,14 +3120,14 @@
     this.on('pointerDown', this.parent.childUIPointerDown.bind(this.parent));
   };
 
-  PrevNextButton.prototype.activate = function() {
+  PrevNextButton.prototype.activate = function () {
     this.bindStartEvent(this.element);
     this.element.addEventListener('click', this);
     // add to DOM
     this.parent.element.appendChild(this.element);
   };
 
-  PrevNextButton.prototype.deactivate = function() {
+  PrevNextButton.prototype.deactivate = function () {
     // remove from DOM
     this.parent.element.removeChild(this.element);
     // click events
@@ -3130,7 +3135,7 @@
     this.element.removeEventListener('click', this);
   };
 
-  PrevNextButton.prototype.createSVG = function() {
+  PrevNextButton.prototype.createSVG = function () {
     var svg = document.createElementNS(svgURI, 'svg');
     svg.setAttribute('class', 'flickity-button-icon');
     svg.setAttribute('viewBox', '0 0 100 100');
@@ -3182,7 +3187,7 @@
 
   PrevNextButton.prototype.handleEvent = utils.handleEvent;
 
-  PrevNextButton.prototype.onclick = function() {
+  PrevNextButton.prototype.onclick = function () {
     if (!this.isEnabled) {
       return;
     }
@@ -3193,7 +3198,7 @@
 
   // -----  ----- //
 
-  PrevNextButton.prototype.enable = function() {
+  PrevNextButton.prototype.enable = function () {
     if (this.isEnabled) {
       return;
     }
@@ -3201,7 +3206,7 @@
     this.isEnabled = true;
   };
 
-  PrevNextButton.prototype.disable = function() {
+  PrevNextButton.prototype.disable = function () {
     if (!this.isEnabled) {
       return;
     }
@@ -3209,7 +3214,7 @@
     this.isEnabled = false;
   };
 
-  PrevNextButton.prototype.update = function() {
+  PrevNextButton.prototype.update = function () {
     // index of first or last slide, if previous or next
     var slides = this.parent.slides;
     // enable is wrapAround and at least 2 slides
@@ -3223,7 +3228,7 @@
     this[method]();
   };
 
-  PrevNextButton.prototype.destroy = function() {
+  PrevNextButton.prototype.destroy = function () {
     this.deactivate();
     this.allOff();
   };
@@ -3245,7 +3250,7 @@
   Flickity.createMethods.push('_createPrevNextButtons');
   var proto = Flickity.prototype;
 
-  proto._createPrevNextButtons = function() {
+  proto._createPrevNextButtons = function () {
     if (!this.options.prevNextButtons) {
       return;
     }
@@ -3256,13 +3261,13 @@
     this.on('activate', this.activatePrevNextButtons);
   };
 
-  proto.activatePrevNextButtons = function() {
+  proto.activatePrevNextButtons = function () {
     this.prevButton.activate();
     this.nextButton.activate();
     this.on('deactivate', this.deactivatePrevNextButtons);
   };
 
-  proto.deactivatePrevNextButtons = function() {
+  proto.deactivatePrevNextButtons = function () {
     this.prevButton.deactivate();
     this.nextButton.deactivate();
     this.off('deactivate', this.deactivatePrevNextButtons);
@@ -3276,7 +3281,7 @@
 });
 
 // page dots
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -3285,7 +3290,7 @@
       './flickity',
       'unipointer/unipointer',
       'fizzy-ui-utils/utils'
-    ], function(Flickity, Unipointer, utils) {
+    ], function (Flickity, Unipointer, utils) {
       return factory(window, Flickity, Unipointer, utils);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -3310,7 +3315,7 @@
 
   PageDots.prototype = Object.create(Unipointer.prototype);
 
-  PageDots.prototype._create = function() {
+  PageDots.prototype._create = function () {
     // create holder element
     this.holder = document.createElement('ol');
     this.holder.className = 'flickity-page-dots';
@@ -3321,7 +3326,7 @@
     this.on('pointerDown', this.parent.childUIPointerDown.bind(this.parent));
   };
 
-  PageDots.prototype.activate = function() {
+  PageDots.prototype.activate = function () {
     this.setDots();
     this.holder.addEventListener('click', this.handleClick);
     this.bindStartEvent(this.holder);
@@ -3329,14 +3334,14 @@
     this.parent.element.appendChild(this.holder);
   };
 
-  PageDots.prototype.deactivate = function() {
+  PageDots.prototype.deactivate = function () {
     this.holder.removeEventListener('click', this.handleClick);
     this.unbindStartEvent(this.holder);
     // remove from DOM
     this.parent.element.removeChild(this.holder);
   };
 
-  PageDots.prototype.setDots = function() {
+  PageDots.prototype.setDots = function () {
     // get difference between number of slides and number of dots
     var delta = this.parent.slides.length - this.dots.length;
     if (delta > 0) {
@@ -3346,7 +3351,7 @@
     }
   };
 
-  PageDots.prototype.addDots = function(count) {
+  PageDots.prototype.addDots = function (count) {
     var fragment = document.createDocumentFragment();
     var newDots = [];
     var length = this.dots.length;
@@ -3364,16 +3369,16 @@
     this.dots = this.dots.concat(newDots);
   };
 
-  PageDots.prototype.removeDots = function(count) {
+  PageDots.prototype.removeDots = function (count) {
     // remove from this.dots collection
     var removeDots = this.dots.splice(this.dots.length - count, count);
     // remove from DOM
-    removeDots.forEach(function(dot) {
+    removeDots.forEach(function (dot) {
       this.holder.removeChild(dot);
     }, this);
   };
 
-  PageDots.prototype.updateSelected = function() {
+  PageDots.prototype.updateSelected = function () {
     // remove selected class on previous
     if (this.selectedDot) {
       this.selectedDot.className = 'dot';
@@ -3388,7 +3393,7 @@
     this.selectedDot.setAttribute('aria-current', 'step');
   };
 
-  PageDots.prototype.onTap = PageDots.prototype.onClick = function(event) {
+  PageDots.prototype.onTap = PageDots.prototype.onClick = function (event) {
     // old method name, backwards-compatible
     var target = event.target;
     // only care about dot clicks
@@ -3401,7 +3406,7 @@
     this.parent.select(index);
   };
 
-  PageDots.prototype.destroy = function() {
+  PageDots.prototype.destroy = function () {
     this.deactivate();
     this.allOff();
   };
@@ -3418,7 +3423,7 @@
 
   var proto = Flickity.prototype;
 
-  proto._createPageDots = function() {
+  proto._createPageDots = function () {
     if (!this.options.pageDots) {
       return;
     }
@@ -3431,19 +3436,19 @@
     this.on('deactivate', this.deactivatePageDots);
   };
 
-  proto.activatePageDots = function() {
+  proto.activatePageDots = function () {
     this.pageDots.activate();
   };
 
-  proto.updateSelectedPageDots = function() {
+  proto.updateSelectedPageDots = function () {
     this.pageDots.updateSelected();
   };
 
-  proto.updatePageDots = function() {
+  proto.updatePageDots = function () {
     this.pageDots.setDots();
   };
 
-  proto.deactivatePageDots = function() {
+  proto.deactivatePageDots = function () {
     this.pageDots.deactivate();
   };
 
@@ -3455,7 +3460,7 @@
 });
 
 // player & autoPlay
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -3464,7 +3469,7 @@
       'ev-emitter/ev-emitter',
       'fizzy-ui-utils/utils',
       './flickity'
-    ], function(EvEmitter, utils, Flickity) {
+    ], function (EvEmitter, utils, Flickity) {
       return factory(EvEmitter, utils, Flickity);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -3492,7 +3497,7 @@
   Player.prototype = Object.create(EvEmitter.prototype);
 
   // start play
-  Player.prototype.play = function() {
+  Player.prototype.play = function () {
     if (this.state == 'playing') {
       return;
     }
@@ -3510,7 +3515,7 @@
     this.tick();
   };
 
-  Player.prototype.tick = function() {
+  Player.prototype.tick = function () {
     // do not tick if not playing
     if (this.state != 'playing') {
       return;
@@ -3522,31 +3527,31 @@
     var _this = this;
     // HACK: reset ticks if stopped and started within interval
     this.clear();
-    this.timeout = setTimeout(function() {
+    this.timeout = setTimeout(function () {
       _this.parent.next(true);
       _this.tick();
     }, time);
   };
 
-  Player.prototype.stop = function() {
+  Player.prototype.stop = function () {
     this.state = 'stopped';
     this.clear();
     // remove visibility change event
     document.removeEventListener('visibilitychange', this.onVisibilityChange);
   };
 
-  Player.prototype.clear = function() {
+  Player.prototype.clear = function () {
     clearTimeout(this.timeout);
   };
 
-  Player.prototype.pause = function() {
+  Player.prototype.pause = function () {
     if (this.state == 'playing') {
       this.state = 'paused';
       this.clear();
     }
   };
 
-  Player.prototype.unpause = function() {
+  Player.prototype.unpause = function () {
     // re-start play if paused
     if (this.state == 'paused') {
       this.play();
@@ -3554,12 +3559,12 @@
   };
 
   // pause if page visibility is hidden, unpause if visible
-  Player.prototype.visibilityChange = function() {
+  Player.prototype.visibilityChange = function () {
     var isPageHidden = document.hidden;
     this[isPageHidden ? 'pause' : 'unpause']();
   };
 
-  Player.prototype.visibilityPlay = function() {
+  Player.prototype.visibilityPlay = function () {
     this.play();
     document.removeEventListener('visibilitychange', this.onVisibilityPlay);
   };
@@ -3573,7 +3578,7 @@
   Flickity.createMethods.push('_createPlayer');
   var proto = Flickity.prototype;
 
-  proto._createPlayer = function() {
+  proto._createPlayer = function () {
     this.player = new Player(this);
 
     this.on('activate', this.activatePlayer);
@@ -3582,7 +3587,7 @@
     this.on('deactivate', this.deactivatePlayer);
   };
 
-  proto.activatePlayer = function() {
+  proto.activatePlayer = function () {
     if (!this.options.autoPlay) {
       return;
     }
@@ -3592,23 +3597,23 @@
 
   // Player API, don't hate the ... thanks I know where the door is
 
-  proto.playPlayer = function() {
+  proto.playPlayer = function () {
     this.player.play();
   };
 
-  proto.stopPlayer = function() {
+  proto.stopPlayer = function () {
     this.player.stop();
   };
 
-  proto.pausePlayer = function() {
+  proto.pausePlayer = function () {
     this.player.pause();
   };
 
-  proto.unpausePlayer = function() {
+  proto.unpausePlayer = function () {
     this.player.unpause();
   };
 
-  proto.deactivatePlayer = function() {
+  proto.deactivatePlayer = function () {
     this.player.stop();
     this.element.removeEventListener('mouseenter', this);
   };
@@ -3616,7 +3621,7 @@
   // ----- mouseenter/leave ----- //
 
   // pause auto-play on hover
-  proto.onmouseenter = function() {
+  proto.onmouseenter = function () {
     if (!this.options.pauseAutoPlayOnHover) {
       return;
     }
@@ -3625,7 +3630,7 @@
   };
 
   // resume auto-play on hover off
-  proto.onmouseleave = function() {
+  proto.onmouseleave = function () {
     this.player.unpause();
     this.element.removeEventListener('mouseleave', this);
   };
@@ -3638,7 +3643,7 @@
 });
 
 // add, remove cell
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -3646,7 +3651,7 @@
     define('flickity/js/add-remove-cell', [
       './flickity',
       'fizzy-ui-utils/utils'
-    ], function(Flickity, utils) {
+    ], function (Flickity, utils) {
       return factory(window, Flickity, utils);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -3664,7 +3669,7 @@
   // append cells to a document fragment
   function getCellsFragment(cells) {
     var fragment = document.createDocumentFragment();
-    cells.forEach(function(cell) {
+    cells.forEach(function (cell) {
       fragment.appendChild(cell.element);
     });
     return fragment;
@@ -3679,7 +3684,7 @@
    * @param {Element, Array, NodeList} elems
    * @param {Integer} index
    */
-  proto.insert = function(elems, index) {
+  proto.insert = function (elems, index) {
     var cells = this._makeCells(elems);
     if (!cells || !cells.length) {
       return;
@@ -3714,11 +3719,11 @@
     this.cellChange(index, true);
   };
 
-  proto.append = function(elems) {
+  proto.append = function (elems) {
     this.insert(elems, this.cells.length);
   };
 
-  proto.prepend = function(elems) {
+  proto.prepend = function (elems) {
     this.insert(elems, 0);
   };
 
@@ -3726,7 +3731,7 @@
    * Remove cells
    * @param {Element, Array, NodeList} elems
    */
-  proto.remove = function(elems) {
+  proto.remove = function (elems) {
     var cells = this.getCells(elems);
     if (!cells || !cells.length) {
       return;
@@ -3734,7 +3739,7 @@
 
     var minCellIndex = this.cells.length - 1;
     // remove cells from collection & DOM
-    cells.forEach(function(cell) {
+    cells.forEach(function (cell) {
       cell.remove();
       var index = this.cells.indexOf(cell);
       minCellIndex = Math.min(index, minCellIndex);
@@ -3748,7 +3753,7 @@
    * logic to be run after a cell's size changes
    * @param {Element} elem - cell's element
    */
-  proto.cellSizeChange = function(elem) {
+  proto.cellSizeChange = function (elem) {
     var cell = this.getCell(elem);
     if (!cell) {
       return;
@@ -3763,7 +3768,7 @@
    * logic any time a cell is changed: added, removed, or size changed
    * @param {Integer} changedCellIndex - index of the changed cell, optional
    */
-  proto.cellChange = function(changedCellIndex, isPositioningSlider) {
+  proto.cellChange = function (changedCellIndex, isPositioningSlider) {
     var prevSelectedElem = this.selectedElement;
     this._positionCells(changedCellIndex);
     this._getWrapShiftCells();
@@ -3791,7 +3796,7 @@
 });
 
 // lazyload
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -3799,7 +3804,7 @@
     define('flickity/js/lazyload', [
       './flickity',
       'fizzy-ui-utils/utils'
-    ], function(Flickity, utils) {
+    ], function (Flickity, utils) {
       return factory(window, Flickity, utils);
     });
   } else if (typeof module == 'object' && module.exports) {
@@ -3819,11 +3824,11 @@
   Flickity.createMethods.push('_createLazyload');
   var proto = Flickity.prototype;
 
-  proto._createLazyload = function() {
+  proto._createLazyload = function () {
     this.on('select', this.lazyLoad);
   };
 
-  proto.lazyLoad = function() {
+  proto.lazyLoad = function () {
     var lazyLoad = this.options.lazyLoad;
     if (!lazyLoad) {
       return;
@@ -3833,12 +3838,12 @@
     var cellElems = this.getAdjacentCellElements(adjCount);
     // get lazy images in those cells
     var lazyImages = [];
-    cellElems.forEach(function(cellElem) {
+    cellElems.forEach(function (cellElem) {
       var lazyCellImages = getCellLazyImages(cellElem);
       lazyImages = lazyImages.concat(lazyCellImages);
     });
     // load lazy images
-    lazyImages.forEach(function(img) {
+    lazyImages.forEach(function (img) {
       new LazyLoader(img, this);
     }, this);
   };
@@ -3874,7 +3879,7 @@
 
   LazyLoader.prototype.handleEvent = utils.handleEvent;
 
-  LazyLoader.prototype.load = function() {
+  LazyLoader.prototype.load = function () {
     this.img.addEventListener('load', this);
     this.img.addEventListener('error', this);
     // get src & srcset
@@ -3893,15 +3898,15 @@
     this.img.removeAttribute('data-flickity-lazyload-srcset');
   };
 
-  LazyLoader.prototype.onload = function(event) {
+  LazyLoader.prototype.onload = function (event) {
     this.complete(event, 'flickity-lazyloaded');
   };
 
-  LazyLoader.prototype.onerror = function(event) {
+  LazyLoader.prototype.onerror = function (event) {
     this.complete(event, 'flickity-lazyerror');
   };
 
-  LazyLoader.prototype.complete = function(event, className) {
+  LazyLoader.prototype.complete = function (event, className) {
     // unbind events
     this.img.removeEventListener('load', this);
     this.img.removeEventListener('error', this);
@@ -3932,7 +3937,7 @@
  * Copyright 2015-2018 Metafizzy
  */
 
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
   /* jshint strict: false */
   if (typeof define == 'function' && define.amd) {
@@ -3970,9 +3975,10 @@
 
 /*jshint browser: true, undef: true, unused: true, strict: true*/
 
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
+  /*jshint strict: false */
+  /*globals define, module, require */
   if (typeof define == 'function' && define.amd) {
     // AMD
     define('flickity-as-nav-for/as-nav-for', [
@@ -3995,7 +4001,7 @@
 
   var proto = Flickity.prototype;
 
-  proto._createAsNavFor = function() {
+  proto._createAsNavFor = function () {
     this.on('activate', this.activateAsNavFor);
     this.on('deactivate', this.deactivateAsNavFor);
     this.on('destroy', this.destroyAsNavFor);
@@ -4011,7 +4017,7 @@
     });
   };
 
-  proto.setNavCompanion = function(elem) {
+  proto.setNavCompanion = function (elem) {
     elem = utils.getQueryElement(elem);
     var companion = Flickity.data(elem);
     // stop if no companion or companion is self
@@ -4022,7 +4028,7 @@
     this.navCompanion = companion;
     // companion select
     var _this = this;
-    this.onNavCompanionSelect = function() {
+    this.onNavCompanionSelect = function () {
       _this.navCompanionSelect();
     };
     companion.on('select', this.onNavCompanionSelect);
@@ -4032,7 +4038,7 @@
     this.navCompanionSelect(true);
   };
 
-  proto.navCompanionSelect = function(isInstant) {
+  proto.navCompanionSelect = function (isInstant) {
     if (!this.navCompanion) {
       return;
     }
@@ -4052,7 +4058,7 @@
     }
 
     var selectedCells = this.cells.slice(firstIndex, lastIndex + 1);
-    this.navSelectedElements = selectedCells.map(function(cell) {
+    this.navSelectedElements = selectedCells.map(function (cell) {
       return cell.element;
     });
     this.changeNavSelectedClass('add');
@@ -4062,17 +4068,17 @@
     return (b - a) * t + a;
   }
 
-  proto.changeNavSelectedClass = function(method) {
-    this.navSelectedElements.forEach(function(navElem) {
+  proto.changeNavSelectedClass = function (method) {
+    this.navSelectedElements.forEach(function (navElem) {
       navElem.classList[method]('is-nav-selected');
     });
   };
 
-  proto.activateAsNavFor = function() {
+  proto.activateAsNavFor = function () {
     this.navCompanionSelect(true);
   };
 
-  proto.removeNavSelectedElements = function() {
+  proto.removeNavSelectedElements = function () {
     if (!this.navSelectedElements) {
       return;
     }
@@ -4080,17 +4086,17 @@
     delete this.navSelectedElements;
   };
 
-  proto.onNavStaticClick = function(event, pointer, cellElement, cellIndex) {
+  proto.onNavStaticClick = function (event, pointer, cellElement, cellIndex) {
     if (typeof cellIndex == 'number') {
       this.navCompanion.selectCell(cellIndex);
     }
   };
 
-  proto.deactivateAsNavFor = function() {
+  proto.deactivateAsNavFor = function () {
     this.removeNavSelectedElements();
   };
 
-  proto.destroyAsNavFor = function() {
+  proto.destroyAsNavFor = function () {
     if (!this.navCompanion) {
       return;
     }
@@ -4110,7 +4116,7 @@
  * MIT License
  */
 
-(function(window, factory) {
+(function (window, factory) {
   'use strict';
   // universal module definition
 
@@ -4118,7 +4124,7 @@
 
   if (typeof define == 'function' && define.amd) {
     // AMD
-    define('imagesloaded/imagesloaded', ['ev-emitter/ev-emitter'], function(
+    define('imagesloaded/imagesloaded', ['ev-emitter/ev-emitter'], function (
       EvEmitter
     ) {
       return factory(window, EvEmitter);
@@ -4219,7 +4225,7 @@
 
     ImagesLoaded.prototype.options = {};
 
-    ImagesLoaded.prototype.getImages = function() {
+    ImagesLoaded.prototype.getImages = function () {
       this.images = [];
 
       // filter & find items if we have an item selector
@@ -4229,7 +4235,7 @@
     /**
      * @param {Node} element
      */
-    ImagesLoaded.prototype.addElementImages = function(elem) {
+    ImagesLoaded.prototype.addElementImages = function (elem) {
       // filter siblings
       if (elem.nodeName == 'IMG') {
         this.addImage(elem);
@@ -4268,7 +4274,7 @@
       11: true
     };
 
-    ImagesLoaded.prototype.addElementBackgroundImages = function(elem) {
+    ImagesLoaded.prototype.addElementBackgroundImages = function (elem) {
       var style = getComputedStyle(elem);
       if (!style) {
         // Firefox returns null if in a hidden iframe https://bugzil.la/548397
@@ -4289,17 +4295,17 @@
     /**
      * @param {Image} img
      */
-    ImagesLoaded.prototype.addImage = function(img) {
+    ImagesLoaded.prototype.addImage = function (img) {
       var loadingImage = new LoadingImage(img);
       this.images.push(loadingImage);
     };
 
-    ImagesLoaded.prototype.addBackground = function(url, elem) {
+    ImagesLoaded.prototype.addBackground = function (url, elem) {
       var background = new Background(url, elem);
       this.images.push(background);
     };
 
-    ImagesLoaded.prototype.check = function() {
+    ImagesLoaded.prototype.check = function () {
       var _this = this;
       this.progressedCount = 0;
       this.hasAnyBroken = false;
@@ -4311,18 +4317,18 @@
 
       function onProgress(image, elem, message) {
         // HACK - Chrome triggers event before object properties have changed. #83
-        setTimeout(function() {
+        setTimeout(function () {
           _this.progress(image, elem, message);
         });
       }
 
-      this.images.forEach(function(loadingImage) {
+      this.images.forEach(function (loadingImage) {
         loadingImage.once('progress', onProgress);
         loadingImage.check();
       });
     };
 
-    ImagesLoaded.prototype.progress = function(image, elem, message) {
+    ImagesLoaded.prototype.progress = function (image, elem, message) {
       this.progressedCount++;
       this.hasAnyBroken = this.hasAnyBroken || !image.isLoaded;
       // progress event
@@ -4340,7 +4346,7 @@
       }
     };
 
-    ImagesLoaded.prototype.complete = function() {
+    ImagesLoaded.prototype.complete = function () {
       var eventName = this.hasAnyBroken ? 'fail' : 'done';
       this.isComplete = true;
       this.emitEvent(eventName, [this]);
@@ -4359,7 +4365,7 @@
 
     LoadingImage.prototype = Object.create(EvEmitter.prototype);
 
-    LoadingImage.prototype.check = function() {
+    LoadingImage.prototype.check = function () {
       // If complete is true and browser supports natural sizes,
       // try to check for image status manually.
       var isComplete = this.getIsImageComplete();
@@ -4379,13 +4385,13 @@
       this.proxyImage.src = this.img.src;
     };
 
-    LoadingImage.prototype.getIsImageComplete = function() {
+    LoadingImage.prototype.getIsImageComplete = function () {
       // check for non-zero, non-undefined naturalWidth
       // fixes Safari+InfiniteScroll+Masonry bug infinite-scroll#671
       return this.img.complete && this.img.naturalWidth;
     };
 
-    LoadingImage.prototype.confirm = function(isLoaded, message) {
+    LoadingImage.prototype.confirm = function (isLoaded, message) {
       this.isLoaded = isLoaded;
       this.emitEvent('progress', [this, this.img, message]);
     };
@@ -4393,24 +4399,24 @@
     // ----- events ----- //
 
     // trigger specified handler for event type
-    LoadingImage.prototype.handleEvent = function(event) {
+    LoadingImage.prototype.handleEvent = function (event) {
       var method = 'on' + event.type;
       if (this[method]) {
         this[method](event);
       }
     };
 
-    LoadingImage.prototype.onload = function() {
+    LoadingImage.prototype.onload = function () {
       this.confirm(true, 'onload');
       this.unbindEvents();
     };
 
-    LoadingImage.prototype.onerror = function() {
+    LoadingImage.prototype.onerror = function () {
       this.confirm(false, 'onerror');
       this.unbindEvents();
     };
 
-    LoadingImage.prototype.unbindEvents = function() {
+    LoadingImage.prototype.unbindEvents = function () {
       this.proxyImage.removeEventListener('load', this);
       this.proxyImage.removeEventListener('error', this);
       this.img.removeEventListener('load', this);
@@ -4428,7 +4434,7 @@
     // inherit LoadingImage prototype
     Background.prototype = Object.create(LoadingImage.prototype);
 
-    Background.prototype.check = function() {
+    Background.prototype.check = function () {
       this.img.addEventListener('load', this);
       this.img.addEventListener('error', this);
       this.img.src = this.url;
@@ -4440,19 +4446,19 @@
       }
     };
 
-    Background.prototype.unbindEvents = function() {
+    Background.prototype.unbindEvents = function () {
       this.img.removeEventListener('load', this);
       this.img.removeEventListener('error', this);
     };
 
-    Background.prototype.confirm = function(isLoaded, message) {
+    Background.prototype.confirm = function (isLoaded, message) {
       this.isLoaded = isLoaded;
       this.emitEvent('progress', [this, this.element, message]);
     };
 
     // -------------------------- jQuery -------------------------- //
 
-    ImagesLoaded.makeJQueryPlugin = function(jQuery) {
+    ImagesLoaded.makeJQueryPlugin = function (jQuery) {
       jQuery = jQuery || window.jQuery;
       if (!jQuery) {
         return;
@@ -4460,7 +4466,7 @@
       // set local variable
       $ = jQuery;
       // $().imagesLoaded()
-      $.fn.imagesLoaded = function(options, callback) {
+      $.fn.imagesLoaded = function (options, callback) {
         var instance = new ImagesLoaded(this, options, callback);
         return instance.jqDeferred.promise($(this));
       };
@@ -4481,12 +4487,13 @@
 
 /*jshint browser: true, strict: true, undef: true, unused: true */
 
-(function(window, factory) {
+(function (window, factory) {
   // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
+  /*jshint strict: false */
+  /*globals define, module, require */
   if (typeof define == 'function' && define.amd) {
     // AMD
-    define(['flickity/js/index', 'imagesloaded/imagesloaded'], function(
+    define(['flickity/js/index', 'imagesloaded/imagesloaded'], function (
       Flickity,
       imagesLoaded
     ) {
@@ -4510,15 +4517,16 @@
 
   var proto = Flickity.prototype;
 
-  proto._createImagesLoaded = function() {
+  proto._createImagesLoaded = function () {
     this.on('activate', this.imagesLoaded);
   };
 
-  proto.imagesLoaded = function() {
+  proto.imagesLoaded = function () {
     if (!this.options.imagesLoaded) {
       return;
     }
     var _this = this;
+
     function onImagesLoadedProgress(instance, image) {
       var cell = _this.getParentCell(image.img);
       _this.cellSizeChange(cell && cell.element);
