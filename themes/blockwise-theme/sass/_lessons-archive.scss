@@ -25,10 +25,6 @@
       width: 100%;
     }
   }
-
-  h4 {
-    text-align: center;
-  }
 }
 
 .lessons {
@@ -164,9 +160,12 @@
   .blockwise-btn,
   .white-btn {
     display: none;
+    margin: 0 auto;
 
     @include desktop {
       display: inline-block;
     }
   }
+
+
 }

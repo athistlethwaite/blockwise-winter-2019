@@ -11,9 +11,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
-			<div>
-			<a class="back" href=""><i class="fas fa-angle-left"></i> See other events</a>
-			</div>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
 
