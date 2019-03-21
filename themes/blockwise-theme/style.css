@@ -1138,43 +1138,51 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
-.post-type-archive-event .site-main {
-  text-align: center; }
-  .post-type-archive-event .site-main .page-header {
-    background: url(../../assets/images/EventsBanner.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding-top: 50px;
-    height: 30vh; }
-    .post-type-archive-event .site-main .page-header h1 {
-      margin-top: 0px; }
-    .post-type-archive-event .site-main .page-header .taxonomy-description p {
-      margin: 0px; }
-  .post-type-archive-event .site-main .event {
-    padding: 20px 0px;
-    margin: 0px;
-    border: 1.5px solid #008294; }
-    .post-type-archive-event .site-main .event .entry-header {
-      padding: 0px 30px;
-      display: grid;
-      grid-template-columns: 90% 10%;
-      grid-template-areas: 'main logo' 'main logo'; }
-      .post-type-archive-event .site-main .event .entry-header .content-event {
-        grid-area: main; }
-        .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
-          color: #7bd1d0; }
-          .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta p {
-            margin-bottom: 5px; }
-      .post-type-archive-event .site-main .event .entry-header .small-angle {
-        grid-area: logo;
-        padding-top: 60px; }
-    .post-type-archive-event .site-main .event .small-chain {
+.post-type-archive-event .site-content {
+  position: relative; }
+  .post-type-archive-event .site-content .site-main {
+    text-align: center; }
+    .post-type-archive-event .site-content .site-main .page-header {
+      background: url(../../assets/images/EventsBanner.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      padding-top: 50px;
+      height: 30vh; }
+      .post-type-archive-event .site-content .site-main .page-header h1 {
+        margin-top: 0px; }
+      .post-type-archive-event .site-content .site-main .page-header .taxonomy-description p {
+        margin: 0px; }
+    .post-type-archive-event .site-content .site-main .event {
+      padding: 20px 0px;
+      margin: 0px;
+      border: 1.5px solid #008294; }
+      .post-type-archive-event .site-content .site-main .event .entry-header {
+        padding: 0px 30px;
+        display: grid;
+        grid-template-columns: 90% 10%;
+        grid-template-areas: 'main logo' 'main logo'; }
+        .post-type-archive-event .site-content .site-main .event .entry-header .content-event {
+          grid-area: main; }
+          .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta {
+            color: #7bd1d0; }
+            .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta p {
+              margin-bottom: 5px; }
+        .post-type-archive-event .site-content .site-main .event .entry-header .small-angle {
+          grid-area: logo;
+          padding-top: 60px; }
+      .post-type-archive-event .site-content .site-main .event .small-chain {
+        display: none; }
+    .post-type-archive-event .site-content .site-main .hidden {
       display: none; }
-  .post-type-archive-event .site-main .hidden {
-    display: none; }
+  .post-type-archive-event .site-content .event-pop-up {
+    z-index: 999;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f7f9fa; }
 
 @media screen and (min-width: 1000px) {
   .post-type-archive-event .site-content {
@@ -1218,6 +1226,7 @@ https://flickity.metafizzy.co
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
+        z-index: 0;
         padding: 0px 50px 100px 50px; }
         .post-type-archive-event .site-content .site-main .all-articles .event {
           position: relative;

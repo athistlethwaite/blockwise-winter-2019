@@ -45,6 +45,13 @@ get_header(); ?>
                 <img class="small-chain" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
                 <?php endif; ?>
             </article><!-- #post-## -->
+            <?php endwhile; ?>
+        </div>
+        <div class="all-main-pop-up">
+            <?php  /* Start the Loop */ ?>
+            <?php $eventNumber = 0; ?>
+            <?php while (have_posts()) : the_post(); ?>
+            <?php $eventNumber++; ?>
             <article class="event-pop-up hidden" data-event=<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <a href="" class="go-back"><img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click for Event Info">See all events</a>
                 <header class="entry-header">
@@ -63,7 +70,7 @@ get_header(); ?>
             </article><!-- #post-## -->
 
             <div class="pop-up hidden">
-            <h2 class="entry-title">RSVP</h2>
+                <h2 class="entry-title">RSVP</h2>
                 <?php echo do_shortcode('[contact-form-7 id="199" title="rsvp event"]'); ?>
             </div>
 

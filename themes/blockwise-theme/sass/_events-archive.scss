@@ -2,6 +2,8 @@
 # Events Archive Page
 --------------------------------------------------------------*/
 .post-type-archive-event {
+  .site-content{
+    position:relative;
   .site-main {
     text-align: center;
     .page-header {
@@ -52,6 +54,16 @@
       display: none;
     }
   }
+
+  .event-pop-up {
+    z-index:999;
+    position:absolute;
+    bottom:0;
+    left:0;
+    background-color: $color__brand-ghost-white;
+    @include desktop {}
+  }
+}
 }
 
 @include desktop {
@@ -87,6 +99,7 @@
           justify-content: center;
           flex-direction: row;
           align-items: center;
+          z-index:0;
           padding: 0px 50px 100px 50px;
 
           .event {
@@ -111,9 +124,9 @@
               box-sizing: border-box;
               .content-event {
                 padding-top: 15px;
-                a h2{
+                a h2 {
                   font-size: 2rem;
-                  margin:10px 0px;
+                  margin: 10px 0px;
                 }
                 .entry-meta {
                   color: $color__brand-middle-blue;
