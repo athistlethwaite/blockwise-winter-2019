@@ -62,7 +62,10 @@ get_header(); ?>
 
             </article><!-- #post-## -->
 
-
+            <div class="pop-up hidden">
+            <h2 class="entry-title">RSVP</h2>
+                <?php echo do_shortcode('[contact-form-7 id="199" title="rsvp event"]'); ?>
+            </div>
 
             <?php endwhile; ?>
         </div>

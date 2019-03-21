@@ -1255,7 +1255,7 @@ https://flickity.metafizzy.co
               padding-top: 15px; }
               .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event a h2 {
                 font-size: 2rem;
-                padding-top: 10px; }
+                margin: 10px 0px; }
               .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta {
                 color: #7bd1d0; }
                 .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta p {
