@@ -48,30 +48,33 @@
     position: relative;
     padding-bottom: 30px;
 
-    &:first-child {
+    &.chain {
+
+      &:first-child {
+
+        &:before {
+          display: none;
+        }
+      }
 
       &:before {
-        display: none;
-      }
-    }
+        background-image: url('../../assets/images/LearnChainMobile.png');
+        background-repeat: no-repeat;
+        width: 6px;
+        height: 38px;
+        content: '';
+        position: absolute;
+        top: -34px;
+        left: 50%;
+        transform: translateX(-50);
 
-    &:before {
-      background-image: url('../../assets/images/LearnChainMobile.png');
-      background-repeat: no-repeat;
-      width: 6px;
-      height: 38px;
-      content: '';
-      position: absolute;
-      top: -34px;
-      left: 50%;
-      transform: translateX(-50);
-
-      @include desktop {
-        background-image: url('../../assets/images/LearnChainLink.png');
-        width: 78px;
-        height: 11px;
-        top: 30px;
-        left: -71px;
+        @include desktop {
+          background-image: url('../../assets/images/LearnChainLink.png');
+          width: 78px;
+          height: 11px;
+          top: 30px;
+          left: -71px;
+        }
       }
     }
 

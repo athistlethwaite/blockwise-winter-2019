@@ -71,7 +71,9 @@ get_header(); ?>
         </div>
         <?php blockwise_numbered_pagination(); ?>
 
-
+        <div class="pop-up hidden">
+            <?php echo do_shortcode('[contact-form-7 id="191" title="contact-us"]'); ?>
+        </div>
 
         <?php else : ?>
 

@@ -24,9 +24,8 @@
   });
 
   //Remove Chain Link 
-  $('.lesson-type-wrapper').on('click', function (event) {
-    $('#pseudo').remove();
-
-  });
+  // $('.lesson-type-wrapper').on('click', function (event) {
+  //   $(this).removeClass('.chain');
+  // });
 
 })(jQuery);

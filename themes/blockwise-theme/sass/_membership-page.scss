@@ -6,7 +6,7 @@
   ul,
   li {
     margin-left: 0;
-    padding-left: 0;
+    padding: 0;
   }
   .wpcf7-form {
     display: none;
@@ -16,14 +16,38 @@
   .entry-header {
     background-image: url('../../assets/images/MembershipBanner.jpg');
   }
-  .option-wrapper {
+  .tablinks {
     display: flex;
     justify-content: space-between;
+    border: solid 3px;
+    font-weight: bold;
+    li {
+      padding: 20px 0;
+      width: 33%;
+      text-align: center;
+    }
+  }
+  .option-wrapper {
+    ul {
+      list-style-image: url('../../assets/images/MembershipCheck.png');
+    }
   }
   .list-content {
     display: none;
+    width: 100%;
+    padding: 0 140px;
+    li {
+      padding: 10px 0px;
+    }
   }
   .sign-up-pop {
     margin-left: 41%;
+  }
+  .active {
+    display: block;
+  }
+  .tab-color {
+    background-color: $color__brand-dark-cyan;
+    color: $color__brand-ghost-white;
   }
 }
