@@ -16,7 +16,7 @@
     </header><!-- .entry-header -->
 
     <div class="entry-content">
-
+        <h3 class="member-h3">Become a blockwise member and become part of the blockchain industry marketing consortium.</h3>
         <?php
  /*
  * CFS Loop membership_options Title

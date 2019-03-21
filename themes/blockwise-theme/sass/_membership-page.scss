@@ -10,11 +10,16 @@
     margin-left: 0;
     padding: 0;
   }
+  .member-h3 {
+    text-align: center;
+    padding: 0 50px;
+  }
   .wpcf7-form {
     display: none;
   }
   .entry-header {
     background-image: url('../../assets/images/MembershipBanner.jpg');
+    height: 62vh !important; //to override global yay or nay
   }
   .tablinks {
     display: flex;
@@ -46,18 +51,22 @@
   .thank-you-active {
     display: block;
     background-color: $color__brand-ghost-white;
-    width: 65vw;
-    height: 37vh;
+    max-width: 58vw;
+    max-height: 36vh;
     position: fixed;
     top: 103px;
-    left: 84px;
+    left: 105px;
     border-radius: 5px;
     background-image: url('../../assets/images/PopupBG.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     p {
       padding: 0px 13px;
       padding-top: 30px;
+      margin: 0;
+    }
+    .got-it {
+      margin: 20px 0;
     }
   }
   .active {
