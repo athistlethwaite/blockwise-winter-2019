@@ -1,3 +1,15 @@
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
+.page-template-about {
+  .entry-header {
+    background-image: url('../../assets/images/AboutBanner.png');
+    height: 70vw !important;
+    @include tablet {
+      height: 100vh;
+    }
+    @include desktop {
+      height: 100vh;
+    }
+  }
+}

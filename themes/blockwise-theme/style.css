@@ -471,7 +471,8 @@ h4,
 h5,
 h6 {
   clear: both;
-  color: #026082; }
+  color: #026082;
+  text-align: center; }
 
 /* Copy */
 p {
@@ -1050,6 +1051,12 @@ https://flickity.metafizzy.co
   background-size: cover;
   text-align: center; }
 
+.blog .header-content-wrapper,
+.page-template-about .header-content-wrapper {
+  padding: 1rem 0;
+  width: 100%;
+  background-color: rgba(247, 249, 250, 0.5); }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1118,6 +1125,16 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
+.page-template-about .entry-header {
+  background-image: url("../../assets/images/AboutBanner.png");
+  height: 70vw !important; }
+  @media screen and (min-width: 600px) and (max-width: 1000px) {
+    .page-template-about .entry-header {
+      height: 100vh; } }
+  @media screen and (min-width: 1000px) {
+    .page-template-about .entry-header {
+      height: 100vh; } }
+
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
@@ -1144,7 +1161,7 @@ https://flickity.metafizzy.co
       padding: 0px 30px;
       display: grid;
       grid-template-columns: 90% 10%;
-      grid-template-areas: 'main logo' 'main logo'; }
+      grid-template-areas: 'main logo' 'main logo'; }
       .post-type-archive-event .site-main .event .entry-header .content-event {
         grid-area: main; }
         .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
@@ -1409,6 +1426,61 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Market Trends Archive Page
 --------------------------------------------------------------*/
+.blog .page-header {
+  background-image: url("../../assets/images/NewsBanner.jpg");
+  height: 50vh !important; }
+
+.blog article {
+  border: 2px solid #026082;
+  border-top: 0;
+  margin-bottom: 0; }
+
+.blog .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1.5rem; }
+  .blog .entry-header img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1rem; }
+  .blog .entry-header .entry-text-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    text-align: center; }
+    .blog .entry-header .entry-text-wrapper p {
+      margin: 0 auto;
+      width: 50%; }
+
+.blog article:nth-of-type(2) {
+  border-top: 2px solid #026082; }
+
+.blog article:nth-of-type(1) {
+  border: 0; }
+  .blog article:nth-of-type(1) .entry-content {
+    text-align: center;
+    padding: 0 1.5rem; }
+
+.paged article:nth-of-type(1) {
+  border: 2px solid #026082; }
+
+.paged article:nth-of-type(2) {
+  border-top: none; }
+
 /*--------------------------------------------------------------
 # Academy Page
 --------------------------------------------------------------*/
@@ -1483,8 +1555,8 @@ https://flickity.metafizzy.co
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

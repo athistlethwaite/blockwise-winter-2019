@@ -6,7 +6,7 @@
   margin: 0 auto;
 }
 
-.site-main>article:first-child header,
+.site-main > article:first-child header,
 .page-header {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -18,6 +18,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+}
+
+.blog,
+.page-template-about {
+  .header-content-wrapper {
+    padding: 1rem 0;
+    width: 100%;
+    background-color: rgba($color: $color__brand-ghost-white, $alpha: 0.5);
+  }
 }
 
 .blockwise-btn {
