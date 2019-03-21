@@ -40,7 +40,25 @@
       padding: 10px 0px;
     }
   }
-  .sign-up-pop {
+  .thank-you {
+    display: none;
+  }
+  .thank-you-active {
+    display: block;
+    background-color: $color__brand-ghost-white;
+    width: 65vw;
+    height: 37vh;
+    position: fixed;
+    top: 103px;
+    left: 84px;
+    border-radius: 5px;
+    background-image: url('../../assets/images/PopupBG.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    p {
+      padding: 0px 13px;
+      padding-top: 30px;
+    }
   }
   .active {
     display: block;
