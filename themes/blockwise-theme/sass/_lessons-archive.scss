@@ -139,22 +139,52 @@
   position: absolute;
   top: 0;
   background-color: white;
+  padding: 20px 30px;
 
   @include desktop {
     position: relative;
+    padding: 0px 0px;
+  }
 
+  h1 {
+    font-size: 1.75rem;
   }
 
   .back-to-lesson {
     display: inline-block;
+    position: relative;
+    padding-left: 10px;
+
+    &:before {
+      background-image: url('../../assets/images/LearnBackArrow.png');
+      width: 22px;
+      height: 28px;
+      content: '';
+      position: absolute;
+      left: -22px;
+      top: -4px;
+    }
 
     @include desktop {
       display: none;
     }
   }
 
+  .back-to-lesson-top {
+    padding: 20px 10px;
+  }
+
+  .back-to-lesson-bottom {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
   h2 {
     text-align: center;
+
+    @include desktop {
+      text-align: start;
+    }
   }
 
   .blockwise-btn,

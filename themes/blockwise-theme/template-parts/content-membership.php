@@ -11,50 +11,51 @@
     <header class="entry-header">
         <div class="header-content-wrapper">
             <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
-            <P>The Description</P>
+            <p><?php echo CFS()->get('page_subtitle'); ?></p>
         </div>
     </header><!-- .entry-header -->
 
     <div class="entry-content">
-
+        <h3 class="member-h3">Become a blockwise member and become part of the blockchain industry marketing consortium.</h3>
         <?php
  /*
  * CFS Loop membership_options Title
  */
         $fields = CFS()->get('membership_options'); ?>
+        <section class="all-membership">
+            <ul class="tablinks">
+                <?php foreach ($fields as $field) : ?>
 
-        <ul class="tablinks">
-            <?php foreach ($fields as $field) : ?>
+                <li>
+                    <?php echo  $field['option_title'] ?>
+                </li>
 
-            <li>
-                <?php echo  $field['option_title'] ?>
-            </li>
+                <?php endforeach; ?>
 
-            <?php endforeach; ?>
-            <!-- <div class='option-title-list   <?php  ?> '> -->
-        </ul>
-        <section class="option-wrapper">
-            <?php foreach ($fields as $field) : ?>
-            <ul class="list-content">
-                <?php 
-                /*
+            </ul>
+            <div class="option-wrapper">
+                <?php foreach ($fields as $field) : ?>
+                <ul class="list-content">
+                    <?php 
+                    /*
             * CFS Loop list options
             */
-                $options = $field['options_list_items'];
-                foreach ($options as $option) :
+                    $options = $field['options_list_items'];
+                    foreach ($options as $option) :
 
-                    echo "<li>" . $option['option'] . "</li>";
-                    ?>
-
-
-                <!-- </div> -->
+                        echo "<li>" . $option['option'] . "</li>";
+                        ?>
+                    <?php endforeach; ?>
+                </ul>
                 <?php endforeach; ?>
-            </ul>
-            <?php endforeach; ?>
+            </div>
         </section>
-
         <?php the_content(); ?>
         <button class="sign-up-pop">Sign Up</button>
+        <div class="thank-you">
+            <p>Thank you for your interest in becoming a member. We will reach out shortly to discuss next steps.</p>
+            <button class='got-it'>Got it!</button>
+        </div>
         <?php
         wp_link_pages(array(
             'before' => '<div class="page-links">' . esc_html('Pages:'),

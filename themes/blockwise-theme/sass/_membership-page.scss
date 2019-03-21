@@ -3,18 +3,23 @@
 --------------------------------------------------------------*/
 
 .post-48 {
+  text-align: center;
+  // position: relative;
   ul,
   li {
     margin-left: 0;
     padding: 0;
   }
+  .member-h3 {
+    text-align: center;
+    padding: 0 50px;
+  }
   .wpcf7-form {
     display: none;
-    // @include desktop {
-    // }
   }
   .entry-header {
     background-image: url('../../assets/images/MembershipBanner.jpg');
+    height: 62vh !important; //to override global yay or nay
   }
   .tablinks {
     display: flex;
@@ -40,11 +45,51 @@
       padding: 10px 0px;
     }
   }
-  .sign-up-pop {
-    margin-left: 41%;
+  .thank-you {
+    display: none;
+  }
+  .thank-you-active {
+    display: block;
+    background-color: $color__brand-ghost-white;
+    max-width: 58vw;
+    max-height: 36vh;
+    position: fixed;
+    top: 103px;
+    left: 105px;
+    border-radius: 5px;
+    background-image: url('../../assets/images/PopupBG.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    p {
+      padding: 0px 13px;
+      padding-top: 30px;
+      margin: 0;
+    }
+    .got-it {
+      margin: 20px 0;
+    }
   }
   .active {
     display: block;
+  }
+  .mobile-popup {
+    display: block;
+    background-color: $color__brand-ghost-white;
+    width: 74vw;
+    height: 90vh;
+    position: fixed;
+    top: 60px;
+    left: 63px;
+    input {
+      max-width: 90%;
+    }
+    textarea {
+      max-width: 90%;
+    }
+    // p {
+    //   text-align: center;
+    //   padding: 0px 52px;
+    // }
   }
   .tab-color {
     background-color: $color__brand-dark-cyan;
