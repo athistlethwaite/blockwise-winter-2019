@@ -152,18 +152,17 @@
 
   .back-to-lesson {
     display: inline-block;
+    position: relative;
+    padding-left: 10px;
 
-    &::before {
+    &:before {
       background-image: url('../../assets/images/LearnBackArrow.png');
-      background-repeat: no-repeat;
       width: 22px;
       height: 28px;
       content: '';
       position: absolute;
-      top: -34px;
-      left: 50%;
-      transform: translateX(-50);
-
+      left: -22px;
+      top: -4px;
     }
 
     @include desktop {
@@ -171,7 +170,7 @@
     }
   }
 
-  .back-to-top .back-to-lesson-top {
+  .back-to-lesson-top {
     padding: 20px 10px;
   }
 

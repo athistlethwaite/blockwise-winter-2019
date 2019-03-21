@@ -1411,22 +1411,21 @@ https://flickity.metafizzy.co
   .load-content h1 {
     font-size: 1.75rem; }
   .load-content .back-to-lesson {
-    display: inline-block; }
-    .load-content .back-to-lesson::before {
+    display: inline-block;
+    position: relative;
+    padding-left: 10px; }
+    .load-content .back-to-lesson:before {
       background-image: url("../../assets/images/LearnBackArrow.png");
-      background-repeat: no-repeat;
       width: 22px;
       height: 28px;
       content: '';
       position: absolute;
-      top: -34px;
-      left: 50%;
-      -webkit-transform: translateX(-50);
-              transform: translateX(-50); }
+      left: -22px;
+      top: -4px; }
     @media screen and (min-width: 1000px) {
       .load-content .back-to-lesson {
         display: none; } }
-  .load-content .back-to-top .back-to-lesson-top {
+  .load-content .back-to-lesson-top {
     padding: 20px 10px; }
   .load-content .back-to-lesson-bottom {
     text-align: center;
@@ -1509,50 +1508,54 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Membership Page
 --------------------------------------------------------------*/
-.post-48 ul,
-.post-48 li {
-  margin-left: 0;
-  padding: 0; }
-
-.post-48 .wpcf7-form {
-  display: none; }
-
-.post-48 .entry-header {
-  background-image: url("../../assets/images/MembershipBanner.jpg"); }
-
-.post-48 .tablinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: solid 3px;
-  font-weight: bold; }
-  .post-48 .tablinks li {
-    padding: 20px 0;
-    width: 33%;
-    text-align: center; }
-
-.post-48 .option-wrapper ul {
-  list-style-image: url("../../assets/images/MembershipCheck.png"); }
-
-.post-48 .list-content {
-  display: none;
-  width: 100%;
-  padding: 0 140px; }
-  .post-48 .list-content li {
-    padding: 10px 0px; }
-
-.post-48 .sign-up-pop {
-  margin-left: 41%; }
-
-.post-48 .active {
-  display: block; }
-
-.post-48 .tab-color {
-  background-color: #008294;
-  color: #f7f9fa; }
+.post-48 {
+  text-align: center; }
+  .post-48 ul,
+  .post-48 li {
+    margin-left: 0;
+    padding: 0; }
+  .post-48 .wpcf7-form {
+    display: none; }
+  .post-48 .entry-header {
+    background-image: url("../../assets/images/MembershipBanner.jpg"); }
+  .post-48 .tablinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border: solid 3px;
+    font-weight: bold; }
+    .post-48 .tablinks li {
+      padding: 20px 0;
+      width: 33%;
+      text-align: center; }
+  .post-48 .option-wrapper ul {
+    list-style-image: url("../../assets/images/MembershipCheck.png"); }
+  .post-48 .list-content {
+    display: none;
+    width: 100%;
+    padding: 0 140px; }
+    .post-48 .list-content li {
+      padding: 10px 0px; }
+  .post-48 .active {
+    display: block; }
+  .post-48 .mobile-popup {
+    display: block;
+    background-color: #f7f9fa;
+    width: 74vw;
+    height: 90vh;
+    position: fixed;
+    top: 60px;
+    left: 63px; }
+    .post-48 .mobile-popup input {
+      max-width: 90%; }
+    .post-48 .mobile-popup textarea {
+      max-width: 90%; }
+  .post-48 .tab-color {
+    background-color: #008294;
+    color: #f7f9fa; }
 
 /*--------------------------------------------------------------
 # Contact Page
