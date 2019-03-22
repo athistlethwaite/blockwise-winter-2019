@@ -37,11 +37,8 @@ jQuery(function($) {
     $('.option-wrapper ul:nth-child(3n)').addClass('active');
   }
 
-  // form display none
-  // on click give class active
   $('.sign-up-pop').click(function() {
     $('.wpcf7-form').addClass('mobile-popup');
-    // show pop up
   });
   $('.membership').click(function() {
     $('.wpcf7-form').removeClass('mobile-popup');
@@ -50,9 +47,20 @@ jQuery(function($) {
   $('.got-it').click(function() {
     $('.thank-you').removeClass('thank-you-active');
   });
-  // on click of button in pop up
-  // give display none to first pop up
-  // give active class to second pop up
+
+  $('.mobile-popup').on('blur', function() {
+    $('.mobile-popup').removeClass('mobile-popup');
+  });
+
+  $('.thank-you').on('blur', function() {
+    $('.thank-you').removeClass('thank-you-active');
+  });
+
+  // click anything not in the popup div
+  $('.wpcf7-form').click('not', function() {
+    $('.wpcf7-form').removeClass('mobile-popup');
+  });
+  // remove the pop up div class
 
   //   let resizeEvent = 0;
 
