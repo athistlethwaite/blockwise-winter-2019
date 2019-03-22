@@ -2,12 +2,12 @@
  *   Membership page tab menu for mobile
  */
 
-jQuery(function($) {
+jQuery(function ($) {
   if ($(window).width() < 600) {
     //wrap in new function call at beginning
     $('.tablinks li:first-child').addClass('tab-color');
     $('.option-wrapper ul:first-child').addClass('active');
-    $('.tablinks li:first-child').click(function() {
+    $('.tablinks li:first-child').click(function () {
       $('.tablinks li:first-child').addClass('tab-color');
       $('.tablinks li:nth-child(2n)').removeClass('tab-color');
       $('.tablinks li:nth-child(3n)').removeClass('tab-color');
@@ -15,7 +15,7 @@ jQuery(function($) {
       $('.option-wrapper ul:nth-child(2n)').removeClass('active');
       $('.option-wrapper ul:nth-child(3n)').removeClass('active');
     });
-    $('.tablinks li:nth-child(2n)').click(function() {
+    $('.tablinks li:nth-child(2n)').click(function () {
       $('.tablinks li:nth-child(2n)').addClass('tab-color');
       $('.tablinks li:first-child').removeClass('tab-color');
       $('.tablinks li:nth-child(3n)').removeClass('tab-color');
@@ -23,7 +23,7 @@ jQuery(function($) {
       $('.option-wrapper ul:first-child').removeClass('active');
       $('.option-wrapper ul:nth-child(3n)').removeClass('active');
     });
-    $('.tablinks li:nth-child(3n)').click(function() {
+    $('.tablinks li:nth-child(3n)').click(function () {
       $('.tablinks li:nth-child(3n)').addClass('tab-color');
       $('.tablinks li:first-child').removeClass('tab-color');
       $('.tablinks li:nth-child(2n)').removeClass('tab-color');
@@ -39,15 +39,15 @@ jQuery(function($) {
 
   // form display none
   // on click give class active
-  $('.sign-up-pop').click(function() {
+  $('.sign-up-pop').click(function () {
     $('.wpcf7-form').addClass('mobile-popup');
     // show pop up
   });
-  $('.membership').click(function() {
+  $('.membership').click(function () {
     $('.wpcf7-form').removeClass('mobile-popup');
     $('.thank-you').addClass('thank-you-active');
   });
-  $('.got-it').click(function() {
+  $('.got-it').click(function () {
     $('.thank-you').removeClass('thank-you-active');
   });
   // on click of button in pop up
