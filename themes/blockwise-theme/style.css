@@ -667,8 +667,7 @@ a {
 
 /* Menus */
 .main-navigation {
-  clear: both;
-  display: inline-block; }
+  clear: both; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -702,13 +701,45 @@ a {
   .main-navigation a {
     display: block;
     text-decoration: none; }
+  .main-navigation ul[aria-expanded='true'] {
+    position: absolute;
+    left: 0;
+    top: 80px;
+    z-index: 999;
+    background-color: #f7f9fa; }
+    .main-navigation ul[aria-expanded='true'] a {
+      color: #026082;
+      text-align: left; }
+    .main-navigation ul[aria-expanded='true'] li {
+      display: block;
+      width: 100vw;
+      margin: 0;
+      padding: 1em 0;
+      border: 2px solid #026082;
+      border-top: 0;
+      border-radius: 2px; }
+  @media screen and (min-width: 1000px) {
+    .main-navigation .sub-menu {
+      top: 52px;
+      background-color: #f7f9fa;
+      text-align: center; }
+      .main-navigation .sub-menu a {
+        color: #026082; }
+      .main-navigation .sub-menu li {
+        margin: 0;
+        padding: 1em 0;
+        border: 2px solid #026082;
+        border-top: 0;
+        border-radius: 2px; } }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
+  .main-navigation {
+    display: inline-block; }
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -1029,7 +1060,7 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Globals
 --------------------------------------------------------------*/
-.container {
+.container, .main-navigation ul[aria-expanded='true'] a {
   max-width: 1000px;
   margin: 0 auto; }
 
@@ -1100,12 +1131,16 @@ https://flickity.metafizzy.co
             flex-flow: row, nowrap;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
     .site-header .site-branding img {
       margin-right: 1.5rem;
       width: auto;
       height: 40px; }
-  .site-header .container {
+  .site-header .container, .site-header .main-navigation ul[aria-expanded='true'] a, .main-navigation ul[aria-expanded='true'] .site-header a {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
