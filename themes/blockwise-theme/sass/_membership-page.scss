@@ -33,7 +33,7 @@
     font-weight: bold;
 
     li {
-      padding: 20px 0;
+      padding: 20px 25px;
       width: 33%;
       text-align: center;
     }
@@ -48,11 +48,12 @@
   .list-content {
     display: none;
     width: 100%;
-    padding: 0 140px;
+    padding: 0px 63px;
 
     li {
       padding: 10px 0px;
     }
+    @include $destop
   }
 
   .thank-you {
@@ -62,16 +63,18 @@
   .thank-you-active {
     display: block;
     background-color: $color__brand-ghost-white;
-    max-width: 58vw;
-    max-height: 36vh;
+    max-width: 69vw;
+    height: 26vh;
     position: fixed;
     top: 103px;
-    left: 105px;
+    left: 64px;
     border-radius: 5px;
     background-image: url('../../assets/images/pop-up.png');
     background-size: cover;
     background-repeat: no-repeat;
-
+    -webkit-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
+    box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     p {
       padding: 0px 13px;
       padding-top: 30px;
@@ -93,8 +96,24 @@
     width: 74vw;
     height: 90vh;
     position: fixed;
-    top: 60px;
+    top: 29px;
     left: 63px;
+    overflow: scroll;
+    border-radius: 1rem;
+    border: 2px solid;
+    border-color: $color__brand-blue-sapphire;
+    -webkit-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
+    -moz-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
+    box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
+    h4 {
+      margin-top: 4rem;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .close {
+      position: absolute;
+      right: 10px;
+    }
 
     input {
       max-width: 90%;
@@ -103,11 +122,6 @@
     textarea {
       max-width: 90%;
     }
-
-    // p {
-    //   text-align: center;
-    //   padding: 0px 52px;
-    // }
   }
 
   .tab-color {
