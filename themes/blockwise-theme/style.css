@@ -1159,7 +1159,7 @@ https://flickity.metafizzy.co
 --------------------------------------------------------------*/
 .home .site-main > article:first-child header {
   height: 100vw;
-  background-image: url("../../assets/images/splash-background.jpg"); }
+  background-image: url("../../assets/images/splash-background-transparent.png"); }
   .home .site-main > article:first-child header .header-content-wrapper {
     margin-bottom: 50vw;
     margin-right: 20vw; }
