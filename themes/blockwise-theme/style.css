@@ -1159,7 +1159,7 @@ https://flickity.metafizzy.co
 --------------------------------------------------------------*/
 .home .site-main > article:first-child header {
   height: 100vw;
-  background-image: url("../../assets/images/SplashBackground.jpg"); }
+  background-image: url("../../assets/images/splash-background.jpg"); }
   .home .site-main > article:first-child header .header-content-wrapper {
     margin-bottom: 50vw;
     margin-right: 20vw; }
@@ -1319,7 +1319,7 @@ https://flickity.metafizzy.co
 .page-template-about {
   text-align: center; }
   .page-template-about .entry-header {
-    background-image: url("../../assets/images/AboutBanner.png");
+    background-image: url("../../assets/images/about-banner.png");
     height: 70vw; }
   .page-template-about .flickity-enabled {
     margin-bottom: 1.2rem; }
@@ -1332,7 +1332,7 @@ https://flickity.metafizzy.co
   .post-type-archive-event .site-content .site-main {
     text-align: center; }
     .post-type-archive-event .site-content .site-main .page-header {
-      background: url(../../assets/images/EventsBanner.jpg);
+      background: url(../../assets/images/event-banner-small.jpg);
       background-repeat: no-repeat;
       background-size: 100%;
       -webkit-box-align: start;
@@ -1352,7 +1352,7 @@ https://flickity.metafizzy.co
         padding: 0px 30px;
         display: grid;
         grid-template-columns: 90% 10%;
-        grid-template-areas: 'main logo' 'main logo'; }
+        grid-template-areas: 'main logo' 'main logo'; }
         .post-type-archive-event .site-content .site-main .event .entry-header .content-event {
           grid-area: main; }
           .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta {
@@ -1376,7 +1376,7 @@ https://flickity.metafizzy.co
 @media screen and (min-width: 1000px) {
   .post-type-archive-event .site-content {
     max-width: none;
-    background-image: url(../../assets/images/EventsBanner-big.jpg);
+    background-image: url(../../assets/images/event-banner-large.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: auto; }
@@ -1475,7 +1475,7 @@ https://flickity.metafizzy.co
   position: relative; }
 
 .post-type-archive-lesson .page-header {
-  background-image: url("../../assets/images/LearnBlocksBGmobile.png");
+  background-image: url("../../assets/images/learn-blocks-mobile.png");
   background-size: 100% 100%;
   height: 40vh;
   margin-right: 0;
@@ -1483,7 +1483,7 @@ https://flickity.metafizzy.co
   margin-bottom: 20px; }
   @media screen and (min-width: 1000px) {
     .post-type-archive-lesson .page-header {
-      background-image: url("../../assets/images/LearnBlocks.png");
+      background-image: url("../../assets/images/learn-blocks-desktop.png");
       background-size: contain;
       background-position: center;
       height: 60vh;
@@ -1518,7 +1518,7 @@ https://flickity.metafizzy.co
     .lessons .lesson-type-wrapper.chain:first-child:before {
       display: none; }
     .lessons .lesson-type-wrapper.chain:before {
-      background-image: url("../../assets/images/LearnChainMobile.png");
+      background-image: url("../../assets/images/learn-chain-mobile.png");
       background-repeat: no-repeat;
       width: 6px;
       height: 38px;
@@ -1530,7 +1530,7 @@ https://flickity.metafizzy.co
               transform: translateX(-50); }
       @media screen and (min-width: 1000px) {
         .lessons .lesson-type-wrapper.chain:before {
-          background-image: url("../../assets/images/LearnChainLink.png");
+          background-image: url("../../assets/images/learn-chain-desktop.png");
           width: 78px;
           height: 11px;
           top: 30px;
@@ -1613,7 +1613,7 @@ https://flickity.metafizzy.co
     position: relative;
     padding-left: 10px; }
     .load-content .back-to-lesson:before {
-      background-image: url("../../assets/images/LearnBackArrow.png");
+      background-image: url("../../assets/images/learn-back-arrow.png");
       width: 22px;
       height: 28px;
       content: '';
@@ -1646,7 +1646,7 @@ https://flickity.metafizzy.co
 # Market Trends Archive Page
 --------------------------------------------------------------*/
 .blog .page-header {
-  background-image: url("../../assets/images/NewsBanner.jpg");
+  background-image: url("../../assets/images/news-banner.jpg");
   height: 50vh !important; }
 
 @media screen and (min-width: 1000px) {
@@ -1740,12 +1740,12 @@ https://flickity.metafizzy.co
   color: white; }
 
 .page-id-46 .site-content {
-  background-image: url("../../assets/images/AcademyBGMobile.png");
+  background-image: url("../../assets/images/academy-mobile-background.png");
   max-width: 100%;
   height: 100%; }
   @media screen and (min-width: 1000px) {
     .page-id-46 .site-content {
-      background-image: url("../../assets/images/AcademyBG.png"); } }
+      background-image: url("../../assets/images/academy-desktop-background.png"); } }
   .page-id-46 .site-content .content-area {
     background-position: center;
     background-size: cover;
@@ -1775,7 +1775,7 @@ https://flickity.metafizzy.co
   .post-48 .wpcf7-form {
     display: none; }
   .post-48 .entry-header {
-    background-image: url("../../assets/images/MembershipBanner.jpg");
+    background-image: url("../../assets/images/membership-banner.jpg");
     height: 62vh !important; }
   .post-48 .tablinks {
     display: -webkit-box;
@@ -1791,7 +1791,7 @@ https://flickity.metafizzy.co
       width: 33%;
       text-align: center; }
   .post-48 .option-wrapper ul {
-    list-style-image: url("../../assets/images/MembershipCheck.png"); }
+    list-style-image: url("../../assets/images/membership-check.png"); }
   .post-48 .list-content {
     display: none;
     width: 100%;
@@ -1809,7 +1809,7 @@ https://flickity.metafizzy.co
     top: 103px;
     left: 105px;
     border-radius: 5px;
-    background-image: url("../../assets/images/PopupBG.png");
+    background-image: url("../../assets/images/pop-up.png");
     background-size: cover;
     background-repeat: no-repeat; }
     .post-48 .thank-you-active p {
@@ -1859,8 +1859,8 @@ https://flickity.metafizzy.co
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

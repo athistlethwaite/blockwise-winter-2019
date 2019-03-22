@@ -25,7 +25,7 @@
             <div class="container">
                 <div class="site-branding">
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                        <img alt="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/BlockwiseLogo.png">
+                        <img alt="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockwise-logo.png">
                     </a>
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                         <h1 class="site-title"><?php bloginfo('name'); ?></h1>

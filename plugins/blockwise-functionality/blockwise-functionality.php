@@ -2,9 +2,9 @@
  /**
  *
  * @package   Blockwise Functionality
- * @author    Your Name <your_email@email.com>
+ * @author    Alysha Thistlethwaite <alysha.thistlethwaite@gmail.com>
  * @license   GPL-2.0+
- * @copyright 2015 Your Name or Company
+ * @copyright 2019 Blockwise
  *
  * @wordpress-plugin
  * Plugin Name: Blockwise Functionality
