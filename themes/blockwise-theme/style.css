@@ -1037,7 +1037,6 @@ https://flickity.metafizzy.co
 .page-header {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  height: 100vh;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1123,23 +1122,176 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Front Page 
 --------------------------------------------------------------*/
+.home .site-main > article:first-child header {
+  height: 100vw;
+  background-image: url("../../assets/images/SplashBackground.jpg"); }
+  .home .site-main > article:first-child header .header-content-wrapper {
+    margin-bottom: 50vw;
+    margin-right: 20vw; }
+    .home .site-main > article:first-child header .header-content-wrapper p {
+      max-width: 20em; }
+
+.home .front-page-content > h2 {
+  margin: 2em auto; }
+
+.home .front-page-content h3 {
+  color: #f7f9fa;
+  background-color: #026082;
+  padding: 1em 0; }
+  @media screen and (min-width: 1000px) {
+    .home .front-page-content h3 {
+      margin-bottom: 0; } }
+
+.home .front-page-events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap; }
+  .home .front-page-events article {
+    display: none;
+    margin-bottom: 0;
+    text-align: center; }
+    @media screen and (min-width: 1000px) {
+      .home .front-page-events article {
+        display: inline-block;
+        border: 3px solid #026082;
+        border-top: 0; } }
+  .home .front-page-events article:nth-child(1),
+  .home .front-page-events article:nth-child(2) {
+    display: inline-block;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0.3em; }
+    @media screen and (min-width: 1000px) {
+      .home .front-page-events article:nth-child(1),
+      .home .front-page-events article:nth-child(2) {
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 100%;
+                flex: 1 0 100%; } }
+  .home .front-page-events article:first-child {
+    border-right: 3px solid #026082; }
+    @media screen and (min-width: 1000px) {
+      .home .front-page-events article:first-child {
+        border-top: 3px solid #026082; } }
+  .home .front-page-events .entry-header {
+    max-width: 70%;
+    margin: auto; }
+  .home .front-page-events .event-location {
+    display: none; }
+  @media screen and (min-width: 1000px) {
+    .home .front-page-events {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+@media screen and (min-width: 1000px) {
+  .home .market-trends h3:nth-of-type(1) {
+    display: none; }
+  .home .market-trends {
+    margin-bottom: 1em; } }
+
+.home .front-page-articles article {
+  border: 2px solid #026082;
+  border-top: 0;
+  margin-bottom: 0; }
+  @media screen and (min-width: 1000px) {
+    .home .front-page-articles article {
+      border: 0;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 33%;
+              flex: 1 0 33%; } }
+
+@media screen and (min-width: 1000px) {
+  .home .front-page-articles {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; } }
+
+.home .front-page-articles .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 1.5rem; }
+  @media screen and (min-width: 1000px) {
+    .home .front-page-articles .entry-header {
+      display: inline-block;
+      text-align: center; } }
+  .home .front-page-articles .entry-header img {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1rem; }
+  .home .front-page-articles .entry-header .entry-text-wrapper {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    text-align: center; }
+    .home .front-page-articles .entry-header .entry-text-wrapper p {
+      margin: 0 auto;
+      width: 50%; }
+      @media screen and (min-width: 1000px) {
+        .home .front-page-articles .entry-header .entry-text-wrapper p {
+          width: 100%; } }
+
+.home .front-page-articles article:nth-of-type(2) {
+  border-top: 2px solid #026082; }
+  @media screen and (min-width: 1000px) {
+    .home .front-page-articles article:nth-of-type(2) {
+      border: 0; } }
+
+@media screen and (min-width: 1000px) {
+  .home .front-page-articles article:nth-of-type(3) {
+    border-right: 2px solid #026082;
+    border-left: 2px solid #026082; } }
+
+.home .front-page-articles article:nth-of-type(1) {
+  border: 0; }
+  @media screen and (min-width: 1000px) {
+    .home .front-page-articles article:nth-of-type(1) {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 100%;
+              flex: 1 0 100%; } }
+  .home .front-page-articles article:nth-of-type(1) .entry-content {
+    text-align: center;
+    padding: 0 1.5rem; }
+
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
-.page-template-about .entry-header {
-  background-image: url("../../assets/images/AboutBanner.png");
-  height: 70vw !important; }
-  @media screen and (min-width: 600px) and (max-width: 1000px) {
-    .page-template-about .entry-header {
-      height: 100vh; } }
-  @media screen and (min-width: 1000px) {
-    .page-template-about .entry-header {
-      height: 100vh; } }
+.page-template-about {
+  text-align: center; }
+  .page-template-about .entry-header {
+    background-image: url("../../assets/images/AboutBanner.png");
+    height: 70vw; }
+  .page-template-about .flickity-enabled {
+    margin-bottom: 1.2rem; }
 
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
-<<<<<<< HEAD
 .post-type-archive-event .site-content {
   position: relative; }
   .post-type-archive-event .site-content .site-main {
@@ -1165,7 +1317,7 @@ https://flickity.metafizzy.co
         padding: 0px 30px;
         display: grid;
         grid-template-columns: 90% 10%;
-        grid-template-areas: 'main logo' 'main logo'; }
+        grid-template-areas: 'main logo' 'main logo'; }
         .post-type-archive-event .site-content .site-main .event .entry-header .content-event {
           grid-area: main; }
           .post-type-archive-event .site-content .site-main .event .entry-header .content-event .entry-meta {
@@ -1185,107 +1337,6 @@ https://flickity.metafizzy.co
     bottom: 0;
     left: 0;
     background-color: #f7f9fa; }
-=======
-.post-type-archive-event .site-main {
-<<<<<<< HEAD
-  text-align: center; }
-  .post-type-archive-event .site-main .page-header {
-    background: url(../../assets/images/EventsBanner.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding-top: 50px;
-    height: 30vh; }
-    .post-type-archive-event .site-main .page-header h1 {
-      margin-top: 0px; }
-    .post-type-archive-event .site-main .page-header .taxonomy-description p {
-      margin: 0px; }
-  .post-type-archive-event .site-main .event {
-    padding: 20px 0px;
-    margin: 0px;
-    border: 1.5px solid #008294; }
-    .post-type-archive-event .site-main .event .entry-header {
-      padding: 0px 30px;
-      display: grid;
-      grid-template-columns: 90% 10%;
-      grid-template-areas: 'main logo' 'main logo'; }
-      .post-type-archive-event .site-main .event .entry-header .content-event {
-        grid-area: main; }
-        .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
-          color: #7bd1d0; }
-          .post-type-archive-event .site-main .event .entry-header .content-event .entry-meta p {
-            margin-bottom: 5px; }
-      .post-type-archive-event .site-main .event .entry-header .small-angle {
-        grid-area: logo;
-        padding-top: 60px; }
-    .post-type-archive-event .site-main .event .small-chain {
-      display: none; }
-  .post-type-archive-event .site-main .hidden {
-    display: none; }
-=======
-  text-align: center;
-}
-
-.post-type-archive-event .site-main .page-header {
-  background: url(../../assets/images/EventsBanner.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  padding-top: 50px;
-  height: 30vh;
-}
-
-.post-type-archive-event .site-main .page-header h1 {
-  margin-top: 0px;
-}
-
-.post-type-archive-event .site-main .page-header .taxonomy-description p {
-  margin: 0px;
-}
-
-.post-type-archive-event .site-main .event {
-  padding: 20px 0px;
-  margin: 0px;
-  border: 1.5px solid #008294;
-}
-
-.post-type-archive-event .site-main .event .entry-header {
-  padding: 0px 30px;
-  display: grid;
-  grid-template-columns: 90% 10%;
-  grid-template-areas: 'main logo''main logo';
-}
-
-.post-type-archive-event .site-main .event .entry-header .content-event {
-  grid-area: main;
-}
-
-.post-type-archive-event .site-main .event .entry-header .content-event .entry-meta {
-  color: #7bd1d0;
-}
-
-.post-type-archive-event .site-main .event .entry-header .content-event .entry-meta p {
-  margin-bottom: 5px;
-}
-
-.post-type-archive-event .site-main .event .entry-header .small-angle {
-  grid-area: logo;
-  padding-top: 60px;
-}
-
-.post-type-archive-event .site-main .event .small-chain {
-  display: none;
-}
-
-.post-type-archive-event .site-main .hidden {
-  display: none;
-}
->>>>>>> 4e4059f1c41cf3a3cbf2a1b1df4d2f88ea61d560
->>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
 
 @media screen and (min-width: 1000px) {
   .post-type-archive-event .site-content {
@@ -1293,10 +1344,6 @@ https://flickity.metafizzy.co
     background-image: url(../../assets/images/EventsBanner-big.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
     height: auto; }
     .post-type-archive-event .site-content .site-main {
       text-align: center;
@@ -1333,10 +1380,7 @@ https://flickity.metafizzy.co
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-<<<<<<< HEAD
-=======
         z-index: 0;
->>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
         padding: 0px 50px 100px 50px; }
         .post-type-archive-event .site-content .site-main .all-articles .event {
           position: relative;
@@ -1388,128 +1432,6 @@ https://flickity.metafizzy.co
                     flex: 1 0 19%; }
       .post-type-archive-event .site-content .site-main .hidden {
         display: none; } }
-<<<<<<< HEAD
-=======
-=======
-    height: auto;
-  }
-
-  .post-type-archive-event .site-content .site-main {
-    text-align: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .post-type-archive-event .site-content .site-main .page-header {
-    background: none;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    height: auto;
-    padding: 150px 0px;
-  }
-
-  .post-type-archive-event .site-content .site-main .page-header h1 {
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-size: 3rem;
-  }
-
-  .post-type-archive-event .site-content .site-main .page-header .taxonomy-description p {
-    margin: 0px;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #026082;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0px 50px 100px 50px;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event {
-    position: relative;
-    padding: 0px;
-    margin: 0px;
-    border: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 33%;
-    flex: 1 0 33%;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header {
-    padding: 0px 10px;
-    border: 1.5px solid #008294;
-    background-color: #f7f9fa;
-    display: block;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 80%;
-    flex: 1 0 80%;
-    height: 200px;
-    border-radius: 15px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event {
-    padding-top: 15px;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event a h2 {
-    font-size: 2rem;
-    margin: 10px 0px;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta {
-    color: #7bd1d0;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header .content-event .entry-meta p {
-    margin-bottom: 5px;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event .entry-header a .small-angle {
-    display: none;
-  }
-
-  .post-type-archive-event .site-content .site-main .all-articles .event .small-chain {
-    display: inline-block;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 19%;
-    flex: 1 0 19%;
-  }
-
-  .post-type-archive-event .site-content .site-main .hidden {
-    display: none;
-  }
-}
->>>>>>> 4e4059f1c41cf3a3cbf2a1b1df4d2f88ea61d560
->>>>>>> a391f68769703dd46329c89c93d8dbcc60b4b4f2
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
@@ -1692,10 +1614,29 @@ https://flickity.metafizzy.co
   background-image: url("../../assets/images/NewsBanner.jpg");
   height: 50vh !important; }
 
+@media screen and (min-width: 1000px) {
+  .blog .site-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap; } }
+
 .blog article {
   border: 2px solid #026082;
   border-top: 0;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  text-align: center; }
+  @media screen and (min-width: 1000px) {
+    .blog article {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 33%;
+              flex: 1 0 33%;
+      border: 0; } }
 
 .blog .entry-header {
   display: -webkit-box;
@@ -1712,6 +1653,9 @@ https://flickity.metafizzy.co
       -ms-flex-align: center;
           align-items: center;
   padding: 0.5rem 1.5rem; }
+  @media screen and (min-width: 1000px) {
+    .blog .entry-header {
+      display: block; } }
   .blog .entry-header img {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 50%;
@@ -1730,9 +1674,17 @@ https://flickity.metafizzy.co
 
 .blog article:nth-of-type(2) {
   border-top: 2px solid #026082; }
+  @media screen and (min-width: 1000px) {
+    .blog article:nth-of-type(2) {
+      border: 0; } }
 
 .blog article:nth-of-type(1) {
   border: 0; }
+  @media screen and (min-width: 1000px) {
+    .blog article:nth-of-type(1) {
+      -webkit-box-flex: 1;
+          -ms-flex: 1 0 100%;
+              flex: 1 0 100%; } }
   .blog article:nth-of-type(1) .entry-content {
     text-align: center;
     padding: 0 1.5rem; }
@@ -1872,8 +1824,8 @@ https://flickity.metafizzy.co
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
