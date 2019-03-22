@@ -8,10 +8,23 @@
     height: 50vh !important;
   }
 
+  @include desktop {
+    .site-main {
+      display: flex;
+      flex-flow: row wrap;
+    }
+  }
   article {
     border: 2px solid $color__brand-blue-sapphire;
     border-top: 0;
     margin-bottom: 0;
+    text-align: center;
+
+    @include desktop {
+      box-sizing: border-box;
+      flex: 1 0 33%;
+      border: 0;
+    }
   }
 
   .entry-header {
@@ -20,6 +33,10 @@
     justify-content: center;
     align-items: center;
     padding: 0.5rem 1.5rem;
+
+    @include desktop {
+      display: block;
+    }
 
     img {
       flex: 1 0 50%;
@@ -40,10 +57,18 @@
 
   article:nth-of-type(2) {
     border-top: 2px solid $color__brand-blue-sapphire;
+
+    @include desktop {
+      border: 0;
+    }
   }
 
   article:nth-of-type(1) {
     border: 0;
+
+    @include desktop {
+      flex: 1 0 100%;
+    }
 
     .entry-content {
       text-align: center;
