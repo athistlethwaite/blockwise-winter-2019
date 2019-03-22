@@ -4,50 +4,61 @@
 
 .post-48 {
   text-align: center;
+
   // position: relative;
   ul,
   li {
     margin-left: 0;
     padding: 0;
   }
+
   .member-h3 {
     text-align: center;
     padding: 0 50px;
   }
+
   .wpcf7-form {
     display: none;
   }
+
   .entry-header {
-    background-image: url('../../assets/images/MembershipBanner.jpg');
+    background-image: url('../../assets/images/membership-banner.jpg');
     height: 62vh !important; //to override global yay or nay
   }
+
   .tablinks {
     display: flex;
     justify-content: space-between;
     border: solid 3px;
     font-weight: bold;
+
     li {
       padding: 20px 0;
       width: 33%;
       text-align: center;
     }
   }
+
   .option-wrapper {
     ul {
-      list-style-image: url('../../assets/images/MembershipCheck.png');
+      list-style-image: url('../../assets/images/membership-check.png');
     }
   }
+
   .list-content {
     display: none;
     width: 100%;
     padding: 0 140px;
+
     li {
       padding: 10px 0px;
     }
   }
+
   .thank-you {
     display: none;
   }
+
   .thank-you-active {
     display: block;
     background-color: $color__brand-ghost-white;
@@ -57,21 +68,25 @@
     top: 103px;
     left: 105px;
     border-radius: 5px;
-    background-image: url('../../assets/images/PopupBG.png');
+    background-image: url('../../assets/images/pop-up.png');
     background-size: cover;
     background-repeat: no-repeat;
+
     p {
       padding: 0px 13px;
       padding-top: 30px;
       margin: 0;
     }
+
     .got-it {
       margin: 20px 0;
     }
   }
+
   .active {
     display: block;
   }
+
   .mobile-popup {
     display: block;
     background-color: $color__brand-ghost-white;
@@ -80,17 +95,21 @@
     position: fixed;
     top: 60px;
     left: 63px;
+
     input {
       max-width: 90%;
     }
+
     textarea {
       max-width: 90%;
     }
+
     // p {
     //   text-align: center;
     //   padding: 0px 52px;
     // }
   }
+
   .tab-color {
     background-color: $color__brand-dark-cyan;
     color: $color__brand-ghost-white;
