@@ -18,8 +18,6 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-        <?php echo do_shortcode( '[sp_wpcarousel id="218"]' ); ?>
-        
         <div class='about-partners'>
             <h2>Our Partners</h2>
             <section class='about-corporate-members'>
