@@ -9,7 +9,7 @@
     event.preventDefault();
     $('.event-pop-up').addClass('hidden');
   });
-  $('.RSVP').on('click', function() {
+  $('.rsvp').on('click', function() {
     event.preventDefault();
     $('.pop-up').removeClass('hidden');
   });

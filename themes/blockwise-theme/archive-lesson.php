@@ -31,7 +31,7 @@ get_header(); ?>
             <div class="lesson-type-wrapper chain">
                 <div class="lesson-type-title">
                     <h3 id="button<?php echo $x ?>"><?php echo $lesson_type->name ?></h3>
-                    <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click to see Lesson"></div>
+                    <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-arrow.png" alt="Click to see Lesson"></div>
                 </div>
 
                 <ul>

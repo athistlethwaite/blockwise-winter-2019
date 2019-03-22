@@ -27,7 +27,6 @@ get_header(); ?>
         <?php get_template_part('template-parts/content', 'post'); ?>
 
         <?php endwhile; ?>
-        <?php blockwise_numbered_pagination(); ?>
 
 
 

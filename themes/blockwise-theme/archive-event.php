@@ -38,11 +38,11 @@ get_header(); ?>
                         </div><!-- .entry-meta -->
                     </div>
                     <a href="#" data-event=<?php echo $eventNumber; ?>>
-                        <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click for Event Info">
+                        <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-arrow.png" alt="Click for Event Info">
                     </a>
                 </header><!-- .entry-header -->
                 <?php if ($eventNumber % 3 !== 0) : ?>
-                <img class="small-chain" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnChainLink.png" alt="Blockwise chains">
+                <img class="small-chain" src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-chain-desktop.png" alt="Blockwise chains">
                 <?php endif; ?>
             </article><!-- #post-## -->
             <?php endwhile; ?>
@@ -53,7 +53,7 @@ get_header(); ?>
             <?php while (have_posts()) : the_post(); ?>
             <?php $eventNumber++; ?>
             <article class="event-pop-up hidden" data-event=<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <a href="" class="go-back"><img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/LearnArrow.png" alt="Click for Event Info">See all events</a>
+                <a href="" class="go-back"><img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-arrow.png" alt="Click for Event Info">See all events</a>
                 <header class="entry-header">
                     <h2 class="entry-title"><?php the_title(); ?></h2>
                     <div class="entry-meta">
@@ -64,13 +64,13 @@ get_header(); ?>
 
                 <div class="entry-content">
                     <?php the_content(); ?>
-                    <button class="RSVP" data-event=<?php echo $eventNumber; ?> class="white-btn blockwise-btn">RSVP</button>
+                    <button class="rsvp" data-event=<?php echo $eventNumber; ?> class="white-btn blockwise-btn">rsvp</button>
                 </div><!-- .entry-content -->
 
             </article><!-- #post-## -->
 
             <div class="pop-up hidden">
-                <h2 class="entry-title">RSVP</h2>
+                <h2 class="entry-title">rsvp</h2>
                 <?php echo do_shortcode('[contact-form-7 id="199" title="rsvp event"]'); ?>
             </div>
 

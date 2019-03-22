@@ -10,7 +10,7 @@
   }
 
   .page-header {
-    background-image: url("../../assets/images/LearnBlocksBGmobile.png");
+    background-image: url("../../assets/images/learn-blocks-mobile.png");
     background-size: 100% 100%;
     height: 40vh;
     margin-right: 0;
@@ -18,7 +18,7 @@
     margin-bottom: 20px;
 
     @include desktop {
-      background-image: url("../../assets/images/LearnBlocks.png");
+      background-image: url("../../assets/images/learn-blocks-desktop.png");
       background-size: contain;
       background-position: center;
       height: 60vh;
@@ -54,7 +54,7 @@
       }
 
       &:before {
-        background-image: url('../../assets/images/LearnChainMobile.png');
+        background-image: url('../../assets/images/learn-chain-mobile.png');
         background-repeat: no-repeat;
         width: 6px;
         height: 38px;
@@ -65,7 +65,7 @@
         transform: translateX(-50);
 
         @include desktop {
-          background-image: url('../../assets/images/LearnChainLink.png');
+          background-image: url('../../assets/images/learn-chain-desktop.png');
           width: 78px;
           height: 11px;
           top: 30px;
@@ -85,6 +85,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0px 10px;
+      cursor: pointer;
 
       @include desktop {
         width: 290px;
@@ -156,7 +157,7 @@
     padding-left: 10px;
 
     &:before {
-      background-image: url('../../assets/images/LearnBackArrow.png');
+      background-image: url('../../assets/images/learn-back-arrow.png');
       width: 22px;
       height: 28px;
       content: '';

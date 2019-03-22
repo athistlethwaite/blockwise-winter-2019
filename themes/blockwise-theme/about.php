@@ -17,6 +17,7 @@ get_header(); ?>
         <?php get_template_part('template-parts/content', 'page'); ?>
 
         <?php endwhile; ?>
+
         <div class='about-partners'>
             <h2>Our Partners</h2>
             <section class='about-corporate-members'>
