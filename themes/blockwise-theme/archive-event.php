@@ -64,13 +64,13 @@ get_header(); ?>
 
                 <div class="entry-content">
                     <?php the_content(); ?>
-                    <button class="RSVP" data-event=<?php echo $eventNumber; ?> class="white-btn blockwise-btn">RSVP</button>
+                    <button class="rsvp" data-event=<?php echo $eventNumber; ?> class="white-btn blockwise-btn">rsvp</button>
                 </div><!-- .entry-content -->
 
             </article><!-- #post-## -->
 
             <div class="pop-up hidden">
-                <h2 class="entry-title">RSVP</h2>
+                <h2 class="entry-title">rsvp</h2>
                 <?php echo do_shortcode('[contact-form-7 id="199" title="rsvp event"]'); ?>
             </div>
 
