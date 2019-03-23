@@ -1782,6 +1782,13 @@ https://flickity.metafizzy.co
     padding: 0 50px; }
   .page-template-membership .wpcf7-form {
     display: none; }
+    @media screen and (min-width: 1000px) {
+      .page-template-membership .wpcf7-form {
+        display: block; } }
+  @media screen and (min-width: 1000px) and (min-width: 1000px) {
+    .page-template-membership .wpcf7-form .close,
+    .page-template-membership .wpcf7-form h4 {
+      display: none; } }
   .page-template-membership .entry-header {
     background-image: url("../../assets/images/membership-banner.jpg");
     height: 100vh; }
@@ -1881,6 +1888,9 @@ https://flickity.metafizzy.co
       max-width: 90%; }
     .page-template-membership .mobile-popup textarea {
       max-width: 90%; }
+  @media screen and (min-width: 1000px) {
+    .page-template-membership .sign-up-pop {
+      display: none; } }
   .page-template-membership .tab-color {
     background-color: #008294;
     color: #f7f9fa; }

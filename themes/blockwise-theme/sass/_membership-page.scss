@@ -23,6 +23,15 @@
 
   .wpcf7-form {
     display: none;
+    @include desktop {
+      display: block;
+      .close,
+      h4 {
+        @include desktop {
+          display: none;
+        }
+      }
+    }
   }
 
   .entry-header {
@@ -147,6 +156,12 @@
 
     textarea {
       max-width: 90%;
+    }
+  }
+
+  .sign-up-pop {
+    @include desktop {
+      display: none;
     }
   }
 
