@@ -4,7 +4,7 @@
 
 jQuery(function($) {
   if ($(window).width() < 600) {
-    //wrap in new function call at beginning
+    // mobile member form pop ups
     $('.tablinks li:first-child').addClass('tab-color');
     $('.option-wrapper ul:first-child').addClass('active');
     $('.tablinks li:first-child').click(function() {
@@ -37,61 +37,22 @@ jQuery(function($) {
     $('.option-wrapper ul:nth-child(3n)').addClass('active');
   }
 
+  // first member pop up mobile on click
   $('.sign-up-pop').click(function() {
     $('.wpcf7-form').addClass('mobile-popup');
   });
-  //on sign-up click close popup, show thankyou pop up
+  // on submit click remove first popup, show thank you pop up
   $('.wpcf7-submit').click(function() {
     $('.wpcf7-form').removeClass('mobile-popup');
     $('.thank-you').addClass('thank-you-active');
   });
-  // click got-it remove thankyou popup
+  // on got it button click close thank you popup
   $('.got-it').click(function() {
     $('.thank-you').removeClass('thank-you-active');
   });
-
+  // X button to close mobile sign up form
   $('.close').click(function() {
     event.preventDefault();
     $('.wpcf7-form').removeClass('mobile-popup');
   });
-
-  // click anything not in the popup div
-
-  // remove the pop up div class
-
-  //   let resizeEvent = 0;
-
-  //   if ($(window).width() < 600) {
-  //     console.log('mobile size');
-  //   } else {
-  //     console.log('>mobile size');
-  //     resizeEvent = 1;
-  //   }
-
-  //   $(window).on('resize', function() {
-  //     if (!resizeEvent) {
-  //       if ($(window).width() < 600) {
-  //         $('.option-wrapper ul:first-child').addClass('active');
-  //         $('.tablinks li:first-child').click(function() {
-  //           $('.option-wrapper ul:first-child').addClass('active');
-  //           $('.option-wrapper ul:nth-child(2n)').removeClass('active');
-  //           $('.option-wrapper ul:nth-child(3n)').removeClass('active');
-  //         });
-  //         $('.tablinks li:nth-child(2n)').click(function() {
-  //           $('.option-wrapper ul:nth-child(2n)').addClass('active');
-  //           $('.option-wrapper ul:first-child').removeClass('active');
-  //           $('.option-wrapper ul:nth-child(3n)').removeClass('active');
-  //         });
-  //         $('.tablinks li:nth-child(3n)').click(function() {
-  //           $('.option-wrapper ul:nth-child(3n)').addClass('active');
-  //           $('.option-wrapper ul:first-child').removeClass('active');
-  //           $('.option-wrapper ul:nth-child(2n)').removeClass('active');
-  //         });
-  //       } else {
-  //         $('.option-wrapper ul:first-child').addClass('active');
-  //         $('.option-wrapper ul:nth-child(2n)').addClass('active');
-  //         $('.option-wrapper ul:nth-child(3n)').addClass('active');
-  //       }
-  //     }
-  //   });
 });
