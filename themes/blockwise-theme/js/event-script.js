@@ -1,16 +1,45 @@
 (function($) {
-  $('.event a').on('click', function() {
+  const popUpEvent = $('.event-single'),
+    popUpForm = $('.pop-up');
+
+  $('.event-boxes').on('click', '.show-content', function() {
     event.preventDefault();
-    const eventNum = this.getAttribute('data-event');
-    $('.event-pop-up').addClass('hidden');
-    $('.event-pop-up[data-event=' + eventNum + ']').removeClass('hidden');
+    const articleMarkUp = getArticle(this.getAttribute('data-event'));
+    popUpEvent.removeClass('hidden');
+    popUpEvent.html(articleMarkUp);
   });
-  $('.go-back').on('click', function() {
+  popUpEvent.on('click', '.show-content', function() {
     event.preventDefault();
-    $('.event-pop-up').addClass('hidden');
   });
-  $('.rsvp').on('click', function() {
+  popUpEvent.on('click', '.hide-content', function() {
     event.preventDefault();
-    $('.pop-up').removeClass('hidden');
+    popUpEvent.addClass('hidden');
   });
+  popUpEvent.on('click', 'button', function() {
+    event.preventDefault();
+    popUpEvent.addClass('hidden');
+    $('#event-id').val(this.getAttribute('data-event'));
+    popUpForm.removeClass('hidden');
+  });
+
+  popUpForm.on('submit', function(event) {
+    console.log(event);
+    popUpForm.addClass('hidden');
+  });
+
+  function getArticle(articleNum) {
+    const article = $('article[data-event="' + articleNum + '"]');
+    const articleContent = article.html();
+    const articleClass = article.attr('class');
+    const articleId = article.attr('id');
+    return (
+      '<article id="' +
+      articleId +
+      '" class="' +
+      articleClass +
+      '">' +
+      articleContent +
+      '</article>'
+    );
+  }
 })(jQuery);

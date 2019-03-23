@@ -5,6 +5,10 @@
   background: url(../../assets/images/event-banner-large.jpg);
   background-size: 100vw;
   background-repeat: no-repeat;
+  .site-content {
+    position: relative;
+  }
+
   .page-header {
     margin: 2rem auto;
     width: 100%;
@@ -87,15 +91,40 @@
       display: none;
     }
   }
-  .event-single {
-  }
   .hidden {
     display: none;
   }
+
+  .event-single {
+    overflow: scroll;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $color__brand-ghost-white;
+    .hide-content {
+      position: relative;
+      padding-left: 40px;
+      &:before {
+        background-image: url('../../assets/images/learn-back-arrow.png');
+        background-repeat: no-repeat;
+        background-size: cover cover;
+        width: 20px;
+        height: 40px;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
   .pop-up {
     position: fixed;
-    top: 25%;
-    left: 25%;
+    transform: translate(-50%, 0);
+    top: 5%;
+    left: 50%;
+    background-color: $color__brand-ghost-white;
     border: 1px solid $color__brand-blue-sapphire;
   }
 }

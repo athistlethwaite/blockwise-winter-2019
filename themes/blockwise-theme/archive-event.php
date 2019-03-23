@@ -28,7 +28,7 @@ get_header(); ?>
             <article data-event=<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
                     <a href="" class="hide-content">See other events</a>
-                    <a href="" class="show-content">
+                    <a href="" class="show-content" data-event=<?php echo $eventNumber; ?>>
                         <h2 class="entry-title"><?php the_title(); ?></h2>
                     </a>
                 </header><!-- .entry-header -->
@@ -39,7 +39,7 @@ get_header(); ?>
                     </div><!-- .entry-meta -->
                     <div class="entry-content">
                         <?php the_content(); ?>
-                        <button data-event=<?php echo $eventNumber; ?> class="white-btn blockwise-btn">rsvp</button>
+                        <button data-event=<?php the_ID(); ?> class="white-btn blockwise-btn">rsvp</button>
                     </div><!-- .entry-content -->
                 </div>
             </article><!-- #post-## -->
@@ -47,10 +47,10 @@ get_header(); ?>
         </section>
 
         <?php blockwise_numbered_pagination(); ?>
-        <section class="event-single">
+        <section class="event-single hidden">
         </section>
         <div class="pop-up hidden">
-            <?php echo do_shortcode('[contact-form-7 id="191" title="contact-us"]'); ?>
+            <?php echo do_shortcode('[contact-form-7 id="249" title="RSVP form"]'); ?>
         </div>
 
         <?php else : ?>
