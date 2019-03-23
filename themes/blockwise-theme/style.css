@@ -1796,7 +1796,9 @@ https://flickity.metafizzy.co
     font-weight: bold; }
     @media screen and (min-width: 1000px) {
       .page-template-membership .tablinks {
-        border: none; } }
+        border: none;
+        margin-bottom: auto;
+        border-collapse: collapse; } }
     .page-template-membership .tablinks li {
       padding: 20px 25px;
       width: 33%;
@@ -1804,14 +1806,21 @@ https://flickity.metafizzy.co
       @media screen and (min-width: 1000px) {
         .page-template-membership .tablinks li {
           border: solid;
-          margin: 0 50px; } }
+          border-color: #008294;
+          border-top-left-radius: 20px;
+          border-top-right-radius: 20px;
+          margin: 0 50px;
+          background-color: #008294;
+          color: #f7f9fa; } }
   .page-template-membership .option-wrapper ul {
     list-style-image: url("../../assets/images/membership-check.png"); }
     @media screen and (min-width: 1000px) {
       .page-template-membership .option-wrapper ul {
         border: solid;
         padding-top: 14px;
-        margin: 0 50px; } }
+        margin: 0 50px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px; } }
   @media screen and (min-width: 1000px) {
     .page-template-membership .option-wrapper {
       display: -webkit-box;

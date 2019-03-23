@@ -37,6 +37,8 @@
     font-weight: bold;
     @include desktop {
       border: none;
+      margin-bottom: auto;
+      border-collapse: collapse;
     }
     li {
       padding: 20px 25px;
@@ -44,7 +46,12 @@
       text-align: center;
       @include desktop {
         border: solid;
+        border-color: $color__brand-dark-cyan;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         margin: 0 50px;
+        background-color: $color__brand-dark-cyan;
+        color: $color__brand-ghost-white;
       }
     }
   }
@@ -56,6 +63,8 @@
         border: solid;
         padding-top: 14px;
         margin: 0 50px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
       }
     }
     @include desktop {
