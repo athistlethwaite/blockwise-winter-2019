@@ -218,6 +218,9 @@ function blockwise_comment_list($comment, $args, $depth)
 		}
 		if (is_post_type_archive('event')) {
 			$query->set('posts_per_page', 3);
+			$query->set('orderby', 'meta_value');
+			$query->set('order', 'ASC');
+			$query->set('meta_key', 'event_date');
 		}
 	}
 	add_action('pre_get_posts', 'blockwise_posts_filter', 1);
