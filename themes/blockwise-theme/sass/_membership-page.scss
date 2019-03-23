@@ -23,7 +23,7 @@
 
   .entry-header {
     background-image: url('../../assets/images/membership-banner.jpg');
-    height: 62vh !important; //to override global yay or nay
+    height: 100vh;
   }
 
   .tablinks {
@@ -31,17 +31,29 @@
     justify-content: space-between;
     border: solid 3px;
     font-weight: bold;
-
+    @include desktop {
+      border: none;
+    }
     li {
       padding: 20px 25px;
       width: 33%;
       text-align: center;
+      @include desktop {
+        border: solid;
+      }
     }
   }
 
   .option-wrapper {
     ul {
       list-style-image: url('../../assets/images/membership-check.png');
+      @include desktop {
+        border: solid;
+        padding-top: 14px;
+      }
+    }
+    @include desktop {
+      display: flex;
     }
   }
 
@@ -53,7 +65,6 @@
     li {
       padding: 10px 0px;
     }
-    @include $destop
   }
 
   .thank-you {

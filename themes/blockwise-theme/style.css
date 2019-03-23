@@ -1781,7 +1781,7 @@ https://flickity.metafizzy.co
     display: none; }
   .post-48 .entry-header {
     background-image: url("../../assets/images/membership-banner.jpg");
-    height: 62vh !important; }
+    height: 100vh; }
   .post-48 .tablinks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1791,12 +1791,27 @@ https://flickity.metafizzy.co
             justify-content: space-between;
     border: solid 3px;
     font-weight: bold; }
+    @media screen and (min-width: 1000px) {
+      .post-48 .tablinks {
+        border: none; } }
     .post-48 .tablinks li {
       padding: 20px 25px;
       width: 33%;
       text-align: center; }
+      @media screen and (min-width: 1000px) {
+        .post-48 .tablinks li {
+          border: solid; } }
   .post-48 .option-wrapper ul {
     list-style-image: url("../../assets/images/membership-check.png"); }
+    @media screen and (min-width: 1000px) {
+      .post-48 .option-wrapper ul {
+        border: solid;
+        padding-top: 14px; } }
+  @media screen and (min-width: 1000px) {
+    .post-48 .option-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
   .post-48 .list-content {
     display: none;
     width: 100%;
