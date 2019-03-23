@@ -1770,9 +1770,13 @@ https://flickity.metafizzy.co
 --------------------------------------------------------------*/
 .page-template-membership {
   text-align: center; }
-  @media screen and (min-width: 1000px) {
-    .page-template-membership .site-content {
-      max-width: none; } }
+  .page-template-membership .site-content {
+    background-image: url("../../assets/images/membership-banner.jpg");
+    background-size: contain;
+    background-repeat: no-repeat; }
+    @media screen and (min-width: 1000px) {
+      .page-template-membership .site-content {
+        max-width: none; } }
   .page-template-membership ul,
   .page-template-membership li {
     margin-left: 0;
@@ -1790,8 +1794,7 @@ https://flickity.metafizzy.co
     .page-template-membership .wpcf7-form h4 {
       display: none; } }
   .page-template-membership .entry-header {
-    background-image: url("../../assets/images/membership-banner.jpg");
-    height: 100vh; }
+    height: 20vh; }
   .page-template-membership .tablinks {
     display: -webkit-box;
     display: -ms-flexbox;

@@ -4,7 +4,11 @@
 
 .page-template-membership {
   text-align: center;
+
   .site-content {
+    background-image: url('../../assets/images/membership-banner.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
     @include desktop {
       max-width: none;
     }
@@ -35,8 +39,7 @@
   }
 
   .entry-header {
-    background-image: url('../../assets/images/membership-banner.jpg');
-    height: 100vh;
+    height: 20vh;
   }
 
   .tablinks {
