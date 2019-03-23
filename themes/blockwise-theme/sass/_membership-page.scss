@@ -2,9 +2,13 @@
 # Membership Page
 --------------------------------------------------------------*/
 
-.post-48 {
+.page-template-membership {
   text-align: center;
-
+  .site-content {
+    @include desktop {
+      max-width: none;
+    }
+  }
   // position: relative;
   ul,
   li {

@@ -1768,21 +1768,24 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # Membership Page
 --------------------------------------------------------------*/
-.post-48 {
+.page-template-membership {
   text-align: center; }
-  .post-48 ul,
-  .post-48 li {
+  @media screen and (min-width: 1000px) {
+    .page-template-membership .site-content {
+      max-width: none; } }
+  .page-template-membership ul,
+  .page-template-membership li {
     margin-left: 0;
     padding: 0; }
-  .post-48 .member-h3 {
+  .page-template-membership .member-h3 {
     text-align: center;
     padding: 0 50px; }
-  .post-48 .wpcf7-form {
+  .page-template-membership .wpcf7-form {
     display: none; }
-  .post-48 .entry-header {
+  .page-template-membership .entry-header {
     background-image: url("../../assets/images/membership-banner.jpg");
     height: 100vh; }
-  .post-48 .tablinks {
+  .page-template-membership .tablinks {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1792,35 +1795,35 @@ https://flickity.metafizzy.co
     border: solid 3px;
     font-weight: bold; }
     @media screen and (min-width: 1000px) {
-      .post-48 .tablinks {
+      .page-template-membership .tablinks {
         border: none; } }
-    .post-48 .tablinks li {
+    .page-template-membership .tablinks li {
       padding: 20px 25px;
       width: 33%;
       text-align: center; }
       @media screen and (min-width: 1000px) {
-        .post-48 .tablinks li {
+        .page-template-membership .tablinks li {
           border: solid; } }
-  .post-48 .option-wrapper ul {
+  .page-template-membership .option-wrapper ul {
     list-style-image: url("../../assets/images/membership-check.png"); }
     @media screen and (min-width: 1000px) {
-      .post-48 .option-wrapper ul {
+      .page-template-membership .option-wrapper ul {
         border: solid;
         padding-top: 14px; } }
   @media screen and (min-width: 1000px) {
-    .post-48 .option-wrapper {
+    .page-template-membership .option-wrapper {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; } }
-  .post-48 .list-content {
+  .page-template-membership .list-content {
     display: none;
     width: 100%;
     padding: 0px 63px; }
-    .post-48 .list-content li {
+    .page-template-membership .list-content li {
       padding: 10px 0px; }
-  .post-48 .thank-you {
+  .page-template-membership .thank-you {
     display: none; }
-  .post-48 .thank-you-active {
+  .page-template-membership .thank-you-active {
     display: block;
     background-color: #f7f9fa;
     max-width: 69vw;
@@ -1834,15 +1837,15 @@ https://flickity.metafizzy.co
     background-repeat: no-repeat;
     -webkit-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78); }
-    .post-48 .thank-you-active p {
+    .page-template-membership .thank-you-active p {
       padding: 0px 13px;
       padding-top: 30px;
       margin: 0; }
-    .post-48 .thank-you-active .got-it {
+    .page-template-membership .thank-you-active .got-it {
       margin: 20px 0; }
-  .post-48 .active {
+  .page-template-membership .active {
     display: block; }
-  .post-48 .mobile-popup {
+  .page-template-membership .mobile-popup {
     display: block;
     background-color: #f7f9fa;
     width: 74vw;
@@ -1856,18 +1859,18 @@ https://flickity.metafizzy.co
     border-color: #026082;
     -webkit-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78); }
-    .post-48 .mobile-popup h4 {
+    .page-template-membership .mobile-popup h4 {
       margin-top: 4rem;
       margin-left: 5px;
       margin-right: 5px; }
-    .post-48 .mobile-popup .close {
+    .page-template-membership .mobile-popup .close {
       position: absolute;
       right: 10px; }
-    .post-48 .mobile-popup input {
+    .page-template-membership .mobile-popup input {
       max-width: 90%; }
-    .post-48 .mobile-popup textarea {
+    .page-template-membership .mobile-popup textarea {
       max-width: 90%; }
-  .post-48 .tab-color {
+  .page-template-membership .tab-color {
     background-color: #008294;
     color: #f7f9fa; }
 
