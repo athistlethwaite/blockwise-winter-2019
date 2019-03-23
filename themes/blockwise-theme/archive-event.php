@@ -20,64 +20,35 @@ get_header(); ?>
                 ?>
             </div>
         </header><!-- .page-header -->
-        <div class="all-articles">
+        <section class="event-boxes">
             <?php  /* Start the Loop */ ?>
             <?php $eventNumber = 0; ?>
             <?php while (have_posts()) : the_post(); ?>
             <?php $eventNumber++; ?>
-
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <article data-event=<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
-                    <div class="content-event">
-                        <a href="#" data-event=<?php echo $eventNumber; ?>>
-                            <h2 class="entry-title"><?php the_title(); ?></h2>
-                        </a>
-                        <div class="entry-meta">
-                            <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
-                            <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
-                        </div><!-- .entry-meta -->
-                    </div>
-                    <a href="#" data-event=<?php echo $eventNumber; ?>>
-                        <img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-arrow.png" alt="Click for Event Info">
+                    <a href="" class="hide-content">See other events</a>
+                    <a href="" class="show-content">
+                        <h2 class="entry-title"><?php the_title(); ?></h2>
                     </a>
                 </header><!-- .entry-header -->
-                <?php if ($eventNumber % 3 !== 0) : ?>
-                <img class="small-chain" src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-chain-desktop.png" alt="Blockwise chains">
-                <?php endif; ?>
-            </article><!-- #post-## -->
-            <?php endwhile; ?>
-        </div>
-        <div class="all-main-pop-up">
-            <?php  /* Start the Loop */ ?>
-            <?php $eventNumber = 0; ?>
-            <?php while (have_posts()) : the_post(); ?>
-            <?php $eventNumber++; ?>
-            <article class="event-pop-up hidden" data-event=<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                <a href="" class="go-back"><img class="small-angle" src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-arrow.png" alt="Click for Event Info">See all events</a>
-                <header class="entry-header">
-                    <h2 class="entry-title"><?php the_title(); ?></h2>
+                <div class="entry-text-wrapper">
                     <div class="entry-meta">
                         <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
                         <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
                     </div><!-- .entry-meta -->
-                </header><!-- .entry-header -->
-
-                <div class="entry-content">
-                    <?php the_content(); ?>
-                    <button class="rsvp" data-event=<?php echo $eventNumber; ?> class="white-btn blockwise-btn">rsvp</button>
-                </div><!-- .entry-content -->
-
+                    <div class="entry-content">
+                        <?php the_content(); ?>
+                        <button data-event=<?php echo $eventNumber; ?> class="white-btn blockwise-btn">rsvp</button>
+                    </div><!-- .entry-content -->
+                </div>
             </article><!-- #post-## -->
-
-            <div class="pop-up hidden">
-                <h2 class="entry-title">rsvp</h2>
-                <?php echo do_shortcode('[contact-form-7 id="199" title="rsvp event"]'); ?>
-            </div>
-
             <?php endwhile; ?>
-        </div>
-        <?php blockwise_numbered_pagination(); ?>
+        </section>
 
+        <?php blockwise_numbered_pagination(); ?>
+        <section class="event-single">
+        </section>
         <div class="pop-up hidden">
             <?php echo do_shortcode('[contact-form-7 id="191" title="contact-us"]'); ?>
         </div>
