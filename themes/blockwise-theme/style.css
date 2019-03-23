@@ -1803,13 +1803,15 @@ https://flickity.metafizzy.co
       text-align: center; }
       @media screen and (min-width: 1000px) {
         .page-template-membership .tablinks li {
-          border: solid; } }
+          border: solid;
+          margin: 0 50px; } }
   .page-template-membership .option-wrapper ul {
     list-style-image: url("../../assets/images/membership-check.png"); }
     @media screen and (min-width: 1000px) {
       .page-template-membership .option-wrapper ul {
         border: solid;
-        padding-top: 14px; } }
+        padding-top: 14px;
+        margin: 0 50px; } }
   @media screen and (min-width: 1000px) {
     .page-template-membership .option-wrapper {
       display: -webkit-box;

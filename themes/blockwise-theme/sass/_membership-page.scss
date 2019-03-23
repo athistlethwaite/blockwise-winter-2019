@@ -44,6 +44,7 @@
       text-align: center;
       @include desktop {
         border: solid;
+        margin: 0 50px;
       }
     }
   }
@@ -54,6 +55,7 @@
       @include desktop {
         border: solid;
         padding-top: 14px;
+        margin: 0 50px;
       }
     }
     @include desktop {
