@@ -1082,11 +1082,13 @@ object {
 /*--------------------------------------------------------------
 # Front Page 
 --------------------------------------------------------------*/
-.home .site-content {
-  background-image: url("../../assets/images/splash-background-transparent.png"); }
-
 .home .front-page-banner {
-  height: 105vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-image: url("../../assets/images/splash-background-transparent.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vw;
   position: relative; }
   .home .front-page-banner .header-content-wrapper {
     text-align: center;
@@ -1094,16 +1096,16 @@ object {
     max-width: 16em;
     padding: 0 0.5em;
     top: 10%;
-    left: 10px; }
+    left: 20px; }
     @media screen and (min-width: 1000px) {
       .home .front-page-banner .header-content-wrapper {
-        max-width: 1000px;
+        max-width: none;
         top: 20%;
         left: 20%; } }
   .home .front-page-banner .carousel {
     background-color: rgba(0, 130, 148, 0.7);
     position: absolute;
-    bottom: 10px; }
+    bottom: 20px; }
 
 .home .front-page-content > h2 {
   margin: 2em auto; }
@@ -1219,7 +1221,7 @@ object {
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
-        height: 33vw;
+        height: 35vw;
         content: '';
         position: absolute;
         top: 75vh;
@@ -1235,11 +1237,9 @@ object {
 
 @media screen and (min-width: 1000px) {
   .page-template-about .site-main > article:first-child {
-    margin-bottom: 9vw; }
-    .page-template-about .site-main > article:first-child p {
-      margin-bottom: 0; }
+    min-height: 56vw; }
     .page-template-about .site-main > article:first-child .entry-content {
-      max-width: 75%; } }
+      max-width: 70%; } }
 
 .page-template-about section h2 {
   color: #f7f9fa;

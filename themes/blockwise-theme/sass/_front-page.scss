@@ -2,11 +2,13 @@
 # Front Page 
 --------------------------------------------------------------*/
 .home {
-  .site-content {
-    background-image: url('../../assets/images/splash-background-transparent.png');
-  }
   .front-page-banner {
-    height: 105vw;
+    max-width: $desktop-width;
+    margin: 0 auto;
+    background-image: url('../../assets/images/splash-background-transparent.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vw;
     position: relative;
     .header-content-wrapper {
       text-align: center;
@@ -14,9 +16,9 @@
       max-width: 16em;
       padding: 0 0.5em;
       top: 10%;
-      left: 10px;
+      left: 20px;
       @include desktop {
-        max-width: $desktop-width;
+        max-width: none;
         top: 20%;
         left: 20%;
       }
@@ -24,7 +26,7 @@
     .carousel {
       background-color: rgba($color: $color__brand-dark-cyan, $alpha: 0.7);
       position: absolute;
-      bottom: 10px;
+      bottom: 20px;
     }
   }
 
