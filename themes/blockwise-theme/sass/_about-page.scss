@@ -13,7 +13,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         width: 100vw;
-        height: 33vw;
+        height: 35vw;
         content: '';
         position: absolute;
         top: 75vh;
@@ -33,12 +33,9 @@
       }
     }
     @include desktop {
-      margin-bottom: 9vw;
-      p {
-        margin-bottom: 0;
-      }
+      min-height: 56vw;
       .entry-content {
-        max-width: 75%;
+        max-width: 70%;
       }
     }
   }
