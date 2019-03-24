@@ -8,9 +8,15 @@
     carosel.addClass('carosel');
     carosel.find('>div').addClass('carosel-item');
     const item = $('.carosel-item');
-    item.find('>div').addClass('carosel-content');
-    item.find('>img').addClass('carosel-thumbnail');
-    item.find('>a').addClass('carosel-link');
+    item
+      .find('p')
+      .parent('div')
+      .addClass('carosel-content');
+    item
+      .find('img')
+      .parent('div')
+      .addClass('carosel-thumbnail');
+
     const viewPort =
       '<div class="carosel-viewport" style="width:' +
       item.width() * 1.1 +
