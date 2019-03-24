@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="mentors-list">
+<div class="mentors-list carousel">
     <?php $logos = get_posts(array('post_type' => 'mentor')); ?>
     <?php foreach ($logos as $logo) : setup_postdata($logo); ?>
     <div class='mentors-item'>

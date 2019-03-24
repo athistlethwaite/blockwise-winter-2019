@@ -22,12 +22,12 @@ get_header(); ?>
         <?php endif; ?>
 
         <?php  /* Start the Loop */ ?>
-        <?php while (have_posts()) : the_post(); ?>
-        <section class="posts container">
+        <section class="archive-posts container">
+            <?php while (have_posts()) : the_post(); ?>
             <?php get_template_part('template-parts/content', 'post'); ?>
+            <?php endwhile; ?>
         </section>
-        <?php endwhile; ?>
-
+        <?php blockwise_numbered_pagination(); ?>
 
 
         <?php else : ?>

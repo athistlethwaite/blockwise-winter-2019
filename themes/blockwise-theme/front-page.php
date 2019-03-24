@@ -12,16 +12,26 @@ get_header(); ?>
 
         <?php while (have_posts()) : the_post(); ?>
 
-        <?php get_template_part('template-parts/content', 'page'); ?>
+        <header class="front-page-banner container">
+            <div class="header-content-wrapper">
+                <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
+                <p><?php echo CFS()->get('page_subtitle'); ?></p>
+            </div>
+            <?php get_template_part('template-parts/content', 'partners') ?>
+        </header><!-- .entry-header -->
 
         <?php endwhile; ?>
-        <?php get_template_part('template-parts/content', 'partners') ?>
+
         <div class='front-page-content container'>
             <h2>Learn, Explore, Connect</h2>
             <section class="upcoming-events">
                 <h3>Upcoming Events</h3>
                 <div class='front-page-events'>
-                    <?php $loop = new WP_Query(array('post_type' => 'event', 'posts_per_page' => -1)); ?>
+                    <?php $loop = new WP_Query(array(
+                        'post_type' => 'event', 'posts_per_page' => -1, 'orderby' => 'meta_value',
+                        'order' => 'ASC',
+                        'meta_key', 'event_date'
+                    )); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php get_template_part('template-parts/content', 'event'); ?>
                     <?php endwhile;
@@ -30,7 +40,7 @@ get_header(); ?>
             </section>
             <section class='market-trends'>
                 <h3>Market Trends</h3>
-                <div class='front-page-articles'>
+                <div class='archive-posts'>
                     <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4, 'order' => 'ASC')); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php get_template_part('template-parts/content', 'post'); ?>

@@ -214,7 +214,7 @@ function blockwise_comment_list($comment, $args, $depth)
 		}
 		if (is_home()) {
 			$query->set('order', 'ASC');
-			$query->set('posts_per_page', -1);
+			$query->set('posts_per_page', 7);
 		}
 		if (is_post_type_archive('event')) {
 			$query->set('posts_per_page', 3);

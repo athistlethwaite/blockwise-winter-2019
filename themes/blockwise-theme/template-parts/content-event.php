@@ -13,7 +13,7 @@
             <h2 class="entry-title"><?php the_title(); ?></h2>
         </a>
         <div class="entry-meta">
-            <p class="event-date"><?php echo CFS()->get('event_date'); ?></p>
+            <p class="event-date"><?php echo date('F j, Y', strtotime(CFS()->get('event_date'))); ?></p>
             <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
         </div><!-- .entry-meta -->
     </header><!-- .entry-header -->

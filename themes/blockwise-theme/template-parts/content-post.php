@@ -10,11 +10,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
         <?php if (has_post_thumbnail()) : ?>
-        <?php if (blockwise_is_latest_post(get_the_ID())) : ?>
         <?php the_post_thumbnail('large'); ?>
-        <?php else : ?>
-        <?php the_post_thumbnail('thumbnail'); ?>
-        <?php endif; ?>
         <?php endif; ?>
         <div class="entry-text-wrapper">
             <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>

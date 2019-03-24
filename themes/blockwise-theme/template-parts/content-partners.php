@@ -7,7 +7,7 @@
 
 ?>
 
-<div class="corporate-partners-list">
+<div class="corporate-partners-list carousel">
     <?php $logos = get_posts(array('post_type' => 'partner', 'order_by' => 'title', 'order' => 'ASC')); ?>
     <?php foreach ($logos as $logo) : setup_postdata($logo); ?>
     <div class='corporate-partners-item'>
