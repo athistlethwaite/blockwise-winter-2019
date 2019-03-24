@@ -20,7 +20,7 @@ get_header(); ?>
                 ?>
             </div>
         </header><!-- .page-header -->
-        <section class="event-boxes">
+        <section class="event-boxes container">
             <?php  /* Start the Loop */ ?>
             <?php $eventNumber = 0; ?>
             <?php while (have_posts()) : the_post(); ?>

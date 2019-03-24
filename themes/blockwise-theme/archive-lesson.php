@@ -20,49 +20,48 @@ get_header(); ?>
                 ?>
             </div>
         </header><!-- .page-header -->
+        <section class="page-content container">
+            <h4>Select a Lesson:</h4>
+            <div class="lessons ">
+                <?php $lesson_types = get_terms('lesson_type'); ?>
+                <?php $x = 0; ?>
+                <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
+                <?php $x++; ?>
+                <div class="lesson-type-wrapper chain">
+                    <div class="lesson-type-title">
+                        <h3 id="button<?php echo $x ?>"><?php echo $lesson_type->name ?></h3>
+                        <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-arrow.png" alt="Click to see Lesson"></div>
+                    </div>
 
-        <h4>Select a Lesson:</h4>
-
-        <section class="lessons">
-            <?php $lesson_types = get_terms('lesson_type'); ?>
-            <?php $x=0;?>
-            <?php foreach ($lesson_types as $lesson_type) : setup_postdata($lesson_type); ?>
-            <?php $x++; ?>
-            <div class="lesson-type-wrapper chain">
-                <div class="lesson-type-title">
-                    <h3 id="button<?php echo $x ?>"><?php echo $lesson_type->name ?></h3>
-                    <div class="arrow"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/learn-arrow.png" alt="Click to see Lesson"></div>
-                </div>
-
-                <ul>
-                    <?php $lessons = get_posts(array(
-                        'post_type' => 'lesson',
-                        'tax_query' => array(
-                            array(
-                                'taxonomy' => 'lesson_type',
-                                'field' => 'term_id',
-                                'terms' => $lesson_type->term_id,
+                    <ul>
+                        <?php $lessons = get_posts(array(
+                            'post_type' => 'lesson',
+                            'tax_query' => array(
+                                array(
+                                    'taxonomy' => 'lesson_type',
+                                    'field' => 'term_id',
+                                    'terms' => $lesson_type->term_id,
+                                )
                             )
-                        )
-                    )); ?>
-                    
-                    <?php foreach ($lessons as $lesson) : setup_postdata($lesson); ?>
+                        )); ?>
 
-                    <?php $the_post_id = $lesson->ID; ?>
+                        <?php foreach ($lessons as $lesson) : setup_postdata($lesson); ?>
 
-                    <li>
-                        <a class="lesson-title" href='#' data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a>
-                    </li>
+                        <?php $the_post_id = $lesson->ID; ?>
 
-                    <?php endforeach;
-                wp_reset_postdata(); ?>
-                </ul>
+                        <li>
+                            <a class="lesson-title" href='#' data-load-post="<?php echo $the_post_id; ?>"><?php echo $lesson->post_title; ?></a>
+                        </li>
+
+                        <?php endforeach;
+                    wp_reset_postdata(); ?>
+                    </ul>
+                </div>
+                <?php endforeach;
+            wp_reset_postdata(); ?>
+
             </div>
-            <?php endforeach;
-        wp_reset_postdata(); ?>
-
         </section>
-
 
         <?php else : ?>
 

@@ -15,7 +15,7 @@
         </div>
     </header><!-- .entry-header -->
 
-    <div class="entry-content">
+    <div class="entry-content container">
         <?php the_content(); ?>
         <?php
         wp_link_pages(array(

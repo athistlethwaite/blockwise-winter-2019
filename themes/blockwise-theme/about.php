@@ -18,19 +18,19 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-        <div class='about-partners'>
+        <section class='about-partners container'>
             <h2>Our Partners</h2>
-            <section class='about-corporate-members'>
+            <div class='about-corporate-members'>
                 <h3>Corporate Members</h3>
                 <?php get_template_part('template-parts/content', 'partners') ?>
                 <a class="yellow-btn blockwise-btn" href=<?php echo get_permalink(get_page_by_title('Membership')); ?>>Become A Member</a>
-            </section>
-            <section class='about-mentors'>
+            </div>
+            <div class='about-mentors'>
                 <h3>Community Mentors</h3>
                 <?php get_template_part('template-parts/content', 'mentors') ?>
                 <a class="yellow-btn blockwise-btn" href=<?php echo get_permalink(get_page_by_title('Membership')); ?>>Become A Mentor</a>
-            </section>
-        </div>
+            </div>
+        </section>
 
     </main><!-- #main -->
 </div><!-- #primary -->
