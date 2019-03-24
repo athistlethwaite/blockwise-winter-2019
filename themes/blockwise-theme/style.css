@@ -995,6 +995,10 @@ object {
   background: #ffae4e;
   color: #008294; }
 
+<<<<<<< HEAD
+/*--------------------------------------------------------------
+# Header
+=======
 .carosel {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1074,6 +1078,7 @@ object {
 
 /*--------------------------------------------------------------
 # Header
+>>>>>>> 619293b9f8536a078af0e2acbae68d8e7b68ca91
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
@@ -1815,8 +1820,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
