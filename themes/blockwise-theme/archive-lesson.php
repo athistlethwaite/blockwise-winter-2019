@@ -12,7 +12,7 @@ get_header(); ?>
 
         <?php if (have_posts()) : ?>
 
-        <header class="page-header">
+        <header class="page-header container">
             <div class="header-content-wrapper">
                 <h1 class="page-title">What is Blockchain?</h1>
                 <?php

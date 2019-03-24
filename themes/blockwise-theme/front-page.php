@@ -16,7 +16,7 @@ get_header(); ?>
 
         <?php endwhile; ?>
         <?php get_template_part('template-parts/content', 'partners') ?>
-        <div class='front-page-content'>
+        <div class='front-page-content container'>
             <h2>Learn, Explore, Connect</h2>
             <section class="upcoming-events">
                 <h3>Upcoming Events</h3>

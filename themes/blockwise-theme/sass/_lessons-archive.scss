@@ -2,23 +2,19 @@
 # Lesson Archive Page
 --------------------------------------------------------------*/
 
-
 .post-type-archive-lesson {
-
   .site-content {
     position: relative;
   }
 
   .page-header {
-    background-image: url("../../assets/images/learn-blocks-mobile.png");
+    background-image: url('../../assets/images/learn-blocks-mobile.png');
     background-size: 100% 100%;
     height: 40vh;
-    margin-right: 0;
-    margin-left: 0;
     margin-bottom: 20px;
 
     @include desktop {
-      background-image: url("../../assets/images/learn-blocks-desktop.png");
+      background-image: url('../../assets/images/learn-blocks-desktop.png');
       background-size: contain;
       background-position: center;
       height: 60vh;
@@ -38,16 +34,12 @@
     justify-content: space-between;
   }
 
-
-
   .lesson-type-wrapper {
     position: relative;
     padding-bottom: 30px;
 
     &.chain {
-
       &:first-child {
-
         &:before {
           display: none;
         }
@@ -110,7 +102,6 @@
           display: none;
         }
       }
-
     }
 
     ul {
@@ -197,6 +188,4 @@
       display: inline-block;
     }
   }
-
-
 }

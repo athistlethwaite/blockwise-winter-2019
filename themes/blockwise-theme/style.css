@@ -1170,7 +1170,7 @@ https://flickity.metafizzy.co
 --------------------------------------------------------------*/
 .post-type-archive-event .site-content {
   position: relative;
-  background: url(../../assets/images/event-banner-large.jpg); }
+  background-image: url(../../assets/images/event-banner-large.jpg); }
 
 .post-type-archive-event .event-boxes {
   display: -webkit-box;
@@ -1307,8 +1307,6 @@ https://flickity.metafizzy.co
   background-image: url("../../assets/images/learn-blocks-mobile.png");
   background-size: 100% 100%;
   height: 40vh;
-  margin-right: 0;
-  margin-left: 0;
   margin-bottom: 20px; }
   @media screen and (min-width: 1000px) {
     .post-type-archive-lesson .page-header {
