@@ -7,13 +7,13 @@
 
 ?>
 
-<div class="mentors-list carousel">
+<div class="mentors-list">
     <?php $logos = get_posts(array('post_type' => 'mentor')); ?>
     <?php foreach ($logos as $logo) : setup_postdata($logo); ?>
-    <div class='mentors-item'>
+    <div>
         <?php the_post_thumbnail('thumbnail', $post = $logo->ID); ?>
         <?php if (!is_front_page()) : ?>
-        <div class="mentor-item-content">
+        <div>
             <?php the_excerpt(); ?>
         </div>
         <?php endif; ?>
