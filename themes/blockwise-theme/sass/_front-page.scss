@@ -29,7 +29,9 @@
       position: absolute;
       bottom: 20px;
       .carosel-thumbnail {
-        width: 50%;
+        img {
+          width: 50%;
+        }
       }
     }
   }
