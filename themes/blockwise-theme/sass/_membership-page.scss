@@ -7,23 +7,12 @@
 
   .site-content {
     background-image: url('../../assets/images/membership-banner.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    @include desktop {
-      max-width: none;
-      background-size: cover;
-    }
   }
   // position: relative;
   ul,
   li {
     margin-left: 0;
     padding: 0;
-  }
-
-  .member-h3 {
-    text-align: center;
-    padding: 0 50px;
   }
 
   .wpcf7-form {
@@ -36,13 +25,6 @@
           display: none;
         }
       }
-    }
-  }
-
-  .entry-header {
-    height: 20vh;
-    @include desktop {
-      height: 100vh;
     }
   }
 

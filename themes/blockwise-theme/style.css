@@ -1069,11 +1069,15 @@ https://flickity.metafizzy.co
   max-width: 1000px;
   margin: 0 auto; }
 
+.site-content {
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
 .site-main > article:first-child header,
 .page-header {
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  width: 100vw;
+  height: 50vh;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1083,15 +1087,11 @@ https://flickity.metafizzy.co
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   text-align: center; }
-
-.blog .header-content-wrapper,
-.page-template-about .header-content-wrapper {
-  padding: 1rem 0;
-  width: 100%;
-  background-color: rgba(247, 249, 250, 0.5); }
+  @media screen and (min-width: 1000px) {
+    .site-main > article:first-child header,
+    .page-header {
+      height: 100vh; } }
 
 .blockwise-btn {
   -webkit-box-sizing: border-box;
@@ -1162,147 +1162,140 @@ https://flickity.metafizzy.co
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
-.page-template-about {
-  text-align: center; }
-  .page-template-about .entry-header {
-    background-image: url("../../assets/images/about-banner.png");
-    height: 70vw; }
-  .page-template-about .flickity-enabled {
-    margin-bottom: 1.2rem; }
+.page-template-about .flickity-enabled {
+  margin-bottom: 1.2rem; }
 
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
-.post-type-archive-event {
-  background: url(../../assets/images/event-banner-large.jpg);
-  background-size: 100vw;
-  background-repeat: no-repeat; }
-  .post-type-archive-event .site-content {
-    position: relative; }
-  .post-type-archive-event .page-header {
-    margin: 2rem auto;
-    width: 100%; }
-  .post-type-archive-event .event-boxes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    margin: 2em auto; }
-    .post-type-archive-event .event-boxes article {
-      position: relative;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      text-align: center;
-      background-color: #f7f9fa;
-      padding: 0 4em;
-      margin-bottom: 0;
-      border: 2px solid #026082;
-      border-top: 0; }
-      .post-type-archive-event .event-boxes article:first-child {
-        border-top: 2px solid #026082; }
-      .post-type-archive-event .event-boxes article .entry-title:after {
-        background-image: url("../../assets/images/learn-arrow.png");
-        background-repeat: no-repeat;
-        background-size: cover cover;
-        width: 20px;
-        height: 40px;
-        content: '';
-        position: absolute;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        right: 10px;
-        top: 50%; }
-    @media screen and (min-width: 1000px) {
-      .post-type-archive-event .event-boxes {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+.post-type-archive-event .site-content {
+  position: relative;
+  background: url(../../assets/images/event-banner-large.jpg); }
+
+.post-type-archive-event .event-boxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap; }
+  .post-type-archive-event .event-boxes article {
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-align: center;
+    background-color: #f7f9fa;
+    padding: 0 4em;
+    margin-bottom: 0;
+    border: 2px solid #026082;
+    border-top: 0; }
+    .post-type-archive-event .event-boxes article:first-child {
+      border-top: 2px solid #026082; }
+    .post-type-archive-event .event-boxes article .entry-title:after {
+      background-image: url("../../assets/images/learn-arrow.png");
+      background-repeat: no-repeat;
+      background-size: cover cover;
+      width: 20px;
+      height: 40px;
+      content: '';
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      right: 10px;
+      top: 50%; }
+  @media screen and (min-width: 1000px) {
+    .post-type-archive-event .event-boxes {
+      padding-bottom: 2em;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .post-type-archive-event .event-boxes article {
+        border: 0;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 0 25%;
+                flex: 1 0 25%;
+        max-width: 18em;
+        text-align: center;
+        padding: 0.5em;
+        border-radius: 1rem;
+        background-color: rgba(247, 249, 250, 0.7);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; }
-        .post-type-archive-event .event-boxes article {
-          border: 0;
-          -webkit-box-flex: 1;
-              -ms-flex: 1 0 25%;
-                  flex: 1 0 25%;
-          max-width: 18em;
-          text-align: center;
-          padding: 0.5em;
-          border-radius: 1rem;
-          background-color: rgba(247, 249, 250, 0.7);
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-align: center;
-              -ms-flex-align: center;
-                  align-items: center;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-              -ms-flex-flow: column nowrap;
-                  flex-flow: column nowrap;
-          height: 250px; }
-          .post-type-archive-event .event-boxes article:first-child {
-            border-top: 0; }
-          .post-type-archive-event .event-boxes article .entry-title:after {
-            display: none; }
-          .post-type-archive-event .event-boxes article:before {
-            background-image: url("../../assets/images/learn-chain-desktop.png");
-            background-repeat: no-repeat;
-            content: '';
-            position: absolute;
-            background-size: cover;
-            width: 75px;
-            height: 11px;
-            top: 50%;
-            left: 0;
-            -webkit-transform: translate(-100%, -50%);
-                    transform: translate(-100%, -50%); }
-          .post-type-archive-event .event-boxes article:first-child:before {
-            display: none; } }
-    .post-type-archive-event .event-boxes .entry-content,
-    .post-type-archive-event .event-boxes .hide-content {
-      display: none; }
-  .post-type-archive-event .hidden {
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        height: 250px; }
+        .post-type-archive-event .event-boxes article:first-child {
+          border-top: 0; }
+        .post-type-archive-event .event-boxes article .entry-title:after {
+          display: none; }
+        .post-type-archive-event .event-boxes article:before {
+          background-image: url("../../assets/images/learn-chain-desktop.png");
+          background-repeat: no-repeat;
+          content: '';
+          position: absolute;
+          background-size: cover;
+          width: 75px;
+          height: 11px;
+          top: 50%;
+          left: 0;
+          -webkit-transform: translate(-100%, -50%);
+                  transform: translate(-100%, -50%); }
+        .post-type-archive-event .event-boxes article:first-child:before {
+          display: none; } }
+  .post-type-archive-event .event-boxes .entry-content,
+  .post-type-archive-event .event-boxes .hide-content {
     display: none; }
-  .post-type-archive-event .event-single {
-    overflow: scroll;
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #f7f9fa; }
-    .post-type-archive-event .event-single .hide-content {
-      position: relative;
-      padding-left: 40px; }
-      .post-type-archive-event .event-single .hide-content:before {
-        background-image: url("../../assets/images/learn-back-arrow.png");
-        background-repeat: no-repeat;
-        background-size: cover cover;
-        width: 20px;
-        height: 40px;
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0; }
-  .post-type-archive-event .pop-up {
-    position: fixed;
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
-    top: 5%;
-    left: 50%;
-    background-color: #f7f9fa;
-    border: 1px solid #026082; }
+
+.post-type-archive-event .hidden {
+  display: none; }
+
+.post-type-archive-event .event-single {
+  overflow: scroll;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #f7f9fa; }
+  .post-type-archive-event .event-single .hide-content {
+    position: relative;
+    padding-left: 40px; }
+    .post-type-archive-event .event-single .hide-content:before {
+      background-image: url("../../assets/images/learn-back-arrow.png");
+      background-repeat: no-repeat;
+      background-size: cover cover;
+      width: 20px;
+      height: 40px;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0; }
+
+.post-type-archive-event .pop-up {
+  position: fixed;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  top: 5%;
+  left: 50%;
+  background-color: #f7f9fa;
+  border: 1px solid #026082; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
@@ -1479,94 +1472,6 @@ https://flickity.metafizzy.co
         display: inline-block; } }
 
 /*--------------------------------------------------------------
-# Market Trends Archive Page
---------------------------------------------------------------*/
-.blog .page-header {
-  background-image: url("../../assets/images/news-banner.jpg");
-  height: 50vh !important; }
-
-@media screen and (min-width: 1000px) {
-  .blog .site-main {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap; } }
-
-.blog article {
-  border: 2px solid #026082;
-  border-top: 0;
-  margin-bottom: 0;
-  text-align: center; }
-  @media screen and (min-width: 1000px) {
-    .blog article {
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      -webkit-box-flex: 1;
-          -ms-flex: 1 0 33%;
-              flex: 1 0 33%;
-      border: 0; } }
-
-.blog .entry-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0.5rem 1.5rem; }
-  @media screen and (min-width: 1000px) {
-    .blog .entry-header {
-      display: block; } }
-  .blog .entry-header img {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 1rem; }
-  .blog .entry-header .entry-text-wrapper {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 50%;
-            flex: 1 0 50%;
-    text-align: center; }
-    .blog .entry-header .entry-text-wrapper p {
-      margin: 0 auto;
-      width: 50%; }
-
-.blog article:nth-of-type(2) {
-  border-top: 2px solid #026082; }
-  @media screen and (min-width: 1000px) {
-    .blog article:nth-of-type(2) {
-      border: 0; } }
-
-.blog article:nth-of-type(1) {
-  border: 0; }
-  @media screen and (min-width: 1000px) {
-    .blog article:nth-of-type(1) {
-      -webkit-box-flex: 1;
-          -ms-flex: 1 0 100%;
-              flex: 1 0 100%; } }
-  .blog article:nth-of-type(1) .entry-content {
-    text-align: center;
-    padding: 0 1.5rem; }
-
-.paged article:nth-of-type(1) {
-  border: 2px solid #026082; }
-
-.paged article:nth-of-type(2) {
-  border-top: none; }
-
-/*--------------------------------------------------------------
 # Academy Page
 --------------------------------------------------------------*/
 .page-id-46 h1,
@@ -1602,20 +1507,11 @@ https://flickity.metafizzy.co
 .page-template-membership {
   text-align: center; }
   .page-template-membership .site-content {
-    background-image: url("../../assets/images/membership-banner.jpg");
-    background-size: contain;
-    background-repeat: no-repeat; }
-    @media screen and (min-width: 1000px) {
-      .page-template-membership .site-content {
-        max-width: none;
-        background-size: cover; } }
+    background-image: url("../../assets/images/membership-banner.jpg"); }
   .page-template-membership ul,
   .page-template-membership li {
     margin-left: 0;
     padding: 0; }
-  .page-template-membership .member-h3 {
-    text-align: center;
-    padding: 0 50px; }
   .page-template-membership .wpcf7-form {
     display: none; }
     @media screen and (min-width: 1000px) {
@@ -1625,11 +1521,6 @@ https://flickity.metafizzy.co
     .page-template-membership .wpcf7-form .close,
     .page-template-membership .wpcf7-form h4 {
       display: none; } }
-  .page-template-membership .entry-header {
-    height: 20vh; }
-    @media screen and (min-width: 1000px) {
-      .page-template-membership .entry-header {
-        height: 100vh; } }
   .page-template-membership .tablinks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1756,8 +1647,8 @@ https://flickity.metafizzy.co
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

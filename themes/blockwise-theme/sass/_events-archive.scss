@@ -2,21 +2,15 @@
 # Events Archive Page
 --------------------------------------------------------------*/
 .post-type-archive-event {
-  background: url(../../assets/images/event-banner-large.jpg);
-  background-size: 100vw;
-  background-repeat: no-repeat;
   .site-content {
     position: relative;
+    background: url(../../assets/images/event-banner-large.jpg);
   }
 
-  .page-header {
-    margin: 2rem auto;
-    width: 100%;
-  }
   .event-boxes {
     display: flex;
     flex-flow: column nowrap;
-    margin: 2em auto;
+
     article {
       position: relative;
       box-sizing: border-box;
@@ -44,6 +38,7 @@
     }
 
     @include desktop {
+      padding-bottom: 2em;
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
