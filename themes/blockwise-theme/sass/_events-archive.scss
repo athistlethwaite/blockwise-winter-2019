@@ -6,6 +6,12 @@
     position: relative;
     background-image: url(../../assets/images/event-banner-large.jpg);
   }
+  .page-header {
+    height: 30vh;
+    @include desktop {
+      height: 50vh;
+    }
+  }
 
   .event-boxes {
     display: flex;
