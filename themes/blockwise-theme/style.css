@@ -949,45 +949,6 @@ object {
   background-size: 100vw;
   background-repeat: no-repeat; }
 
-.carousel {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  width: 100%;
-  overflow-x: scroll; }
-  .carousel div {
-    padding: 0.5em;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 20%;
-            flex: 1 0 20%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .carousel img {
-    width: auto;
-    height: 100px; }
-
 .site-main > article:first-child header,
 .page-header {
   height: 50vh;
@@ -1034,8 +995,73 @@ object {
   background: #ffae4e;
   color: #008294; }
 
+<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Header
+=======
+.carosel {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  position: relative; }
+  .carosel .carosel-viewport {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: 400px; }
+    .carosel .carosel-viewport .carosel-nav {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%);
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 1rem;
+      background-color: rgba(247, 249, 250, 0.8);
+      border-radius: 50%; }
+    .carosel .carosel-viewport .carosel-item {
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      width: 250px;
+      height: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column nowrap;
+              flex-flow: column nowrap;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .carosel .carosel-viewport .carosel-item .carosel-thumbnail {
+        height: auto;
+        width: 50%; }
+      .carosel .carosel-viewport .carosel-item .carosel-link {
+        justify-self: flex-end; }
+      .carosel .carosel-viewport .carosel-item .carosel-content {
+        color: #21759b;
+        font-size: 15px;
+        padding: 8px 12px;
+        width: 100%;
+        text-align: left; }
+
+/*--------------------------------------------------------------
+# Header
+>>>>>>> 619293b9f8536a078af0e2acbae68d8e7b68ca91
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
@@ -1083,8 +1109,6 @@ object {
 # Front Page 
 --------------------------------------------------------------*/
 .home .front-page-banner {
-  max-width: 1000px;
-  margin: 0 auto;
   background-image: url("../../assets/images/splash-background-transparent.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1102,10 +1126,14 @@ object {
         max-width: none;
         top: 20%;
         left: 20%; } }
-  .home .front-page-banner .carousel {
+  .home .front-page-banner .carosel {
     background-color: rgba(0, 130, 148, 0.7);
     position: absolute;
     bottom: 20px; }
+    .home .front-page-banner .carosel .carosel-viewport {
+      height: 100px; }
+      .home .front-page-banner .carosel .carosel-viewport .carosel-thumbnail {
+        width: 30%; }
 
 .home .front-page-content > h2 {
   margin: 2em auto; }

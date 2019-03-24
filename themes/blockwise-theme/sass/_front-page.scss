@@ -3,8 +3,6 @@
 --------------------------------------------------------------*/
 .home {
   .front-page-banner {
-    max-width: $desktop-width;
-    margin: 0 auto;
     background-image: url('../../assets/images/splash-background-transparent.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,10 +21,16 @@
         left: 20%;
       }
     }
-    .carousel {
+    .carosel {
       background-color: rgba($color: $color__brand-dark-cyan, $alpha: 0.7);
       position: absolute;
       bottom: 20px;
+      .carosel-viewport {
+        height: 100px;
+        .carosel-thumbnail {
+          width: 30%;
+        }
+      }
     }
   }
 
