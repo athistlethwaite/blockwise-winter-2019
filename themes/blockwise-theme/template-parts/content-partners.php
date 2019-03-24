@@ -11,7 +11,8 @@
     <?php $logos = get_posts(array('post_type' => 'partner', 'order_by' => 'title', 'order' => 'ASC')); ?>
     <?php foreach ($logos as $logo) : setup_postdata($logo); ?>
     <div>
-        <?php the_post_thumbnail($post = $logo->ID); ?>
+        <div> <?php the_post_thumbnail($post = $logo->ID); ?></div>
+
         <?php if (!is_front_page()) : ?>
         <div>
             <?php the_excerpt(); ?>
