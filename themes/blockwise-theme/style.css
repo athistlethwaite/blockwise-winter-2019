@@ -962,14 +962,15 @@ object {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  width: 100%; }
+  width: 100%;
+  overflow-x: scroll; }
   .carousel div {
     padding: 0.5em;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     -webkit-box-flex: 1;
-        -ms-flex: 1 0 25%;
-            flex: 1 0 25%;
+        -ms-flex: 1 0 20%;
+            flex: 1 0 20%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1005,6 +1006,12 @@ object {
     .site-main > article:first-child header,
     .page-header {
       height: 100vh; } }
+
+.page-template-about .header-content-wrapper,
+.blog .header-content-wrapper {
+  width: 100%;
+  background-color: rgba(247, 249, 250, 0.7);
+  padding: 1rem 0; }
 
 .blockwise-btn {
   -webkit-box-sizing: border-box;
@@ -1202,6 +1209,43 @@ object {
 .page-template-about .site-content {
   background-image: url(../../assets/images/about-banner.png);
   text-align: center; }
+  @media screen and (min-width: 1000px) {
+    .page-template-about .site-content {
+      background-image: url(../../assets/images/about.jpg);
+      position: relative; }
+      .page-template-about .site-content:after {
+        z-index: 999;
+        background-image: url("../../assets/images/about-blocks.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 33vw;
+        content: '';
+        position: absolute;
+        top: 75vh;
+        left: 0; } }
+
+.page-template-about .site-main > article:first-child header {
+  height: 60vw; }
+  @media screen and (min-width: 1000px) {
+    .page-template-about .site-main > article:first-child header {
+      height: 33vw; }
+      .page-template-about .site-main > article:first-child header .header-content-wrapper {
+        background: none; } }
+
+@media screen and (min-width: 1000px) {
+  .page-template-about .site-main > article:first-child {
+    margin-bottom: 9vw; }
+    .page-template-about .site-main > article:first-child p {
+      margin-bottom: 0; }
+    .page-template-about .site-main > article:first-child .entry-content {
+      max-width: 75%; } }
+
+.page-template-about section h2 {
+  color: #f7f9fa;
+  background-color: #026082;
+  padding: 0.5rem 0;
+  margin-top: 0; }
 
 /*--------------------------------------------------------------
 # Events Archive Page

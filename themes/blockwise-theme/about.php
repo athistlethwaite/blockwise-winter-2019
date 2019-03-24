@@ -18,14 +18,14 @@ get_header(); ?>
 
         <?php endwhile; ?>
 
-        <section class='about-partners container'>
+        <section class='about-partners'>
             <h2>Our Partners</h2>
-            <div class='about-corporate-members'>
+            <div class='about-corporate-members container'>
                 <h3>Corporate Members</h3>
                 <?php get_template_part('template-parts/content', 'partners') ?>
                 <a class="yellow-btn blockwise-btn" href=<?php echo get_permalink(get_page_by_title('Membership')); ?>>Become A Member</a>
             </div>
-            <div class='about-mentors'>
+            <div class='about-mentors container'>
                 <h3>Community Mentors</h3>
                 <?php get_template_part('template-parts/content', 'mentors') ?>
                 <a class="yellow-btn blockwise-btn" href=<?php echo get_permalink(get_page_by_title('Membership')); ?>>Become A Mentor</a>
