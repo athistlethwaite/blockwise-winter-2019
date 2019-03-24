@@ -10,28 +10,6 @@
   background-repeat: no-repeat;
 }
 
-.carousel {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: flex-start;
-  width: 100%;
-  overflow-x: scroll;
-  div {
-    padding: 0.5em;
-    box-sizing: border-box;
-    flex: 1 0 20%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  img {
-    width: auto;
-    height: 100px;
-  }
-}
-
 .site-main > article:first-child header,
 .page-header {
   height: 50vh;

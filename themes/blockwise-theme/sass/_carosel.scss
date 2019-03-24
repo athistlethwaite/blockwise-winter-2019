@@ -1,0 +1,50 @@
+.carosel {
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  .carosel-viewport {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 400px;
+
+    .carosel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      box-sizing: border-box;
+      padding: 1rem;
+      background-color: rgba($color: $color__brand-ghost-white, $alpha: 0.8);
+      border-radius: 50%;
+      &:hover {
+      }
+    }
+
+    .carosel-item {
+      box-sizing: border-box;
+      width: 250px;
+      height: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+
+      .carosel-thumbnail {
+        height: auto;
+        width: 50%;
+      }
+      .carosel-link {
+        justify-self: flex-end;
+      }
+      .carosel-content {
+        color: $color__text-screen;
+        font-size: 15px;
+        padding: 8px 12px;
+        width: 100%;
+        text-align: left;
+      }
+    }
+  }
+}
