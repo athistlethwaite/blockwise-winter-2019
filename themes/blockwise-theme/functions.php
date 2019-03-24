@@ -95,8 +95,6 @@ function blockwise_scripts()
 
 	wp_enqueue_script('bw-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20151215', true);
 
-	wp_enqueue_script('bw-flickity', get_template_directory_uri() . '/build/js/flickity.pkgd.min.js', array(), '', true);
-
 	wp_enqueue_script('jquery');
 
 	wp_enqueue_script('bw-scripts', get_template_directory_uri() . '/build/js/blockwise-theme.min.js', array('jquery'), '', true);
