@@ -1,24 +1,3 @@
-<<<<<<< HEAD
-/*!
-Theme Name: Blockwise Theme
-Theme URI: http://underscores.me/
-Author: Emre, Marie, Gavin & Alysha
-Author URI: http://www.redacademy.com
-Description: A RED Academy community project for Blockwise.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags:
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-Blockwise Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-=======
 /*!
 Theme Name: Blockwise Theme
 Theme URI: http://underscores.me/
@@ -35,7 +14,6 @@ Blockwise Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Au
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
->>>>>>> fe725da6b6980eb354696731906d3af463de90c4
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -1066,13 +1044,8 @@ object {
         .carosel .carosel-viewport .carosel-item .carosel-content p {
           margin: 0; }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Header
-=======
-/*--------------------------------------------------------------
-# Header
->>>>>>> fe725da6b6980eb354696731906d3af463de90c4
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
@@ -1719,20 +1692,28 @@ object {
 /*--------------------------------------------------------------
 # Academy Page
 --------------------------------------------------------------*/
-.page-id-46 h1,
-.page-id-46 h2,
-.page-id-46 h3,
-.page-id-46 p {
+.page-id-46 .entry-header h1 {
+  color: #026082; }
+
+.page-id-46 .entry-header p {
   color: white; }
 
-.page-id-46 .site-main > article:first-child header {
-  height: 20vh; }
-  @media screen and (min-width: 1000px) {
-    .page-id-46 .site-main > article:first-child header {
-      height: 20vh; } }
+@media screen and (min-width: 1000px) {
+  .page-id-46 h1,
+  .page-id-46 h2,
+  .page-id-46 h3,
+  .page-id-46 p {
+    color: white; } }
+
+@media screen and (min-width: 1000px) {
+  .page-id-46 .site-main > article:first-child header {
+    height: 20vh; } }
 
 .page-id-46 .site-content {
-  background-image: url("../../assets/images/academy-desktop-background.png"); }
+  background-image: url("../../assets/images/academy-mobile-background.png"); }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .site-content {
+      background-image: url("../../assets/images/academy-mobile-background.png"); } }
   .page-id-46 .site-content .content-area {
     background-position: center;
     background-size: cover;
@@ -1744,8 +1725,9 @@ object {
 .wp-block-button__link {
   text-transform: uppercase;
   color: #026082;
+  font-weight: bold;
   background-color: #ffae4e;
-  border-radius: 10px; }
+  border-radius: 25px; }
 
 /*--------------------------------------------------------------
 # Membership Page
@@ -1873,10 +1855,6 @@ object {
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
-<<<<<<< HEAD
-/*--------------------------------------------------------------
-# Footer
-=======
 .page-id-70 .entry-header {
   background-image: url("../../assets/images/contact-banner.jpg");
   background-size: cover; }
@@ -1892,7 +1870,6 @@ object {
 
 /*--------------------------------------------------------------
 # Footer
->>>>>>> fe725da6b6980eb354696731906d3af463de90c4
 --------------------------------------------------------------*/
 .site-footer {
   background-color: #026082;
