@@ -22,8 +22,8 @@
     popUpForm.removeClass('hidden');
   });
 
-  $(window).on('wpcf7:mailsent', function(){
-      popUpForm.addClass('hidden');
+  $(window).on('wpcf7:mailsent', function() {
+    popUpForm.addClass('hidden');
   });
 
   function getArticle(articleNum) {
@@ -34,7 +34,7 @@
     return (
       '<article id="' +
       articleId +
-      '" class="container ' +
+      '" class="' +
       articleClass +
       '">' +
       articleContent +

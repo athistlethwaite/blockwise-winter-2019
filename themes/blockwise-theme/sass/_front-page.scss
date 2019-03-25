@@ -5,34 +5,32 @@
   .front-page-banner {
     background-image: url('../../assets/images/splash-background-transparent.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 125vw;
-
-    @include desktop {
-      height: 120vh;
-    }
+    background-size: 100vw;
+    height: 100vw;
 
     position: relative;
 
     .header-content-wrapper {
-      text-align: center;
+      h1,
+      p {
+        text-align: left;
+      }
       position: absolute;
       max-width: 16em;
       padding: 0 0.5em;
       top: 10%;
-      left: 20px;
+      left: 50px;
 
       @include desktop {
         max-width: none;
-        top: 20%;
-        left: 20%;
+        font-size: 2rem;
       }
     }
 
     .carosel {
-      background-color: rgba($color: $color__brand-dark-cyan, $alpha: 0.7);
+      background-color: $color__brand-dark-cyan;
       position: absolute;
-      bottom: 20px;
+      bottom: 50px;
 
       .carosel-thumbnail {
         img {
@@ -43,7 +41,7 @@
   }
 
   .front-page-content {
-    &>h2 {
+    & > h2 {
       margin: 2em auto;
     }
 
@@ -60,17 +58,18 @@
     @include desktop {
       display: flex;
       flex-flow: row wrap;
-
+      justify-content: flex-end;
+      align-items: flex-start;
       h2 {
         flex: 1 0 100%;
       }
 
       .archive-posts {
         article:first-child {
-          margin-left: 50%;
+          margin-right: 50%;
           max-width: 50%;
-          margin-right: 15%;
-          margin-top: -500px;
+          margin-left: 5%;
+          border: 0;
         }
       }
     }
@@ -78,9 +77,10 @@
 
   @include desktop {
     .upcoming-events {
-      width: 40%;
+      width: 45%;
       overflow: scroll;
-
+      order: 1;
+      margin-top: -95%;
       h3 {
         margin-top: 0;
       }
