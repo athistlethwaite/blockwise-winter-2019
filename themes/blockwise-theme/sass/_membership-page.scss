@@ -19,7 +19,7 @@
     @include desktop {
       display: block;
       .close,
-      h4 {
+      h3 {
         @include desktop {
           display: none;
         }
@@ -130,7 +130,7 @@
     -webkit-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     -moz-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
-    h4 {
+    h3 {
       margin-top: 4rem;
       margin-left: 5px;
       margin-right: 5px;
