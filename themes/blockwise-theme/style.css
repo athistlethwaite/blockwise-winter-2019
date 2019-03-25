@@ -1820,6 +1820,11 @@ object {
   text-align: center;
   padding: 0 32px; }
 
+@media screen and (min-width: 1000px) {
+  .page-id-70 .page {
+    background-image: url("../../assets/images/contact-banner.jpg");
+    background-size: cover; } }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
