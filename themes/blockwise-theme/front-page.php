@@ -12,7 +12,7 @@ get_header(); ?>
 
         <?php while (have_posts()) : the_post(); ?>
 
-        <header class="front-page-banner container">
+        <header class="front-page-banner">
             <div class="header-content-wrapper">
                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                 <p><?php echo CFS()->get('page_subtitle'); ?></p>
