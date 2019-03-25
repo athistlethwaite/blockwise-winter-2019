@@ -20,16 +20,16 @@
       .parent('div')
       .addClass('carosel-thumbnail');
     const viewPort =
-      '<div class="carosel-viewport" style="width:' +
+      '<a style="left:1rem" class="carosel-nav left">&#10094;</a><a style="right:1rem" class="carosel-nav right">&#10095;</a><div class="carosel-viewport" style="width:' +
       viewPortWidth +
       'px">' +
       carosel.html() +
-      '<a style="left:1rem" class="carosel-nav left">&#10094;</a><a style="right:1rem" class="carosel-nav right">&#10095;</a></div>';
+      '</div>';
     carosel.html(viewPort);
   }
 
   $('.carosel').on('click', '.carosel-nav', function() {
-    const viewPort = $(this).parent();
+    const viewPort = $(this).siblings('div');
     const direction = $(this).attr('class');
     if (direction.includes('right')) {
       caroselSlideRight(viewPort);
