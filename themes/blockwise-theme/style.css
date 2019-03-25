@@ -1826,9 +1826,24 @@ object {
     padding: 0; }
   .page-template-membership .wpcf7-form {
     display: none; }
+    .page-template-membership .wpcf7-form .wpcf7-response-output {
+      display: none !important; }
+    .page-template-membership .wpcf7-form .interest {
+      padding-bottom: 10px; }
     @media screen and (min-width: 1000px) {
       .page-template-membership .wpcf7-form {
-        display: block; } }
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15% 45% 30%;
+        grid-template-areas: 'main header' 'main sidebar' 'footer footer'; }
+        .page-template-membership .wpcf7-form .interest {
+          grid-area: header; }
+        .page-template-membership .wpcf7-form .input {
+          grid-area: main; }
+        .page-template-membership .wpcf7-form .about {
+          grid-area: sidebar; }
+        .page-template-membership .wpcf7-form .submit {
+          grid-area: footer; } }
   @media screen and (min-width: 1000px) and (min-width: 1000px) {
     .page-template-membership .wpcf7-form .close,
     .page-template-membership .wpcf7-form h3 {
@@ -1885,7 +1900,7 @@ object {
   .page-template-membership .thank-you-active {
     display: block;
     background-color: #f7f9fa;
-    max-width: 300px;
+    width: 300px;
     height: 200px;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1922,7 +1937,7 @@ object {
     -webkit-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78); }
     .page-template-membership .mobile-popup h3 {
-      margin-top: 4rem;
+      margin-top: 2rem;
       margin-left: 5px;
       margin-right: 5px; }
     .page-template-membership .mobile-popup .close {
@@ -1990,8 +2005,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
