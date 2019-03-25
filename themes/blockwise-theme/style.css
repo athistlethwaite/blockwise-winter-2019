@@ -1793,11 +1793,13 @@ object {
   .page-template-membership .thank-you-active {
     display: block;
     background-color: #f7f9fa;
-    max-width: 69vw;
-    height: 26vh;
+    max-width: 300px;
+    height: 200px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     position: fixed;
-    top: 103px;
-    left: 64px;
+    top: 50%;
+    left: 50%;
     border-radius: 5px;
     background-image: url("../../assets/images/pop-up.png");
     background-size: cover;
@@ -1821,6 +1823,7 @@ object {
     top: 29px;
     left: 63px;
     overflow: scroll;
+    z-index: 999;
     border-radius: 1rem;
     border: 2px solid;
     border-color: #026082;
@@ -1880,8 +1883,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

@@ -4,7 +4,6 @@
 
 .page-template-membership {
   text-align: center;
-
   .site-content {
     background-image: url('../../assets/images/membership-banner.jpg');
   }
@@ -87,11 +86,12 @@
   .thank-you-active {
     display: block;
     background-color: $color__brand-ghost-white;
-    max-width: 69vw;
-    height: 26vh;
+    max-width: 300px;
+    height: 200px;
+    transform: translate(-50%, -50%);
     position: fixed;
-    top: 103px;
-    left: 64px;
+    top: 50%;
+    left: 50%;
     border-radius: 5px;
     background-image: url('../../assets/images/pop-up.png');
     background-size: cover;
@@ -123,6 +123,7 @@
     top: 29px;
     left: 63px;
     overflow: scroll;
+    z-index: 999;
     border-radius: 1rem;
     border: 2px solid;
     border-color: $color__brand-blue-sapphire;
