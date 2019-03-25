@@ -5,8 +5,9 @@
   max-width: $desktop-width;
   margin: 0 auto;
 }
-.site-content {
+body {
   margin-top: 5.5rem;
+  background-position-y: 5.5rem;
   background-size: 100vw;
   background-repeat: no-repeat;
 }

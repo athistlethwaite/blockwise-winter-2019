@@ -2,10 +2,12 @@
 # About Page
 --------------------------------------------------------------*/
 .page-template-about {
+  background-image: url(../../assets/images/about-banner.png);
+  @include desktop {
+    background-image: url(../../assets/images/about.jpg);
+  }
   .site-content {
-    background-image: url(../../assets/images/about-banner.png);
     @include desktop {
-      background-image: url(../../assets/images/about.jpg);
       position: relative;
       &:after {
         z-index: 999;

@@ -36,8 +36,9 @@
     .sub-menu {
       text-align: center;
       background-color: $color__brand-ghost-white;
-      transform: translate(-40%, 2.8rem);
+      transform: translate(-40%, 2.95rem);
       border: 2px solid $color__brand-blue-sapphire;
+      border-top: 0;
       box-sizing: border-box;
       li {
         padding: 1rem 0;
@@ -117,6 +118,9 @@
 
   .container {
     padding: 0 2rem;
+    @include desktop {
+      padding: 0;
+    }
     display: flex;
     flex-flow: row, nowrap;
     justify-content: space-around;

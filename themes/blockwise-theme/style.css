@@ -914,8 +914,9 @@ object {
   max-width: 1000px;
   margin: 0 auto; }
 
-.site-content {
+body {
   margin-top: 5.5rem;
+  background-position-y: 5.5rem;
   background-size: 100vw;
   background-repeat: no-repeat; }
 
@@ -1086,9 +1087,10 @@ object {
     .site-header .sub-menu {
       text-align: center;
       background-color: #f7f9fa;
-      -webkit-transform: translate(-40%, 2.8rem);
-              transform: translate(-40%, 2.8rem);
+      -webkit-transform: translate(-40%, 2.95rem);
+              transform: translate(-40%, 2.95rem);
       border: 2px solid #026082;
+      border-top: 0;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
       .site-header .sub-menu li {
@@ -1168,6 +1170,9 @@ object {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end; }
+    @media screen and (min-width: 1000px) {
+      .site-header .container {
+        padding: 0; } }
 
 /*--------------------------------------------------------------
 # Front Page 
@@ -1309,240 +1314,236 @@ object {
 /*--------------------------------------------------------------
 # About Page
 --------------------------------------------------------------*/
-.page-template-about .site-content {
-  background-image: url(../../assets/images/about-banner.png);
-  text-align: center; }
+.page-template-about {
+  background-image: url(../../assets/images/about-banner.png); }
   @media screen and (min-width: 1000px) {
-    .page-template-about .site-content {
-      background-image: url(../../assets/images/about.jpg);
-      position: relative; }
-      .page-template-about .site-content:after {
-        z-index: 999;
-        background-image: url("../../assets/images/about-blocks.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100vw;
-        height: 35vw;
-        content: '';
-        position: absolute;
-        top: 75vh;
-        left: 0; } }
-
-.page-template-about .site-main > article:first-child header {
-  height: 60vw; }
+    .page-template-about {
+      background-image: url(../../assets/images/about.jpg); } }
+  .page-template-about .site-content {
+    text-align: center; }
+    @media screen and (min-width: 1000px) {
+      .page-template-about .site-content {
+        position: relative; }
+        .page-template-about .site-content:after {
+          z-index: 999;
+          background-image: url("../../assets/images/about-blocks.png");
+          background-repeat: no-repeat;
+          background-size: cover;
+          width: 100vw;
+          height: 35vw;
+          content: '';
+          position: absolute;
+          top: 75vh;
+          left: 0; } }
+  .page-template-about .site-main > article:first-child header {
+    height: 60vw; }
+    @media screen and (min-width: 1000px) {
+      .page-template-about .site-main > article:first-child header {
+        height: 33vw; }
+        .page-template-about .site-main > article:first-child header .header-content-wrapper {
+          background: none; } }
   @media screen and (min-width: 1000px) {
-    .page-template-about .site-main > article:first-child header {
-      height: 33vw; }
-      .page-template-about .site-main > article:first-child header .header-content-wrapper {
-        background: none; } }
-
-@media screen and (min-width: 1000px) {
-  .page-template-about .site-main > article:first-child {
-    min-height: 56vw; }
-    .page-template-about .site-main > article:first-child .entry-content {
-      max-width: 70%; } }
-
-.page-template-about section h2 {
-  color: #f7f9fa;
-  background-color: #026082;
-  padding: 0.5rem 0;
-  margin-top: 0; }
+    .page-template-about .site-main > article:first-child {
+      min-height: 56vw; }
+      .page-template-about .site-main > article:first-child .entry-content {
+        max-width: 70%; } }
+  .page-template-about section h2 {
+    color: #f7f9fa;
+    background-color: #026082;
+    padding: 0.5rem 0;
+    margin-top: 0; }
 
 /*--------------------------------------------------------------
 # Events Archive Page
 --------------------------------------------------------------*/
-.post-type-archive-event .site-content {
-  position: relative;
+.post-type-archive-event {
   background-image: url(../../assets/images/event-banner-large.jpg); }
-
-.post-type-archive-event .page-header {
-  height: 30vh; }
-  @media screen and (min-width: 1000px) {
-    .post-type-archive-event .page-header {
-      height: 50vh; } }
-
-.post-type-archive-event .event-boxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap; }
-  .post-type-archive-event .event-boxes article {
-    position: relative;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    text-align: center;
-    background-color: #f7f9fa;
-    padding: 0 4em;
-    margin-bottom: 0;
-    border: 2px solid #026082;
-    border-top: 0; }
-    .post-type-archive-event .event-boxes article:first-child {
-      border-top: 2px solid #026082; }
-    .post-type-archive-event .event-boxes article .entry-title:after {
-      background-image: url("../../assets/images/learn-arrow.png");
-      background-repeat: no-repeat;
-      background-size: cover cover;
-      width: 20px;
-      height: 40px;
-      content: '';
-      position: absolute;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      right: 10px;
-      top: 50%; }
-  @media screen and (min-width: 1000px) {
-    .post-type-archive-event .event-boxes {
-      padding-bottom: 2em;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; }
-      .post-type-archive-event .event-boxes article {
-        border: 0;
-        -webkit-box-flex: 1;
-            -ms-flex: 1 0 25%;
-                flex: 1 0 25%;
-        max-width: 18em;
-        text-align: center;
-        padding: 0.5em;
-        border-radius: 1rem;
-        background-color: rgba(247, 249, 250, 0.7);
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+  .post-type-archive-event .site-content {
+    position: relative; }
+  .post-type-archive-event .page-header {
+    height: 30vh; }
+    @media screen and (min-width: 1000px) {
+      .post-type-archive-event .page-header {
+        height: 50vh; } }
+  .post-type-archive-event .event-boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+    .post-type-archive-event .event-boxes article {
+      position: relative;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      text-align: center;
+      background-color: #f7f9fa;
+      padding: 0 4em;
+      margin-bottom: 0;
+      border: 2px solid #026082;
+      border-top: 0; }
+      .post-type-archive-event .event-boxes article:first-child {
+        border-top: 2px solid #026082; }
+      .post-type-archive-event .event-boxes article .entry-title:after {
+        background-image: url("../../assets/images/learn-arrow.png");
+        background-repeat: no-repeat;
+        background-size: cover cover;
+        width: 20px;
+        height: 40px;
+        content: '';
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        right: 10px;
+        top: 50%; }
+    @media screen and (min-width: 1000px) {
+      .post-type-archive-event .event-boxes {
+        padding-bottom: 2em;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-flow: column nowrap;
-                flex-flow: column nowrap;
-        height: 250px; }
-        .post-type-archive-event .event-boxes article:first-child {
-          border-top: 0; }
-        .post-type-archive-event .event-boxes article .entry-title:after {
-          display: none; }
-        .post-type-archive-event .event-boxes article:before {
-          background-image: url("../../assets/images/learn-chain-desktop.png");
-          background-repeat: no-repeat;
-          content: '';
-          position: absolute;
-          background-size: cover;
-          width: 75px;
-          height: 11px;
-          top: 50%;
-          left: 0;
-          -webkit-transform: translate(-100%, -50%);
-                  transform: translate(-100%, -50%); }
-        .post-type-archive-event .event-boxes article:first-child:before {
-          display: none; } }
-  .post-type-archive-event .event-boxes .entry-content,
-  .post-type-archive-event .event-boxes .hide-content {
-    display: none; }
-
-.post-type-archive-event .hidden {
-  display: none; }
-
-.post-type-archive-event .event-single {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: #f7f9fa; }
-  @media screen and (min-width: 1000px) {
-    .post-type-archive-event .event-single {
-      top: auto;
-      height: 70vh;
-      bottom: 0; } }
-  .post-type-archive-event .event-single .event .entry-header {
-    padding: 1rem 0 0 0; }
-    @media screen and (min-width: 1000px) {
-      .post-type-archive-event .event-single .event .entry-header {
-        background-color: #026082; }
-        .post-type-archive-event .event-single .event .entry-header a,
-        .post-type-archive-event .event-single .event .entry-header h2 {
-          color: #f7f9fa; }
-          .post-type-archive-event .event-single .event .entry-header a:hover,
-          .post-type-archive-event .event-single .event .entry-header h2:hover {
-            color: #ffae4e; }
-        .post-type-archive-event .event-single .event .entry-header .container {
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; }
+        .post-type-archive-event .event-boxes article {
+          border: 0;
+          -webkit-box-flex: 1;
+              -ms-flex: 1 0 25%;
+                  flex: 1 0 25%;
+          max-width: 18em;
+          text-align: center;
+          padding: 0.5em;
+          border-radius: 1rem;
+          background-color: rgba(247, 249, 250, 0.7);
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
           -webkit-box-orient: vertical;
           -webkit-box-direction: normal;
               -ms-flex-flow: column nowrap;
                   flex-flow: column nowrap;
-          -webkit-box-pack: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          -ms-flex-line-pack: center;
-              align-content: center; } }
-    .post-type-archive-event .event-single .event .entry-header ::before {
-      margin-left: 10px;
-      width: 15px; }
-    .post-type-archive-event .event-single .event .entry-header .hide-content {
-      padding-top: 5px;
-      font-size: 1rem; }
-  .post-type-archive-event .event-single .event .entry-text-wrapper {
-    overflow: scroll;
-    text-align: justify;
-    padding: 5px 40px; }
-    .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
-      padding-right: 100px;
-      color: #7bd1d0; }
-    .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
-      display: block;
-      margin: 0 auto; }
-  .post-type-archive-event .event-single .hide-content {
-    position: relative;
-    padding-left: 40px; }
-    .post-type-archive-event .event-single .hide-content:before {
-      background-image: url("../../assets/images/learn-back-arrow.png");
-      background-repeat: no-repeat;
-      background-size: cover cover;
-      width: 20px;
-      height: 40px;
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0; }
-
-.post-type-archive-event .pop-up {
-  z-index: 99999;
-  position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  background-image: url("../../assets/images/rsvp-background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #f7f9fa;
-  border-radius: 25px;
-  width: 400px;
-  border-bottom: 5px solid #026082; }
-  .post-type-archive-event .pop-up .wpcf7 {
-    margin: 20px; }
-    .post-type-archive-event .pop-up .wpcf7 .wpcf7-response-output {
-      border: 2px solid #7bd1d0;
-      border-radius: 5px;
-      -webkit-box-shadow: 2px 2px #888888;
-              box-shadow: 2px 2px #888888;
-      color: #008294; }
+          height: 250px; }
+          .post-type-archive-event .event-boxes article:first-child {
+            border-top: 0; }
+          .post-type-archive-event .event-boxes article .entry-title:after {
+            display: none; }
+          .post-type-archive-event .event-boxes article:before {
+            background-image: url("../../assets/images/learn-chain-desktop.png");
+            background-repeat: no-repeat;
+            content: '';
+            position: absolute;
+            background-size: cover;
+            width: 75px;
+            height: 11px;
+            top: 50%;
+            left: 0;
+            -webkit-transform: translate(-100%, -50%);
+                    transform: translate(-100%, -50%); }
+          .post-type-archive-event .event-boxes article:first-child:before {
+            display: none; } }
+    .post-type-archive-event .event-boxes .entry-content,
+    .post-type-archive-event .event-boxes .hide-content {
+      display: none; }
+  .post-type-archive-event .hidden {
+    display: none; }
+  .post-type-archive-event .event-single {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7f9fa; }
+    @media screen and (min-width: 1000px) {
+      .post-type-archive-event .event-single {
+        top: auto;
+        height: 70vh;
+        bottom: 0; } }
+    .post-type-archive-event .event-single .event .entry-header {
+      padding: 1rem 0 0 0; }
+      @media screen and (min-width: 1000px) {
+        .post-type-archive-event .event-single .event .entry-header {
+          background-color: #026082; }
+          .post-type-archive-event .event-single .event .entry-header a,
+          .post-type-archive-event .event-single .event .entry-header h2 {
+            color: #f7f9fa; }
+            .post-type-archive-event .event-single .event .entry-header a:hover,
+            .post-type-archive-event .event-single .event .entry-header h2:hover {
+              color: #ffae4e; }
+          .post-type-archive-event .event-single .event .entry-header .container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column nowrap;
+                    flex-flow: column nowrap;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -ms-flex-line-pack: center;
+                align-content: center; } }
+      .post-type-archive-event .event-single .event .entry-header ::before {
+        margin-left: 10px;
+        width: 15px; }
+      .post-type-archive-event .event-single .event .entry-header .hide-content {
+        padding-top: 5px;
+        font-size: 1rem; }
+    .post-type-archive-event .event-single .event .entry-text-wrapper {
+      overflow: scroll;
+      text-align: justify;
+      padding: 5px 40px; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
+        padding-right: 100px;
+        color: #7bd1d0; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
+        display: block;
+        margin: 0 auto; }
+    .post-type-archive-event .event-single .hide-content {
+      position: relative;
+      padding-left: 40px; }
+      .post-type-archive-event .event-single .hide-content:before {
+        background-image: url("../../assets/images/learn-back-arrow.png");
+        background-repeat: no-repeat;
+        background-size: cover cover;
+        width: 20px;
+        height: 40px;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0; }
+  .post-type-archive-event .pop-up {
+    z-index: 99999;
+    position: fixed;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-image: url("../../assets/images/rsvp-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #f7f9fa;
+    border-radius: 25px;
+    width: 400px;
+    border-bottom: 5px solid #026082; }
+    .post-type-archive-event .pop-up .wpcf7 {
+      margin: 20px; }
+      .post-type-archive-event .pop-up .wpcf7 .wpcf7-response-output {
+        border: 2px solid #7bd1d0;
+        border-radius: 5px;
+        -webkit-box-shadow: 2px 2px #888888;
+                box-shadow: 2px 2px #888888;
+        color: #008294; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
@@ -1718,7 +1719,7 @@ object {
 /*--------------------------------------------------------------
 # Market Trends Archive Page
 --------------------------------------------------------------*/
-.blog .site-content {
+.blog {
   background-image: url("../../assets/images/news-banner.jpg"); }
 
 .archive-posts {
@@ -1817,9 +1818,8 @@ object {
 # Membership Page
 --------------------------------------------------------------*/
 .page-template-membership {
-  text-align: center; }
-  .page-template-membership .site-content {
-    background-image: url("../../assets/images/membership-banner.jpg"); }
+  text-align: center;
+  background-image: url("../../assets/images/membership-banner.jpg"); }
   .page-template-membership ul,
   .page-template-membership li {
     margin-left: 0;
@@ -1835,7 +1835,7 @@ object {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 45% 30%;
-        grid-template-areas: 'main header' 'main sidebar' 'footer footer'; }
+        grid-template-areas: 'main header' 'main sidebar' 'footer footer'; }
         .page-template-membership .wpcf7-form .interest {
           grid-area: header; }
         .page-template-membership .wpcf7-form .input {
@@ -2005,8 +2005,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
