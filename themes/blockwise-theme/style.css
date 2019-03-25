@@ -943,6 +943,10 @@ object {
   background-color: rgba(247, 249, 250, 0.7);
   padding: 1rem 0; }
 
+* .header-content-wrapper p,
+.front-page-banner .header-content-wrapper p {
+  font-weight: bold; }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1055,7 +1059,7 @@ object {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999; }
+  z-index: 300; }
   .site-header .menu-toggle,
   .site-header .site-title {
     padding: 2rem 0 1rem 0;
@@ -1724,12 +1728,14 @@ object {
 --------------------------------------------------------------*/
 .page-id-46 .entry-header h1 {
   color: #026082; }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .entry-header h1 {
+      color: white; } }
 
 .page-id-46 .entry-header p {
   color: white; }
 
 @media screen and (min-width: 1000px) {
-  .page-id-46 h1,
   .page-id-46 h2,
   .page-id-46 h3,
   .page-id-46 p {
@@ -1743,7 +1749,8 @@ object {
   background-image: url("../../assets/images/academy-mobile-background.png"); }
   @media screen and (min-width: 1000px) {
     .page-id-46 .site-content {
-      background-image: url("../../assets/images/academy-mobile-background.png"); } }
+      background-image: url("../../assets/images/academy-mobile-background.png");
+      height: 80vh; } }
   .page-id-46 .site-content .content-area {
     background-position: center;
     background-size: cover;
@@ -1831,11 +1838,13 @@ object {
   .page-template-membership .thank-you-active {
     display: block;
     background-color: #f7f9fa;
-    max-width: 69vw;
-    height: 26vh;
+    max-width: 300px;
+    height: 200px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     position: fixed;
-    top: 103px;
-    left: 64px;
+    top: 50%;
+    left: 50%;
     border-radius: 5px;
     background-image: url("../../assets/images/pop-up.png");
     background-size: cover;
@@ -1859,6 +1868,7 @@ object {
     top: 29px;
     left: 63px;
     overflow: scroll;
+    z-index: 999;
     border-radius: 1rem;
     border: 2px solid;
     border-color: #026082;
@@ -1902,14 +1912,29 @@ object {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #026082;
+  background-image: url("../../assets/images/footer-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #f7f9fa;
-  padding-bottom: 1rem;
-  padding-top: 2rem; }
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  @media screen and (min-width: 1000px) {
+    .site-footer {
+      background-image: url("../../assets/images/footer-desktop.png"); } }
   .site-footer p {
     font-size: 11.2px;
     font-size: 0.7rem;
-    text-align: center; }
+    text-align: start;
+    width: 80vw; }
+    @media screen and (min-width: 1000px) {
+      .site-footer p {
+        text-align: center;
+        width: 50vw; } }
   .site-footer .site-info {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1942,3 +1967,9 @@ object {
       margin: 0; }
       .site-footer .site-info ul li {
         padding: 0.4em 0; }
+    @media screen and (min-width: 1000px) {
+      .site-footer .site-info {
+        width: 1000px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
