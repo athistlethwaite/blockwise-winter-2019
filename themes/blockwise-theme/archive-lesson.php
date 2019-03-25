@@ -69,7 +69,7 @@ get_header(); ?>
 
         <?php endif; ?>
 
-        <div id="load-content" class="load-content"></div>
+        <div id="load-content" class="load-content container"></div>
 
     </main><!-- #main -->
 </div><!-- #primary -->

@@ -53,4 +53,8 @@
 .yellow-btn {
   background: $color__brand-yellow-orange;
   color: $color__brand-dark-cyan;
+  &:hover {
+    color: $color__brand-dark-cyan;
+    background-color: rgba($color: $color__brand-yellow-orange, $alpha: 0.7);
+  }
 }
