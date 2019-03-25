@@ -97,22 +97,36 @@
   }
 
   .event-single {
-    overflow: scroll;
     position: absolute;
     left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+    bottom: 0;
+    height: 100vh;
+    @include desktop {
+      height: 400px;
+    }
+    width: 100vw;
     background-color: $color__brand-ghost-white;
     .event {
-      padding-top: 70px;
+      @include desktop {
+        height: 100%;
+
+        .entry-header {
+          height: 30%;
+        }
+        .entry-text-wrapper {
+          height: 70%;
+        }
+      }
       .entry-header {
+        @include desktop {
+          display: flex;
+          flex-flow: column nowrap;
+          justify-content: center;
+          align-content: center;
+        }
         ::before {
           margin-left: 10px;
           width: 15px;
-        }
-        @include desktop {
-          
         }
         .hide-content {
           padding-top: 5px;
@@ -120,6 +134,7 @@
         }
       }
       .entry-text-wrapper {
+        overflow: scroll;
         text-align: justify;
         padding: 5px 40px;
         .entry-meta {
@@ -149,8 +164,22 @@
       }
     }
   }
+  @include desktop {
+    .event-single {
+      background-image: url('../../assets/images/event-popup-2.jpg');
+      background-repeat: no-repeat;
+      .event {
+        .entry-header {
+          a,
+          h2 {
+            color: $color__background-screen;
+          }
+        }
+      }
+    }
+  }
   .pop-up {
-    z-index:99999;
+    z-index: 99999;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -164,11 +193,11 @@
     border-bottom: 5px solid $color__brand-blue-sapphire;
     .wpcf7 {
       margin: 20px;
-      .wpcf7-response-output{
+      .wpcf7-response-output {
         border: 2px solid $color__brand-middle-blue;
         border-radius: 5px;
         box-shadow: 2px 2px #888888;
-        color:$color__brand-dark-cyan;
+        color: $color__brand-dark-cyan;
       }
     }
   }
