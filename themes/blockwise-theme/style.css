@@ -1801,9 +1801,9 @@ object {
 .wp-block-button__link {
   text-transform: uppercase;
   color: #026082;
-  font-weight: bold;
   background-color: #ffae4e;
-  border-radius: 25px; }
+  border-radius: 20px;
+  padding: 12px 40px; }
 
 /*--------------------------------------------------------------
 # Membership Page
