@@ -16,8 +16,33 @@
 
   .wpcf7-form {
     display: none;
+    .wpcf7-response-output {
+      display: none !important;
+    }
+    .interest {
+      padding-bottom: 10px;
+    }
     @include desktop {
-      display: block;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 15% 45% 30%;
+      grid-template-areas:
+        'main header'
+        'main sidebar'
+        'footer footer';
+      // max-height: 350px;
+      .interest {
+        grid-area: header;
+      }
+      .input {
+        grid-area: main;
+      }
+      .about {
+        grid-area: sidebar;
+      }
+      .submit {
+        grid-area: footer;
+      }
       .close,
       h3 {
         @include desktop {
@@ -86,7 +111,7 @@
   .thank-you-active {
     display: block;
     background-color: $color__brand-ghost-white;
-    max-width: 300px;
+    width: 300px;
     height: 200px;
     transform: translate(-50%, -50%);
     position: fixed;
@@ -131,7 +156,7 @@
     -moz-box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     box-shadow: 10px 10px 73px 14px rgba(0, 0, 0, 0.78);
     h3 {
-      margin-top: 4rem;
+      margin-top: 2rem;
       margin-left: 5px;
       margin-right: 5px;
     }
