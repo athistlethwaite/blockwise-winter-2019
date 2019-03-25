@@ -682,8 +682,6 @@ a {
     margin: 0;
     padding-left: 0; }
     .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 1.5rem;
@@ -1058,7 +1056,6 @@ object {
   left: 0;
   width: 100%;
   z-index: 99999; }
-  .site-header #primary-menu > li > a,
   .site-header .menu-toggle,
   .site-header .site-title {
     padding: 2rem 0 1rem 0;
@@ -1075,6 +1072,7 @@ object {
           -ms-flex-pack: justify;
               justify-content: space-between; }
     .site-header #primary-menu > li > a {
+      padding: 2rem 0 1rem 0;
       color: #f7f9fa;
       border-bottom: 3px solid #026082; }
       .site-header #primary-menu > li > a:hover {
@@ -1093,6 +1091,37 @@ object {
         border-top: 2px solid #026082; }
         .site-header .sub-menu li:first-child {
           border: 0; } }
+  .site-header .toggled #primary-menu {
+    position: absolute;
+    font-size: 20.8px;
+    font-size: 1.3rem;
+    top: 5.5rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/images/menu-bg.png");
+    background-size: 100vw;
+    background-repeat: none; }
+  .site-header .toggled ul {
+    padding: 1rem; }
+  .site-header .toggled .sub-menu {
+    display: none; }
+  .site-header .toggled li.focus > .sub-menu {
+    display: inline-block;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+  .site-header .toggled ul > li {
+    width: 100%;
+    display: block;
+    padding: 2rem 0; }
+    .site-header .toggled ul > li a {
+      margin-left: 5em; }
   .site-header .site-branding {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 30%;
@@ -1118,6 +1147,8 @@ object {
                 transform: translate(0, -30%);
         height: 35px;
         width: 53px; }
+  .site-header #primary-menu > li:last-child > a {
+    color: #ffae4e; }
   .site-header .container {
     padding: 0 2rem;
     display: -webkit-box;
@@ -1844,8 +1875,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
