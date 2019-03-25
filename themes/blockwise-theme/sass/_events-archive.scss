@@ -99,30 +99,34 @@
   .event-single {
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
+
     height: 100vh;
     @include desktop {
-      height: 400px;
+      top: auto;
+      height: 70vh;
+      bottom: 0;
     }
     width: 100vw;
     background-color: $color__brand-ghost-white;
     .event {
-      @include desktop {
-        height: 100%;
-
-        .entry-header {
-          height: 30%;
-        }
-        .entry-text-wrapper {
-          height: 70%;
-        }
-      }
       .entry-header {
+        padding: 1rem 0 0 0;
         @include desktop {
-          display: flex;
-          flex-flow: column nowrap;
-          justify-content: center;
-          align-content: center;
+          background-color: $color__brand-blue_sapphire;
+          a,
+          h2 {
+            color: $color__brand-ghost-white;
+            &:hover {
+              color: $color__brand-yellow-orange;
+            }
+          }
+          .container {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-content: center;
+          }
         }
         ::before {
           margin-left: 10px;
@@ -143,7 +147,8 @@
         }
         .entry-content {
           button {
-            margin: 0 135px;
+            display: block;
+            margin: 0 auto;
           }
         }
       }
@@ -164,27 +169,14 @@
       }
     }
   }
-  @include desktop {
-    .event-single {
-      background-image: url('../../assets/images/event-popup-2.jpg');
-      background-repeat: no-repeat;
-      .event {
-        .entry-header {
-          a,
-          h2 {
-            color: $color__background-screen;
-          }
-        }
-      }
-    }
-  }
+
   .pop-up {
     z-index: 99999;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    background-image: url('../../assets/images/RSVPBg.png');
+    background-image: url('../../assets/images/rsvp-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $color__brand-ghost-white;

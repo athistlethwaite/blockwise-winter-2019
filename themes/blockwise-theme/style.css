@@ -915,6 +915,7 @@ object {
   margin: 0 auto; }
 
 .site-content {
+  margin-top: 5.5rem;
   background-size: 100vw;
   background-repeat: no-repeat; }
 
@@ -1449,40 +1450,45 @@ object {
 .post-type-archive-event .event-single {
   position: absolute;
   left: 0;
-  bottom: 0;
+  top: 0;
   height: 100vh;
   width: 100vw;
   background-color: #f7f9fa; }
   @media screen and (min-width: 1000px) {
     .post-type-archive-event .event-single {
-      height: 400px; } }
-  @media screen and (min-width: 1000px) {
-    .post-type-archive-event .event-single .event {
-      height: 100%; }
+      top: auto;
+      height: 70vh;
+      bottom: 0; } }
+  .post-type-archive-event .event-single .event .entry-header {
+    padding: 1rem 0 0 0; }
+    @media screen and (min-width: 1000px) {
       .post-type-archive-event .event-single .event .entry-header {
-        height: 30%; }
-      .post-type-archive-event .event-single .event .entry-text-wrapper {
-        height: 70%; } }
-  @media screen and (min-width: 1000px) {
-    .post-type-archive-event .event-single .event .entry-header {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column nowrap;
-              flex-flow: column nowrap;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -ms-flex-line-pack: center;
-          align-content: center; } }
-  .post-type-archive-event .event-single .event .entry-header ::before {
-    margin-left: 10px;
-    width: 15px; }
-  .post-type-archive-event .event-single .event .entry-header .hide-content {
-    padding-top: 5px;
-    font-size: 1rem; }
+        background-color: #026082; }
+        .post-type-archive-event .event-single .event .entry-header a,
+        .post-type-archive-event .event-single .event .entry-header h2 {
+          color: #f7f9fa; }
+          .post-type-archive-event .event-single .event .entry-header a:hover,
+          .post-type-archive-event .event-single .event .entry-header h2:hover {
+            color: #ffae4e; }
+        .post-type-archive-event .event-single .event .entry-header .container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-flow: column nowrap;
+                  flex-flow: column nowrap;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -ms-flex-line-pack: center;
+              align-content: center; } }
+    .post-type-archive-event .event-single .event .entry-header ::before {
+      margin-left: 10px;
+      width: 15px; }
+    .post-type-archive-event .event-single .event .entry-header .hide-content {
+      padding-top: 5px;
+      font-size: 1rem; }
   .post-type-archive-event .event-single .event .entry-text-wrapper {
     overflow: scroll;
     text-align: justify;
@@ -1491,7 +1497,8 @@ object {
       padding-right: 100px;
       color: #7bd1d0; }
     .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
-      margin: 0 135px; }
+      display: block;
+      margin: 0 auto; }
   .post-type-archive-event .event-single .hide-content {
     position: relative;
     padding-left: 40px; }
@@ -1506,14 +1513,6 @@ object {
       left: 0;
       top: 0; }
 
-@media screen and (min-width: 1000px) {
-  .post-type-archive-event .event-single {
-    background-image: url("../../assets/images/event-popup-2.jpg");
-    background-repeat: no-repeat; }
-    .post-type-archive-event .event-single .event .entry-header a,
-    .post-type-archive-event .event-single .event .entry-header h2 {
-      color: #f1f1f1; } }
-
 .post-type-archive-event .pop-up {
   z-index: 99999;
   position: fixed;
@@ -1521,7 +1520,7 @@ object {
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: url("../../assets/images/RSVPBg.png");
+  background-image: url("../../assets/images/rsvp-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f7f9fa;
@@ -1983,8 +1982,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;

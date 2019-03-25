@@ -27,12 +27,15 @@ get_header(); ?>
             <?php $eventNumber++; ?>
             <article data-event=<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
-                    <a href="" class="hide-content">See other events</a>
-                    <a href="" class="show-content" data-event=<?php echo $eventNumber; ?>>
-                        <h2 class="entry-title"><?php the_title(); ?></h2>
-                    </a>
+                    <div class="container">
+                        <a href="" class="hide-content">See other events</a>
+                        <a href="" class="show-content" data-event=<?php echo $eventNumber; ?>>
+                            <h2 class="entry-title"><?php the_title(); ?></h2>
+                        </a>
+                    </div>
+
                 </header><!-- .entry-header -->
-                <div class="entry-text-wrapper">
+                <div class="entry-text-wrapper container">
                     <div class="entry-meta">
                         <p class="event-date"><?php echo date('F j, Y', strtotime(CFS()->get('event_date'))); ?></p>
                         <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
