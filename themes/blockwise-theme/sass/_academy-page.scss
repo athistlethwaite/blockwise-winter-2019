@@ -54,6 +54,10 @@
     width: 80%;
     margin: 0 auto;
 
+    h2 {
+      padding-top: 20px;
+    }
+
     @include desktop {
       p {
         text-align: center;
@@ -68,6 +72,4 @@
   font-weight: bold;
   background-color: $color__brand-yellow-orange;
   border-radius: 25px;
-  margin-top: 30px;
-  margin-bottom: 20px;
 }
