@@ -12,7 +12,6 @@
 
   @include desktop {
     background-image: url('../../assets/images/footer-desktop.png');
-    height: 260px;
 
   }
 
@@ -23,7 +22,6 @@
 
     @include desktop {
       text-align: center;
-      padding: 0px;
       width: 50vw;
     }
   }
@@ -67,6 +65,7 @@
 
     @include desktop {
       width: $desktop-width;
+      align-items: center;
     }
   }
 }
