@@ -943,6 +943,10 @@ object {
   background-color: rgba(247, 249, 250, 0.7);
   padding: 1rem 0; }
 
+* .header-content-wrapper p,
+.front-page-banner .header-content-wrapper p {
+  font-weight: bold; }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1055,7 +1059,7 @@ object {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999; }
+  z-index: 300; }
   .site-header .menu-toggle,
   .site-header .site-title {
     padding: 2rem 0 1rem 0;
@@ -1450,6 +1454,22 @@ object {
   height: 100%;
   width: 100%;
   background-color: #f7f9fa; }
+  .post-type-archive-event .event-single .event {
+    padding-top: 50px; }
+    .post-type-archive-event .event-single .event .entry-header ::before {
+      margin-left: 10px;
+      width: 15px; }
+    .post-type-archive-event .event-single .event .entry-header .hide-content {
+      padding-top: 5px;
+      font-size: 1rem; }
+    .post-type-archive-event .event-single .event .entry-text-wrapper {
+      text-align: justify;
+      padding: 5px 40px; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
+        padding-right: 100px;
+        color: #7bd1d0; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
+        margin: 0 135px; }
   .post-type-archive-event .event-single .hide-content {
     position: relative;
     padding-left: 40px; }
@@ -1466,12 +1486,19 @@ object {
 
 .post-type-archive-event .pop-up {
   position: fixed;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  top: 5%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
   left: 50%;
+  background-image: url("../../assets/images/RSVPBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #f7f9fa;
-  border: 1px solid #026082; }
+  border-radius: 25px;
+  width: 400px;
+  border-bottom: 5px solid #026082; }
+  .post-type-archive-event .pop-up .wpcf7 {
+    margin: 20px; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
@@ -1607,8 +1634,7 @@ object {
   padding: 20px 30px; }
   @media screen and (min-width: 1000px) {
     .load-content {
-      position: relative;
-      padding: 0px 0px; } }
+      position: relative; } }
   .load-content h1 {
     font-size: 1.75rem; }
   .load-content .back-to-lesson {
@@ -1693,20 +1719,31 @@ object {
 /*--------------------------------------------------------------
 # Academy Page
 --------------------------------------------------------------*/
-.page-id-46 h1,
-.page-id-46 h2,
-.page-id-46 h3,
-.page-id-46 p {
+.page-id-46 .entry-header h1 {
+  color: #026082; }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .entry-header h1 {
+      color: white; } }
+
+.page-id-46 .entry-header p {
   color: white; }
 
-.page-id-46 .site-main > article:first-child header {
-  height: 20vh; }
-  @media screen and (min-width: 1000px) {
-    .page-id-46 .site-main > article:first-child header {
-      height: 20vh; } }
+@media screen and (min-width: 1000px) {
+  .page-id-46 h2,
+  .page-id-46 h3,
+  .page-id-46 p {
+    color: white; } }
+
+@media screen and (min-width: 1000px) {
+  .page-id-46 .site-main > article:first-child header {
+    height: 20vh; } }
 
 .page-id-46 .site-content {
-  background-image: url("../../assets/images/academy-desktop-background.png"); }
+  background-image: url("../../assets/images/academy-mobile-background.png"); }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .site-content {
+      background-image: url("../../assets/images/academy-mobile-background.png");
+      height: 80vh; } }
   .page-id-46 .site-content .content-area {
     background-position: center;
     background-size: cover;
@@ -1718,8 +1755,9 @@ object {
 .wp-block-button__link {
   text-transform: uppercase;
   color: #026082;
+  font-weight: bold;
   background-color: #ffae4e;
-  border-radius: 10px; }
+  border-radius: 25px; }
 
 /*--------------------------------------------------------------
 # Membership Page
@@ -1867,17 +1905,29 @@ object {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #026082;
+  background-image: url("../../assets/images/footer-mobile.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #f7f9fa;
-  padding-bottom: 1rem;
-  padding-top: 2rem; }
+  height: 250px; }
+  @media screen and (min-width: 1000px) {
+    .site-footer {
+      background-image: url("../../assets/images/footer-desktop.png"); } }
   .site-footer p {
     font-size: 11.2px;
     font-size: 0.7rem;
-    text-align: center; }
+    text-align: start;
+    padding-left: 80px; }
+    @media screen and (min-width: 1000px) {
+      .site-footer p {
+        text-align: center;
+        padding: 0px; } }
   .site-footer .site-info {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-left: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1891,6 +1941,11 @@ object {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
+    @media screen and (min-width: 1000px) {
+      .site-footer .site-info {
+        padding-top: 100px;
+        padding-right: 0px;
+        padding-left: 0px; } }
     .site-footer .site-info a {
       color: #f7f9fa; }
       .site-footer .site-info a:hover {

@@ -2,18 +2,39 @@
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: $color__brand-blue-sapphire;
+  background-image: url('../../assets/images/footer-mobile.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   color: $color__brand-ghost-white;
-  padding-bottom: 1rem;
-  padding-top: 2rem;
+  height: 250px;
+
+  @include desktop {
+    background-image: url('../../assets/images/footer-desktop.png');
+
+  }
 
   p {
     @include font-size(0.7);
-    text-align: center;
+    text-align: start;
+    padding-left: 80px;
+
+    @include desktop {
+      text-align: center;
+      padding: 0px;
+    }
   }
 
   .site-info {
     box-sizing: border-box;
+    padding-top: 100px;
+    padding-right: 80px;
+    padding-left: 80px;
+
+    @include desktop {
+      padding-top: 100px;
+      padding-right: 0px;
+      padding-left: 0px;
+    }
 
     a {
       color: $color__brand-ghost-white;

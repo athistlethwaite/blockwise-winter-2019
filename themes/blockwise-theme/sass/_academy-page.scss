@@ -3,21 +3,45 @@
 --------------------------------------------------------------*/
 
 .page-id-46 {
-  h1,
-  h2,
-  h3,
-  p {
-    color: white;
+
+  .entry-header {
+
+    h1 {
+      color: $color__brand-blue-sapphire;
+
+      @include desktop {
+        color: white;
+      }
+    }
+
+    p {
+      color: white;
+    }
   }
 
-  .site-main > article:first-child header {
-    height: 20vh;
+  @include desktop {
+
+    h2,
+    h3,
+    p {
+      color: white;
+    }
+  }
+
+  .site-main>article:first-child header {
+
     @include desktop {
       height: 20vh;
     }
   }
+
   .site-content {
-    background-image: url('../../assets/images/academy-desktop-background.png');
+    background-image: url('../../assets/images/academy-mobile-background.png');
+
+    @include desktop {
+      background-image: url('../../assets/images/academy-mobile-background.png');
+      height: 80vh;
+    }
 
     .content-area {
       background-position: center;
@@ -35,6 +59,7 @@
 .wp-block-button__link {
   text-transform: uppercase;
   color: $color__brand-blue-sapphire;
+  font-weight: bold;
   background-color: $color__brand-yellow-orange;
-  border-radius: 10px;
+  border-radius: 25px;
 }
