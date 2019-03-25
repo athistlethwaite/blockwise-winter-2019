@@ -7,21 +7,17 @@
 a {
   color: $color__link;
   text-decoration: none;
-
   &:visited {
     color: $color__link-visited;
   }
-
   &:hover,
   &:focus,
   &:active {
     color: $color__link-hover;
   }
-
   &:focus {
     outline: thin dotted;
   }
-
   &:hover,
   &:active {
     outline: 0;
@@ -32,14 +28,15 @@ a {
 
 .main-navigation {
   clear: both;
+  display: block;
+  float: left;
+  width: 100%;
 
   ul {
     display: none;
     list-style: none;
     margin: 0;
     padding-left: 0;
-    text-transform: capitalize;
-    font-weight: bold;
 
     ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -48,6 +45,7 @@ a {
       top: $base__space-unit;
       left: -999rem;
       z-index: 99999;
+
       ul {
         left: -999rem;
         top: 0;
@@ -78,17 +76,14 @@ a {
       left: auto;
     }
   }
-
   li {
     float: left;
     position: relative;
-    margin: 0 0.8em;
 
     &:hover > a,
     &.focus > a {
     }
   }
-
   a {
     display: block;
     text-decoration: none;
@@ -98,46 +93,6 @@ a {
   .current-menu-item > a,
   .current_page_ancestor > a {
   }
-
-  ul[aria-expanded='true'] {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    z-index: 999;
-    background-color: $color__brand-ghost-white;
-    a {
-      color: $color__brand-blue-sapphire;
-      @extend .container;
-      text-align: left;
-    }
-    li {
-      display: block;
-      width: 100vw;
-      margin: 0;
-      padding: 1em 0;
-      border: 2px solid $color__brand-blue-sapphire;
-      border-top: 0;
-      border-radius: 2px;
-    }
-  }
-
-  @include desktop {
-    .sub-menu {
-      top: 52px;
-      background-color: $color__brand-ghost-white;
-      text-align: center;
-      a {
-        color: $color__brand-blue-sapphire;
-      }
-      li {
-        margin: 0;
-        padding: 1em 0;
-        border: 2px solid $color__brand-blue-sapphire;
-        border-top: 0;
-        border-radius: 2px;
-      }
-    }
-  }
 }
 
 /* Small menu. */
@@ -145,15 +100,17 @@ a {
 .main-navigation.toggled ul {
   display: block;
 }
+.menu-toggle {
+  float: right;
+  color: $color__brand-yellow-orange;
+  background-color: $color__brand-blue-sapphire;
+  font-size: 1.5rem;
+}
 
 @media screen and (min-width: $desktop-width) {
-  .main-navigation {
-    display: inline-block;
-  }
   .menu-toggle {
     display: none;
   }
-
   .main-navigation ul {
     display: block;
   }

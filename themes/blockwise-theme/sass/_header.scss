@@ -4,34 +4,79 @@
 .site-header {
   color: $color__brand-ghost-white;
   background-color: $color__brand-blue-sapphire;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+  #primary-menu > li > a,
+  .menu-toggle,
+  .site-title {
+    padding: 2rem 0 1rem 0;
+    box-sizing: border-box;
+  }
+  .menu-toggle {
+    font-size: 2rem;
+  }
 
-  a,
-  h1 {
-    color: $color__brand-ghost-white;
-
-    &:hover {
-      color: $color__brand-yellow-orange;
+  @include desktop {
+    #primary-menu {
+      display: flex;
+      justify-content: space-between;
+    }
+    #primary-menu > li > a {
+      color: $color__brand-ghost-white;
+      border-bottom: 3px solid $color__brand-blue-sapphire;
+      &:hover {
+        color: $color__brand-yellow-orange;
+        border-color: $color__brand-yellow-orange;
+      }
+    }
+    .sub-menu {
+      text-align: center;
+      background-color: $color__brand-ghost-white;
+      transform: translate(-40%, 3rem);
+      li {
+        padding: 1rem 0;
+        border: 2px solid $color__brand-blue-sapphire;
+        border-top: 0;
+      }
     }
   }
 
   .site-branding {
-    display: flex;
-    flex-flow: row, nowrap;
-    align-items: center;
-    justify-content: flex-start;
-
-    img {
-      margin-right: 1.5rem;
-      width: auto;
-      height: 40px;
+    flex: 1 0 30%;
+    .site-title {
+      color: $color__brand-ghost-white;
+      &:hover {
+        color: $color__brand-yellow-orange;
+      }
+      margin: 0;
+      padding-left: 60px;
+      text-align: left;
+      text-decoration: none;
+      position: relative;
+      &:before {
+        background-image: url(../../assets/images/blockwise-logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -30%);
+        height: 35px;
+        width: 53px;
+      }
     }
   }
 
   .container {
-    position: relative;
+    padding: 0 2rem;
     display: flex;
     flex-flow: row, nowrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-end;
   }
 }
