@@ -104,6 +104,33 @@
     height: 100%;
     width: 100%;
     background-color: $color__brand-ghost-white;
+    .event{
+      padding-top:20px;
+      .entry-header{
+        ::before{
+          margin-left:10px;
+          width: 15px;
+        }
+        .hide-content{
+          padding-top:5px;
+          font-size:1rem;
+        }
+      }
+      .entry-text-wrapper{
+        text-align: justify;
+        padding:5px 40px;
+        .entry-meta{
+          padding-right:100px;
+          color:$color__brand-middle-blue;
+        }
+        .entry-content{
+          button{
+            margin:0 135px;
+          }
+       } 
+      }
+
+    }
     .hide-content {
       position: relative;
       padding-left: 40px;
@@ -123,9 +150,16 @@
   .pop-up {
     position: fixed;
     transform: translate(-50%, 0);
-    top: 5%;
+    top: 20%;
     left: 50%;
+    background-image: url('../../assets/images/pop-up.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: $color__brand-ghost-white;
-    border: 1px solid $color__brand-blue-sapphire;
+    border: 3px solid $color__brand-blue-sapphire;
+    border-radius:10px;
+    .wpcf7{
+      margin:20px;
+    }
   }
 }

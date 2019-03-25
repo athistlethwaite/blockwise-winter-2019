@@ -995,10 +995,6 @@ object {
   background: #ffae4e;
   color: #008294; }
 
-<<<<<<< HEAD
-/*--------------------------------------------------------------
-# Header
-=======
 .carosel {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1078,7 +1074,6 @@ object {
 
 /*--------------------------------------------------------------
 # Header
->>>>>>> 619293b9f8536a078af0e2acbae68d8e7b68ca91
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
@@ -1403,6 +1398,22 @@ object {
   height: 100%;
   width: 100%;
   background-color: #f7f9fa; }
+  .post-type-archive-event .event-single .event {
+    padding-top: 20px; }
+    .post-type-archive-event .event-single .event .entry-header ::before {
+      margin-left: 10px;
+      width: 15px; }
+    .post-type-archive-event .event-single .event .entry-header .hide-content {
+      padding-top: 5px;
+      font-size: 1rem; }
+    .post-type-archive-event .event-single .event .entry-text-wrapper {
+      text-align: justify;
+      padding: 5px 40px; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
+        padding-right: 100px;
+        color: #7bd1d0; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
+        margin: 0 135px; }
   .post-type-archive-event .event-single .hide-content {
     position: relative;
     padding-left: 40px; }
@@ -1421,10 +1432,16 @@ object {
   position: fixed;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  top: 5%;
+  top: 20%;
   left: 50%;
+  background-image: url("../../assets/images/pop-up.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #f7f9fa;
-  border: 1px solid #026082; }
+  border: 3px solid #026082;
+  border-radius: 10px; }
+  .post-type-archive-event .pop-up .wpcf7 {
+    margin: 20px; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
