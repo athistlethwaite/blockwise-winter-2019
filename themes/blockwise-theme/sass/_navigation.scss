@@ -6,7 +6,7 @@
 
 a {
   color: $color__link;
-
+  text-decoration: none;
   &:visited {
     color: $color__link-visited;
   }
@@ -99,6 +99,12 @@ a {
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
+}
+.menu-toggle {
+  float: right;
+  color: $color__brand-yellow-orange;
+  background-color: $color__brand-blue-sapphire;
+  font-size: 1.5rem;
 }
 
 @media screen and (min-width: $desktop-width) {

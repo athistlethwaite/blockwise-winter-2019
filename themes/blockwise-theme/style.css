@@ -659,7 +659,8 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #026082; }
+  color: #026082;
+  text-decoration: none; }
   a:visited {
     color: #026082; }
   a:hover, a:focus, a:active {
@@ -710,6 +711,12 @@ a {
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
+
+.menu-toggle {
+  float: right;
+  color: #ffae4e;
+  background-color: #026082;
+  font-size: 1.5rem; }
 
 @media screen and (min-width: 1000px) {
   .menu-toggle {
@@ -1044,18 +1051,57 @@ object {
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
-  background-color: #026082; }
-  .site-header a,
-  .site-header h1 {
-    color: #f7f9fa;
-    text-decoration: none; }
-    .site-header a:hover,
-    .site-header h1:hover {
-      color: #ffae4e; }
+  background-color: #026082;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999; }
+  .site-header #primary-menu > li > a,
+  .site-header .menu-toggle,
+  .site-header .site-title {
+    padding: 2rem 0 1rem 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .site-header .menu-toggle {
+    font-size: 2rem; }
+  @media screen and (min-width: 1000px) {
+    .site-header #primary-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .site-header #primary-menu > li > a {
+      color: #f7f9fa;
+      border-bottom: 3px solid #026082; }
+      .site-header #primary-menu > li > a:hover {
+        color: #ffae4e;
+        border-color: #ffae4e; }
+    .site-header .sub-menu {
+      text-align: center;
+      background-color: #f7f9fa;
+      -webkit-transform: translate(-40%, 3rem);
+              transform: translate(-40%, 3rem); }
+      .site-header .sub-menu li {
+        padding: 1rem 0;
+        border: 2px solid #026082;
+        border-top: 0; } }
   .site-header .site-branding {
-    position: relative; }
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%; }
     .site-header .site-branding .site-title {
-      margin: 0 auto; }
+      color: #f7f9fa;
+      margin: 0;
+      padding-left: 60px;
+      text-align: left;
+      text-decoration: none;
+      position: relative; }
+      .site-header .site-branding .site-title:hover {
+        color: #ffae4e; }
       .site-header .site-branding .site-title:before {
         background-image: url(../../assets/images/blockwise-logo.png);
         background-size: cover;
@@ -1063,13 +1109,13 @@ object {
         content: '';
         position: absolute;
         top: 50%;
-        left: -1rem;
-        -webkit-transform: translate(-100%, -50%);
-                transform: translate(-100%, -50%);
-        height: 2.5rem;
-        width: 3.8rem; }
+        left: 0;
+        -webkit-transform: translate(0, -30%);
+                transform: translate(0, -30%);
+        height: 35px;
+        width: 53px; }
   .site-header .container {
-    position: relative;
+    padding: 0 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1079,9 +1125,9 @@ object {
             flex-flow: row, nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
 
 /*--------------------------------------------------------------
 # Front Page 
