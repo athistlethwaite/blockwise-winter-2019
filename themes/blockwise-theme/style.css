@@ -1855,8 +1855,18 @@ object {
   text-align: center;
   padding: 0 32px; }
 
+<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Footer
+=======
+@media screen and (min-width: 1000px) {
+  .page-id-70 .page {
+    background-image: url("../../assets/images/contact-banner.jpg");
+    background-size: cover; } }
+
+/*--------------------------------------------------------------
+# Footer
+>>>>>>> 36d479e697b88f51a68fcd168cbd6f4dfbad150c
 --------------------------------------------------------------*/
 .site-footer {
   background-color: #026082;
