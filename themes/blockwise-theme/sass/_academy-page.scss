@@ -3,8 +3,23 @@
 --------------------------------------------------------------*/
 
 .page-id-46 {
+  @include desktop {
+    background-image: url('../../assets/images/academy-desktop-background.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px;
+  }
 
   .entry-header {
+    background-image: url('../../assets/images/academy-mobile-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+
+    @include desktop {
+      background-image: none;
+    }
 
     h1 {
       color: $color__brand-blue-sapphire;
@@ -31,26 +46,17 @@
   .site-main>article:first-child header {
 
     @include desktop {
-      height: 20vh;
+      height: 30vh;
     }
   }
 
-  .site-content {
-    background-image: url('../../assets/images/academy-mobile-background.png');
+  .entry-content {
+    width: 80%;
+    margin: 0 auto;
 
     @include desktop {
-      background-image: url('../../assets/images/academy-mobile-background.png');
-      height: 80vh;
-    }
-
-    .content-area {
-      background-position: center;
-      background-size: cover;
-      width: 80%;
-      margin: 0 auto;
-
-      .entry-content {
-        margin: 0 auto;
+      p {
+        text-align: center;
       }
     }
   }
@@ -62,4 +68,6 @@
   font-weight: bold;
   background-color: $color__brand-yellow-orange;
   border-radius: 25px;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
