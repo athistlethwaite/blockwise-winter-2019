@@ -105,7 +105,7 @@ function blockwise_scripts()
 
 	wp_enqueue_script('membership-script', get_template_directory_uri() . '/build/js/membership-script.min.js', array('jquery'), '', true);
 
-	wp_enqueue_script('page-script', get_template_directory_uri() . '/build/js/page-script.min.js', array('jquery'), '', true);
+	wp_enqueue_script('carosel-script', get_template_directory_uri() . '/build/js/carosel-script.min.js', array('jquery'), '', true);
 
 	wp_localize_script('bw-scripts', 'bw_vars', array(
 		'rest_url' => esc_url_raw(rest_url()),

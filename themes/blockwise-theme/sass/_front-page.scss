@@ -6,7 +6,10 @@
     background-image: url('../../assets/images/splash-background-transparent.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 60vw;
+    height: 125vw;
+    @include desktop {
+      height: 120vh;
+    }
     position: relative;
     .header-content-wrapper {
       text-align: center;
@@ -25,10 +28,9 @@
       background-color: rgba($color: $color__brand-dark-cyan, $alpha: 0.7);
       position: absolute;
       bottom: 20px;
-      .carosel-viewport {
-        height: 100px;
-        .carosel-thumbnail {
-          width: 30%;
+      .carosel-thumbnail {
+        img {
+          width: 50%;
         }
       }
     }

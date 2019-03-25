@@ -1001,6 +1001,16 @@ object {
   overflow: hidden;
   width: 100%;
   position: relative; }
+  .carosel .carosel-nav {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 1rem;
+    background-color: rgba(247, 249, 250, 0.8);
+    border-radius: 50%; }
   .carosel .carosel-viewport {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1011,52 +1021,63 @@ object {
             flex-flow: row nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    height: 400px; }
-    .carosel .carosel-viewport .carosel-nav {
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translate(0, -50%);
-              transform: translate(0, -50%);
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      padding: 1rem;
-      background-color: rgba(247, 249, 250, 0.8);
-      border-radius: 50%; }
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
     .carosel .carosel-viewport .carosel-item {
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      width: 250px;
-      height: 100%;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column nowrap;
-              flex-flow: column nowrap;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
+      display: grid;
+      grid-template-rows: 1fr;
+      grid-auto-rows: 1fr; }
       .carosel .carosel-viewport .carosel-item .carosel-thumbnail {
-        height: auto;
-        width: 50%; }
-      .carosel .carosel-viewport .carosel-item .carosel-link {
-        justify-self: flex-end; }
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 1rem; }
+        .carosel .carosel-viewport .carosel-item .carosel-thumbnail img {
+          border-radius: 5px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          height: auto;
+          width: 100%; }
       .carosel .carosel-viewport .carosel-item .carosel-content {
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         color: #21759b;
         font-size: 15px;
         padding: 8px 12px;
         width: 100%;
         text-align: left; }
+        .carosel .carosel-viewport .carosel-item .carosel-content p {
+          margin: 0; }
 
+<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Header
+=======
+/*--------------------------------------------------------------
+# Header
+>>>>>>> b28b80c315f17659d2e544606959d04d284dce90
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
@@ -1107,8 +1128,11 @@ object {
   background-image: url("../../assets/images/splash-background-transparent.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vw;
+  height: 125vw;
   position: relative; }
+  @media screen and (min-width: 1000px) {
+    .home .front-page-banner {
+      height: 120vh; } }
   .home .front-page-banner .header-content-wrapper {
     text-align: center;
     position: absolute;
@@ -1125,10 +1149,8 @@ object {
     background-color: rgba(0, 130, 148, 0.7);
     position: absolute;
     bottom: 20px; }
-    .home .front-page-banner .carosel .carosel-viewport {
-      height: 100px; }
-      .home .front-page-banner .carosel .carosel-viewport .carosel-thumbnail {
-        width: 30%; }
+    .home .front-page-banner .carosel .carosel-thumbnail img {
+      width: 50%; }
 
 .home .front-page-content > h2 {
   margin: 2em auto; }
@@ -1802,8 +1824,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
