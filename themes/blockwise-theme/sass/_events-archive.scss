@@ -105,11 +105,14 @@
     width: 100%;
     background-color: $color__brand-ghost-white;
     .event {
-      padding-top: 50px;
+      padding-top: 70px;
       .entry-header {
         ::before {
           margin-left: 10px;
           width: 15px;
+        }
+        @include desktop {
+          
         }
         .hide-content {
           padding-top: 5px;
@@ -147,6 +150,7 @@
     }
   }
   .pop-up {
+    z-index:99999;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -160,6 +164,12 @@
     border-bottom: 5px solid $color__brand-blue-sapphire;
     .wpcf7 {
       margin: 20px;
+      .wpcf7-response-output{
+        border: 2px solid $color__brand-middle-blue;
+        border-radius: 5px;
+        box-shadow: 2px 2px #888888;
+        color:$color__brand-dark-cyan;
+      }
     }
   }
 }
