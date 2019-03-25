@@ -7,34 +7,29 @@
   background-repeat: no-repeat;
   color: $color__brand-ghost-white;
   height: 250px;
+  display: flex;
+  align-items: flex-end;
 
   @include desktop {
     background-image: url('../../assets/images/footer-desktop.png');
+    height: 260px;
 
   }
 
   p {
     @include font-size(0.7);
     text-align: start;
-    padding-left: 80px;
+    width: 80vw;
 
     @include desktop {
       text-align: center;
       padding: 0px;
+      width: 50vw;
     }
   }
 
   .site-info {
     box-sizing: border-box;
-    padding-top: 100px;
-    padding-right: 80px;
-    padding-left: 80px;
-
-    @include desktop {
-      padding-top: 100px;
-      padding-right: 0px;
-      padding-left: 0px;
-    }
 
     a {
       color: $color__brand-ghost-white;
@@ -69,5 +64,9 @@
     nowrap;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include desktop {
+      width: $desktop-width;
+    }
   }
 }

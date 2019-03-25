@@ -1902,25 +1902,30 @@ object {
   background-size: cover;
   background-repeat: no-repeat;
   color: #f7f9fa;
-  height: 250px; }
+  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
   @media screen and (min-width: 1000px) {
     .site-footer {
-      background-image: url("../../assets/images/footer-desktop.png"); } }
+      background-image: url("../../assets/images/footer-desktop.png");
+      height: 260px; } }
   .site-footer p {
     font-size: 11.2px;
     font-size: 0.7rem;
     text-align: start;
-    padding-left: 80px; }
+    width: 80vw; }
     @media screen and (min-width: 1000px) {
       .site-footer p {
         text-align: center;
-        padding: 0px; } }
+        padding: 0px;
+        width: 50vw; } }
   .site-footer .site-info {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    padding-top: 100px;
-    padding-right: 80px;
-    padding-left: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1934,11 +1939,6 @@ object {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
-    @media screen and (min-width: 1000px) {
-      .site-footer .site-info {
-        padding-top: 100px;
-        padding-right: 0px;
-        padding-left: 0px; } }
     .site-footer .site-info a {
       color: #f7f9fa; }
       .site-footer .site-info a:hover {
@@ -1955,3 +1955,6 @@ object {
       margin: 0; }
       .site-footer .site-info ul li {
         padding: 0.4em 0; }
+    @media screen and (min-width: 1000px) {
+      .site-footer .site-info {
+        width: 1000px; } }
