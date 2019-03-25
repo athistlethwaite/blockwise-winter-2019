@@ -1012,6 +1012,7 @@ object {
     background-color: rgba(247, 249, 250, 0.8);
     border-radius: 50%; }
   .carosel .carosel-viewport {
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1071,13 +1072,8 @@ object {
         .carosel .carosel-viewport .carosel-item .carosel-content p {
           margin: 0; }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Header
-=======
-/*--------------------------------------------------------------
-# Header
->>>>>>> b28b80c315f17659d2e544606959d04d284dce90
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
@@ -1804,6 +1800,14 @@ object {
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
+.page-id-70 .entry-header {
+  background-image: url("../../assets/images/contact-banner.jpg");
+  background-size: cover; }
+
+.page-id-70 .wpcf7-form {
+  text-align: center;
+  padding: 0 32px; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -1824,8 +1828,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
