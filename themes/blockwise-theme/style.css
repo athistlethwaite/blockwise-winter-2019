@@ -1451,7 +1451,7 @@ object {
   width: 100%;
   background-color: #f7f9fa; }
   .post-type-archive-event .event-single .event {
-    padding-top: 50px; }
+    padding-top: 70px; }
     .post-type-archive-event .event-single .event .entry-header ::before {
       margin-left: 10px;
       width: 15px; }
@@ -1481,6 +1481,7 @@ object {
       top: 0; }
 
 .post-type-archive-event .pop-up {
+  z-index: 99999;
   position: fixed;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1495,6 +1496,12 @@ object {
   border-bottom: 5px solid #026082; }
   .post-type-archive-event .pop-up .wpcf7 {
     margin: 20px; }
+    .post-type-archive-event .pop-up .wpcf7 .wpcf7-response-output {
+      border: 2px solid #7bd1d0;
+      border-radius: 5px;
+      -webkit-box-shadow: 2px 2px #888888;
+              box-shadow: 2px 2px #888888;
+      color: #008294; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page

@@ -22,9 +22,8 @@
     popUpForm.removeClass('hidden');
   });
 
-  popUpForm.on('submit', function(event) {
-    console.log(event);
-    popUpForm.addClass('hidden');
+  $(window).on('wpcf7:mailsent', function(){
+      popUpForm.addClass('hidden');
   });
 
   function getArticle(articleNum) {
