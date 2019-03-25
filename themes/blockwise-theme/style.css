@@ -1756,14 +1756,29 @@ object {
 /*--------------------------------------------------------------
 # Academy Page
 --------------------------------------------------------------*/
-.page-id-46 .entry-header h1 {
-  color: #026082; }
-  @media screen and (min-width: 1000px) {
-    .page-id-46 .entry-header h1 {
-      color: white; } }
+@media screen and (min-width: 1000px) {
+  .page-id-46 {
+    background-image: url("../../assets/images/academy-desktop-background.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px; } }
 
-.page-id-46 .entry-header p {
-  color: white; }
+.page-id-46 .entry-header {
+  background-image: url("../../assets/images/academy-mobile-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%; }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .entry-header {
+      background-image: none; } }
+  .page-id-46 .entry-header h1 {
+    color: #026082; }
+    @media screen and (min-width: 1000px) {
+      .page-id-46 .entry-header h1 {
+        color: white; } }
+  .page-id-46 .entry-header p {
+    color: white; }
 
 @media screen and (min-width: 1000px) {
   .page-id-46 h2,
@@ -1773,21 +1788,16 @@ object {
 
 @media screen and (min-width: 1000px) {
   .page-id-46 .site-main > article:first-child header {
-    height: 20vh; } }
+    height: 30vh; } }
 
-.page-id-46 .site-content {
-  background-image: url("../../assets/images/academy-mobile-background.png"); }
+.page-id-46 .entry-content {
+  width: 80%;
+  margin: 0 auto; }
+  .page-id-46 .entry-content h2 {
+    padding-top: 20px; }
   @media screen and (min-width: 1000px) {
-    .page-id-46 .site-content {
-      background-image: url("../../assets/images/academy-mobile-background.png");
-      height: 80vh; } }
-  .page-id-46 .site-content .content-area {
-    background-position: center;
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto; }
-    .page-id-46 .site-content .content-area .entry-content {
-      margin: 0 auto; }
+    .page-id-46 .entry-content p {
+      text-align: center; } }
 
 .wp-block-button__link {
   text-transform: uppercase;
@@ -1945,8 +1955,7 @@ object {
   background-image: url("../../assets/images/footer-mobile.png");
   background-size: cover;
   background-repeat: no-repeat;
-  color: #f7f9fa;
-  height: 250px;
+  height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1960,7 +1969,8 @@ object {
     font-size: 11.2px;
     font-size: 0.7rem;
     text-align: start;
-    width: 80vw; }
+    width: 80vw;
+    color: white; }
     @media screen and (min-width: 1000px) {
       .site-footer p {
         text-align: center;
