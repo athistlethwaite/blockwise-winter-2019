@@ -104,32 +104,31 @@
     height: 100%;
     width: 100%;
     background-color: $color__brand-ghost-white;
-    .event{
-      padding-top:20px;
-      .entry-header{
-        ::before{
-          margin-left:10px;
+    .event {
+      padding-top: 50px;
+      .entry-header {
+        ::before {
+          margin-left: 10px;
           width: 15px;
         }
-        .hide-content{
-          padding-top:5px;
-          font-size:1rem;
+        .hide-content {
+          padding-top: 5px;
+          font-size: 1rem;
         }
       }
-      .entry-text-wrapper{
+      .entry-text-wrapper {
         text-align: justify;
-        padding:5px 40px;
-        .entry-meta{
-          padding-right:100px;
-          color:$color__brand-middle-blue;
+        padding: 5px 40px;
+        .entry-meta {
+          padding-right: 100px;
+          color: $color__brand-middle-blue;
         }
-        .entry-content{
-          button{
-            margin:0 135px;
+        .entry-content {
+          button {
+            margin: 0 135px;
           }
-       } 
+        }
       }
-
     }
     .hide-content {
       position: relative;
@@ -149,17 +148,18 @@
   }
   .pop-up {
     position: fixed;
-    transform: translate(-50%, 0);
-    top: 20%;
+    transform: translate(-50%, -50%);
+    top: 50%;
     left: 50%;
-    background-image: url('../../assets/images/pop-up.png');
+    background-image: url('../../assets/images/RSVPBg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $color__brand-ghost-white;
-    border: 3px solid $color__brand-blue-sapphire;
-    border-radius:10px;
-    .wpcf7{
-      margin:20px;
+    border-radius: 25px;
+    width: 400px;
+    border-bottom: 5px solid $color__brand-blue-sapphire;
+    .wpcf7 {
+      margin: 20px;
     }
   }
 }

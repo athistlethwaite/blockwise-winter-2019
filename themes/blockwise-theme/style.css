@@ -1451,7 +1451,11 @@ object {
   width: 100%;
   background-color: #f7f9fa; }
   .post-type-archive-event .event-single .event {
+<<<<<<< HEAD
     padding-top: 20px; }
+=======
+    padding-top: 50px; }
+>>>>>>> a11f1763dc5b1f31d58faaef17da722110cc43ad
     .post-type-archive-event .event-single .event .entry-header ::before {
       margin-left: 10px;
       width: 15px; }
@@ -1482,6 +1486,7 @@ object {
 
 .post-type-archive-event .pop-up {
   position: fixed;
+<<<<<<< HEAD
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
   top: 20%;
@@ -1492,6 +1497,19 @@ object {
   background-color: #f7f9fa;
   border: 3px solid #026082;
   border-radius: 10px; }
+=======
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: url("../../assets/images/RSVPBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #f7f9fa;
+  border-radius: 25px;
+  width: 400px;
+  border-bottom: 5px solid #026082; }
+>>>>>>> a11f1763dc5b1f31d58faaef17da722110cc43ad
   .post-type-archive-event .pop-up .wpcf7 {
     margin: 20px; }
 
