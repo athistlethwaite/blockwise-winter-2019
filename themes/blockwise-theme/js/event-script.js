@@ -22,8 +22,7 @@
     popUpForm.removeClass('hidden');
   });
 
-  popUpForm.on('submit', function(event) {
-    console.log(event);
+  $(window).on('wpcf7:mailsent', function() {
     popUpForm.addClass('hidden');
   });
 
@@ -35,7 +34,7 @@
     return (
       '<article id="' +
       articleId +
-      '" class="container ' +
+      '" class="' +
       articleClass +
       '">' +
       articleContent +

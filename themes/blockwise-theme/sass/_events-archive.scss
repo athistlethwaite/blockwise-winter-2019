@@ -97,16 +97,37 @@
   }
 
   .event-single {
-    overflow: scroll;
     position: absolute;
     left: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
+
+    height: 100vh;
+    @include desktop {
+      top: auto;
+      height: 70vh;
+      bottom: 0;
+    }
+    width: 100vw;
     background-color: $color__brand-ghost-white;
     .event {
-      padding-top: 50px;
       .entry-header {
+        padding: 1rem 0 0 0;
+        @include desktop {
+          background-color: $color__brand-blue_sapphire;
+          a,
+          h2 {
+            color: $color__brand-ghost-white;
+            &:hover {
+              color: $color__brand-yellow-orange;
+            }
+          }
+          .container {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-content: center;
+          }
+        }
         ::before {
           margin-left: 10px;
           width: 15px;
@@ -117,6 +138,7 @@
         }
       }
       .entry-text-wrapper {
+        overflow: scroll;
         text-align: justify;
         padding: 5px 40px;
         .entry-meta {
@@ -125,7 +147,8 @@
         }
         .entry-content {
           button {
-            margin: 0 135px;
+            display: block;
+            margin: 0 auto;
           }
         }
       }
@@ -146,12 +169,14 @@
       }
     }
   }
+
   .pop-up {
+    z-index: 99999;
     position: fixed;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    background-image: url('../../assets/images/RSVPBg.png');
+    background-image: url('../../assets/images/rsvp-background.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-color: $color__brand-ghost-white;
@@ -160,6 +185,12 @@
     border-bottom: 5px solid $color__brand-blue-sapphire;
     .wpcf7 {
       margin: 20px;
+      .wpcf7-response-output {
+        border: 2px solid $color__brand-middle-blue;
+        border-radius: 5px;
+        box-shadow: 2px 2px #888888;
+        color: $color__brand-dark-cyan;
+      }
     }
   }
 }

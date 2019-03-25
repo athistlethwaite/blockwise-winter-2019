@@ -915,6 +915,7 @@ object {
   margin: 0 auto; }
 
 .site-content {
+  margin-top: 5.5rem;
   background-size: 100vw;
   background-repeat: no-repeat; }
 
@@ -1447,29 +1448,57 @@ object {
   display: none; }
 
 .post-type-archive-event .event-single {
-  overflow: scroll;
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: #f7f9fa; }
-  .post-type-archive-event .event-single .event {
-    padding-top: 50px; }
+  @media screen and (min-width: 1000px) {
+    .post-type-archive-event .event-single {
+      top: auto;
+      height: 70vh;
+      bottom: 0; } }
+  .post-type-archive-event .event-single .event .entry-header {
+    padding: 1rem 0 0 0; }
+    @media screen and (min-width: 1000px) {
+      .post-type-archive-event .event-single .event .entry-header {
+        background-color: #026082; }
+        .post-type-archive-event .event-single .event .entry-header a,
+        .post-type-archive-event .event-single .event .entry-header h2 {
+          color: #f7f9fa; }
+          .post-type-archive-event .event-single .event .entry-header a:hover,
+          .post-type-archive-event .event-single .event .entry-header h2:hover {
+            color: #ffae4e; }
+        .post-type-archive-event .event-single .event .entry-header .container {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-flow: column nowrap;
+                  flex-flow: column nowrap;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -ms-flex-line-pack: center;
+              align-content: center; } }
     .post-type-archive-event .event-single .event .entry-header ::before {
       margin-left: 10px;
       width: 15px; }
     .post-type-archive-event .event-single .event .entry-header .hide-content {
       padding-top: 5px;
       font-size: 1rem; }
-    .post-type-archive-event .event-single .event .entry-text-wrapper {
-      text-align: justify;
-      padding: 5px 40px; }
-      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
-        padding-right: 100px;
-        color: #7bd1d0; }
-      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
-        margin: 0 135px; }
+  .post-type-archive-event .event-single .event .entry-text-wrapper {
+    overflow: scroll;
+    text-align: justify;
+    padding: 5px 40px; }
+    .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
+      padding-right: 100px;
+      color: #7bd1d0; }
+    .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
+      display: block;
+      margin: 0 auto; }
   .post-type-archive-event .event-single .hide-content {
     position: relative;
     padding-left: 40px; }
@@ -1485,12 +1514,13 @@ object {
       top: 0; }
 
 .post-type-archive-event .pop-up {
+  z-index: 99999;
   position: fixed;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background-image: url("../../assets/images/RSVPBg.png");
+  background-image: url("../../assets/images/rsvp-background.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f7f9fa;
@@ -1499,6 +1529,12 @@ object {
   border-bottom: 5px solid #026082; }
   .post-type-archive-event .pop-up .wpcf7 {
     margin: 20px; }
+    .post-type-archive-event .pop-up .wpcf7 .wpcf7-response-output {
+      border: 2px solid #7bd1d0;
+      border-radius: 5px;
+      -webkit-box-shadow: 2px 2px #888888;
+              box-shadow: 2px 2px #888888;
+      color: #008294; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
@@ -1719,14 +1755,29 @@ object {
 /*--------------------------------------------------------------
 # Academy Page
 --------------------------------------------------------------*/
-.page-id-46 .entry-header h1 {
-  color: #026082; }
-  @media screen and (min-width: 1000px) {
-    .page-id-46 .entry-header h1 {
-      color: white; } }
+@media screen and (min-width: 1000px) {
+  .page-id-46 {
+    background-image: url("../../assets/images/academy-desktop-background.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 20px; } }
 
-.page-id-46 .entry-header p {
-  color: white; }
+.page-id-46 .entry-header {
+  background-image: url("../../assets/images/academy-mobile-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%; }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .entry-header {
+      background-image: none; } }
+  .page-id-46 .entry-header h1 {
+    color: #026082; }
+    @media screen and (min-width: 1000px) {
+      .page-id-46 .entry-header h1 {
+        color: white; } }
+  .page-id-46 .entry-header p {
+    color: white; }
 
 @media screen and (min-width: 1000px) {
   .page-id-46 h2,
@@ -1736,28 +1787,23 @@ object {
 
 @media screen and (min-width: 1000px) {
   .page-id-46 .site-main > article:first-child header {
-    height: 20vh; } }
+    height: 30vh; } }
 
-.page-id-46 .site-content {
-  background-image: url("../../assets/images/academy-mobile-background.png"); }
+.page-id-46 .entry-content {
+  width: 80%;
+  margin: 0 auto; }
+  .page-id-46 .entry-content h2 {
+    padding-top: 20px; }
   @media screen and (min-width: 1000px) {
-    .page-id-46 .site-content {
-      background-image: url("../../assets/images/academy-mobile-background.png");
-      height: 80vh; } }
-  .page-id-46 .site-content .content-area {
-    background-position: center;
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto; }
-    .page-id-46 .site-content .content-area .entry-content {
-      margin: 0 auto; }
+    .page-id-46 .entry-content p {
+      text-align: center; } }
 
 .wp-block-button__link {
   text-transform: uppercase;
   color: #026082;
-  font-weight: bold;
   background-color: #ffae4e;
-  border-radius: 25px; }
+  border-radius: 20px;
+  padding: 12px 40px; }
 
 /*--------------------------------------------------------------
 # Membership Page
@@ -1923,8 +1969,7 @@ object {
   background-image: url("../../assets/images/footer-mobile.png");
   background-size: cover;
   background-repeat: no-repeat;
-  color: #f7f9fa;
-  height: 250px;
+  height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1938,7 +1983,8 @@ object {
     font-size: 11.2px;
     font-size: 0.7rem;
     text-align: start;
-    width: 80vw; }
+    width: 80vw;
+    color: white; }
     @media screen and (min-width: 1000px) {
       .site-footer p {
         text-align: center;

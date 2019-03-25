@@ -5,8 +5,7 @@
   background-image: url('../../assets/images/footer-mobile.png');
   background-size: cover;
   background-repeat: no-repeat;
-  color: $color__brand-ghost-white;
-  height: 250px;
+  height: 220px;
   display: flex;
   align-items: flex-end;
 
@@ -19,6 +18,7 @@
     @include font-size(0.7);
     text-align: start;
     width: 80vw;
+    color: white;
 
     @include desktop {
       text-align: center;
