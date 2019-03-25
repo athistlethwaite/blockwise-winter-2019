@@ -1715,20 +1715,28 @@ object {
 /*--------------------------------------------------------------
 # Academy Page
 --------------------------------------------------------------*/
-.page-id-46 h1,
-.page-id-46 h2,
-.page-id-46 h3,
-.page-id-46 p {
+.page-id-46 .entry-header h1 {
+  color: #026082; }
+
+.page-id-46 .entry-header p {
   color: white; }
 
-.page-id-46 .site-main > article:first-child header {
-  height: 20vh; }
-  @media screen and (min-width: 1000px) {
-    .page-id-46 .site-main > article:first-child header {
-      height: 20vh; } }
+@media screen and (min-width: 1000px) {
+  .page-id-46 h1,
+  .page-id-46 h2,
+  .page-id-46 h3,
+  .page-id-46 p {
+    color: white; } }
+
+@media screen and (min-width: 1000px) {
+  .page-id-46 .site-main > article:first-child header {
+    height: 20vh; } }
 
 .page-id-46 .site-content {
-  background-image: url("../../assets/images/academy-desktop-background.png"); }
+  background-image: url("../../assets/images/academy-mobile-background.png"); }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .site-content {
+      background-image: url("../../assets/images/academy-mobile-background.png"); } }
   .page-id-46 .site-content .content-area {
     background-position: center;
     background-size: cover;
@@ -1740,8 +1748,9 @@ object {
 .wp-block-button__link {
   text-transform: uppercase;
   color: #026082;
+  font-weight: bold;
   background-color: #ffae4e;
-  border-radius: 10px; }
+  border-radius: 25px; }
 
 /*--------------------------------------------------------------
 # Membership Page
