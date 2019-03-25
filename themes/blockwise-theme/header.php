@@ -25,15 +25,12 @@
             <div class="container">
                 <div class="site-branding">
                     <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-                        <img alt="logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/blockwise-logo.png">
-                    </a>
-                    <a href="<?php echo esc_url(home_url('/')); ?>" rel="home">
                         <h1 class="site-title"><?php bloginfo('name'); ?></h1>
                     </a>
                 </div><!-- .site-branding -->
 
                 <nav id="site-navigation" class="main-navigation" role="navigation">
-                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php echo esc_html('Primary Menu'); ?></button>
+                    <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
                     <?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
                 </nav><!-- #site-navigation -->
             </div>

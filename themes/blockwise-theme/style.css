@@ -659,8 +659,7 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #026082;
-  text-decoration: none; }
+  color: #026082; }
   a:visited {
     color: #026082; }
   a:hover, a:focus, a:active {
@@ -672,14 +671,15 @@ a {
 
 /* Menus */
 .main-navigation {
-  clear: both; }
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%; }
   .main-navigation ul {
     display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0;
-    text-transform: capitalize;
-    font-weight: bold; }
+    padding-left: 0; }
     .main-navigation ul ul {
       -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
               box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -701,41 +701,10 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative;
-    margin: 0 0.8em; }
+    position: relative; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
-  .main-navigation ul[aria-expanded='true'] {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    z-index: 999;
-    background-color: #f7f9fa; }
-    .main-navigation ul[aria-expanded='true'] a {
-      color: #026082;
-      text-align: left; }
-    .main-navigation ul[aria-expanded='true'] li {
-      display: block;
-      width: 100vw;
-      margin: 0;
-      padding: 1em 0;
-      border: 2px solid #026082;
-      border-top: 0;
-      border-radius: 2px; }
-  @media screen and (min-width: 1000px) {
-    .main-navigation .sub-menu {
-      top: 52px;
-      background-color: #f7f9fa;
-      text-align: center; }
-      .main-navigation .sub-menu a {
-        color: #026082; }
-      .main-navigation .sub-menu li {
-        margin: 0;
-        padding: 1em 0;
-        border: 2px solid #026082;
-        border-top: 0;
-        border-radius: 2px; } }
 
 /* Small menu. */
 .menu-toggle,
@@ -743,8 +712,6 @@ a {
   display: block; }
 
 @media screen and (min-width: 1000px) {
-  .main-navigation {
-    display: inline-block; }
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -941,7 +908,7 @@ object {
 /*--------------------------------------------------------------
 # Globals
 --------------------------------------------------------------*/
-.container, .main-navigation ul[aria-expanded='true'] a {
+.container {
   max-width: 1000px;
   margin: 0 auto; }
 
@@ -1012,6 +979,7 @@ object {
     background-color: rgba(247, 249, 250, 0.8);
     border-radius: 50%; }
   .carosel .carosel-viewport {
+    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1071,42 +1039,36 @@ object {
         .carosel .carosel-viewport .carosel-item .carosel-content p {
           margin: 0; }
 
-<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Header
-=======
-/*--------------------------------------------------------------
-# Header
->>>>>>> b28b80c315f17659d2e544606959d04d284dce90
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
   background-color: #026082; }
   .site-header a,
   .site-header h1 {
-    color: #f7f9fa; }
+    color: #f7f9fa;
+    text-decoration: none; }
     .site-header a:hover,
     .site-header h1:hover {
       color: #ffae4e; }
   .site-header .site-branding {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    .site-header .site-branding img {
-      margin-right: 1.5rem;
-      width: auto;
-      height: 40px; }
-  .site-header .container, .site-header .main-navigation ul[aria-expanded='true'] a, .main-navigation ul[aria-expanded='true'] .site-header a {
+    position: relative; }
+    .site-header .site-branding .site-title {
+      margin: 0 auto; }
+      .site-header .site-branding .site-title:before {
+        background-image: url(../../assets/images/blockwise-logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        -webkit-transform: translate(-100%, -50%);
+                transform: translate(-100%, -50%);
+        height: 2.5rem;
+        width: 3.8rem; }
+  .site-header .container {
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;

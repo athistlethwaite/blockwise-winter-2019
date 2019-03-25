@@ -8,22 +8,28 @@
   a,
   h1 {
     color: $color__brand-ghost-white;
-
+    text-decoration: none;
     &:hover {
       color: $color__brand-yellow-orange;
     }
   }
 
   .site-branding {
-    display: flex;
-    flex-flow: row, nowrap;
-    align-items: center;
-    justify-content: flex-start;
-
-    img {
-      margin-right: 1.5rem;
-      width: auto;
-      height: 40px;
+    position: relative;
+    .site-title {
+      margin: 0 auto;
+      &:before {
+        background-image: url(../../assets/images/blockwise-logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -1rem;
+        transform: translate(-100%, -50%);
+        height: 2.5rem;
+        width: 3.8rem;
+      }
     }
   }
 
