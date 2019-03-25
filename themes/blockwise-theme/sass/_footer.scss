@@ -2,10 +2,17 @@
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: $color__brand-blue-sapphire;
+  background-image: url('../../assets/images/footer-mobile.png');
+  // width: 375px;
+  // height: 144px;
+  background-repeat: no-repeat;
   color: $color__brand-ghost-white;
-  padding-bottom: 1rem;
-  padding-top: 2rem;
+
+  @include desktop {
+    background-image: url('../../assets/images/footer-desktop.png');
+    // width: 1440px;
+    // height: 187px;
+  }
 
   p {
     @include font-size(0.7);

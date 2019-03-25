@@ -8,6 +8,10 @@
 
     h1 {
       color: $color__brand-blue-sapphire;
+
+      @include desktop {
+        color: white;
+      }
     }
 
     p {
@@ -17,7 +21,6 @@
 
   @include desktop {
 
-    h1,
     h2,
     h3,
     p {
@@ -35,9 +38,9 @@
   .site-content {
     background-image: url('../../assets/images/academy-mobile-background.png');
 
-
     @include desktop {
       background-image: url('../../assets/images/academy-mobile-background.png');
+      height: 80vh;
     }
 
     .content-area {

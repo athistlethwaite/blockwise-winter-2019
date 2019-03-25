@@ -1450,6 +1450,22 @@ object {
   height: 100%;
   width: 100%;
   background-color: #f7f9fa; }
+  .post-type-archive-event .event-single .event {
+    padding-top: 20px; }
+    .post-type-archive-event .event-single .event .entry-header ::before {
+      margin-left: 10px;
+      width: 15px; }
+    .post-type-archive-event .event-single .event .entry-header .hide-content {
+      padding-top: 5px;
+      font-size: 1rem; }
+    .post-type-archive-event .event-single .event .entry-text-wrapper {
+      text-align: justify;
+      padding: 5px 40px; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
+        padding-right: 100px;
+        color: #7bd1d0; }
+      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
+        margin: 0 135px; }
   .post-type-archive-event .event-single .hide-content {
     position: relative;
     padding-left: 40px; }
@@ -1468,10 +1484,16 @@ object {
   position: fixed;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  top: 5%;
+  top: 20%;
   left: 50%;
+  background-image: url("../../assets/images/pop-up.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color: #f7f9fa;
-  border: 1px solid #026082; }
+  border: 3px solid #026082;
+  border-radius: 10px; }
+  .post-type-archive-event .pop-up .wpcf7 {
+    margin: 20px; }
 
 /*--------------------------------------------------------------
 # Lesson Archive Page
@@ -1694,12 +1716,14 @@ object {
 --------------------------------------------------------------*/
 .page-id-46 .entry-header h1 {
   color: #026082; }
+  @media screen and (min-width: 1000px) {
+    .page-id-46 .entry-header h1 {
+      color: white; } }
 
 .page-id-46 .entry-header p {
   color: white; }
 
 @media screen and (min-width: 1000px) {
-  .page-id-46 h1,
   .page-id-46 h2,
   .page-id-46 h3,
   .page-id-46 p {
@@ -1713,7 +1737,8 @@ object {
   background-image: url("../../assets/images/academy-mobile-background.png"); }
   @media screen and (min-width: 1000px) {
     .page-id-46 .site-content {
-      background-image: url("../../assets/images/academy-mobile-background.png"); } }
+      background-image: url("../../assets/images/academy-mobile-background.png");
+      height: 80vh; } }
   .page-id-46 .site-content .content-area {
     background-position: center;
     background-size: cover;
@@ -1872,10 +1897,12 @@ object {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-  background-color: #026082;
-  color: #f7f9fa;
-  padding-bottom: 1rem;
-  padding-top: 2rem; }
+  background-image: url("../../assets/images/footer-mobile.png");
+  background-repeat: no-repeat;
+  color: #f7f9fa; }
+  @media screen and (min-width: 1000px) {
+    .site-footer {
+      background-image: url("../../assets/images/footer-desktop.png"); } }
   .site-footer p {
     font-size: 11.2px;
     font-size: 0.7rem;
