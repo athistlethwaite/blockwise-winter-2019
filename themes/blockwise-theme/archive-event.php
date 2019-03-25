@@ -47,9 +47,9 @@ get_header(); ?>
         </section>
 
         <?php blockwise_numbered_pagination(); ?>
-        <section class="event-single hidden">
+        <section class="event-single hidden container">
         </section>
-        <div class="pop-up hidden">
+        <div class="pop-up hidden container">
             <?php echo do_shortcode('[contact-form-7 id="249" title="RSVP form"]'); ?>
         </div>
 
