@@ -943,6 +943,10 @@ object {
   background-color: rgba(247, 249, 250, 0.7);
   padding: 1rem 0; }
 
+* .header-content-wrapper p,
+.front-page-banner .header-content-wrapper p {
+  font-weight: bold; }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1055,7 +1059,7 @@ object {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999; }
+  z-index: 300; }
   .site-header .menu-toggle,
   .site-header .site-title {
     padding: 2rem 0 1rem 0;
@@ -1451,11 +1455,7 @@ object {
   width: 100%;
   background-color: #f7f9fa; }
   .post-type-archive-event .event-single .event {
-<<<<<<< HEAD
-    padding-top: 20px; }
-=======
     padding-top: 50px; }
->>>>>>> a11f1763dc5b1f31d58faaef17da722110cc43ad
     .post-type-archive-event .event-single .event .entry-header ::before {
       margin-left: 10px;
       width: 15px; }
@@ -1486,18 +1486,6 @@ object {
 
 .post-type-archive-event .pop-up {
   position: fixed;
-<<<<<<< HEAD
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  top: 20%;
-  left: 50%;
-  background-image: url("../../assets/images/pop-up.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #f7f9fa;
-  border: 3px solid #026082;
-  border-radius: 10px; }
-=======
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
@@ -1509,7 +1497,6 @@ object {
   border-radius: 25px;
   width: 400px;
   border-bottom: 5px solid #026082; }
->>>>>>> a11f1763dc5b1f31d58faaef17da722110cc43ad
   .post-type-archive-event .pop-up .wpcf7 {
     margin: 20px; }
 
@@ -1933,8 +1920,8 @@ object {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
