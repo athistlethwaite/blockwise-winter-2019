@@ -6,8 +6,11 @@
 
   function buildCarosel(carosel) {
     carosel.addClass('carosel');
+
     carosel.find('>div').addClass('carosel-item');
+    const viewPortWidth = 1 * carosel.width();
     const item = $('.carosel-item');
+    item.css('width', viewPortWidth / carosel.find('>.carosel-item').length);
     item
       .find('p')
       .parent('div')
@@ -16,10 +19,9 @@
       .find('img')
       .parent('div')
       .addClass('carosel-thumbnail');
-
     const viewPort =
       '<div class="carosel-viewport" style="width:' +
-      item.width() * 1.1 +
+      viewPortWidth +
       'px">' +
       carosel.html() +
       '<a style="left:1rem" class="carosel-nav left">&#10094;</a><a style="right:1rem" class="carosel-nav right">&#10095;</a></div>';
