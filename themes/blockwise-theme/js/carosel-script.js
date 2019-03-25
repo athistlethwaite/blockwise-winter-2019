@@ -6,11 +6,11 @@
 
   function buildCarosel(carosel) {
     carosel.addClass('carosel');
-
+    const itemWidth = carosel.width() / 4;
     carosel.find('>div').addClass('carosel-item');
-    const viewPortWidth = 1 * carosel.width();
     const item = $('.carosel-item');
-    item.css('width', viewPortWidth / carosel.find('>.carosel-item').length);
+    item.css('width', itemWidth);
+    const viewPortWidth = itemWidth * carosel.find('.carosel-item').length;
     item
       .find('p')
       .parent('div')
