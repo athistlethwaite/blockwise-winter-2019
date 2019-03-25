@@ -1,3 +1,20 @@
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
+
+.page-id-70 {
+  .entry-header {
+    background-image: url('../../assets/images/contact-banner.jpg');
+    background-size: cover;
+  }
+  .wpcf7-form {
+    text-align: center;
+    padding: 0 32px;
+  }
+  @include desktop {
+    .page {
+      background-image: url('../../assets/images/contact-banner.jpg');
+      background-size: cover;
+    }
+  }
+}

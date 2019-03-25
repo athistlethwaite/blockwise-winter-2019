@@ -35,7 +35,7 @@
     return (
       '<article id="' +
       articleId +
-      '" class="' +
+      '" class="container ' +
       articleClass +
       '">' +
       articleContent +

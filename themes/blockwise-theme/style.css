@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*!
 Theme Name: Blockwise Theme
 Theme URI: http://underscores.me/
@@ -17,6 +18,24 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+=======
+/*!
+Theme Name: Blockwise Theme
+Theme URI: http://underscores.me/
+Author: Emre, Marie, Gavin & Alysha
+Author URI: http://www.redacademy.com
+Description: A RED Academy community project for Blockwise.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+Blockwise Theme is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+>>>>>>> fe725da6b6980eb354696731906d3af463de90c4
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
@@ -672,17 +691,16 @@ a {
 
 /* Menus */
 .main-navigation {
-  clear: both; }
+  clear: both;
+  display: block;
+  float: left;
+  width: 100%; }
   .main-navigation ul {
     display: none;
     list-style: none;
     margin: 0;
-    padding-left: 0;
-    text-transform: capitalize;
-    font-weight: bold; }
+    padding-left: 0; }
     .main-navigation ul ul {
-      -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-              box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
       position: absolute;
       top: 1.5rem;
@@ -701,50 +719,23 @@ a {
       left: auto; }
   .main-navigation li {
     float: left;
-    position: relative;
-    margin: 0 0.8em; }
+    position: relative; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
-  .main-navigation ul[aria-expanded='true'] {
-    position: absolute;
-    left: 0;
-    top: 80px;
-    z-index: 999;
-    background-color: #f7f9fa; }
-    .main-navigation ul[aria-expanded='true'] a {
-      color: #026082;
-      text-align: left; }
-    .main-navigation ul[aria-expanded='true'] li {
-      display: block;
-      width: 100vw;
-      margin: 0;
-      padding: 1em 0;
-      border: 2px solid #026082;
-      border-top: 0;
-      border-radius: 2px; }
-  @media screen and (min-width: 1000px) {
-    .main-navigation .sub-menu {
-      top: 52px;
-      background-color: #f7f9fa;
-      text-align: center; }
-      .main-navigation .sub-menu a {
-        color: #026082; }
-      .main-navigation .sub-menu li {
-        margin: 0;
-        padding: 1em 0;
-        border: 2px solid #026082;
-        border-top: 0;
-        border-radius: 2px; } }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block; }
 
+.menu-toggle {
+  float: right;
+  color: #ffae4e;
+  background-color: #026082;
+  font-size: 1.5rem; }
+
 @media screen and (min-width: 1000px) {
-  .main-navigation {
-    display: inline-block; }
   .menu-toggle {
     display: none; }
   .main-navigation ul {
@@ -941,7 +932,7 @@ object {
 /*--------------------------------------------------------------
 # Globals
 --------------------------------------------------------------*/
-.container, .main-navigation ul[aria-expanded='true'] a {
+.container {
   max-width: 1000px;
   margin: 0 auto; }
 
@@ -994,6 +985,9 @@ object {
 .yellow-btn {
   background: #ffae4e;
   color: #008294; }
+  .yellow-btn:hover {
+    color: #008294;
+    background-color: rgba(255, 174, 78, 0.7); }
 
 .carosel {
   -webkit-box-sizing: border-box;
@@ -1072,38 +1066,118 @@ object {
         .carosel .carosel-viewport .carosel-item .carosel-content p {
           margin: 0; }
 
+<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Header
+=======
+/*--------------------------------------------------------------
+# Header
+>>>>>>> fe725da6b6980eb354696731906d3af463de90c4
 --------------------------------------------------------------*/
 .site-header {
   color: #f7f9fa;
-  background-color: #026082; }
-  .site-header a,
-  .site-header h1 {
-    color: #f7f9fa; }
-    .site-header a:hover,
-    .site-header h1:hover {
-      color: #ffae4e; }
-  .site-header .site-branding {
+  background-color: #026082;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999; }
+  .site-header .menu-toggle,
+  .site-header .site-title {
+    padding: 2rem 0 1rem 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .site-header .menu-toggle {
+    font-size: 2rem; }
+  @media screen and (min-width: 1000px) {
+    .site-header #primary-menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .site-header #primary-menu > li > a {
+      padding: 2rem 0 1rem 0;
+      color: #f7f9fa;
+      border-bottom: 3px solid #026082; }
+      .site-header #primary-menu > li > a:hover {
+        color: #ffae4e;
+        border-color: #ffae4e; }
+    .site-header .sub-menu {
+      text-align: center;
+      background-color: #f7f9fa;
+      -webkit-transform: translate(-40%, 2.8rem);
+              transform: translate(-40%, 2.8rem);
+      border: 2px solid #026082;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box; }
+      .site-header .sub-menu li {
+        padding: 1rem 0;
+        border-top: 2px solid #026082; }
+        .site-header .sub-menu li:first-child {
+          border: 0; } }
+  .site-header .toggled #primary-menu {
+    position: absolute;
+    font-size: 20.8px;
+    font-size: 1.3rem;
+    top: 5.5rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/images/menu-bg.png");
+    background-size: 100vw;
+    background-repeat: none; }
+  .site-header .toggled ul {
+    padding: 1rem; }
+  .site-header .toggled .sub-menu {
+    display: none; }
+  .site-header .toggled li.focus > .sub-menu {
+    display: inline-block;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-    .site-header .site-branding img {
-      margin-right: 1.5rem;
-      width: auto;
-      height: 40px; }
-  .site-header .container, .site-header .main-navigation ul[aria-expanded='true'] a, .main-navigation ul[aria-expanded='true'] .site-header a {
-    position: relative;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
+  .site-header .toggled ul > li {
+    width: 100%;
+    display: block;
+    padding: 2rem 0; }
+    .site-header .toggled ul > li a {
+      margin-left: 5em; }
+  .site-header .site-branding {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 30%;
+            flex: 1 0 30%; }
+    .site-header .site-branding .site-title {
+      color: #f7f9fa;
+      margin: 0;
+      padding-left: 60px;
+      text-align: left;
+      text-decoration: none;
+      position: relative; }
+      .site-header .site-branding .site-title:hover {
+        color: #ffae4e; }
+      .site-header .site-branding .site-title:before {
+        background-image: url(../../assets/images/blockwise-logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        -webkit-transform: translate(0, -30%);
+                transform: translate(0, -30%);
+        height: 35px;
+        width: 53px; }
+  .site-header #primary-menu > li:last-child > a {
+    color: #ffae4e; }
+  .site-header .container {
+    padding: 0 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1113,9 +1187,9 @@ object {
             flex-flow: row, nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
 
 /*--------------------------------------------------------------
 # Front Page 
@@ -1799,8 +1873,26 @@ object {
 /*--------------------------------------------------------------
 # Contact Page
 --------------------------------------------------------------*/
+<<<<<<< HEAD
 /*--------------------------------------------------------------
 # Footer
+=======
+.page-id-70 .entry-header {
+  background-image: url("../../assets/images/contact-banner.jpg");
+  background-size: cover; }
+
+.page-id-70 .wpcf7-form {
+  text-align: center;
+  padding: 0 32px; }
+
+@media screen and (min-width: 1000px) {
+  .page-id-70 .page {
+    background-image: url("../../assets/images/contact-banner.jpg");
+    background-size: cover; } }
+
+/*--------------------------------------------------------------
+# Footer
+>>>>>>> fe725da6b6980eb354696731906d3af463de90c4
 --------------------------------------------------------------*/
 .site-footer {
   background-color: #026082;
