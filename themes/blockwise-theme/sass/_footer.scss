@@ -11,18 +11,16 @@
 
   @include desktop {
     background-image: url('../../assets/images/footer-desktop.png');
-
   }
 
   p {
     @include font-size(0.7);
     text-align: start;
-    width: 80vw;
+
     color: white;
 
     @include desktop {
       text-align: center;
-      width: 50vw;
     }
   }
 
@@ -58,13 +56,12 @@
     }
 
     display: flex;
-    flex-flow: row,
-    nowrap;
+    flex-flow: row, nowrap;
     justify-content: space-between;
     align-items: flex-start;
-
+    width: 80vw;
+    max-width: 100%;
     @include desktop {
-      width: $desktop-width;
       align-items: center;
     }
   }
