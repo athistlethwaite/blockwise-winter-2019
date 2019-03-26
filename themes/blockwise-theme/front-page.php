@@ -17,7 +17,9 @@ get_header(); ?>
                 <?php the_title('<h1 class="entry-title">', '</h1>'); ?>
                 <p><?php echo CFS()->get('page_subtitle'); ?></p>
             </div>
-            <?php get_template_part('template-parts/content', 'partners') ?>
+            <div class="front-page-carosel">
+                <?php get_template_part('template-parts/content', 'partners') ?>
+            </div>
         </header><!-- .entry-header -->
 
         <?php endwhile; ?>

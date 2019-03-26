@@ -11,7 +11,6 @@
     position: relative;
 
     .header-content-wrapper {
-
       h1,
       p {
         text-align: left;
@@ -28,7 +27,8 @@
       }
     }
 
-    .carosel {
+    .front-page-carosel {
+      width: 100%;
       background-color: $color__brand-dark-cyan;
       position: absolute;
       bottom: 20px;
@@ -54,7 +54,7 @@
   }
 
   .front-page-content {
-    &>h2 {
+    & > h2 {
       margin: 2em auto;
     }
 

@@ -5,6 +5,7 @@
   padding: 0.5em;
   color: $color__brand-yellow-orange;
   font-size: 2rem;
+  transform: translate(0, -50%);
   &.left {
     left: 5px;
     @include desktop {

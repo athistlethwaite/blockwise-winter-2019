@@ -990,7 +990,9 @@ body {
           box-sizing: border-box;
   padding: 0.5em;
   color: #ffae4e;
-  font-size: 2rem; }
+  font-size: 2rem;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
   .carosel-nav.left {
     left: 5px; }
     @media screen and (min-width: 1000px) {
@@ -1214,19 +1216,20 @@ body {
     @media screen and (min-width: 1000px) {
       .home .front-page-banner .header-content-wrapper {
         max-width: none; } }
-  .home .front-page-banner .carosel {
+  .home .front-page-banner .front-page-carosel {
+    width: 100%;
     background-color: #008294;
     position: absolute;
     bottom: 20px; }
     @media screen and (min-width: 1000px) {
-      .home .front-page-banner .carosel {
+      .home .front-page-banner .front-page-carosel {
         bottom: 80px; } }
-    .home .front-page-banner .carosel .carosel-item {
+    .home .front-page-banner .front-page-carosel .carosel-item {
       width: 150px; }
       @media screen and (min-width: 1000px) {
-        .home .front-page-banner .carosel .carosel-item {
+        .home .front-page-banner .front-page-carosel .carosel-item {
           width: 250px; } }
-    .home .front-page-banner .carosel .carosel-thumbnail img {
+    .home .front-page-banner .front-page-carosel .carosel-thumbnail img {
       width: 50%; }
 
 .home .front-page-content > h2 {
