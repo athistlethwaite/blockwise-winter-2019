@@ -1517,7 +1517,8 @@ body {
             background-color: #026082; }
             .post-type-archive-event .event-single article .entry-header a,
             .post-type-archive-event .event-single article .entry-header h2 {
-              color: #f7f9fa; }
+              color: #f7f9fa;
+              font-family: "Proxima-Nova"; }
               .post-type-archive-event .event-single article .entry-header a:hover,
               .post-type-archive-event .event-single article .entry-header h2:hover {
                 color: #ffae4e; }
