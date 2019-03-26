@@ -1936,13 +1936,13 @@ body {
           -webkit-box-pack: end;
               -ms-flex-pack: end;
                   justify-content: flex-end; }
-        .page-template-membership .wpcf7-form .input {
-          grid-area: main; }
+        .page-template-membership .wpcf7-form .inputs {
+          grid-area: main;
+          margin-right: 250px; }
         .page-template-membership .wpcf7-form .about {
           grid-area: sidebar; }
         .page-template-membership .wpcf7-form .submit {
-          grid-area: footer;
-          padding-top: 43px; } }
+          grid-area: footer; } }
   @media screen and (min-width: 1000px) and (min-width: 1000px) {
     .page-template-membership .wpcf7-form .close,
     .page-template-membership .wpcf7-form h3 {
@@ -1971,18 +1971,24 @@ body {
           border-color: #008294;
           border-top-left-radius: 20px;
           border-top-right-radius: 20px;
-          margin: 0 50px;
           background-color: #008294;
-          color: #f7f9fa; } }
+          color: #f7f9fa; }
+          .page-template-membership .tablinks li:first-child {
+            margin-right: 50px; }
+          .page-template-membership .tablinks li:last-child {
+            margin-left: 50px; } }
   .page-template-membership .option-wrapper ul {
     list-style-image: url("../../assets/images/membership-check.png"); }
     @media screen and (min-width: 1000px) {
       .page-template-membership .option-wrapper ul {
         border: solid;
         padding-top: 14px;
-        margin: 0 50px;
         border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px; } }
+        border-bottom-right-radius: 20px; }
+        .page-template-membership .option-wrapper ul:first-child {
+          margin-right: 50px; }
+        .page-template-membership .option-wrapper ul:last-child {
+          margin-left: 50px; } }
   @media screen and (min-width: 1000px) {
     .page-template-membership .option-wrapper {
       display: -webkit-box;
