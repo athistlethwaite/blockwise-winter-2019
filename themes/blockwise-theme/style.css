@@ -1422,7 +1422,7 @@ body {
           text-align: center;
           padding: 0.5em;
           border-radius: 1rem;
-          background-color: rgba(247, 249, 250, 0.7);
+          background-color: white;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -1480,7 +1480,7 @@ body {
     top: 0;
     height: 100%;
     width: 100vw;
-    background-color: #f7f9fa; }
+    background-color: white; }
     @media screen and (min-width: 1000px) {
       .post-type-archive-event .event-single {
         top: auto;
@@ -1609,7 +1609,7 @@ body {
     background-image: url("../../assets/images/rsvp-background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #f7f9fa;
+    background-color: white;
     border-radius: 25px;
     width: 400px;
     border-bottom: 5px solid #026082; }
@@ -1691,7 +1691,7 @@ body {
           position: absolute;
           width: 50px;
           height: 7px;
-          top: 50%;
+          top: 32px;
           left: 0;
           -webkit-transform: translate(-100%, -50%);
                   transform: translate(-100%, -50%); } }
@@ -1855,10 +1855,11 @@ body {
 @media screen and (min-width: 1000px) {
   .page-id-46 {
     background-image: url("../../assets/images/academy-desktop-background.png");
-    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 20px; } }
+    padding-top: 20px; }
+    .page-id-46 .site-main {
+      padding-top: 50px; } }
 
 .page-id-46 .entry-header {
   background-image: url("../../assets/images/academy-mobile-background.png");
@@ -2090,6 +2091,17 @@ body {
     background-size: cover; }
   .page-id-70 .entry-content p {
     text-align: center; } }
+
+.error404 .error-404 {
+  height: 100vh; }
+  .error404 .error-404 .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
 
 /*--------------------------------------------------------------
 # Footer

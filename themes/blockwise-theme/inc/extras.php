@@ -29,13 +29,13 @@ function blockwise_login_logo()
 		.login h1 a {
 			background-image: url(' . $logo_url . ');
 			background-repreat: no-repreat;
-			//background-size: 35px 70px;
+			background-size: 100% 100%;
 			height: 100px;
-			width: 100px;
+			width: 100%;
 			margin: 0;
 		}
 		.login .button.button-primary {
-			background-color : #248A83;
+			background-color : $color__brand-blue-sapphire;
 		}
 	</style>';
 }
