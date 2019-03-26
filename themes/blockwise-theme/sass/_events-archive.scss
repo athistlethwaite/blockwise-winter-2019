@@ -14,9 +14,20 @@
   }
 
   .event-boxes {
+    .entry-content,
+    .hide-content {
+      display: none;
+    }
     display: flex;
     flex-flow: column nowrap;
 
+    @include desktop {
+      margin-bottom: 2em;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      max-width: $container-width;
+    }
     article {
       position: relative;
       box-sizing: border-box;
@@ -26,38 +37,9 @@
       margin-bottom: 0;
       border: 2px solid $color__brand-blue-sapphire;
       border-top: 0;
-      &:first-child {
-        border-top: 2px solid $color__brand-blue-sapphire;
-      }
-      .entry-title:after {
-        background-image: url('../../assets/images/learn-arrow.png');
-        background-repeat: no-repeat;
-        background-size: cover cover;
-        width: 20px;
-        height: 40px;
-        content: '';
-        position: absolute;
-        transform: translate(-50%, -50%);
-        right: 10px;
-        top: 50%;
-      }
-    }
-
-    @include desktop {
-      padding-bottom: 2em;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      article {
+      @include desktop {
         border: 0;
-        &:first-child {
-          border-top: 0;
-        }
-        .entry-title:after {
-          display: none;
-        }
-        flex: 1 0 25%;
-        max-width: 18em;
+        width: 30%;
         text-align: center;
         padding: 0.5em;
         border-radius: 1rem;
@@ -73,23 +55,37 @@
           content: '';
           position: absolute;
           background-size: cover;
-          width: 75px;
-          height: 11px;
+          width: $container-width * 0.05;
+          height: $container-width * 0.007;
           top: 50%;
           left: 0;
           transform: translate(-100%, -50%);
         }
-        &:first-child {
+      }
+      &:first-child {
+        border-top: 2px solid $color__brand-blue-sapphire;
+        @include desktop {
+          border-top: 0;
           &:before {
             display: none;
           }
         }
       }
-    }
-
-    .entry-content,
-    .hide-content {
-      display: none;
+      .entry-title:after {
+        background-image: url('../../assets/images/learn-arrow.png');
+        background-repeat: no-repeat;
+        background-size: cover cover;
+        width: 20px;
+        height: 40px;
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        right: 10px;
+        top: 50%;
+        @include desktop {
+          display: none;
+        }
+      }
     }
   }
   .hidden {

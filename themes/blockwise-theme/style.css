@@ -911,7 +911,7 @@ object {
 # Globals
 --------------------------------------------------------------*/
 .container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto; }
 
 body {
@@ -1353,6 +1353,23 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap; }
+    .post-type-archive-event .event-boxes .entry-content,
+    .post-type-archive-event .event-boxes .hide-content {
+      display: none; }
+    @media screen and (min-width: 1000px) {
+      .post-type-archive-event .event-boxes {
+        margin-bottom: 2em;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        max-width: 1200px; } }
     .post-type-archive-event .event-boxes article {
       position: relative;
       -webkit-box-sizing: border-box;
@@ -1363,39 +1380,10 @@ body {
       margin-bottom: 0;
       border: 2px solid #026082;
       border-top: 0; }
-      .post-type-archive-event .event-boxes article:first-child {
-        border-top: 2px solid #026082; }
-      .post-type-archive-event .event-boxes article .entry-title:after {
-        background-image: url("../../assets/images/learn-arrow.png");
-        background-repeat: no-repeat;
-        background-size: cover cover;
-        width: 20px;
-        height: 40px;
-        content: '';
-        position: absolute;
-        -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-        right: 10px;
-        top: 50%; }
-    @media screen and (min-width: 1000px) {
-      .post-type-archive-event .event-boxes {
-        padding-bottom: 2em;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: justify;
-            -ms-flex-pack: justify;
-                justify-content: space-between; }
+      @media screen and (min-width: 1000px) {
         .post-type-archive-event .event-boxes article {
           border: 0;
-          -webkit-box-flex: 1;
-              -ms-flex: 1 0 25%;
-                  flex: 1 0 25%;
-          max-width: 18em;
+          width: 30%;
           text-align: center;
           padding: 0.5em;
           border-radius: 1rem;
@@ -1414,27 +1402,40 @@ body {
               -ms-flex-flow: column nowrap;
                   flex-flow: column nowrap;
           height: 250px; }
-          .post-type-archive-event .event-boxes article:first-child {
-            border-top: 0; }
-          .post-type-archive-event .event-boxes article .entry-title:after {
-            display: none; }
           .post-type-archive-event .event-boxes article:before {
             background-image: url("../../assets/images/learn-chain-desktop.png");
             background-repeat: no-repeat;
             content: '';
             position: absolute;
             background-size: cover;
-            width: 75px;
-            height: 11px;
+            width: 60px;
+            height: 8.4px;
             top: 50%;
             left: 0;
             -webkit-transform: translate(-100%, -50%);
-                    transform: translate(-100%, -50%); }
-          .post-type-archive-event .event-boxes article:first-child:before {
+                    transform: translate(-100%, -50%); } }
+      .post-type-archive-event .event-boxes article:first-child {
+        border-top: 2px solid #026082; }
+        @media screen and (min-width: 1000px) {
+          .post-type-archive-event .event-boxes article:first-child {
+            border-top: 0; }
+            .post-type-archive-event .event-boxes article:first-child:before {
+              display: none; } }
+      .post-type-archive-event .event-boxes article .entry-title:after {
+        background-image: url("../../assets/images/learn-arrow.png");
+        background-repeat: no-repeat;
+        background-size: cover cover;
+        width: 20px;
+        height: 40px;
+        content: '';
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        right: 10px;
+        top: 50%; }
+        @media screen and (min-width: 1000px) {
+          .post-type-archive-event .event-boxes article .entry-title:after {
             display: none; } }
-    .post-type-archive-event .event-boxes .entry-content,
-    .post-type-archive-event .event-boxes .hide-content {
-      display: none; }
   .post-type-archive-event .hidden {
     display: none; }
   .post-type-archive-event .event-single {
@@ -1566,10 +1567,12 @@ body {
               align-items: flex-start;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; } }
+              justify-content: space-between;
+      max-width: 1000px;
+      margin: 0 auto; } }
   .lessons .lesson-type-wrapper {
     position: relative;
-    padding-bottom: 30px; }
+    margin-bottom: 30px; }
     .lessons .lesson-type-wrapper.chain:first-child:before {
       display: none; }
     .lessons .lesson-type-wrapper.chain:before {
@@ -1586,10 +1589,16 @@ body {
       @media screen and (min-width: 1000px) {
         .lessons .lesson-type-wrapper.chain:before {
           background-image: url("../../assets/images/learn-chain-desktop.png");
-          width: 78px;
-          height: 11px;
-          top: 30px;
-          left: -71px; } }
+          background-repeat: no-repeat;
+          background-size: cover;
+          content: '';
+          position: absolute;
+          width: 50px;
+          height: 7px;
+          top: 50%;
+          left: 0;
+          -webkit-transform: translate(-100%, -50%);
+                  transform: translate(-100%, -50%); } }
     .lessons .lesson-type-wrapper .lesson-type-title {
       background-color: #026082;
       -webkit-box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -1610,12 +1619,15 @@ body {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
-      padding: 0px 10px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding: 0px 2em;
       cursor: pointer; }
       @media screen and (min-width: 1000px) {
         .lessons .lesson-type-wrapper .lesson-type-title {
-          width: 290px; } }
+          width: 300px; } }
       .lessons .lesson-type-wrapper .lesson-type-title h3 {
+        margin: 0;
         -webkit-box-flex: 0;
             -ms-flex: 0 1 90%;
                 flex: 0 1 90%;
