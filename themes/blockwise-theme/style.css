@@ -953,6 +953,11 @@ body {
   .front-page-banner .header-content-wrapper {
     font-size: 1.8rem; } }
 
+.search-pagination {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem; }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1358,6 +1363,14 @@ body {
     @media screen and (min-width: 1000px) {
       .post-type-archive-event .page-header {
         height: 50vh; } }
+  @media screen and (min-width: 1000px) {
+    .post-type-archive-event .search-pagination a,
+    .post-type-archive-event .search-pagination {
+      color: #f7f9fa; }
+      .post-type-archive-event .search-pagination a:active, .post-type-archive-event .search-pagination a:hover,
+      .post-type-archive-event .search-pagination:active,
+      .post-type-archive-event .search-pagination:hover {
+        color: #ffae4e; } }
   .post-type-archive-event .event-boxes {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1401,7 +1414,7 @@ body {
           text-align: center;
           padding: 0.5em;
           border-radius: 1rem;
-          background-color: white;
+          background-color: rgba(247, 249, 250, 0.6);
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -1788,6 +1801,14 @@ body {
 --------------------------------------------------------------*/
 .blog {
   background-image: url("../../assets/images/news-banner.jpg"); }
+
+.search-pagination a,
+.search-pagination {
+  color: #026082; }
+  .search-pagination a:active, .search-pagination a:hover,
+  .search-pagination:active,
+  .search-pagination:hover {
+    color: #ffae4e; }
 
 .archive-posts {
   text-align: center; }

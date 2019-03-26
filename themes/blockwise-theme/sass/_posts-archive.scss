@@ -5,7 +5,14 @@
 .blog {
   background-image: url('../../assets/images/news-banner.jpg');
 }
-
+.search-pagination a,
+.search-pagination {
+  color: $color__brand-blue-sapphire;
+  &:active,
+  &:hover {
+    color: $color__brand-yellow-orange;
+  }
+}
 .archive-posts {
   text-align: center;
   article {
