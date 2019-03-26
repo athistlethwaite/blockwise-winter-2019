@@ -1310,14 +1310,36 @@ body {
     height: 60vw; }
     @media screen and (min-width: 1000px) {
       .page-template-about .site-main > article:first-child header {
-        height: 33vw; }
+        height: 33vw;
+        position: relative; }
         .page-template-about .site-main > article:first-child header .header-content-wrapper {
-          background: none; } }
+          background: none; }
+        .page-template-about .site-main > article:first-child header:after {
+          background-image: url("../../assets/images/about-blocks-right.png");
+          background-repeat: no-repeat;
+          content: '';
+          position: absolute;
+          background-size: auto;
+          background-position-x: 100%;
+          width: 100%;
+          height: 100%;
+          top: 100%;
+          right: 0; }
+        .page-template-about .site-main > article:first-child header:before {
+          background-image: url("../../assets/images/about-blocks-left.png");
+          background-repeat: no-repeat;
+          content: '';
+          position: absolute;
+          background-size: auto;
+          width: 100%;
+          height: 100%;
+          top: 100%;
+          left: 0; } }
   @media screen and (min-width: 1000px) {
     .page-template-about .site-main > article:first-child {
       min-height: 56vw; }
       .page-template-about .site-main > article:first-child .entry-content {
-        max-width: 70%; } }
+        max-width: 60%; } }
   .page-template-about section h2 {
     color: #f7f9fa;
     background-color: #026082;
