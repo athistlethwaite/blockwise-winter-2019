@@ -5,6 +5,7 @@
   max-width: $container-width;
   margin: 0 auto;
 }
+
 body {
   margin-top: 5.5rem;
   background-position-y: 5.5rem;
@@ -12,9 +13,10 @@ body {
   background-repeat: no-repeat;
 }
 
-.site-main > article:first-child header,
+.site-main>article:first-child header,
 .page-header {
   height: 50vh;
+
   @include desktop {
     height: 100vh;
   }
@@ -25,6 +27,7 @@ body {
   align-items: center;
   text-align: center;
 }
+
 .page-template-about,
 .blog {
   .header-content-wrapper {
@@ -33,17 +36,21 @@ body {
     padding: 1rem 0;
   }
 }
+
 *,
 .front-page-banner {
   .header-content-wrapper {
     p {
       font-weight: bold;
+      color: $color__brand-blue-sapphire;
     }
+
     @include desktop {
       font-size: 1.8rem;
     }
   }
 }
+
 .search-pagination {
   margin: 0 auto;
   text-align: center;
@@ -53,7 +60,7 @@ body {
 .blockwise-btn {
   box-sizing: border-box;
   display: inline-block;
-  border-radius: 1rem;
+  border-radius: 1.75rem;
   border: 0px;
   text-transform: uppercase;
   font-weight: bold;
@@ -71,6 +78,7 @@ body {
 .yellow-btn {
   background: $color__brand-yellow-orange;
   color: $color__brand-dark-cyan;
+
   &:hover {
     color: $color__brand-ghost-white;
   }

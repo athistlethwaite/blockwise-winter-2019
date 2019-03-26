@@ -7,6 +7,7 @@
   @include desktop {
     background-size: cover;
   }
+
   .site-content {
     position: relative;
   }
@@ -20,6 +21,7 @@
   }
 
   .event-boxes {
+
     .entry-content,
     .event-rsvp,
     .hide-content {
@@ -169,6 +171,7 @@
           a,
           h2 {
             color: $color__brand-ghost-white;
+            font-family: $font__main;
 
             &:hover {
               color: $color__brand-yellow-orange;

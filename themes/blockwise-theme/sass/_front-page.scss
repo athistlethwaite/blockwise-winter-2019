@@ -11,10 +11,12 @@
     position: relative;
 
     .header-content-wrapper {
+
       h1,
       p {
         text-align: left;
       }
+
       position: absolute;
       max-width: 16em;
       padding: 0 0.5em;
@@ -29,13 +31,20 @@
     .carosel {
       background-color: $color__brand-dark-cyan;
       position: absolute;
-      bottom: 50px;
+      bottom: 20px;
+
+      @include desktop {
+        bottom: 80px;
+      }
+
       .carosel-item {
         width: 150px;
+
         @include desktop {
           width: 250px;
         }
       }
+
       .carosel-thumbnail {
         img {
           width: 50%;
@@ -45,7 +54,7 @@
   }
 
   .front-page-content {
-    & > h2 {
+    &>h2 {
       margin: 2em auto;
     }
 
@@ -61,6 +70,7 @@
 
     @include desktop {
       position: relative;
+
       h2 {
         flex: 1 0 100%;
       }
@@ -84,6 +94,7 @@
       position: absolute;
       top: 4em;
       right: 0;
+
       h3 {
         margin-top: 0;
       }
@@ -101,6 +112,7 @@
     @include desktop {
       flex-direction: column;
     }
+
     .entry-header {
       max-width: 70%;
       margin: auto;
@@ -116,6 +128,7 @@
       display: none;
       box-sizing: border-box;
       padding: 0.3em;
+
       &:nth-child(1),
       &:nth-child(2) {
         display: inline-block;
@@ -125,6 +138,7 @@
           flex: 1 0 100%;
         }
       }
+
       &:first-child {
         border-right: 3px solid $color__brand-blue-sapphire;
       }
