@@ -40,3 +40,10 @@ function blockwise_login_logo()
 	</style>';
 }
 add_action('login_head', 'blockwise_login_logo');
+
+function blockwise_login_url()
+{
+	return get_site_url();
+}
+add_filter('login_headerurl', 'blockwise_login_url');
+
