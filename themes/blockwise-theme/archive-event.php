@@ -51,7 +51,7 @@ get_header(); ?>
             <?php endwhile; ?>
         </section>
 
-        <?php blockwise_numbered_pagination(); ?>
+
         <section class="event-single hidden">
         </section>
         <div class="pop-up hidden">

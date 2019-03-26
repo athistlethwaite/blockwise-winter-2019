@@ -4,6 +4,9 @@
 .post-type-archive-event {
   background-image: url(../../assets/images/event-banner-large.jpg);
 
+  @include desktop {
+    background-size: cover;
+  }
   .site-content {
     position: relative;
   }
@@ -13,16 +16,6 @@
 
     @include desktop {
       height: 50vh;
-    }
-  }
-  @include desktop {
-    .search-pagination a,
-    .search-pagination {
-      color: $color__brand-ghost-white;
-      &:active,
-      &:hover {
-        color: $color__brand-yellow-orange;
-      }
     }
   }
 

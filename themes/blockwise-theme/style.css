@@ -1356,6 +1356,9 @@ body {
 --------------------------------------------------------------*/
 .post-type-archive-event {
   background-image: url(../../assets/images/event-banner-large.jpg); }
+  @media screen and (min-width: 1000px) {
+    .post-type-archive-event {
+      background-size: cover; } }
   .post-type-archive-event .site-content {
     position: relative; }
   .post-type-archive-event .page-header {
@@ -1363,14 +1366,6 @@ body {
     @media screen and (min-width: 1000px) {
       .post-type-archive-event .page-header {
         height: 50vh; } }
-  @media screen and (min-width: 1000px) {
-    .post-type-archive-event .search-pagination a,
-    .post-type-archive-event .search-pagination {
-      color: #f7f9fa; }
-      .post-type-archive-event .search-pagination a:active, .post-type-archive-event .search-pagination a:hover,
-      .post-type-archive-event .search-pagination:active,
-      .post-type-archive-event .search-pagination:hover {
-        color: #ffae4e; } }
   .post-type-archive-event .event-boxes {
     display: -webkit-box;
     display: -ms-flexbox;
