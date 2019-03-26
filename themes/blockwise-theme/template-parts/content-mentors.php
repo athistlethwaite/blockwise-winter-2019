@@ -15,7 +15,10 @@
 
         <?php if (!is_front_page()) : ?>
         <div>
-            <?php the_excerpt(); ?>
+            <div>
+                <h3><?php the_title(); ?></h3>
+                <?php the_excerpt(); ?>
+            </div>
         </div>
         <?php endif; ?>
     </div>
