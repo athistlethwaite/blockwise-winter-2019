@@ -36,14 +36,16 @@ get_header(); ?>
 
                 </header><!-- .entry-header -->
                 <div class="entry-text-wrapper container">
+                    <div class="entry-content">
+                        <?php the_content(); ?>
+                    </div><!-- .entry-content -->
                     <div class="entry-meta">
                         <p class="event-date"><?php echo date('F j, Y', strtotime(CFS()->get('event_date'))); ?></p>
                         <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
                     </div><!-- .entry-meta -->
-                    <div class="entry-content">
-                        <?php the_content(); ?>
+                    <div class="event-rsvp">
                         <button data-event=<?php the_ID(); ?> class="white-btn blockwise-btn">rsvp</button>
-                    </div><!-- .entry-content -->
+                    </div>
                 </div>
             </article><!-- #post-## -->
             <?php endwhile; ?>

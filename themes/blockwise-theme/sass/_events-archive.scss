@@ -15,6 +15,7 @@
 
   .event-boxes {
     .entry-content,
+    .event-rsvp,
     .hide-content {
       display: none;
     }
@@ -93,19 +94,47 @@
   }
 
   .event-single {
+    z-index: 100;
     position: absolute;
     left: 0;
     top: 0;
+    height: 100%;
 
-    height: 100vh;
     @include desktop {
       top: auto;
-      height: 70vh;
-      bottom: 0;
+      bottom: -20%;
     }
     width: 100vw;
     background-color: $color__brand-ghost-white;
-    .event {
+    article {
+      @include desktop {
+        position: relative;
+        &:after {
+          background-image: url('../../assets/images/event-popup-blocks-right.png');
+          background-repeat: no-repeat;
+          content: '';
+          position: absolute;
+          background-size: auto;
+          background-position-x: 100%;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          right: 0;
+        }
+        &:before {
+          background-image: url('../../assets/images/event-popup-blocks-left.png');
+          background-repeat: no-repeat;
+          background-position-y: 100%;
+          content: '';
+          position: absolute;
+          background-size: auto;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+      }
+      margin-bottom: 0;
       .entry-header {
         padding: 1rem 0 0 0;
         @include desktop {
@@ -124,40 +153,48 @@
             align-content: center;
           }
         }
-        ::before {
-          margin-left: 10px;
-          width: 15px;
-        }
-        .hide-content {
-          padding-top: 5px;
-          font-size: 1rem;
-        }
       }
       .entry-text-wrapper {
+        padding: 0 3em;
         overflow: scroll;
-        text-align: justify;
-        padding: 5px 40px;
+        display: flex;
+        flex-flow: column nowrap;
+        @include desktop {
+          padding: 0 10em;
+          flex-flow: row wrap;
+        }
         .entry-meta {
-          padding-right: 100px;
-          color: $color__brand-middle-blue;
+          max-width: 15em;
+          @include desktop {
+            flex: 30%;
+            order: 1;
+            max-width: 100%;
+          }
         }
         .entry-content {
-          button {
-            display: block;
-            margin: 0 auto;
-          }
+          color: $color__brand-middle-blue;
+          margin: 0;
+          flex: 70%;
+          order: 2;
+        }
+        .event-rsvp {
+          flex: 100%;
+          order: 3;
+          text-align: center;
         }
       }
     }
     .hide-content {
       position: relative;
-      padding-left: 40px;
+      padding-left: 1.2em;
+      margin-left: 0.5em;
+      font-weight: bold;
       &:before {
         background-image: url('../../assets/images/learn-back-arrow.png');
         background-repeat: no-repeat;
-        background-size: cover cover;
-        width: 20px;
-        height: 40px;
+        background-size: 100% 100%;
+        width: 1em;
+        height: 1em;
         content: '';
         position: absolute;
         left: 0;

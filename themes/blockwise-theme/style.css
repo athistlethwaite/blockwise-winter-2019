@@ -958,7 +958,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1;
-  padding: 0.6rem 1.5rem;
+  padding: 1rem 1.5rem;
   margin-top: 1rem;
   margin-bottom: 1rem; }
 
@@ -1301,20 +1301,6 @@ body {
       background-image: url(../../assets/images/about.jpg); } }
   .page-template-about .site-content {
     text-align: center; }
-    @media screen and (min-width: 1000px) {
-      .page-template-about .site-content {
-        position: relative; }
-        .page-template-about .site-content:after {
-          z-index: 999;
-          background-image: url();
-          background-repeat: no-repeat;
-          background-size: cover;
-          width: 100vw;
-          height: 35vw;
-          content: '';
-          position: absolute;
-          top: 75vh;
-          left: 0; } }
   .page-template-about .site-main > article:first-child header {
     height: 60vw; }
     @media screen and (min-width: 1000px) {
@@ -1330,7 +1316,7 @@ body {
   .page-template-about section h2 {
     color: #f7f9fa;
     background-color: #026082;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
     margin-top: 0; }
 
 /*--------------------------------------------------------------
@@ -1354,6 +1340,7 @@ body {
         -ms-flex-flow: column nowrap;
             flex-flow: column nowrap; }
     .post-type-archive-event .event-boxes .entry-content,
+    .post-type-archive-event .event-boxes .event-rsvp,
     .post-type-archive-event .event-boxes .hide-content {
       display: none; }
     @media screen and (min-width: 1000px) {
@@ -1439,66 +1426,124 @@ body {
   .post-type-archive-event .hidden {
     display: none; }
   .post-type-archive-event .event-single {
+    z-index: 100;
     position: absolute;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: #f7f9fa; }
     @media screen and (min-width: 1000px) {
       .post-type-archive-event .event-single {
         top: auto;
-        height: 70vh;
-        bottom: 0; } }
-    .post-type-archive-event .event-single .event .entry-header {
-      padding: 1rem 0 0 0; }
+        bottom: -20%; } }
+    .post-type-archive-event .event-single article {
+      margin-bottom: 0; }
       @media screen and (min-width: 1000px) {
-        .post-type-archive-event .event-single .event .entry-header {
-          background-color: #026082; }
-          .post-type-archive-event .event-single .event .entry-header a,
-          .post-type-archive-event .event-single .event .entry-header h2 {
-            color: #f7f9fa; }
-            .post-type-archive-event .event-single .event .entry-header a:hover,
-            .post-type-archive-event .event-single .event .entry-header h2:hover {
-              color: #ffae4e; }
-          .post-type-archive-event .event-single .event .entry-header .container {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: vertical;
+        .post-type-archive-event .event-single article {
+          position: relative; }
+          .post-type-archive-event .event-single article:after {
+            background-image: url("../../assets/images/event-popup-blocks-right.png");
+            background-repeat: no-repeat;
+            content: '';
+            position: absolute;
+            background-size: auto;
+            background-position-x: 100%;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0; }
+          .post-type-archive-event .event-single article:before {
+            background-image: url("../../assets/images/event-popup-blocks-left.png");
+            background-repeat: no-repeat;
+            background-position-y: 100%;
+            content: '';
+            position: absolute;
+            background-size: auto;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0; } }
+      .post-type-archive-event .event-single article .entry-header {
+        padding: 1rem 0 0 0; }
+        @media screen and (min-width: 1000px) {
+          .post-type-archive-event .event-single article .entry-header {
+            background-color: #026082; }
+            .post-type-archive-event .event-single article .entry-header a,
+            .post-type-archive-event .event-single article .entry-header h2 {
+              color: #f7f9fa; }
+              .post-type-archive-event .event-single article .entry-header a:hover,
+              .post-type-archive-event .event-single article .entry-header h2:hover {
+                color: #ffae4e; }
+            .post-type-archive-event .event-single article .entry-header .container {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+                  -ms-flex-flow: column nowrap;
+                      flex-flow: column nowrap;
+              -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                      justify-content: center;
+              -ms-flex-line-pack: center;
+                  align-content: center; } }
+      .post-type-archive-event .event-single article .entry-text-wrapper {
+        padding: 0 3em;
+        overflow: scroll;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column nowrap;
+                flex-flow: column nowrap; }
+        @media screen and (min-width: 1000px) {
+          .post-type-archive-event .event-single article .entry-text-wrapper {
+            padding: 0 10em;
+            -webkit-box-orient: horizontal;
             -webkit-box-direction: normal;
-                -ms-flex-flow: column nowrap;
-                    flex-flow: column nowrap;
-            -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                    justify-content: center;
-            -ms-flex-line-pack: center;
-                align-content: center; } }
-      .post-type-archive-event .event-single .event .entry-header ::before {
-        margin-left: 10px;
-        width: 15px; }
-      .post-type-archive-event .event-single .event .entry-header .hide-content {
-        padding-top: 5px;
-        font-size: 1rem; }
-    .post-type-archive-event .event-single .event .entry-text-wrapper {
-      overflow: scroll;
-      text-align: justify;
-      padding: 5px 40px; }
-      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-meta {
-        padding-right: 100px;
-        color: #7bd1d0; }
-      .post-type-archive-event .event-single .event .entry-text-wrapper .entry-content button {
-        display: block;
-        margin: 0 auto; }
+                -ms-flex-flow: row wrap;
+                    flex-flow: row wrap; } }
+        .post-type-archive-event .event-single article .entry-text-wrapper .entry-meta {
+          max-width: 15em; }
+          @media screen and (min-width: 1000px) {
+            .post-type-archive-event .event-single article .entry-text-wrapper .entry-meta {
+              -webkit-box-flex: 30%;
+                  -ms-flex: 30%;
+                      flex: 30%;
+              -webkit-box-ordinal-group: 2;
+                  -ms-flex-order: 1;
+                      order: 1;
+              max-width: 100%; } }
+        .post-type-archive-event .event-single article .entry-text-wrapper .entry-content {
+          color: #7bd1d0;
+          margin: 0;
+          -webkit-box-flex: 70%;
+              -ms-flex: 70%;
+                  flex: 70%;
+          -webkit-box-ordinal-group: 3;
+              -ms-flex-order: 2;
+                  order: 2; }
+        .post-type-archive-event .event-single article .entry-text-wrapper .event-rsvp {
+          -webkit-box-flex: 100%;
+              -ms-flex: 100%;
+                  flex: 100%;
+          -webkit-box-ordinal-group: 4;
+              -ms-flex-order: 3;
+                  order: 3;
+          text-align: center; }
     .post-type-archive-event .event-single .hide-content {
       position: relative;
-      padding-left: 40px; }
+      padding-left: 1.2em;
+      margin-left: 0.5em;
+      font-weight: bold; }
       .post-type-archive-event .event-single .hide-content:before {
         background-image: url("../../assets/images/learn-back-arrow.png");
         background-repeat: no-repeat;
-        background-size: cover cover;
-        width: 20px;
-        height: 40px;
+        background-size: 100% 100%;
+        width: 1em;
+        height: 1em;
         content: '';
         position: absolute;
         left: 0;
