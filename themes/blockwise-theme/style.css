@@ -1836,7 +1836,9 @@ body {
     background-image: url("../../assets/images/academy-desktop-background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 20px; } }
+    padding-top: 20px; }
+    .page-id-46 .site-main {
+      padding-top: 50px; } }
 
 .page-id-46 .entry-header {
   background-image: url("../../assets/images/academy-mobile-background.png");
