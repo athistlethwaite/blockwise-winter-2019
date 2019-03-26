@@ -1834,7 +1834,6 @@ body {
 @media screen and (min-width: 1000px) {
   .page-id-46 {
     background-image: url("../../assets/images/academy-desktop-background.png");
-    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px; } }

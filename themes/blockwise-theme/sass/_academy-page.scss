@@ -5,7 +5,6 @@
 .page-id-46 {
   @include desktop {
     background-image: url('../../assets/images/academy-desktop-background.png');
-    height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px;
@@ -35,7 +34,6 @@
   }
 
   @include desktop {
-
     h2,
     h3,
     p {
@@ -43,8 +41,7 @@
     }
   }
 
-  .site-main>article:first-child header {
-
+  .site-main > article:first-child header {
     @include desktop {
       height: 30vh;
     }
