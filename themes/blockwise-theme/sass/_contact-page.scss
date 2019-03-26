@@ -12,6 +12,11 @@
     padding: 0 32px;
   }
   @include desktop {
+    .contactus-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
     .page {
       background-image: url('../../assets/images/contact-banner.jpg');
       background-size: cover;
