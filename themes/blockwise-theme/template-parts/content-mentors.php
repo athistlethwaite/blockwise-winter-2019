@@ -11,7 +11,7 @@
     <?php $logos = get_posts(array('post_type' => 'mentor')); ?>
     <?php foreach ($logos as $logo) : setup_postdata($logo); ?>
     <div>
-        <div> <?php the_post_thumbnail('thumbnail'); ?></div>
+        <div> <?php the_post_thumbnail('thumbnail', $post = $logo); ?></div>
 
         <?php if (!is_front_page()) : ?>
         <div>
