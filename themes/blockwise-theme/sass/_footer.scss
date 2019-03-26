@@ -24,6 +24,13 @@
     text-align: start;
   }
 
+  .social-icons {
+    .widget {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
   .site-info {
     box-sizing: border-box;
 
