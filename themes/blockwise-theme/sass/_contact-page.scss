@@ -16,10 +16,35 @@
       display: flex;
       flex-direction: row;
       justify-content: space-around;
+      input,
+      textarea {
+        padding: 10px 0;
+        margin: 0px;
+      }
+      textarea {
+        margin: 0px;
+        height: 304px;
+        min-width: 502px;
+      }
+      input {
+        padding: 10 50px;
+      }
+      .input {
+        width: 40rem;
+        p {
+          width: 100%;
+          padding: 6px;
+        }
+      }
     }
     .page {
       background-image: url('../../assets/images/contact-banner.jpg');
       background-size: cover;
+    }
+    .entry-content {
+      p {
+        text-align: center;
+      }
     }
   }
 }
