@@ -30,7 +30,7 @@ get_header(); ?>
                     <?php $loop = new WP_Query(array(
                         'post_type' => 'event', 'posts_per_page' => -1, 'orderby' => 'meta_value',
                         'order' => 'ASC',
-                        'meta_key', 'event_date'
+                        'meta_key' => 'event_date'
                     )); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php get_template_part('template-parts/content', 'event'); ?>
