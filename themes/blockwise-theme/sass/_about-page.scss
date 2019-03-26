@@ -7,21 +7,6 @@
     background-image: url(../../assets/images/about.jpg);
   }
   .site-content {
-    @include desktop {
-      position: relative;
-      &:after {
-        z-index: 999;
-        background-image: url('../../assets/images/about-blocks.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100vw;
-        height: 35vw;
-        content: '';
-        position: absolute;
-        top: 75vh;
-        left: 0;
-      }
-    }
     text-align: center;
   }
   .site-main > article:first-child {
@@ -46,7 +31,7 @@
     h2 {
       color: $color__brand-ghost-white;
       background-color: $color__brand-blue-sapphire;
-      padding: 0.5rem 0;
+      padding: 1rem 0;
       margin-top: 0;
     }
   }
