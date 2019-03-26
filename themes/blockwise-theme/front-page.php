@@ -41,7 +41,7 @@ get_header(); ?>
             <section class='market-trends'>
                 <h3>Market Trends</h3>
                 <div class='archive-posts'>
-                    <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 1, 'order' => 'DESC', 'orderby' => 'publish_date')); ?>
+                    <?php $loop = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 4, 'order' => 'DESC', 'orderby' => 'publish_date')); ?>
                     <?php while ($loop->have_posts()) : $loop->the_post(); ?>
                     <?php get_template_part('template-parts/content', 'post'); ?>
                     <?php endwhile;

@@ -1903,7 +1903,7 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 45% 30%;
-        grid-template-areas: 'main header' 'main sidebar' 'footer footer'; }
+        grid-template-areas: 'main header' 'main sidebar' 'footer footer'; }
         .page-template-membership .wpcf7-form .interest {
           grid-area: header;
           display: -webkit-box;
@@ -2111,8 +2111,8 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
