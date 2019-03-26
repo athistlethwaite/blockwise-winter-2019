@@ -41,7 +41,7 @@ function blockwise_event()
         'filter_items_list'     => 'Filter Events list',
     );
     $args = array(
-        'label'                 => 'Event',
+        'label'                 => 'Events.',
         'description'           => 'Connecting BC’s Blockchain community 
         one event at a time.',
         'labels'                => $labels,
