@@ -31,7 +31,12 @@
       background-color: $color__brand-dark-cyan;
       position: absolute;
       bottom: 50px;
-
+      .carosel-item {
+        width: 150px;
+        @include desktop {
+          width: 250px;
+        }
+      }
       .carosel-thumbnail {
         img {
           width: 50%;

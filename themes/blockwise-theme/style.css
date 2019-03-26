@@ -1200,6 +1200,11 @@ body {
     background-color: #008294;
     position: absolute;
     bottom: 50px; }
+    .home .front-page-banner .carosel .carosel-item {
+      width: 150px; }
+      @media screen and (min-width: 1000px) {
+        .home .front-page-banner .carosel .carosel-item {
+          width: 250px; } }
     .home .front-page-banner .carosel .carosel-thumbnail img {
       width: 50%; }
 
