@@ -12,10 +12,7 @@
     <div class="container">
         <div class="site-info">
             <div class="social-icons">
-                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook-icon.png" alt="Facebook Icon"></a>
-                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/insta-icon.png" alt="Instagram Icon"></a>
-                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin-icon.png" alt="LinkedIn Icon"></a>
-                <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/twitter-icon.png" alt="Twitter Icon"></a>
+                <?php dynamic_sidebar( 'sidebar-2' ); ?>
             </div>
             <div class="footer-menu">
                 <?php wp_nav_menu(array('theme_location' => 'secondary')); ?>

@@ -26,6 +26,7 @@ access_log
 # ========================================================== #
 plugins/*
 !plugins/blockwise-functionality/
+!plugins/social-widget/
 # Ignore everything in "themes" except the active theme. #
 # ====================================================== #
 themes/*
