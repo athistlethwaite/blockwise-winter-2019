@@ -3,22 +3,27 @@
 --------------------------------------------------------------*/
 .post-type-archive-event {
   background-image: url(../../assets/images/event-banner-large.jpg);
+
   .site-content {
     position: relative;
   }
+
   .page-header {
     height: 30vh;
+
     @include desktop {
       height: 50vh;
     }
   }
 
   .event-boxes {
+
     .entry-content,
     .event-rsvp,
     .hide-content {
       display: none;
     }
+
     display: flex;
     flex-flow: column nowrap;
 
@@ -29,6 +34,7 @@
       justify-content: space-between;
       max-width: $container-width;
     }
+
     article {
       position: relative;
       box-sizing: border-box;
@@ -38,18 +44,20 @@
       margin-bottom: 0;
       border: 2px solid $color__brand-blue-sapphire;
       border-top: 0;
+
       @include desktop {
         border: 0;
         width: 30%;
         text-align: center;
         padding: 0.5em;
         border-radius: 1rem;
-        background-color: rgba($color: $color__brand-ghost-white, $alpha: 0.7);
+        background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-flow: column nowrap;
         height: 250px;
+
         &:before {
           background-image: url('../../assets/images/learn-chain-desktop.png');
           background-repeat: no-repeat;
@@ -63,15 +71,19 @@
           transform: translate(-100%, -50%);
         }
       }
+
       &:first-child {
         border-top: 2px solid $color__brand-blue-sapphire;
+
         @include desktop {
           border-top: 0;
+
           &:before {
             display: none;
           }
         }
       }
+
       .entry-title:after {
         background-image: url('../../assets/images/learn-arrow.png');
         background-repeat: no-repeat;
@@ -83,12 +95,14 @@
         transform: translate(-50%, -50%);
         right: 10px;
         top: 50%;
+
         @include desktop {
           display: none;
         }
       }
     }
   }
+
   .hidden {
     display: none;
   }
@@ -104,12 +118,15 @@
       top: auto;
       bottom: -20%;
     }
+
     width: 100vw;
-    background-color: $color__brand-ghost-white;
+    background-color: white;
+
     article {
       @include desktop {
         position: relative;
         height: 100%;
+
         &:after {
           pointer-events: none;
           background-image: url('../../assets/images/event-popup-blocks-right.png');
@@ -123,6 +140,7 @@
           top: 0;
           right: 0;
         }
+
         &:before {
           pointer-events: none;
           background-image: url('../../assets/images/event-popup-blocks-left.png');
@@ -137,18 +155,24 @@
           left: 0;
         }
       }
+
       margin-bottom: 0;
+
       .entry-header {
         padding: 1rem 0 0 0;
+
         @include desktop {
           background-color: $color__brand-blue_sapphire;
+
           a,
           h2 {
             color: $color__brand-ghost-white;
+
             &:hover {
               color: $color__brand-yellow-orange;
             }
           }
+
           .container {
             display: flex;
             flex-flow: column nowrap;
@@ -157,29 +181,35 @@
           }
         }
       }
+
       .entry-text-wrapper {
         padding: 0 3em;
         overflow-y: scroll;
         display: flex;
         flex-flow: column nowrap;
+
         @include desktop {
           padding: 0 10em;
           flex-flow: row wrap;
         }
+
         .entry-meta {
           max-width: 15em;
+
           @include desktop {
             flex: 30%;
             order: 1;
             max-width: 100%;
           }
         }
+
         .entry-content {
           color: $color__brand-middle-blue;
           margin: 0;
           flex: 70%;
           order: 2;
         }
+
         .event-rsvp {
           flex: 100%;
           order: 3;
@@ -187,11 +217,13 @@
         }
       }
     }
+
     .hide-content {
       position: relative;
       padding-left: 1.2em;
       margin-left: 0.5em;
       font-weight: bold;
+
       &:before {
         background-image: url('../../assets/images/learn-back-arrow.png');
         background-repeat: no-repeat;
@@ -215,12 +247,14 @@
     background-image: url('../../assets/images/rsvp-background.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: $color__brand-ghost-white;
+    background-color: white;
     border-radius: 25px;
     width: 400px;
     border-bottom: 5px solid $color__brand-blue-sapphire;
+
     .wpcf7 {
       margin: 20px;
+
       .wpcf7-response-output {
         border: 2px solid $color__brand-middle-blue;
         border-radius: 5px;
