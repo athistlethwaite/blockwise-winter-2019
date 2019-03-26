@@ -1401,7 +1401,7 @@ body {
           text-align: center;
           padding: 0.5em;
           border-radius: 1rem;
-          background-color: rgba(247, 249, 250, 0.7);
+          background-color: white;
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex;
@@ -1459,7 +1459,7 @@ body {
     top: 0;
     height: 100%;
     width: 100vw;
-    background-color: #f7f9fa; }
+    background-color: white; }
     @media screen and (min-width: 1000px) {
       .post-type-archive-event .event-single {
         top: auto;
@@ -1588,7 +1588,7 @@ body {
     background-image: url("../../assets/images/rsvp-background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #f7f9fa;
+    background-color: white;
     border-radius: 25px;
     width: 400px;
     border-bottom: 5px solid #026082; }
