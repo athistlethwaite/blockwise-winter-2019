@@ -1835,7 +1835,7 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 45% 30%;
-        grid-template-areas: 'main header' 'main sidebar' 'footer footer'; }
+        grid-template-areas: 'main header' 'main sidebar' 'footer footer'; }
         .page-template-membership .wpcf7-form .interest {
           grid-area: header; }
         .page-template-membership .wpcf7-form .input {
@@ -1991,12 +1991,10 @@ body {
     font-size: 11.2px;
     font-size: 0.7rem;
     text-align: start;
-    width: 80vw;
     color: white; }
     @media screen and (min-width: 1000px) {
       .site-footer p {
-        text-align: center;
-        width: 50vw; } }
+        text-align: center; } }
   .site-footer .site-info {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2012,7 +2010,9 @@ body {
             justify-content: space-between;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: flex-start; }
+            align-items: flex-start;
+    width: 80vw;
+    max-width: 100%; }
     .site-footer .site-info a {
       color: #f7f9fa; }
       .site-footer .site-info a:hover {
@@ -2031,7 +2031,6 @@ body {
         padding: 0.4em 0; }
     @media screen and (min-width: 1000px) {
       .site-footer .site-info {
-        width: 1000px;
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; } }
