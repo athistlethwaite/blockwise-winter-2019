@@ -32,11 +32,13 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    max-width: $desktop-width;
+    margin: 0 auto;
   }
 
   .lesson-type-wrapper {
     position: relative;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 
     &.chain {
       &:first-child {
@@ -58,10 +60,15 @@
 
         @include desktop {
           background-image: url('../../assets/images/learn-chain-desktop.png');
-          width: 78px;
-          height: 11px;
-          top: 30px;
-          left: -71px;
+          background-repeat: no-repeat;
+          background-size: cover;
+          content: '';
+          position: absolute;
+          width: $desktop-width * 0.05;
+          height: $desktop-width * 0.007;
+          top: 50%;
+          left: 0;
+          transform: translate(-100%, -50%);
         }
       }
     }
@@ -76,14 +83,16 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: 0px 10px;
+      box-sizing: border-box;
+      padding: 0px 2em;
       cursor: pointer;
 
       @include desktop {
-        width: 290px;
+        width: $desktop-width * 0.3;
       }
 
       h3 {
+        margin: 0;
         flex: 0 1 90%;
         line-height: 1.25em;
         color: white;
@@ -135,7 +144,6 @@
 
   @include desktop {
     position: relative;
-
   }
 
   h1 {
