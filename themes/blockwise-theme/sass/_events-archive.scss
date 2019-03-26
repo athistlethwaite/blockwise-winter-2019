@@ -16,8 +16,16 @@
     }
   }
 
-  .event-boxes {
+  .search-pagination a,
+  .search-pagination {
+    color: $color__brand-ghost-white;
+    &:active,
+    &:hover {
+      color: $color__brand-yellow-orange;
+    }
+  }
 
+  .event-boxes {
     .entry-content,
     .event-rsvp,
     .hide-content {
