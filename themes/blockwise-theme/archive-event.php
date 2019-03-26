@@ -22,14 +22,12 @@ get_header(); ?>
         </header><!-- .page-header -->
         <section class="event-boxes container">
             <?php  /* Start the Loop */ ?>
-            <?php $eventNumber = 0; ?>
             <?php while (have_posts()) : the_post(); ?>
-            <?php $eventNumber++; ?>
-            <article data-event=<?php echo $eventNumber; ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <article data-event=<?php the_ID(); ?> id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="entry-header">
                     <div class="container">
                         <a href="" class="hide-content">See other events</a>
-                        <a href="" class="show-content" data-event=<?php echo $eventNumber; ?>>
+                        <a href="" class="show-content" data-event=<?php the_ID(); ?>>
                             <h2 class="entry-title"><?php the_title(); ?></h2>
                         </a>
                     </div>

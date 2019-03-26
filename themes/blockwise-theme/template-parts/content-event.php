@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header class="entry-header">
-        <a href="#">
+        <a href="./event#<?php the_ID(); ?>">
             <h2 class="entry-title"><?php the_title(); ?></h2>
         </a>
         <div class="entry-meta">

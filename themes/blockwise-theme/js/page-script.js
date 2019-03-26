@@ -1,7 +1,14 @@
 (function($) {
   const popUpEvent = $('.event-single'),
     popUpForm = $('.pop-up');
-
+  $('body.post-type-archive-event').ready(function(){
+    const eventId = window.location.hash.substring(1);
+    if (eventId){
+    const articleMarkUp = getArticle(eventId);
+    popUpEvent.removeClass('hidden');
+    popUpEvent.html(articleMarkUp);
+    }
+  })
   $('.event-boxes').on('click', '.show-content', function() {
     event.preventDefault();
     const articleMarkUp = getArticle(this.getAttribute('data-event'));
