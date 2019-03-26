@@ -199,7 +199,7 @@ function blockwise_comment_list($comment, $args, $depth)
 
 	function blockwise_is_latest_post($ID)
 	{
-		$last_post = get_posts(array('post_type' => 'post', 'order' => 'ASC', 'posts_per_page' => 1))[0];
+		$last_post = get_posts(array('post_type' => 'post', 'order' => 'DESC', 'orderby' => 'publish_date', 'posts_per_page' => 1))[0];
 		if ($ID === $last_post->ID) {
 			return true;
 		} else {
@@ -213,7 +213,8 @@ function blockwise_comment_list($comment, $args, $depth)
 			return;
 		}
 		if (is_home()) {
-			$query->set('order', 'ASC');
+			$query->set('order', 'DESC');
+			$query->set('orderby', 'publish_date');
 			$query->set('posts_per_page', 7);
 		}
 		if (is_post_type_archive('event')) {
