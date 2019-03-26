@@ -15,8 +15,8 @@ get_header(); ?>
         <?php if (is_home() && !is_front_page()) : ?>
         <header class="page-header">
             <div class="header-content-wrapper">
-                <h1 class="page-title"><?php single_post_title(); ?></h1>
-                <p><?php echo CFS()->get('page_subtitle'); ?></p>
+                <h1 class="page-title">Centralizing Decentralized Knowledge.</h1>
+                <p>News & articles from around BC’s Blockchain ecosystem and beyond.</p>
             </div>
         </header>
         <?php endif; ?>
