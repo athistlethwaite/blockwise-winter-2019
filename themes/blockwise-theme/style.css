@@ -2070,6 +2070,17 @@ body {
   .page-id-70 .entry-content p {
     text-align: center; } }
 
+.error404 .error-404 {
+  height: 100vh; }
+  .error404 .error-404 .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
