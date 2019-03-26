@@ -68,11 +68,12 @@
     .sub-menu {
       display: none;
     }
-    li.focus > .sub-menu {
-      display: inline-block;
-      position: relative;
-      display: flex;
-      flex-flow: column nowrap;
+
+    li.focus {
+      .sub-menu {
+        display: inline-block;
+        position: static;
+      }
     }
 
     ul > li {
