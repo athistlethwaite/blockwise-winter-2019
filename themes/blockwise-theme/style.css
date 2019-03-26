@@ -1912,9 +1912,6 @@ body {
   .page-template-membership li {
     margin-left: 0;
     padding: 0; }
-  .page-template-membership .form-content {
-    margin: 0;
-    max-width: 100%; }
   .page-template-membership .wpcf7-form {
     display: none; }
     .page-template-membership .wpcf7-form .wpcf7-response-output {
@@ -1940,7 +1937,8 @@ body {
         .page-template-membership .wpcf7-form .about {
           grid-area: sidebar; }
         .page-template-membership .wpcf7-form .submit {
-          grid-area: footer; } }
+          grid-area: footer;
+          padding-top: 43px; } }
   @media screen and (min-width: 1000px) and (min-width: 1000px) {
     .page-template-membership .wpcf7-form .close,
     .page-template-membership .wpcf7-form h3 {
