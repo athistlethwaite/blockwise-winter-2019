@@ -953,6 +953,27 @@ body {
   .front-page-banner .header-content-wrapper {
     font-size: 1.8rem; } }
 
+.search-pagination {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem; }
+
+.blog .search-pagination a,
+.blog .search-pagination {
+  color: #026082; }
+  .blog .search-pagination a:active, .blog .search-pagination a:hover,
+  .blog .search-pagination:active,
+  .blog .search-pagination:hover {
+    color: #ffae4e; }
+
+.post-type-archive-event .search-pagination a,
+.post-type-archive-event .search-pagination {
+  color: #f7f9fa; }
+  .post-type-archive-event .search-pagination a:active, .post-type-archive-event .search-pagination a:hover,
+  .post-type-archive-event .search-pagination:active,
+  .post-type-archive-event .search-pagination:hover {
+    color: #ffae4e; }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
