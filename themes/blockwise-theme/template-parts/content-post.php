@@ -13,7 +13,7 @@
         <?php the_post_thumbnail('large'); ?>
         <?php endif; ?>
         <div class="entry-text-wrapper">
-            <?php the_title(sprintf('<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h2>'); ?>
+            <h2 class="entry-title"><a target="_blank" href=<?php echo CFS()->get('article_url'); ?>><?php the_title(); ?></a></h2>
             <?php if ('post' === get_post_type()) : ?>
             <div class="entry-meta">
                 <p>by <?php echo CFS()->get('article_author'); ?></p>
