@@ -31,5 +31,5 @@ This theme was built for *Blockwise* WordPress website. It was built as part of 
 ## Installation Instructions 
 
 **1. Download**
-**2. Apply Theme**
+**2. Activate Theme**
 
