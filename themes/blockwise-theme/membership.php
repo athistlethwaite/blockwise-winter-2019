@@ -19,8 +19,8 @@ get_header(); ?>
         <?php endwhile; ?>
 
         <?php $fields = CFS()->get('membership_options'); ?>
-        <section class="all-membership">
-            <ul class="tablinks">
+        <section class="all-membership container">
+            <ul class="tablinks container">
                 <?php foreach ($fields as $field) : ?>
 
                 <li>
@@ -30,7 +30,7 @@ get_header(); ?>
                 <?php endforeach; ?>
 
             </ul>
-            <div class="option-wrapper">
+            <div class="option-wrapper container">
                 <?php foreach ($fields as $field) : ?>
                 <ul class="list-content">
                     <?php 
