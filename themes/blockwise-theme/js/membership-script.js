@@ -3,7 +3,7 @@
  */
 
 jQuery(function($) {
-  if ($(window).width() < 600) {
+  if ($(window).width() < 1000) {
     // mobile member form pop ups
     $('.tablinks li:first-child').addClass('tab-color');
     $('.option-wrapper ul:first-child').addClass('active');
