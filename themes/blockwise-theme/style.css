@@ -455,7 +455,7 @@ input,
 select,
 textarea {
   color: #008294;
-  font-family: "Raleway";
+  font-family: "Proxima-Nova";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.25; }
@@ -474,7 +474,8 @@ h6 {
 /* Copy */
 p {
   margin-bottom: 1.5rem;
-  line-height: 1.25; }
+  line-height: 1.25;
+  font-family: "Raleway"; }
 
 dfn,
 cite,
@@ -624,7 +625,7 @@ textarea {
   color: #7bd1d0;
   border: 3px solid #026082;
   border-radius: 1rem;
-  font-family: "Proxima-Nova"; }
+  font-family: "Raleway"; }
   input[type='text']:focus,
   input[type='email']:focus,
   input[type='url']:focus,
@@ -1349,11 +1350,14 @@ body {
       min-height: 56vw; }
       .page-template-about .site-main > article:first-child .entry-content {
         max-width: 60%; } }
+  .page-template-about .carosel-content .blockwise-btn {
+    text-transform: capitalize; }
   .page-template-about section h2 {
     color: #f7f9fa;
     background-color: #026082;
     padding: 1rem 0;
-    margin-top: 0; }
+    margin-top: 0;
+    text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Events Archive Page
