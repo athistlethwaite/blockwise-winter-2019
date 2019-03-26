@@ -975,8 +975,7 @@ body {
   background: #ffae4e;
   color: #008294; }
   .yellow-btn:hover {
-    color: #008294;
-    background-color: rgba(255, 174, 78, 0.7); }
+    color: #f7f9fa; }
 
 .carosel {
   -webkit-box-sizing: border-box;
@@ -1474,6 +1473,7 @@ body {
         .post-type-archive-event .event-single article {
           position: relative; }
           .post-type-archive-event .event-single article:after {
+            pointer-events: none;
             background-image: url("../../assets/images/event-popup-blocks-right.png");
             background-repeat: no-repeat;
             content: '';
@@ -1485,6 +1485,7 @@ body {
             top: 0;
             right: 0; }
           .post-type-archive-event .event-single article:before {
+            pointer-events: none;
             background-image: url("../../assets/images/event-popup-blocks-left.png");
             background-repeat: no-repeat;
             background-position-y: 100%;

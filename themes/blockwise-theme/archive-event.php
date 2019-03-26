@@ -44,7 +44,7 @@ get_header(); ?>
                         <p class="event-location"><?php echo CFS()->get('event_location'); ?></p>
                     </div><!-- .entry-meta -->
                     <div class="event-rsvp">
-                        <button data-event=<?php the_ID(); ?> class="white-btn blockwise-btn">rsvp</button>
+                        <a data-event=<?php the_ID(); ?> class="yellow-btn blockwise-btn">rsvp</a>
                     </div>
                 </div>
             </article><!-- #post-## -->

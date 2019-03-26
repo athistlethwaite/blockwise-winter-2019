@@ -15,7 +15,7 @@
     event.preventDefault();
     popUpEvent.addClass('hidden');
   });
-  popUpEvent.on('click', 'button', function() {
+  popUpEvent.on('click', '.event-rsvp', function() {
     event.preventDefault();
     popUpEvent.addClass('hidden');
     $('#event-id').val(this.getAttribute('data-event'));
