@@ -949,6 +949,11 @@ body {
 .front-page-banner .header-content-wrapper p {
   font-weight: bold; }
 
+@media screen and (min-width: 1000px) {
+  * .header-content-wrapper,
+  .front-page-banner .header-content-wrapper {
+    font-size: 1.8rem; } }
+
 .blockwise-btn {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1194,8 +1199,7 @@ body {
       text-align: left; }
     @media screen and (min-width: 1000px) {
       .home .front-page-banner .header-content-wrapper {
-        max-width: none;
-        font-size: 2rem; } }
+        max-width: none; } }
   .home .front-page-banner .carosel {
     background-color: #008294;
     position: absolute;

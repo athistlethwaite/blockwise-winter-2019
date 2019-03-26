@@ -39,6 +39,9 @@ body {
     p {
       font-weight: bold;
     }
+    @include desktop {
+      font-size: 1.8rem;
+    }
   }
 }
 
