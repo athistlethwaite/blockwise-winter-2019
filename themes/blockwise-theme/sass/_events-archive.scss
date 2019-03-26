@@ -110,6 +110,7 @@
       @include desktop {
         position: relative;
         &:after {
+          pointer-events: none;
           background-image: url('../../assets/images/event-popup-blocks-right.png');
           background-repeat: no-repeat;
           content: '';
@@ -122,6 +123,7 @@
           right: 0;
         }
         &:before {
+          pointer-events: none;
           background-image: url('../../assets/images/event-popup-blocks-left.png');
           background-repeat: no-repeat;
           background-position-y: 100%;
