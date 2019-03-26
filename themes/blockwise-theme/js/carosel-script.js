@@ -5,10 +5,9 @@
   buildCarosel($('.corporate-partners-list'));
 
   function buildCarosel(carosel) {
-    carosel.addClass('carosel');
+    carosel.css('position', 'relative');
     carosel.find('>div').addClass('carosel-item');
     const item = $('.carosel-item');
-    console.log(item.width());
     item
       .find('p')
       .parent('div')
@@ -18,16 +17,19 @@
       .parent('div')
       .addClass('carosel-thumbnail');
     const viewPort =
-      '<a style="left:30px" class="carosel-nav left">&#10094;</a><a style="right:30px" class="carosel-nav right">&#10095;</a><div class="carosel-viewport" style="width:' +
-      item.width() * carosel.find('>.carosel-item').length * 1.2 +
+      '<div class="carosel"><div class="carosel-viewport" style="width:' +
+      item.width() * carosel.find('>div').length * 1.2 +
       'px">' +
       carosel.html() +
-      '</div>';
+      '</div></div><a class="carosel-nav left">&#10094;</a><a class="carosel-nav right">&#10095;</a>';
     carosel.html(viewPort);
   }
 
-  $('.carosel').on('click', '.carosel-nav', function() {
-    const viewPort = $(this).siblings('div');
+  $('.carosel-nav').on('click', function() {
+    event.preventDefault();
+    const viewPort = $(this)
+      .siblings('.carosel')
+      .children('.carosel-viewport');
     const direction = $(this).attr('class');
     if (direction.includes('right')) {
       caroselSlideRight(viewPort);

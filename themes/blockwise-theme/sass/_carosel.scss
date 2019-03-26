@@ -1,56 +1,70 @@
+.carosel-nav {
+  position: absolute;
+  top: 50%;
+  box-sizing: border-box;
+  padding: 0.5em;
+  color: $color__brand-yellow-orange;
+  font-size: 2rem;
+  transform: translate(0, -50%);
+  &.left {
+    left: 5px;
+    @include desktop {
+      left: -10px;
+    }
+  }
+  &.right {
+    right: 5px;
+    @include desktop {
+      right: -10px;
+    }
+  }
+}
 .carosel {
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
-  position: relative;
-  .carosel-nav {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    box-sizing: border-box;
-    color: $color__brand-yellow-orange;
-    font-size: 2rem;
-  }
-  .carosel-viewport {
-    margin: 0 auto;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: stretch;
-  }
-  .carosel-item {
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-auto-rows: 1fr;
-    width: 250px;
-    .carosel-thumbnail {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0.5rem;
-      img {
-        border-radius: 5px;
-        box-sizing: border-box;
-        height: auto;
-        width: 100%;
-      }
-    }
-    .carosel-content {
-      box-sizing: border-box;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      justify-content: space-between;
-      p {
-        margin: 0;
-      }
-      color: $color__text-screen;
-      font-size: 15px;
-      padding: 8px 12px;
+}
 
+.carosel-viewport {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.carosel-item {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  width: 250px;
+
+  .carosel-thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    img {
+      border-radius: 5px;
+      box-sizing: border-box;
+      height: auto;
       width: 100%;
-      text-align: left;
     }
+  }
+  .carosel-content {
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      margin: 0;
+    }
+    color: $color__text-screen;
+    font-size: 15px;
+    padding: 8px 12px;
+
+    width: 100%;
+    text-align: left;
   }
 }

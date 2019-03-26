@@ -30,9 +30,15 @@ $color__link-hover: $color__brand-yellow-orange;
 
 // Typography
 
-$font__main: 'Raleway';
-$font__other: 'Proxima-Nova';
-$font__code: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-$font__pre: 'Courier 10 Pitch', Courier, monospace;
+$font__main: 'Proxima-Nova';
+$font__other: 'Raleway';
+$font__code: Monaco,
+Consolas,
+'Andale Mono',
+'DejaVu Sans Mono',
+monospace;
+$font__pre: 'Courier 10 Pitch',
+Courier,
+monospace;
 $font__line-height-body: 1.25;
 $font__line-height-pre: 1;
