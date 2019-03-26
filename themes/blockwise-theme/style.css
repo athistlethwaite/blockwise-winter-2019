@@ -800,7 +800,6 @@ a {
 # Widgets
 --------------------------------------------------------------*/
 .widget {
-  margin: 0 0 1.5rem;
   /* Make sure select elements fit in widgets. */ }
   .widget select {
     max-width: 100%; }
@@ -2102,7 +2101,8 @@ body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; }
+            flex-direction: row;
+    padding-top: 10px; }
   .site-footer .site-info {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -2130,7 +2130,6 @@ body {
       width: auto;
       margin: 0 0.5em; }
       .site-footer .site-info img:hover {
-        border: 2px solid #ffae4e;
         border-radius: 50%; }
     .site-footer .site-info ul {
       padding: 0;
