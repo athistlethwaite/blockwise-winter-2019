@@ -17,7 +17,9 @@
       .parent('div')
       .addClass('carosel-thumbnail');
     const viewPort =
-      '<div class="carosel"><div class="carosel-viewport">' +
+      '<div class="carosel"><div class="carosel-viewport" style="width:' +
+      item.width() * carosel.find('>div').length * 1.2 +
+      'px">' +
       carosel.html() +
       '</div></div><a class="carosel-nav left">&#10094;</a><a class="carosel-nav right">&#10095;</a>';
     carosel.html(viewPort);

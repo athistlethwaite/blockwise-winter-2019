@@ -992,77 +992,84 @@ body {
   color: #ffae4e;
   font-size: 2rem; }
   .carosel-nav.left {
-    left: -1em; }
+    left: 5px; }
+    @media screen and (min-width: 1000px) {
+      .carosel-nav.left {
+        left: -10px; } }
   .carosel-nav.right {
-    right: -1em; }
+    right: 5px; }
+    @media screen and (min-width: 1000px) {
+      .carosel-nav.right {
+        right: -10px; } }
 
 .carosel {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
   width: 100%; }
-  .carosel .carosel-viewport {
-    margin: 0 auto;
+
+.carosel-viewport {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch; }
+
+.carosel-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  width: 250px; }
+  .carosel-item .carosel-thumbnail {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch; }
-  .carosel .carosel-item {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-auto-rows: 1fr;
-    width: 250px;
-    margin: 0 0.5em; }
-    .carosel .carosel-item .carosel-thumbnail {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      padding: 0.5rem; }
-      .carosel .carosel-item .carosel-thumbnail img {
-        border-radius: 5px;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        height: auto;
-        width: 100%; }
-    .carosel .carosel-item .carosel-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5rem; }
+    .carosel-item .carosel-thumbnail img {
+      border-radius: 5px;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: column nowrap;
-              flex-flow: column nowrap;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      color: #21759b;
-      font-size: 15px;
-      padding: 8px 12px;
-      width: 100%;
-      text-align: left; }
-      .carosel .carosel-item .carosel-content p {
-        margin: 0; }
+      height: auto;
+      width: 100%; }
+  .carosel-item .carosel-content {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    color: #21759b;
+    font-size: 15px;
+    padding: 8px 12px;
+    width: 100%;
+    text-align: left; }
+    .carosel-item .carosel-content p {
+      margin: 0; }
 
 /*--------------------------------------------------------------
 # Header
