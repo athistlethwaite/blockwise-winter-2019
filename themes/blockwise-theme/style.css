@@ -981,21 +981,24 @@ body {
   .yellow-btn:hover {
     color: #f7f9fa; }
 
+.carosel-nav {
+  position: absolute;
+  top: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5em;
+  color: #ffae4e;
+  font-size: 2rem; }
+  .carosel-nav.left {
+    left: -1em; }
+  .carosel-nav.right {
+    right: -1em; }
+
 .carosel {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  width: 100%;
-  position: relative; }
-  .carosel .carosel-nav {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    color: #ffae4e;
-    font-size: 2rem; }
+  width: 100%; }
   .carosel .carosel-viewport {
     margin: 0 auto;
     display: -webkit-box;
@@ -1016,7 +1019,8 @@ body {
     display: grid;
     grid-template-rows: 1fr;
     grid-auto-rows: 1fr;
-    width: 250px; }
+    width: 250px;
+    margin: 0 0.5em; }
     .carosel .carosel-item .carosel-thumbnail {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1922,7 +1926,7 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 45% 20% 10%;
-        grid-template-areas: 'main header' 'main sidebar' 'main sidebar' 'footer footer'; }
+        grid-template-areas: 'main header' 'main sidebar' 'main sidebar' 'footer footer'; }
         .page-template-membership .wpcf7-form .interest {
           grid-area: header;
           display: -webkit-box;
@@ -2142,8 +2146,8 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
