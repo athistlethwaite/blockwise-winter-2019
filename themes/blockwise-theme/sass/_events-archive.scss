@@ -106,10 +106,6 @@
     }
   }
 
-  .hidden {
-    display: none;
-  }
-
   .event-single {
     z-index: 100;
     position: absolute;
@@ -119,7 +115,8 @@
 
     @include desktop {
       top: auto;
-      bottom: -20%;
+      height: auto;
+      bottom: -120px;
     }
 
     width: 100vw;
@@ -188,7 +185,7 @@
 
       .entry-text-wrapper {
         padding: 0 3em;
-        overflow-y: scroll;
+
         display: flex;
         flex-flow: column nowrap;
 

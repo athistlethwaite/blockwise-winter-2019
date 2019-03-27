@@ -1507,8 +1507,6 @@ body {
         @media screen and (min-width: 1000px) {
           .post-type-archive-event .event-boxes article .entry-title:after {
             display: none; } }
-  .post-type-archive-event .hidden {
-    display: none; }
   .post-type-archive-event .event-single {
     z-index: 100;
     position: absolute;
@@ -1520,7 +1518,8 @@ body {
     @media screen and (min-width: 1000px) {
       .post-type-archive-event .event-single {
         top: auto;
-        bottom: -20%; } }
+        height: auto;
+        bottom: -120px; } }
     .post-type-archive-event .event-single article {
       margin-bottom: 0; }
       @media screen and (min-width: 1000px) {
@@ -1578,7 +1577,6 @@ body {
                   align-content: center; } }
       .post-type-archive-event .event-single article .entry-text-wrapper {
         padding: 0 3em;
-        overflow-y: scroll;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
