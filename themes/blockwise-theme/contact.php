@@ -17,7 +17,10 @@ get_header(); ?>
         <?php get_template_part('template-parts/content', 'page'); ?>
 
         <?php endwhile; ?>
-
+        <div class="pop-up-alert hidden">
+            <p>Thank you for your inquiry. We will get back to you within 48 hours.</p>
+            <button>Got it!</button>
+        </div>
     </main><!-- #main -->
 </div><!-- #primary -->
 
