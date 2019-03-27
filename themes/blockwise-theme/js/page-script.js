@@ -35,6 +35,19 @@
     $('.pop-up-alert').removeClass('hidden');
   });
 
+  $(document).click(function(event) {
+    if (
+      !$(event.target).closest(
+        '.mobile-popup,.rsvp-pop-up,.event-single,pop-up-alert,.sign-up-pop,.event-rsvp,.show-content,.hide-content'
+      ).length
+    ) {
+      $('body')
+        .find('.rsvp-pop-up,.event-single,.pop-up-alert')
+        .addClass('hidden');
+      $('.mobile-popup').removeClass('mobile-popup');
+    }
+  });
+
   function getArticle(articleNum) {
     const article = $('article[data-event="' + articleNum + '"]');
     const articleContent = article.html();
