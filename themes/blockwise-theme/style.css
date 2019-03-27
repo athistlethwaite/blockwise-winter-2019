@@ -992,7 +992,8 @@ body {
   color: #ffae4e;
   font-size: 2rem;
   -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%); }
+          transform: translate(0, -50%);
+  cursor: pointer; }
   .carosel-nav.left {
     left: 5px; }
     @media screen and (min-width: 1000px) {
@@ -1026,6 +1027,7 @@ body {
           align-items: stretch; }
 
 .carosel-item {
+  cursor: pointer;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: grid;

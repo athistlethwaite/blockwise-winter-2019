@@ -6,6 +6,7 @@
   color: $color__brand-yellow-orange;
   font-size: 2rem;
   transform: translate(0, -50%);
+  cursor: pointer;
   &.left {
     left: 5px;
     @include desktop {
@@ -33,6 +34,7 @@
   align-items: stretch;
 }
 .carosel-item {
+  cursor: pointer;
   box-sizing: border-box;
   display: grid;
   grid-template-rows: 1fr;
