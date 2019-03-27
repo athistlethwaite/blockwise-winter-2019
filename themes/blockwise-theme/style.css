@@ -1355,38 +1355,18 @@ body {
   background-image: url(../../assets/images/about-banner.png); }
   @media screen and (min-width: 1000px) {
     .page-template-about {
-      background-image: url(../../assets/images/about.jpg); } }
+      background-image: url(../../assets/images/about.jpg);
+      background-size: auto 65vw;
+      background-position-x: center; } }
   .page-template-about .site-content {
     text-align: center; }
   .page-template-about .site-main > article:first-child header {
     height: 60vw; }
     @media screen and (min-width: 1000px) {
       .page-template-about .site-main > article:first-child header {
-        height: 33vw;
-        position: relative; }
+        height: 33vw; }
         .page-template-about .site-main > article:first-child header .header-content-wrapper {
-          background: none; }
-        .page-template-about .site-main > article:first-child header:after {
-          background-image: url("../../assets/images/about-blocks-right.png");
-          background-repeat: no-repeat;
-          content: '';
-          position: absolute;
-          background-size: auto;
-          background-position-x: 100%;
-          width: 100%;
-          height: 100%;
-          top: 100%;
-          right: 0; }
-        .page-template-about .site-main > article:first-child header:before {
-          background-image: url("../../assets/images/about-blocks-left.png");
-          background-repeat: no-repeat;
-          content: '';
-          position: absolute;
-          background-size: auto;
-          width: 100%;
-          height: 100%;
-          top: 100%;
-          left: 0; } }
+          background: none; } }
   @media screen and (min-width: 1000px) {
     .page-template-about .site-main > article:first-child {
       min-height: 56vw; }
@@ -1394,12 +1374,43 @@ body {
         max-width: 60%; } }
   .page-template-about .carosel-content .blockwise-btn {
     text-transform: capitalize; }
-  .page-template-about section h2 {
-    color: #f7f9fa;
-    background-color: #026082;
-    padding: 1rem 0;
-    margin-top: 0;
-    text-transform: uppercase; }
+  .page-template-about .corporate-partners-list .carosel-thumbnail img {
+    width: 60%; }
+    @media screen and (min-width: 1000px) {
+      .page-template-about .corporate-partners-list .carosel-thumbnail img {
+        width: 70%; } }
+  .page-template-about .about-partners {
+    background-color: white; }
+    .page-template-about .about-partners h2 {
+      color: #f7f9fa;
+      background-color: #026082;
+      padding: 1rem 0;
+      margin-top: 0;
+      text-transform: uppercase; }
+      @media screen and (min-width: 1000px) {
+        .page-template-about .about-partners h2 {
+          position: relative; }
+          .page-template-about .about-partners h2:after {
+            background-image: url("../../assets/images/about-blocks-right.png");
+            background-repeat: no-repeat;
+            content: '';
+            position: absolute;
+            background-size: cover;
+            background-position-x: 100%;
+            width: 300px;
+            height: 400px;
+            top: -250px;
+            right: 0; }
+          .page-template-about .about-partners h2:before {
+            background-image: url("../../assets/images/about-blocks-left.png");
+            background-repeat: no-repeat;
+            content: '';
+            position: absolute;
+            background-size: cover;
+            width: 250px;
+            height: 400px;
+            top: -250px;
+            left: 0; } }
 
 /*--------------------------------------------------------------
 # Events Archive Page
