@@ -1165,20 +1165,20 @@ body {
     height: 100vh;
     background-image: url("../../assets/images/menu-bg.png");
     background-size: 100vw;
-    background-repeat: none; }
+    background-repeat: none;
+    padding-top: 60px; }
   .site-header .toggled ul {
     padding: 1rem; }
-  .site-header .toggled .sub-menu {
-    display: inli; }
   .site-header .toggled .sub-menu {
     display: inline-block;
     position: static; }
   .site-header .toggled ul > li {
     width: 100%;
     display: block;
-    padding: 2rem 0; }
+    padding: 0.75rem 0;
+    text-align: start; }
     .site-header .toggled ul > li a {
-      margin-left: 5em; }
+      margin-left: 40px; }
   .site-header .site-branding {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 30%;
