@@ -11,7 +11,6 @@
     position: relative;
 
     .header-content-wrapper {
-
       h1,
       p {
         text-align: left;
@@ -55,7 +54,7 @@
   }
 
   .front-page-content {
-    &>h2 {
+    & > h2 {
       margin: 2em auto;
     }
 
@@ -91,7 +90,7 @@
   @include desktop {
     .upcoming-events {
       width: 45%;
-      overflow: scroll;
+      overflow-y: scroll;
       position: absolute;
       top: 4em;
       right: 0;

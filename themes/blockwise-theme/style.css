@@ -1262,7 +1262,7 @@ body {
 @media screen and (min-width: 1000px) {
   .home .upcoming-events {
     width: 45%;
-    overflow: scroll;
+    overflow-y: scroll;
     position: absolute;
     top: 4em;
     right: 0;
