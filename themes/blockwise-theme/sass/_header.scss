@@ -3,7 +3,10 @@
 --------------------------------------------------------------*/
 
 .site-header {
-  @include admin-sticky-fix();
+  @include desktop {
+    @include admin-sticky-fix();
+  }
+
   color: $color__brand-ghost-white;
   background-color: $color__brand-blue-sapphire;
   font-weight: bold;
@@ -12,11 +15,13 @@
   left: 0;
   width: 100%;
   z-index: 300;
+
   .menu-toggle,
   .site-title {
     padding: 2rem 0 1rem 0;
     box-sizing: border-box;
   }
+
   .menu-toggle {
     font-size: 2rem;
   }
@@ -27,15 +32,18 @@
       justify-content: space-between;
       font-size: 1.3rem;
     }
-    #primary-menu > li > a {
+
+    #primary-menu>li>a {
       padding: 2rem 0 1rem 0;
       color: $color__brand-ghost-white;
       border-bottom: 3px solid $color__brand-blue-sapphire;
+
       &:hover {
         color: $color__brand-yellow-orange;
         border-color: $color__brand-yellow-orange;
       }
     }
+
     .sub-menu {
       text-align: center;
       background-color: $color__brand-ghost-white;
@@ -43,15 +51,18 @@
       border: 2px solid $color__brand-blue-sapphire;
       border-top: 0;
       box-sizing: border-box;
+
       li {
         padding: 1rem 0;
         border-top: 2px solid $color__brand-blue-sapphire;
+
         &:first-child {
           border: 0;
         }
       }
     }
   }
+
   .toggled {
     #primary-menu {
       position: absolute;
@@ -68,6 +79,7 @@
     ul {
       padding: 1rem;
     }
+
     .sub-menu {
       display: inli;
     }
@@ -77,10 +89,11 @@
       position: static;
     }
 
-    ul > li {
+    ul>li {
       width: 100%;
       display: block;
       padding: 2rem 0;
+
       a {
         margin-left: 5em;
       }
@@ -89,16 +102,20 @@
 
   .site-branding {
     flex: 1 0 30%;
+
     .site-title {
       color: $color__brand-ghost-white;
+
       &:hover {
         color: $color__brand-yellow-orange;
       }
+
       margin: 0;
       padding-left: 60px;
       text-align: left;
       text-decoration: none;
       position: relative;
+
       &:before {
         background-image: url(../../assets/images/blockwise-logo.png);
         background-size: cover;
@@ -114,17 +131,20 @@
     }
   }
 
-  #primary-menu > li:last-child > a {
+  #primary-menu>li:last-child>a {
     color: $color__brand-yellow-orange;
   }
 
   .container {
     padding: 0 2rem;
+
     @include desktop {
       padding: 0;
     }
+
     display: flex;
-    flex-flow: row, nowrap;
+    flex-flow: row,
+    nowrap;
     justify-content: space-around;
     align-items: flex-end;
   }
