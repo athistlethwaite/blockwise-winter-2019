@@ -1961,6 +1961,9 @@ body {
   .page-template-membership h2 {
     padding: 0 40px;
     font-size: 16px; }
+    @media screen and (min-width: 1000px) {
+      .page-template-membership h2 {
+        font-size: 25px; } }
   .page-template-membership .wpcf7-form {
     display: none; }
     .page-template-membership .wpcf7-form .wpcf7-response-output {
@@ -1972,7 +1975,7 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 45% 20% 10%;
-        grid-template-areas: 'main header' 'main sidebar' 'main sidebar' 'footer footer'; }
+        grid-template-areas: 'main header' 'main sidebar' 'main sidebar' 'footer footer'; }
         .page-template-membership .wpcf7-form .interest {
           grid-area: header;
           display: -webkit-box;
@@ -2104,7 +2107,7 @@ body {
         justify-content: space-around; }
     .page-id-70 .contactus-form input,
     .page-id-70 .contactus-form textarea {
-      padding: 10px 0;
+      padding: 10px 10px;
       margin: 0px; }
     .page-id-70 .contactus-form textarea {
       margin: 0px;
@@ -2176,8 +2179,8 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
