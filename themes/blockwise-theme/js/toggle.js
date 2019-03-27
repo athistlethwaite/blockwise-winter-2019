@@ -92,23 +92,4 @@
     $('.option-wrapper ul:nth-child(2n)').addClass('active');
     $('.option-wrapper ul:nth-child(3n)').addClass('active');
   }
-
-  // first member pop up mobile on click
-  $('.sign-up-pop').click(function() {
-    $('.wpcf7-form').addClass('mobile-popup');
-  });
-  // on submit click remove first popup, show thank you pop up
-  $('.wpcf7-submit').click(function() {
-    $('.wpcf7-form').removeClass('mobile-popup');
-    $('.thank-you').addClass('thank-you-active');
-  });
-  // on got it button click close thank you popup
-  $('.got-it').click(function() {
-    $('.thank-you').removeClass('thank-you-active');
-  });
-  // X button to close mobile sign up form
-  $('.close').click(function() {
-    event.preventDefault();
-    $('.wpcf7-form').removeClass('mobile-popup');
-  });
 })(jQuery);

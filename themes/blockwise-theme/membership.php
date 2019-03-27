@@ -51,9 +51,9 @@ get_header(); ?>
             <h2>Take the first step in joining our community</h2>
             <?php echo do_shortcode('[contact-form-7 id="9" title="Membership Form"]'); ?>
             <button class="sign-up-pop">Sign Up</button>
-            <div class="thank-you">
+            <div class="pop-up-alert hidden">
                 <p>Thank you for your interest in becoming a member. We will reach out shortly to discuss next steps.</p>
-                <button class='got-it'>Got it!</button>
+                <button>Got it!</button>
             </div>
         </section>
 

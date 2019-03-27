@@ -1,14 +1,14 @@
 (function($) {
   const popUpEvent = $('.event-single'),
     popUpForm = $('.pop-up');
-  $('body.post-type-archive-event').ready(function(){
+  $('body.post-type-archive-event').ready(function() {
     const eventId = window.location.hash.substring(1);
-    if (eventId){
-    const articleMarkUp = getArticle(eventId);
-    popUpEvent.removeClass('hidden');
-    popUpEvent.html(articleMarkUp);
+    if (eventId) {
+      const articleMarkUp = getArticle(eventId);
+      popUpEvent.removeClass('hidden');
+      popUpEvent.html(articleMarkUp);
     }
-  })
+  });
   $('.event-boxes').on('click', '.show-content', function() {
     event.preventDefault();
     const articleMarkUp = getArticle(this.getAttribute('data-event'));
@@ -31,6 +31,8 @@
 
   $(window).on('wpcf7:mailsent', function() {
     popUpForm.addClass('hidden');
+    $('.wpcf7-form').removeClass('mobile-popup');
+    $('.pop-up-alert').removeClass('hidden');
   });
 
   function getArticle(articleNum) {
@@ -48,4 +50,20 @@
       '</article>'
     );
   }
+
+  //Membership Page
+  // first member pop up mobile on click
+  $('.sign-up-pop').click(function() {
+    $('.wpcf7-form').addClass('mobile-popup');
+  });
+
+  // on got it button click close thank you popup
+  $('.pop-up-alert').on('click', 'button', function() {
+    $('.pop-up-alert').addClass('hidden');
+  });
+  // X button to close mobile sign up form
+  $('.close').click(function() {
+    event.preventDefault();
+    $('.wpcf7-form').removeClass('mobile-popup');
+  });
 })(jQuery);
