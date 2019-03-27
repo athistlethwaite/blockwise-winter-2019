@@ -11,9 +11,23 @@
     position: relative;
 
     .header-content-wrapper {
-      h1,
+
+      h1 {
+        font-size: 1.5rem;
+        text-align: left;
+
+        @include desktop {
+          font-size: 2.5rem;
+        }
+      }
+
       p {
         text-align: left;
+        font-size: .75rem;
+
+        @include desktop {
+          font-size: 1.75rem;
+        }
       }
 
       position: absolute;
@@ -54,7 +68,7 @@
   }
 
   .front-page-content {
-    & > h2 {
+    &>h2 {
       margin: 2em auto;
     }
 

@@ -7,19 +7,24 @@
   font-size: 2rem;
   transform: translate(0, -50%);
   cursor: pointer;
+
   &.left {
     left: 5px;
+
     @include desktop {
       left: -10px;
     }
   }
+
   &.right {
     right: 5px;
+
     @include desktop {
       right: -10px;
     }
   }
 }
+
 .carosel {
   box-sizing: border-box;
   overflow: hidden;
@@ -33,6 +38,7 @@
   justify-content: space-around;
   align-items: stretch;
 }
+
 .carosel-item {
   cursor: pointer;
   box-sizing: border-box;
@@ -46,6 +52,7 @@
     justify-content: center;
     align-items: center;
     padding: 0.5rem;
+
     img {
       border-radius: 5px;
       box-sizing: border-box;
@@ -53,15 +60,18 @@
       width: 100%;
     }
   }
+
   .carosel-content {
     box-sizing: border-box;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: space-between;
+
     p {
       margin: 0;
     }
+
     color: $color__text-screen;
     font-size: 15px;
     padding: 8px 12px;

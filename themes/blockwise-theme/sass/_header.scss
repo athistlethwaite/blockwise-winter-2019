@@ -3,10 +3,7 @@
 --------------------------------------------------------------*/
 
 .site-header {
-  @include desktop {
-    @include admin-sticky-fix();
-  }
-
+  @include admin-sticky-fix();
   color: $color__brand-ghost-white;
   background-color: $color__brand-blue-sapphire;
   font-weight: bold;
@@ -33,7 +30,7 @@
       font-size: 1.3rem;
     }
 
-    #primary-menu > li > a {
+    #primary-menu>li>a {
       padding: 2rem 0 1rem 0;
       color: $color__brand-ghost-white;
       border-bottom: 3px solid $color__brand-blue-sapphire;
@@ -86,11 +83,12 @@
       position: static;
     }
 
-    ul > li {
+    ul>li {
       width: 100%;
       display: block;
       padding: 0.75rem 0;
       text-align: start;
+
       a {
         margin-left: 40px;
       }
@@ -128,7 +126,7 @@
     }
   }
 
-  #primary-menu > li:last-child > a {
+  #primary-menu>li:last-child>a {
     color: $color__brand-yellow-orange;
   }
 
@@ -140,7 +138,8 @@
     }
 
     display: flex;
-    flex-flow: row, nowrap;
+    flex-flow: row,
+    nowrap;
     justify-content: space-around;
     align-items: flex-end;
   }

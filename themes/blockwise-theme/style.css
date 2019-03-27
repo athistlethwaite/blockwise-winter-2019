@@ -1112,12 +1112,11 @@ body {
   left: 0;
   width: 100%;
   z-index: 300; }
-  @media screen and (min-width: 1000px) {
-    .admin-bar .site-header {
-      top: 46px; } }
-  @media screen and (min-width: 1000px) and (min-width: 783px) {
-    .admin-bar .site-header {
-      top: 32px; } }
+  .admin-bar .site-header {
+    top: 46px; }
+    @media screen and (min-width: 783px) {
+      .admin-bar .site-header {
+        top: 32px; } }
   .site-header .menu-toggle,
   .site-header .site-title {
     padding: 2rem 0 1rem 0;
@@ -1239,9 +1238,18 @@ body {
     padding: 0 0.5em;
     top: 10%;
     left: 50px; }
-    .home .front-page-banner .header-content-wrapper h1,
-    .home .front-page-banner .header-content-wrapper p {
+    .home .front-page-banner .header-content-wrapper h1 {
+      font-size: 1.5rem;
       text-align: left; }
+      @media screen and (min-width: 1000px) {
+        .home .front-page-banner .header-content-wrapper h1 {
+          font-size: 2.5rem; } }
+    .home .front-page-banner .header-content-wrapper p {
+      text-align: left;
+      font-size: .75rem; }
+      @media screen and (min-width: 1000px) {
+        .home .front-page-banner .header-content-wrapper p {
+          font-size: 1.75rem; } }
     @media screen and (min-width: 1000px) {
       .home .front-page-banner .header-content-wrapper {
         max-width: none; } }
