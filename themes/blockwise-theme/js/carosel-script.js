@@ -38,6 +38,16 @@
     }
   });
 
+  $('.carosel-viewport').on('click', '.carosel-item', function() {
+    const viewPort = $(this).parent();
+    const items = viewPort.find('.carosel-item');
+    if (items.index(this) >= viewPort.length / 2) {
+      caroselSlideRight(viewPort);
+    } else {
+      caroselSlideLeft(viewPort);
+    }
+  });
+
   function caroselSlideRight(viewPort) {
     const item = viewPort.children('.carosel-item:first-child');
     item.remove();
