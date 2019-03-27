@@ -1,6 +1,6 @@
 (function($) {
   const popUpEvent = $('.event-single'),
-    popUpForm = $('.pop-up');
+    popUpForm = $('.rsvp-pop-up');
   $('body.post-type-archive-event').ready(function() {
     const eventId = window.location.hash.substring(1);
     if (eventId) {

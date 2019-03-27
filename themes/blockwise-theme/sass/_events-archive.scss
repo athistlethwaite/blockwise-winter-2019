@@ -21,7 +21,6 @@
   }
 
   .event-boxes {
-
     .entry-content,
     .event-rsvp,
     .hide-content {
@@ -243,7 +242,7 @@
     }
   }
 
-  .pop-up {
+  .rsvp-pop-up {
     z-index: 99999;
     position: fixed;
     transform: translate(-50%, -50%);

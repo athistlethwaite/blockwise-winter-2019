@@ -52,8 +52,12 @@ get_header(); ?>
 
         <section class="event-single hidden">
         </section>
-        <div class="pop-up hidden">
+        <div class="rsvp-pop-up pop-up hidden">
             <?php echo do_shortcode('[contact-form-7 id="249" title="RSVP form"]'); ?>
+        </div>
+        <div class="pop-up-alert hidden">
+            <p>We’ve saved your spot!<br>You should receive an email confirmation with your ticket.</p>
+            <button>Got it!</button>
         </div>
 
         <?php else : ?>
