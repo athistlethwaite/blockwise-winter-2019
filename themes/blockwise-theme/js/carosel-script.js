@@ -41,7 +41,7 @@
   $('.carosel-viewport').on('click', '.carosel-item', function() {
     const viewPort = $(this).parent();
     const items = viewPort.find('.carosel-item');
-    if (items.index(this) >= viewPort.length / 2) {
+    if (items.index(this) >= items.length / 2) {
       caroselSlideRight(viewPort);
     } else {
       caroselSlideLeft(viewPort);
