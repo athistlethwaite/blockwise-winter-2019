@@ -25,6 +25,7 @@
     #primary-menu {
       display: flex;
       justify-content: space-between;
+      font-size: 1.3rem;
     }
     #primary-menu > li > a {
       padding: 2rem 0 1rem 0;
@@ -38,7 +39,7 @@
     .sub-menu {
       text-align: center;
       background-color: $color__brand-ghost-white;
-      transform: translate(-40%, 2.95rem);
+      transform: translate(-40%, 3.2rem);
       border: 2px solid $color__brand-blue-sapphire;
       border-top: 0;
       box-sizing: border-box;
