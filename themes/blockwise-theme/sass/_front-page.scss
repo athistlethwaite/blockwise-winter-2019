@@ -11,7 +11,6 @@
     position: relative;
 
     .header-content-wrapper {
-
       h1 {
         font-size: 1.5rem;
         text-align: left;
@@ -23,7 +22,7 @@
 
       p {
         text-align: left;
-        font-size: .75rem;
+        font-size: 0.75rem;
 
         @include desktop {
           font-size: 1.75rem;
@@ -50,7 +49,9 @@
       @include desktop {
         bottom: 60px;
       }
-
+      .carosel {
+        width: 100%;
+      }
       .carosel-item {
         width: 100px;
 
@@ -68,7 +69,7 @@
   }
 
   .front-page-content {
-    &>h2 {
+    & > h2 {
       margin: 2em auto;
     }
 
