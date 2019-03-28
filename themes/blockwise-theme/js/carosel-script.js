@@ -7,22 +7,21 @@
   function buildCarosel(carosel) {
     carosel.css('position', 'relative');
     carosel.find('>div').addClass('carosel-item');
-    const item = $('.carosel-item');
-    item
+    const items = $('.carosel-item');
+    items
       .find('p')
       .parent('div')
       .addClass('carosel-content');
-    item
+    items
       .find('img')
       .parent('div')
       .addClass('carosel-thumbnail');
-    const viewPort =
-      '<div class="carosel"><div class="carosel-viewport" style="width:' +
-      item.width() * carosel.find('>div').length * 1.2 +
-      'px">' +
+
+    const caroselHTML =
+      '<div class="carosel"><div class="carosel-viewport" >' +
       carosel.html() +
       '</div></div><a class="carosel-nav left">&#10094;</a><a class="carosel-nav right">&#10095;</a>';
-    carosel.html(viewPort);
+    carosel.html(caroselHTML);
   }
 
   $('.carosel-nav').on('click', function() {

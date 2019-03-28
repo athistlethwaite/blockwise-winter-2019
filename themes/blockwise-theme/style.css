@@ -1034,22 +1034,33 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
-  width: 100%; }
-
-.carosel-viewport {
-  margin: 0 auto;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch; }
+      -ms-flex-flow: row, nowrap;
+          flex-flow: row, nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  @media screen and (max-width: 720px) {
+    .carosel {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      width: 250px;
+      margin: 0 auto; } }
+
+.carosel-viewport {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  grid-gap: 50px; }
 
 .carosel-item {
   cursor: pointer;
@@ -1212,8 +1223,8 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: end;
@@ -1994,7 +2005,7 @@ body {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 15% 45% 20% 10%;
-        grid-template-areas: 'main header' 'main sidebar' 'main sidebar' 'footer footer'; }
+        grid-template-areas: 'main header' 'main sidebar' 'main sidebar' 'footer footer'; }
         .page-template-membership .wpcf7-form .interest {
           grid-area: header;
           display: -webkit-box;
@@ -2198,8 +2209,8 @@ body {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-flow: row, nowrap;
-            flex-flow: row, nowrap;
+        -ms-flex-flow: row, nowrap;
+            flex-flow: row, nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
